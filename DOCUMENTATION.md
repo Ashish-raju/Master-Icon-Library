@@ -1,209 +1,108 @@
-# Master Icon Library | Technical Documentation
+# Master Icon Library | Technical Architecture Spec
 
-Welcome to the **Master Icon Library** technical specification. This document provides a comprehensive, end-to-end breakdown of our iconography pipeline—designed for scalability, performance, and industrial-grade automation at a FAANG seniority level.
-
----
-
-## 🚀 1. Project Philosophy & Core Governance
-
-The Master Icon Library operates on a **Single Source of Truth (SSOT)** model. The central nervous system of the library is the `/icons-svg` directory where raw design assets reside.
-
-- **Deterministic Builds:** No manual modifications to production assets are permitted. Every asset in the `/dist` folder is a purely reproducible output of the build pipeline.
-- **Design System Guardrails:** The pipeline enforces strict geometry and metadata rules while remaining agnostic to the specific aesthetic of the icons.
-- **Developer-Centric UX:** The interactive demo and standardized CSS prefixing ensure that any engineer can integrate an icon into their UI in seconds with zero configuration.
+Welcome to the **Master Icon Library** technical documentation. This document serves as the primary engineering reference for the iconography compiler, asset distribution, and design-to-code workflow.
 
 ---
 
-## 🏗️ 2. Technical Architecture & Component Map
+## 🚀 1. Architectural Philosophy
 
-The architecture is a linear, multi-stage compiler written in Node.js. It follows a **Validate → Transform → Compile → Distribute** lifecycle to ensure that assets are optimized for both performance and interoperability.
+The library is designed around the concept of **Geometric Equivalence**. Regardless of the source asset's provenance (Figma, Illustrator, Sketch), the compiler ensures that the final output is normalized to a high-fidelity, predictable coordinate system.
 
-### 🔌 2.1 The Build Orchestrator
-The `scripts/build-icons.js` file serves as the pipeline's execution engine. It manages the asynchronous execution sequence to ensure that heavy I/O and processing tasks (like stroke-fixing and font-generation) are handled in the correct order.
+### Core Principles
+- **SSOT (Single Source of Truth):** Raw SVGs are the only source. All `dist` assets are reproducible artifacts.
+- **Stateless Validation:** Every icon must pass a rigorous geometric audit before being merged into the font pool.
+- **Zero-Conf Integration:** Developers can consume icons via simple class names with built-in variants for sizing and brand states.
 
-### 📊 2.3 Visual Data Flow Architecture
-The following diagram illustrates the transformation lifecycle of an asset from raw design to production-ready glyph.
+---
+
+## 🏗️ 2. Pipeline Architecture
+
+The build pipeline is a resilient, multi-stage compiler that transforms raw vectors into optimized production assets.
+
+### 2.1 Asset Transformation Lifecycle
 
 ```mermaid
 graph TD
-    A[Raw Figma SVG] -->|Input| B(scripts/validate-icons.js)
-    B -->|Normalize & Validate| C{Compiler Check}
-    C -->|Valid| D(scripts/fix-strokes.js)
-    C -->|Invalid| E[Error Trace & Early Exit]
-    D -->|Strokes -> Fills| F(scripts/optimize-icons.js)
-    F -->|Minify & Normalization| G[Optimized SVG Pool]
-    G -->|Codegen| H(scripts/generate-font.js)
-    G -->|Codegen| I(scripts/generate-assets.js)
-    G -->|Codegen| J(scripts/generate-metadata.js)
-    H -->|Bundle| K[icons.css & woff2]
-    I -->|Bundle| L[sprite.svg & raw svg]
-    J -->|Bundle| M[icons.json Mapping]
-    K & L & M -->|Render| N(scripts/generate-demo.js)
-    N -->|Output| O[Interactive Master Demo]
+    A[icons-svg/*.svg] -->|Gatekeep| B(scripts/validate-icons.js)
+    B -->|Sanitize Dims| C(scripts/fix-strokes.js)
+    C -->|Normalise Paths| D(scripts/optimize-icons.js)
+    D -->|Minify SVGO| E{Optimized Pool}
+    
+    E --> F(scripts/generate-font.js)
+    E --> G(scripts/generate-assets.js)
+    E --> H(scripts/generate-metadata.js)
+    
+    F -->|Output| F1[icons.css & woff2]
+    G -->|Output| G1[sprite.svg & raw svg]
+    H -->|Output| H1[icons.json Mapping]
+    
+    F1 & G1 & H1 -->|Render| I(scripts/generate-demo.js)
+    I -->|Publish| J[Master Demo UI]
 ```
 
-### 🛤️ 2.4 Pipeline Stages & Microservices
+### 2.2 Gatekeeping Logic (Validation Stage)
 
-| Stage | Logic | Responsibility |
-| :--- | :--- | :--- |
-| **0. Global Clean** | `clean.js` | Purges previous build artifacts to prevent stale asset contamination. |
-| **1. Validation Gate** | `validate-icons.js` | Enforces naming logic and strict geometry guardrails (Sizing, Viewbox). |
-| **2. Geometry Fix** | `fix-strokes.js` | Automated "Outline Strokes" using `oslllo-svg-fixer` for font compatibility. |
-| **3. Optimization** | `optimize-icons.js` | Payload reduction via `svgo`. Normalizes all colors to `currentColor`. |
-| **4. Font Compiler** | `generate-font.js` | Generates WOFF2 glyphs and the prefixed `icons.css` stylesheet. |
-| **5. Asset Export** | `generate-assets.js` | Exports individual optimized SVGs and a global SVG Sprite. |
-| **6. Metadata Store** | `generate-metadata.js` | Emits JSON maps for programmatic integration and design tracking. |
-| **7. Production Demo** | `generate-demo.js` | Builds the interactive, brand-aware, glassmorphism preview site. |
+```mermaid
+flowchart LR
+    Start[Input SVG] --> Q1{Is Square?}
+    Q1 -->|No| Reject[Build Failure]
+    Q1 -->|Yes| Q2{< 15KB & No Gradients?}
+    Q2 -->|No| Reject
+    Q2 -->|Yes| Q3{Normalize Name}
+    Q3 --> Accept[Pass to Fixer]
+```
 
 ---
 
-## 📏 3. Design System Standards (The Compiler Spec)
+## 📏 3. Design System Standards
 
-To ensure high-fidelity rendering across Web, iOS, and Android formats, every icon dropped into `/icons-svg` must satisfy these "Compiler Pass" requirements:
+### 3.1 Geometric Constraints
+- **Square ViewBox:** All icons must be designed on a square grid (e.g., 24x24).
+- **Dimensional Sanitization:** The compiler strips root `width` and `height` to prevent coordinate bloating while preserving internal `mask` and `clipPath` dimensions.
+- **Monochromatic Requirement:** Gradients and multi-color fills are automatically stripped. Design for `currentColor`.
 
-### 📐 3.1 Geometry Guidelines
-- **Uniform Square Grid:** Icons must be designed on a square canvas (e.g., 16x16, 24x24). Non-square viewboxes are automatically rejected to prevent stretching during rendering.
-- **Dimensional Sanitization:** The compiler automatically strips fixed `width` and `height` attributes from source SVGs. This ensures that the `viewBox` is the only source of truth for the coordinate system, preventing "invisible" icons caused by coordinate expansion.
-- **Flattened Shapes:** While the pipeline *can* fix strokes, designers are encouraged to flatten complex boolean layers (Subtract/Union) into a single compound path for consistency.
-- **No Gradients/Masks:** Font glyphs are monochromatic. Icons containing gradients, radial blends, or masks will trigger an immediate validation error.
-- **Payload Constraint:** Individual SVGs must remain under **15KB**. High-density vectors are blocked to prevent UI performance degradation.
-
-### 🔡 3.2 Naming Convention Logic
-The library strictly enforces **kebab-case** via an aggressive normalization regex:
-- `Property 1=Alert_Circle.svg` → `alert-circle`
-- `new-User-Profile.svg` → `new-user-profile`
-- `100.svg` → `100` (Handled safely via CSS prefixing)
+### 3.2 Naming Logic
+Assets are automatically normalized from Figma property strings to `kebab-case`:
+- `Property 1=Add_User.svg` $\rightarrow$ `add-user`
+- `new-UserProfile-Icon.svg` $\rightarrow$ `new-user-profile-icon`
 
 ---
 
-## 💻 4. Engineering Implementation Guide
+## 🎨 4. Branding & Customization guide
 
-### ⚛️ 4.1 React Integration (Primary)
-The library is optimized for React development. Use the `className` attribute to ensure compatibility with JSX (React elements).
+### 4.1 Customizing Brand Colors
+The library supports dynamic recoloring via CSS. You can modify the standard preview colors in [**scripts/generate-demo.js**](file:///c:/Users/VudumudiAshishRamaRa/OneDrive%20-%20PharmaForce%20Group%20LLC/Desktop/Icon/scripts/generate-demo.js) by adding or updating hex values in the `colorChips` group.
 
-```javascript
-/* 1. Include Stylsheet in your root App.js or index.js */
-import 'master-icon-library/dist/font/icons.css';
+### 4.2 Scaling Interaction States
+The Interactive Demo utilizes a scalable `data-active-state` architecture.
 
-/* 2. Standard Usage */
-const MyComponent = () => (
-  <span className="icon icon-activity" />
-);
+| State | Background | Border | Icon Color |
+| :--- | :--- | :--- | :--- |
+| **None** | Transparent | Transparent | `dynamic-color` |
+| **Hover** | `#DBCAD8` (Light) | Transparent | `accent-color` |
+| **Selected** | `#702C62` (Dark) | Transparent | `#FFFFFF` (White) |
 
-/* 3. Sizing Variants (Built-in) */
-const LargeIcon = () => (
-  <span className="icon icon-activity icon-lg" /> /* 20px */
-);
+**Adding New States:** To add a state like "Pressed", simply add a new CSS rule for `[data-active-state="pressed"]` and a corresponding button in the demo generator.
+
+---
+
+## 💻 5. Integration Guide
+
+### React Mode (JSX)
+The master demo includes a **Syntax Selector**. Ensure you are in **React Mode** to copy `className` based snippets.
+
+```jsx
+<span className="icon icon-activity" />
 ```
 
-### 🅰️ 4.2 Standard HTML / Angular Usage
-For standard templates, use the `class` attribute.
+### HTML Mode
+Standard usage for non-JSX environments.
 
 ```html
-<!-- 1. Include Stylsheet -->
-<link rel="stylesheet" href="dist/font/icons.css">
-
-<!-- 2. Usage -->
 <span class="icon icon-activity"></span>
 ```
-
-### 🎨 4.3 Dynamic Styling
-Since all assets are normalized to `currentColor`, you can style them directly with CSS without modifying the SVG:
-
-```css
-.my-custom-icon {
-  color: #702C62; /* Corporate Action Color */
-  font-size: 24px;
-  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-```
-
----
-
-## ⚙️ 5. DevOps, Automation & CI/CD
-
-### 🤖 5.1 Continuous Integration (GitHub Actions)
-The project includes an enterprise-grade `.github` workflow suite:
-1.  **PR Validation:** Automatically runs the full pipeline on every Pull Request. Builds will fail if assets do not meet geometry or naming standards.
-2.  **Deployment:** Capable of conditional publishing to private NPM registries or CDN storage.
-
-### ⌨️ 5.2 Local Developer CLI
-| Script | Command | Usage |
-| :--- | :--- | :--- |
-| **Build Library** | `npm run icons` | Standard build (Clean -> Validate -> Compile). |
-| **Hard Rebuild** | `npm run icons:build` | Deep rebuild from scratch. |
-| **Purge Dist** | `npm run icons:clean` | Completely resets the build environment. |
-
----
-
-## 🧪 6. The Premium Interactive Demo
-
-The `/demo/index.html` tool serves as the bridge between Design, Engineering, and Quality:
-
-- **State Previews:** Instantly test icons against standard brand states (**Primary, Success, Error, Disabled**).
-- **Smart Contrast:** Includes a "White on Dark" algorithm that automatically detects light icon states and provides a high-contrast card background.
-- **Size Simulation:** Toggle between 8px and 32px to ensure geographic balance at all scales.
-- **Instant Code Snippets:** Clicking any icon instantly copies the exact HTML usage syntax to the clipboard.
-
----
-
-## 🏗️ 7. Multi-Framework Support (React, Angular, Vue)
-
-The library is designed for seamless integration across all modern frontend frameworks.
-
-- **React Compatibility:** Use `className` instead of `class`. The **Master Demo** includes a dedicated "React" mode that automatically generates `className` snippets for your components.
-- **Angular/Vue/Svelte:** These frameworks use the standard HTML `class` attribute.
-- **Dynamic Theming:** All frameworks benefit from the `currentColor` normalization—simply style the parent component's `color` to change the icon hue.
-
----
-
-## 🛠️ 8. Troubleshooting & FAQ
-
-### ❌ The Build Failed with "Non-square ViewBox"
-The library enforces a perfectly square design canvas (e.g., `width=24, height=24`). If a designer exports an icon as `16x15`, the build will halt to prevent rendering distortion.
-- **Fix:** Update the Frame dimensions in Figma to be equal and re-export.
-
-### ❌ An Icon is rendering as a "Square" or "Blank" in CSS
-This usually means the CSS class was not prefix correctly or the SVG had no valid paths.
-- **Check:** Ensure the icon starts with a digit? Use `.icon-100` instead of `.100`.
-- **Check:** Did the designer use complex masks? Simple masks may fail the font glyph trace.
-
-### ❓ Can I use these icons in a React app?
-Yes. The `/dist/svg/` folder contains clean, optimized raw SVGs. You can use `svgr` or direct imports.
-
----
-
----
-
-## 🎨 9. Branding & Customization Guide
-
-The Master Icon Library is engineered for total brand flexibility. Below is the technical map for modifying the library's design tokens.
-
-### 9.1 Changing Brand Colors
-- **In Your App:** Use CSS to override the `color` property on the `.icon` class or specific icon classes.
-- **In the Demo Page:** To add or change the color pills in the interactive preview, modify the `colorChips` array (or equivalent HTML buttons) in [**scripts/generate-demo.js**](file:///c:/Users/VudumudiAshishRamaRa/OneDrive%20-%20PharmaForce%20Group%20LLC/Desktop/Icon/scripts/generate-demo.js).
-  ```html
-  <!-- Add this to the #color-select group in generate-demo.js -->
-  <button class="chip" data-color="#NEW_HEX">Brand New Color</button>
-  ```
-
-### 9.2 Modifying Library Sizes
-Standard sizes are baked into the generated font stylesheet.
-- **Core Styles:** Modify the `.icon-sm`, `.icon-lg` definitions in [**scripts/generate-font.js**](file:///c:/Users/VudumudiAshishRamaRa/OneDrive%20-%20PharmaForce%20Group%20LLC/Desktop/Icon/scripts/generate-font.js).
-- **Default Baseline:** The baseline `.icon` class is currently set to `16px`. You can change this in the `cssContent` template within `generate-font.js`.
-
-### 9.3 Overriding Scale Normalization
-If your design system requires an icon to intentionally exceed the `1em` bounding box (e.g., for decorative "overflow" icons):
-1.  Upload the icon normally.
-2.  Bypass the `1em` constraint in your local CSS by targeting the specific icon:
-    ```css
-    .icon-hero-banner { 
-      width: 4rem !important; 
-      height: 4rem !important; 
-    }
-    ```
 
 ---
 
 **Master Icon Library Documentation v1.0.0**
-*Engineered for Excellence.*
+*Engineered for Excellence and Scalability.*

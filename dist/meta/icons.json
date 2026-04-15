@@ -3967,14 +3967,5 @@
       "svg": "dist/svg/zoom-out.svg",
       "sprite": "dist/sprite/sprite.svg#zoom-out"
     }
-  },
-  {
-    "name": "test",
-    "originalName": "Test.svg",
-    "className": "icon test",
-    "paths": {
-      "svg": "dist/svg/test.svg",
-      "sprite": "dist/sprite/sprite.svg#test"
-    }
   }
 ]

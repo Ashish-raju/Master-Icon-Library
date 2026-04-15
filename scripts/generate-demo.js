@@ -30,9 +30,14 @@ function generateDemo() {
       --subtext: #475569;
       
       /* Dynamic Settings */
-      --dynamic-color: #212121;
+      --dynamic-color: #702C62;
       --dynamic-size: 16px;
       --card-bg-override: rgba(255, 255, 255, 0.65);
+      
+      /* State Styles */
+      --state-bg: transparent;
+      --state-border: transparent;
+      --state-icon-color: var(--dynamic-color);
     }
 
     * { box-sizing: border-box; }
@@ -218,26 +223,52 @@ function generateDemo() {
     .icon-card:hover::before { opacity: 1; }
 
     .icon-card .icon-preview {
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
+      min-height: 80px;
       position: relative;
       z-index: 1;
     }
 
+    .preview-box {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2px;
+      background: var(--state-bg);
+      border: 2px solid var(--state-border);
+      padding: 2px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
     .icon-card .icon-preview .icon {
-      color: var(--dynamic-color);
+      color: var(--state-icon-color);
       font-size: var(--dynamic-size);
       width: 1em;
       height: 1em;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-      /* Add slight drop shadow to icons for pop */
-      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.06));
+      transition: all 0.3s ease;
+    }
+
+    /* State Logic */
+    [data-active-state="none"] {
+      --state-bg: transparent;
+      --state-border: transparent;
+      --state-icon-color: var(--dynamic-color);
+    }
+    [data-active-state="hover"] {
+      --state-bg: #DBCAD8;
+      --state-border: transparent;
+      --state-icon-color: #702C62;
+    }
+    [data-active-state="selected"] {
+      --state-bg: #702C62;
+      --state-border: transparent;
+      --state-icon-color: #FFFFFF;
     }
 
     .icon-card .icon-name {
@@ -300,15 +331,26 @@ function generateDemo() {
         <div class="control-group">
           <label>Color State Mappings</label>
           <div class="chip-group" id="color-select">
-            <button class="chip active" data-color="#212121"><span class="color-swatch" style="background:#212121;"></span> Primary (#212121)</button>
-            <button class="chip" data-color="#702C62"><span class="color-swatch" style="background:#702C62;"></span> Action / Info (#702C62)</button>
+            <button class="chip active" data-color="#702C62"><span class="color-swatch" style="background:#702C62;"></span> Action / Info (#702C62)</button>
             <button class="chip" data-color="#542149"><span class="color-swatch" style="background:#542149;"></span> Action Hover (#542149)</button>
+            <button class="chip" data-color="#212121"><span class="color-swatch" style="background:#212121;"></span> Dark / Text (#212121)</button>
             <button class="chip" data-color="#9E9E9E"><span class="color-swatch" style="background:#9E9E9E;"></span> Disabled (#9E9E9E)</button>
             <button class="chip" data-color="#757575"><span class="color-swatch" style="background:#757575;"></span> On Disabled (#757575)</button>
             <button class="chip" data-color="#339900"><span class="color-swatch" style="background:#339900;"></span> Success (#339900)</button>
             <button class="chip" data-color="#FF7C00"><span class="color-swatch" style="background:#FF7C00;"></span> Warning (#FF7C00)</button>
             <button class="chip" data-color="#E54141"><span class="color-swatch" style="background:#E54141;"></span> Error (#E54141)</button>
             <button class="chip" data-color="#FFFFFF"><span class="color-swatch" style="background:#FFFFFF;"></span> On Action (#FFFFFF)</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-row">
+        <div class="control-group">
+          <label>Interaction States Preview</label>
+          <div class="chip-group" id="state-select">
+            <button class="chip active" data-state="none">No Background</button>
+            <button class="chip" data-state="hover">Hover BG</button>
+            <button class="chip" data-state="selected">Selected BG</button>
           </div>
         </div>
       </div>
@@ -343,7 +385,9 @@ function generateDemo() {
       ${iconsData.map(icon => `
         <div class="icon-card" data-name="${icon.name}">
           <div class="icon-preview">
-            <span class="icon icon-${icon.name}"></span>
+            <div class="preview-box">
+              <span class="icon icon-${icon.name}"></span>
+            </div>
           </div>
           <div class="icon-name">${icon.name}</div>
         </div>
@@ -357,12 +401,14 @@ function generateDemo() {
     const search = document.getElementById('search');
     const colorChips = document.querySelectorAll('#color-select .chip');
     const sizeChips = document.querySelectorAll('#size-select .chip');
+    const stateChips = document.querySelectorAll('#state-select .chip');
     const syntaxChips = document.querySelectorAll('#syntax-select .chip');
     const cards = document.querySelectorAll('.icon-card');
     const toast = document.getElementById('toast');
     const root = document.documentElement;
 
     let currentSyntax = 'react';
+    root.setAttribute('data-active-state', 'none');
 
     // Search Filtering
     search.addEventListener('input', (e) => {
@@ -396,6 +442,15 @@ function generateDemo() {
         sizeChips.forEach(c => c.classList.remove('active'));
         chip.classList.add('active');
         root.style.setProperty('--dynamic-size', chip.dataset.size);
+      });
+    });
+
+    // State Toggling
+    stateChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        stateChips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        root.setAttribute('data-active-state', chip.dataset.state);
       });
     });
 

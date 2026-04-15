@@ -1,70 +1,76 @@
-# Master Icon Library 🚀
+# 💎 Master Icon Library 
 
-> **The Single Source of Truth for Enterprise Iconography.**
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
+[![Design System](https://img.shields.io/badge/design--system-validated-blue.svg)]()
+[![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)]()
 
-The **Master Icon Library** is a high-performance, automated pipeline that transforms raw design assets (SVGs) into a comprehensive suite of production-ready web assets. It eliminates manual handoff friction between design and engineering.
+An enterprise-grade, automated iconography pipeline that serves as a single source of truth for SVG and font-based icon distribution. Engineered for strict design-system compliance and multi-framework interoperability.
 
 ---
 
-## 🏗️ Core Features
-- **Automated Normalization:** Strips Figma-specific naming and forces strict `kebab-case`.
-- **Geometry Guardrails:** Enforces perfectly square grids and monochromatic paths.
-- **Smart Tracing:** Automatically converts SVG strokes into solid paths for zero-error font rendering.
-- **Dynamic Styling:** All assets are normalized to `currentColor` for effortless CSS theming.
-- **Interactive Demo:** A premium, glassmorphism-based previewer with brand-aware state toggling.
+## ✨ Key Features
 
-## 📦 Getting Started
+*   **⚡ Automated Optimization**: Built-in SVG compiler that handles stroke-to-path conversion, payload minification, and geometry normalization.
+*   **🛡️ Geometric Gatekeeping**: Strict validation layers prevent non-square, oversized, or complex assets from entering the production build.
+*   **🎨 CSS-Driven Theming**: All icons are normalized to `currentColor` for instant CSS styling. No hardcoded brand styles.
+*   **⚛️ Framework First**: Native support for **React (`className`)**, Angular, and Vue.
+*   **🎭 Premium Interactivity**: Includes a glassmorphism master demo with live state previews (Hover, Selected) and one-click code extraction.
 
-### 1. Installation
-Clone the repository and install the compiler dependencies:
+---
+
+## 🏗️ High-Level Architecture
+
+```mermaid
+graph LR
+    A[Design Specs] -->|Gatekeep| B(Validation Engine)
+    B -->|Cleanse| C(Stroke Fixer)
+    C -->|Minimize| D(SVGO Optimizer)
+    D -->|Compile| E{Asset Pool}
+    E --> F[WebFont Generator]
+    E --> G[SVG Sprite Engine]
+    E --> H[Metadata Hub]
+    F & G & H --> I[Interactive Demo]
+```
+
+---
+
+## 🚀 Quick Start
+
+### Installation
 ```bash
-git clone <repository-url>
-cd MasterIconLibrary
 npm install
 ```
 
-### 2. Add Your Icons
-Drop your `.svg` files directly into the `/icons-svg` folder.
-*Example: `Property 1=Add_User.svg`*
-
-### 3. Compile the Library
-Run the build orchestrator to generate all distribution formats and the demo site:
+### Build the Library
 ```bash
 npm run icons
 ```
 
-## 🛠️ Integrated Usage
+---
 
-### React (Modern Standard)
-```html
-<link rel="stylesheet" href="dist/font/icons.css">
+## 💻 Usage
 
-<!-- Implementation -->
-<span className="icon icon-add-user"></span>
+### React (Primary)
+```jsx
+// 1. Import CSS in root
+import 'master-icon-library/dist/font/icons.css';
+
+// 2. Implementation
+<span className="icon icon-activity" />
 ```
 
-### Standard Icon Font (HTML)
+### SVG Sprite (Performance)
 ```html
-<link rel="stylesheet" href="dist/font/icons.css">
-
-<!-- Implementation -->
-<span class="icon icon-add-user"></span>
-```
-
-### SVG Sprite (Modern Web)
-```html
-<svg class="icon">
-  <use href="dist/svg/sprite.svg#add-user"/>
-</svg>
+<svg class="icon"><use xlink:href="dist/sprite/sprite.svg#activity"></use></svg>
 ```
 
 ---
 
-## 📘 Deep Dive Documentation
-For a full technical breakdown of the architecture, design system requirements, and CI/CD integration, please refer to the:
+## 📖 Extended Documentation
 
-👉 [**Technical Documentation (DOCUMENTATION.md)**](./DOCUMENTATION.md)
+For a deep-dive into the technical architecture, design system specifications, and customization guides, please refer to the [**Technical Documentation**](./DOCUMENTATION.md).
 
 ---
 
-**Built with Precision for Enterprise Teams.**
+**© 2026 Enterprise Icon Pipeline Team**
+*Engineered for Excellence.*
