@@ -172,5 +172,37 @@ Yes. The `/dist/svg/` folder contains clean, optimized raw SVGs. You can use `sv
 
 ---
 
+---
+
+## 🎨 9. Branding & Customization Guide
+
+The Master Icon Library is engineered for total brand flexibility. Below is the technical map for modifying the library's design tokens.
+
+### 9.1 Changing Brand Colors
+- **In Your App:** Use CSS to override the `color` property on the `.icon` class or specific icon classes.
+- **In the Demo Page:** To add or change the color pills in the interactive preview, modify the `colorChips` array (or equivalent HTML buttons) in [**scripts/generate-demo.js**](file:///c:/Users/VudumudiAshishRamaRa/OneDrive%20-%20PharmaForce%20Group%20LLC/Desktop/Icon/scripts/generate-demo.js).
+  ```html
+  <!-- Add this to the #color-select group in generate-demo.js -->
+  <button class="chip" data-color="#NEW_HEX">Brand New Color</button>
+  ```
+
+### 9.2 Modifying Library Sizes
+Standard sizes are baked into the generated font stylesheet.
+- **Core Styles:** Modify the `.icon-sm`, `.icon-lg` definitions in [**scripts/generate-font.js**](file:///c:/Users/VudumudiAshishRamaRa/OneDrive%20-%20PharmaForce%20Group%20LLC/Desktop/Icon/scripts/generate-font.js).
+- **Default Baseline:** The baseline `.icon` class is currently set to `16px`. You can change this in the `cssContent` template within `generate-font.js`.
+
+### 9.3 Overriding Scale Normalization
+If your design system requires an icon to intentionally exceed the `1em` bounding box (e.g., for decorative "overflow" icons):
+1.  Upload the icon normally.
+2.  Bypass the `1em` constraint in your local CSS by targeting the specific icon:
+    ```css
+    .icon-hero-banner { 
+      width: 4rem !important; 
+      height: 4rem !important; 
+    }
+    ```
+
+---
+
 **Master Icon Library Documentation v1.0.0**
 *Engineered for Excellence.*
