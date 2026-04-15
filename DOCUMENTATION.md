@@ -77,22 +77,36 @@ The library strictly enforces **kebab-case** via an aggressive normalization reg
 
 ## 💻 4. Engineering Implementation Guide
 
-### 🅰️ 4.1 Icon Font Usage
-The icon font is the primary method for standard UI usage. Every icon is prefixed with `icon-` to ensure valid CSS and prevent namespace collisions.
+### ⚛️ 4.1 React Integration (Primary)
+The library is optimized for React development. Use the `className` attribute to ensure compatibility with JSX (React elements).
+
+```javascript
+/* 1. Include Stylsheet in your root App.js or index.js */
+import 'master-icon-library/dist/font/icons.css';
+
+/* 2. Standard Usage */
+const MyComponent = () => (
+  <span className="icon icon-activity" />
+);
+
+/* 3. Sizing Variants (Built-in) */
+const LargeIcon = () => (
+  <span className="icon icon-activity icon-lg" /> /* 20px */
+);
+```
+
+### 🅰️ 4.2 Standard HTML / Angular Usage
+For standard templates, use the `class` attribute.
 
 ```html
 <!-- 1. Include Stylsheet -->
 <link rel="stylesheet" href="dist/font/icons.css">
 
-<!-- 2. Standard Usage -->
+<!-- 2. Usage -->
 <span class="icon icon-activity"></span>
-
-<!-- 3. Scaling Classes (Pre-configured) -->
-<span class="icon icon-activity icon-sm"></span> <!-- 12px -->
-<span class="icon icon-activity icon-lg"></span> <!-- 20px -->
 ```
 
-### 🎨 4.2 Dynamic Styling
+### 🎨 4.3 Dynamic Styling
 Since all assets are normalized to `currentColor`, you can style them directly with CSS without modifying the SVG:
 
 ```css
@@ -132,9 +146,17 @@ The `/demo/index.html` tool serves as the bridge between Design, Engineering, an
 
 ---
 
+## 🏗️ 7. Multi-Framework Support (React, Angular, Vue)
+
+The library is designed for seamless integration across all modern frontend frameworks.
+
+- **React Compatibility:** Use `className` instead of `class`. The **Master Demo** includes a dedicated "React" mode that automatically generates `className` snippets for your components.
+- **Angular/Vue/Svelte:** These frameworks use the standard HTML `class` attribute.
+- **Dynamic Theming:** All frameworks benefit from the `currentColor` normalization—simply style the parent component's `color` to change the icon hue.
+
 ---
 
-## 🛠️ 7. Troubleshooting & FAQ
+## 🛠️ 8. Troubleshooting & FAQ
 
 ### ❌ The Build Failed with "Non-square ViewBox"
 The library enforces a perfectly square design canvas (e.g., `width=24, height=24`). If a designer exports an icon as `16x15`, the build will halt to prevent rendering distortion.

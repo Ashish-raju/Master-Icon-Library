@@ -230,6 +230,11 @@ function generateDemo() {
     .icon-card .icon-preview .icon {
       color: var(--dynamic-color);
       font-size: var(--dynamic-size);
+      width: 1em;
+      height: 1em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
       /* Add slight drop shadow to icons for pop */
       filter: drop-shadow(0 4px 6px rgba(0,0,0,0.06));
@@ -321,6 +326,17 @@ function generateDemo() {
           </div>
         </div>
       </div>
+
+      <div class="control-row">
+        <div class="control-group">
+          <label>Implementation Syntax</label>
+          <div class="chip-group" id="syntax-select">
+            <button class="chip" data-syntax="html">HTML / Standard</button>
+            <button class="chip active" data-syntax="react">React (className)</button>
+            <button class="chip" data-syntax="angular">Angular / Vue</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="grid" id="grid">
@@ -341,9 +357,12 @@ function generateDemo() {
     const search = document.getElementById('search');
     const colorChips = document.querySelectorAll('#color-select .chip');
     const sizeChips = document.querySelectorAll('#size-select .chip');
+    const syntaxChips = document.querySelectorAll('#syntax-select .chip');
     const cards = document.querySelectorAll('.icon-card');
     const toast = document.getElementById('toast');
     const root = document.documentElement;
+
+    let currentSyntax = 'react';
 
     // Search Filtering
     search.addEventListener('input', (e) => {
@@ -380,13 +399,29 @@ function generateDemo() {
       });
     });
 
+    // Syntax Toggling
+    syntaxChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        syntaxChips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        currentSyntax = chip.dataset.syntax;
+      });
+    });
+
     // Copy to clipboard
     cards.forEach(card => {
       card.addEventListener('click', () => {
         const name = card.dataset.name;
-        const code = '\\x3Cspan class="icon icon-' + name + '"\\x3E\\x3C/span\\x3E';
+        let code = '';
+        
+        if (currentSyntax === 'react') {
+          code = '\\x3Cspan className="icon icon-' + name + '"\\x3E\\x3C/span\\x3E';
+        } else {
+          code = '\\x3Cspan class="icon icon-' + name + '"\\x3E\\x3C/span\\x3E';
+        }
+
         navigator.clipboard.writeText(code);
-        toast.textContent = 'Copied: ' + code;
+        toast.textContent = 'Copied for ' + currentSyntax.toUpperCase() + ': ' + code;
         toast.className = 'toast show';
         setTimeout(() => toast.className = 'toast', 2000);
       });

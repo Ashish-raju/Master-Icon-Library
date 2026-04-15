@@ -72,6 +72,9 @@ function validateAndNormalize() {
         hasErrors = true;
         return;
       }
+      if (w > 64 || h > 64) {
+        console.warn(`⚠️ Scale Normalization required for ${file}: Large coordinate space detected (${w}x${h}). The compiler will automatically normalize this to the system's standard em-box.`);
+      }
     }
 
     const normalizedName = normalizeName(file);

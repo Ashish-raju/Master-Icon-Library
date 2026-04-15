@@ -35,7 +35,15 @@ npm run icons
 
 ## 🛠️ Integrated Usage
 
-### Standard Icon Font (CSS)
+### React (Modern Standard)
+```html
+<link rel="stylesheet" href="dist/font/icons.css">
+
+<!-- Implementation -->
+<span className="icon icon-add-user"></span>
+```
+
+### Standard Icon Font (HTML)
 ```html
 <link rel="stylesheet" href="dist/font/icons.css">
 

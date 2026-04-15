@@ -28,7 +28,11 @@ async function generateFont() {
 }
 
 .icon {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
   line-height: 1;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -37,6 +41,8 @@ async function generateFont() {
   font-variant: normal;
   font-weight: normal;
   text-transform: none;
+  vertical-align: middle;
+  overflow: hidden;
 }
 
 .icon-sm { font-size: 12px; }
