@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "{{ name }}";
+    src: {{{ fontSrc }}};
+}
+
+.icon {
+    display: inline-block;
+    line-height: 1;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.icon-sm { font-size: 12px; }
+.icon-lg { font-size: 20px; }
+.icon-xl { font-size: 24px; }
+
+{{# each codepoints }}
+.{{ @key }}:before {
+    font-family: "{{ ../name }}" !important;
+    content: "\\{{ this }}";
+}
+{{/ each }}

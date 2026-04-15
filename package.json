@@ -1,0 +1,32 @@
+{
+  "name": "my-icon-library",
+  "version": "1.0.0",
+  "description": "Production-ready automated icon library pipeline",
+  "main": "dist/meta/icons.json",
+  "style": "dist/font/icons.css",
+  "exports": {
+    ".": "./dist/meta/icons.json",
+    "./font": "./dist/font/icons.css",
+    "./svg/*": "./dist/svg/*",
+    "./sprite": "./dist/sprite/sprite.svg"
+  },
+  "files": [
+    "dist",
+    "demo"
+  ],
+  "scripts": {
+    "icons": "npm run icons:build",
+    "icons:clean": "node scripts/clean.js",
+    "icons:validate": "node scripts/validate-icons.js",
+    "icons:build": "node scripts/build-icons.js",
+    "icons:demo": "node scripts/generate-demo.js"
+  },
+  "dependencies": {
+    "fantasticon": "^4.1.0",
+    "oslllo-svg-fixer": "^6.0.1",
+    "svgo": "^3.2.0",
+    "webfont": "^11.2.26"
+  },
+  "author": "",
+  "license": "MIT"
+}

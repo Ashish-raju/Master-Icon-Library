@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build caches & Temps
+.tmp/
+tmp-build/ 
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+
+# Build outputs (Optional: Include if this is a distribution repo)
+# dist/
+# demo/

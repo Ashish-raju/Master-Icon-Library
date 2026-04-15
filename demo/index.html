@@ -1,0 +1,3462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Icon Library</title>
+  <link rel="stylesheet" href="../dist/font/icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #702C62;
+      --accent-glow: rgba(112, 44, 98, 0.4);
+      --glass-bg: rgba(255, 255, 255, 0.65);
+      --glass-border: rgba(255, 255, 255, 0.5);
+      --text: #0f172a;
+      --subtext: #475569;
+      
+      /* Dynamic Settings */
+      --dynamic-color: #212121;
+      --dynamic-size: 16px;
+      --card-bg-override: rgba(255, 255, 255, 0.65);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background-color: #fce7f3;
+      background-image: 
+        radial-gradient(at 10% 10%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+        radial-gradient(at 90% 10%, rgba(244, 63, 94, 0.15) 0%, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(112, 44, 98, 0.1) 0%, transparent 50%),
+        radial-gradient(at 10% 90%, rgba(56, 189, 248, 0.15) 0%, transparent 50%),
+        radial-gradient(at 90% 90%, rgba(16, 185, 129, 0.15) 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .wrapper {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--subtext);
+      font-weight: 400;
+    }
+
+    .controls-panel {
+      background: var(--glass-bg);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
+      margin-bottom: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .control-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .control-group {
+      flex: 1;
+    }
+
+    .control-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--subtext);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .search-box {
+      width: 100%;
+      padding: 16px 24px;
+      border-radius: 100px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background: rgba(255, 255, 255, 0.8);
+      color: var(--text);
+      font-size: 16px;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .search-box:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-glow);
+      background: #ffffff;
+    }
+
+    .chip-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      color: var(--subtext);
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 500;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .chip:hover {
+      background: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      color: var(--text);
+    }
+
+    .chip.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+      box-shadow: 0 8px 16px var(--accent-glow);
+      transform: translateY(-2px);
+    }
+
+    .color-swatch {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 24px;
+    }
+
+    .icon-card {
+      background: var(--card-bg-override);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-radius: 20px;
+      padding: 32px 20px;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid var(--glass-border);
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .icon-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .icon-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255,255,255,1);
+      border-color: transparent;
+    }
+
+    .icon-card:hover::before { opacity: 1; }
+
+    .icon-card .icon-preview {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .icon-card .icon-preview .icon {
+      color: var(--dynamic-color);
+      font-size: var(--dynamic-size);
+      transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+      /* Add slight drop shadow to icons for pop */
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.06));
+    }
+
+    .icon-card .icon-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--subtext);
+      word-break: break-all;
+      position: relative;
+      z-index: 1;
+      transition: color 0.3s;
+    }
+
+    .icon-card:hover .icon-name {
+      color: var(--text);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px) scale(0.95);
+      background: #0f172a;
+      color: white;
+      padding: 16px 32px;
+      border-radius: 100px;
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      pointer-events: none;
+      z-index: 1000;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .toast::before {
+      content: '✨';
+    }
+    .toast.show { 
+      opacity: 1; 
+      transform: translateX(-50%) translateY(0) scale(1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="header">
+      <h1>Master Icon Library</h1>
+      <div class="subtitle">Select states to interactively preview geometries and copy exact implementation codes.</div>
+    </div>
+    
+    <div class="controls-panel">
+      <div class="control-group">
+        <input type="text" id="search" class="search-box" placeholder="Start typing to filter icons...">
+      </div>
+      
+      <div class="control-row">
+        <div class="control-group">
+          <label>Color State Mappings</label>
+          <div class="chip-group" id="color-select">
+            <button class="chip active" data-color="#212121"><span class="color-swatch" style="background:#212121;"></span> Primary (#212121)</button>
+            <button class="chip" data-color="#702C62"><span class="color-swatch" style="background:#702C62;"></span> Action / Info (#702C62)</button>
+            <button class="chip" data-color="#542149"><span class="color-swatch" style="background:#542149;"></span> Action Hover (#542149)</button>
+            <button class="chip" data-color="#9E9E9E"><span class="color-swatch" style="background:#9E9E9E;"></span> Disabled (#9E9E9E)</button>
+            <button class="chip" data-color="#757575"><span class="color-swatch" style="background:#757575;"></span> On Disabled (#757575)</button>
+            <button class="chip" data-color="#339900"><span class="color-swatch" style="background:#339900;"></span> Success (#339900)</button>
+            <button class="chip" data-color="#FF7C00"><span class="color-swatch" style="background:#FF7C00;"></span> Warning (#FF7C00)</button>
+            <button class="chip" data-color="#E54141"><span class="color-swatch" style="background:#E54141;"></span> Error (#E54141)</button>
+            <button class="chip" data-color="#FFFFFF"><span class="color-swatch" style="background:#FFFFFF;"></span> On Action (#FFFFFF)</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-row">
+        <div class="control-group">
+          <label>Geometric Scale / Font Size</label>
+          <div class="chip-group" id="size-select">
+            <button class="chip" data-size="8px">8px</button>
+            <button class="chip" data-size="12px">12px</button>
+            <button class="chip" data-size="14px">14px</button>
+            <button class="chip active" data-size="16px">16px</button>
+            <button class="chip" data-size="20px">20px</button>
+            <button class="chip" data-size="24px">24px</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid" id="grid">
+      
+        <div class="icon-card" data-name="100">
+          <div class="icon-preview">
+            <span class="icon icon-100"></span>
+          </div>
+          <div class="icon-name">100</div>
+        </div>
+      
+        <div class="icon-card" data-name="new-user-profile-icon">
+          <div class="icon-preview">
+            <span class="icon icon-new-user-profile-icon"></span>
+          </div>
+          <div class="icon-name">new-user-profile-icon</div>
+        </div>
+      
+        <div class="icon-card" data-name="activity">
+          <div class="icon-preview">
+            <span class="icon icon-activity"></span>
+          </div>
+          <div class="icon-name">activity</div>
+        </div>
+      
+        <div class="icon-card" data-name="add-product">
+          <div class="icon-preview">
+            <span class="icon icon-add-product"></span>
+          </div>
+          <div class="icon-name">add-product</div>
+        </div>
+      
+        <div class="icon-card" data-name="admin">
+          <div class="icon-preview">
+            <span class="icon icon-admin"></span>
+          </div>
+          <div class="icon-name">admin</div>
+        </div>
+      
+        <div class="icon-card" data-name="ai-next">
+          <div class="icon-preview">
+            <span class="icon icon-ai-next"></span>
+          </div>
+          <div class="icon-name">ai-next</div>
+        </div>
+      
+        <div class="icon-card" data-name="ai">
+          <div class="icon-preview">
+            <span class="icon icon-ai"></span>
+          </div>
+          <div class="icon-name">ai</div>
+        </div>
+      
+        <div class="icon-card" data-name="airplay">
+          <div class="icon-preview">
+            <span class="icon icon-airplay"></span>
+          </div>
+          <div class="icon-name">airplay</div>
+        </div>
+      
+        <div class="icon-card" data-name="alert-circle">
+          <div class="icon-preview">
+            <span class="icon icon-alert-circle"></span>
+          </div>
+          <div class="icon-name">alert-circle</div>
+        </div>
+      
+        <div class="icon-card" data-name="alert-octagon">
+          <div class="icon-preview">
+            <span class="icon icon-alert-octagon"></span>
+          </div>
+          <div class="icon-name">alert-octagon</div>
+        </div>
+      
+        <div class="icon-card" data-name="alert-triangle">
+          <div class="icon-preview">
+            <span class="icon icon-alert-triangle"></span>
+          </div>
+          <div class="icon-name">alert-triangle</div>
+        </div>
+      
+        <div class="icon-card" data-name="align-center-1">
+          <div class="icon-preview">
+            <span class="icon icon-align-center-1"></span>
+          </div>
+          <div class="icon-name">align-center-1</div>
+        </div>
+      
+        <div class="icon-card" data-name="align-center-2">
+          <div class="icon-preview">
+            <span class="icon icon-align-center-2"></span>
+          </div>
+          <div class="icon-name">align-center-2</div>
+        </div>
+      
+        <div class="icon-card" data-name="align-center-3">
+          <div class="icon-preview">
+            <span class="icon icon-align-center-3"></span>
+          </div>
+          <div class="icon-name">align-center-3</div>
+        </div>
+      
+        <div class="icon-card" data-name="align-center-4">
+          <div class="icon-preview">
+            <span class="icon icon-align-center-4"></span>
+          </div>
+          <div class="icon-name">align-center-4</div>
+        </div>
+      
+        <div class="icon-card" data-name="align-center-5">
+          <div class="icon-preview">
+            <span class="icon icon-align-center-5"></span>
+          </div>
+          <div class="icon-name">align-center-5</div>
+        </div>
+      
+        <div class="icon-card" data-name="align-center">
+          <div class="icon-preview">
+            <span class="icon icon-align-center"></span>
+          </div>
+          <div class="icon-name">align-center</div>
+        </div>
+      
+        <div class="icon-card" data-name="align-justify">
+          <div class="icon-preview">
+            <span class="icon icon-align-justify"></span>
+          </div>
+          <div class="icon-name">align-justify</div>
+        </div>
+      
+        <div class="icon-card" data-name="align-left">
+          <div class="icon-preview">
+            <span class="icon icon-align-left"></span>
+          </div>
+          <div class="icon-name">align-left</div>
+        </div>
+      
+        <div class="icon-card" data-name="align-right">
+          <div class="icon-preview">
+            <span class="icon icon-align-right"></span>
+          </div>
+          <div class="icon-name">align-right</div>
+        </div>
+      
+        <div class="icon-card" data-name="analytics-fill">
+          <div class="icon-preview">
+            <span class="icon icon-analytics-fill"></span>
+          </div>
+          <div class="icon-name">analytics-fill</div>
+        </div>
+      
+        <div class="icon-card" data-name="analytics">
+          <div class="icon-preview">
+            <span class="icon icon-analytics"></span>
+          </div>
+          <div class="icon-name">analytics</div>
+        </div>
+      
+        <div class="icon-card" data-name="anchor">
+          <div class="icon-preview">
+            <span class="icon icon-anchor"></span>
+          </div>
+          <div class="icon-name">anchor</div>
+        </div>
+      
+        <div class="icon-card" data-name="aperture">
+          <div class="icon-preview">
+            <span class="icon icon-aperture"></span>
+          </div>
+          <div class="icon-name">aperture</div>
+        </div>
+      
+        <div class="icon-card" data-name="archive">
+          <div class="icon-preview">
+            <span class="icon icon-archive"></span>
+          </div>
+          <div class="icon-name">archive</div>
+        </div>
+      
+        <div class="icon-card" data-name="arrow-down-circle">
+          <div class="icon-preview">
+            <span class="icon icon-arrow-down-circle"></span>
+          </div>
+          <div class="icon-name">arrow-down-circle</div>
+        </div>
+      
+        <div class="icon-card" data-name="arrow-down-left">
+          <div class="icon-preview">
+            <span class="icon icon-arrow-down-left"></span>
+          </div>
+          <div class="icon-name">arrow-down-left</div>
+        </div>
+      
+        <div class="icon-card" data-name="arrow-down-right">
+          <div class="icon-preview">
+            <span class="icon icon-arrow-down-right"></span>
+          </div>
+          <div class="icon-name">arrow-down-right</div>
+        </div>
+      
+        <div class="icon-card" data-name="arrow-down">
+          <div class="icon-preview">
+            <span class="icon icon-arrow-down"></span>
+          </div>
+          <div class="icon-name">arrow-down</div>
+        </div>
+      
+        <div class="icon-card" data-name="arrow-left-circle">
+          <div class="icon-preview">
+            <span class="icon icon-arrow-left-circle"></span>
+          </div>
+          <div class="icon-name">arrow-left-circle</div>
+        </div>
+      
+        <div class="icon-card" data-name="arrow-left">
+          <div class="icon-preview">
+            <span class="icon icon-arrow-left"></span>
+          </div>
+          <div class="icon-name">arrow-left</div>
+        </div>
+      
+        <div class="icon-card" data-name="arrow-right-circle">
+          <div class="icon-preview">
+            <span class="icon icon-arrow-right-circle"></span>
+          </div>
+          <div class="icon-name">arrow-right-circle</div>
+        </div>
+      
+        <div class="icon-card" data-name="arrow-right">
+          <div class="icon-preview">
+            <span class="icon icon-arrow-right"></span>
+          </div>
+          <div class="icon-name">arrow-right</div>
+        </div>
+      
+        <div class="icon-card" data-name="arrow-up-circle">
+          <div class="icon-preview">
+            <span class="icon icon-arrow-up-circle"></span>
+          </div>
+          <div class="icon-name">arrow-up-circle</div>
+        </div>
+      
+        <div class="icon-card" data-name="arrow-up-left">
+          <div class="icon-preview">
+            <span class="icon icon-arrow-up-left"></span>
+          </div>
+          <div class="icon-name">arrow-up-left</div>
+        </div>
+      
+        <div class="icon-card" data-name="arrow-up-right">
+          <div class="icon-preview">
+            <span class="icon icon-arrow-up-right"></span>
+          </div>
+          <div class="icon-name">arrow-up-right</div>
+        </div>
+      
+        <div class="icon-card" data-name="arrow-up">
+          <div class="icon-preview">
+            <span class="icon icon-arrow-up"></span>
+          </div>
+          <div class="icon-name">arrow-up</div>
+        </div>
+      
+        <div class="icon-card" data-name="at-sign">
+          <div class="icon-preview">
+            <span class="icon icon-at-sign"></span>
+          </div>
+          <div class="icon-name">at-sign</div>
+        </div>
+      
+        <div class="icon-card" data-name="audit">
+          <div class="icon-preview">
+            <span class="icon icon-audit"></span>
+          </div>
+          <div class="icon-name">audit</div>
+        </div>
+      
+        <div class="icon-card" data-name="award">
+          <div class="icon-preview">
+            <span class="icon icon-award"></span>
+          </div>
+          <div class="icon-name">award</div>
+        </div>
+      
+        <div class="icon-card" data-name="baby-0-23-months">
+          <div class="icon-preview">
+            <span class="icon icon-baby-0-23-months"></span>
+          </div>
+          <div class="icon-name">baby-0-23-months</div>
+        </div>
+      
+        <div class="icon-card" data-name="bar-chart-2">
+          <div class="icon-preview">
+            <span class="icon icon-bar-chart-2"></span>
+          </div>
+          <div class="icon-name">bar-chart-2</div>
+        </div>
+      
+        <div class="icon-card" data-name="bar-chart">
+          <div class="icon-preview">
+            <span class="icon icon-bar-chart"></span>
+          </div>
+          <div class="icon-name">bar-chart</div>
+        </div>
+      
+        <div class="icon-card" data-name="battery-charging">
+          <div class="icon-preview">
+            <span class="icon icon-battery-charging"></span>
+          </div>
+          <div class="icon-name">battery-charging</div>
+        </div>
+      
+        <div class="icon-card" data-name="battery">
+          <div class="icon-preview">
+            <span class="icon icon-battery"></span>
+          </div>
+          <div class="icon-name">battery</div>
+        </div>
+      
+        <div class="icon-card" data-name="bell-off">
+          <div class="icon-preview">
+            <span class="icon icon-bell-off"></span>
+          </div>
+          <div class="icon-name">bell-off</div>
+        </div>
+      
+        <div class="icon-card" data-name="bell">
+          <div class="icon-preview">
+            <span class="icon icon-bell"></span>
+          </div>
+          <div class="icon-name">bell</div>
+        </div>
+      
+        <div class="icon-card" data-name="bluetooth">
+          <div class="icon-preview">
+            <span class="icon icon-bluetooth"></span>
+          </div>
+          <div class="icon-name">bluetooth</div>
+        </div>
+      
+        <div class="icon-card" data-name="bold">
+          <div class="icon-preview">
+            <span class="icon icon-bold"></span>
+          </div>
+          <div class="icon-name">bold</div>
+        </div>
+      
+        <div class="icon-card" data-name="book-open">
+          <div class="icon-preview">
+            <span class="icon icon-book-open"></span>
+          </div>
+          <div class="icon-name">book-open</div>
+        </div>
+      
+        <div class="icon-card" data-name="book">
+          <div class="icon-preview">
+            <span class="icon icon-book"></span>
+          </div>
+          <div class="icon-name">book</div>
+        </div>
+      
+        <div class="icon-card" data-name="bookmark-flag">
+          <div class="icon-preview">
+            <span class="icon icon-bookmark-flag"></span>
+          </div>
+          <div class="icon-name">bookmark-flag</div>
+        </div>
+      
+        <div class="icon-card" data-name="bookmark">
+          <div class="icon-preview">
+            <span class="icon icon-bookmark"></span>
+          </div>
+          <div class="icon-name">bookmark</div>
+        </div>
+      
+        <div class="icon-card" data-name="box">
+          <div class="icon-preview">
+            <span class="icon icon-box"></span>
+          </div>
+          <div class="icon-name">box</div>
+        </div>
+      
+        <div class="icon-card" data-name="briefcase">
+          <div class="icon-preview">
+            <span class="icon icon-briefcase"></span>
+          </div>
+          <div class="icon-name">briefcase</div>
+        </div>
+      
+        <div class="icon-card" data-name="calendar">
+          <div class="icon-preview">
+            <span class="icon icon-calendar"></span>
+          </div>
+          <div class="icon-name">calendar</div>
+        </div>
+      
+        <div class="icon-card" data-name="camera-off">
+          <div class="icon-preview">
+            <span class="icon icon-camera-off"></span>
+          </div>
+          <div class="icon-name">camera-off</div>
+        </div>
+      
+        <div class="icon-card" data-name="camera">
+          <div class="icon-preview">
+            <span class="icon icon-camera"></span>
+          </div>
+          <div class="icon-name">camera</div>
+        </div>
+      
+        <div class="icon-card" data-name="card-credit">
+          <div class="icon-preview">
+            <span class="icon icon-card-credit"></span>
+          </div>
+          <div class="icon-name">card-credit</div>
+        </div>
+      
+        <div class="icon-card" data-name="cast">
+          <div class="icon-preview">
+            <span class="icon icon-cast"></span>
+          </div>
+          <div class="icon-name">cast</div>
+        </div>
+      
+        <div class="icon-card" data-name="chat">
+          <div class="icon-preview">
+            <span class="icon icon-chat"></span>
+          </div>
+          <div class="icon-name">chat</div>
+        </div>
+      
+        <div class="icon-card" data-name="check-box">
+          <div class="icon-preview">
+            <span class="icon icon-check-box"></span>
+          </div>
+          <div class="icon-name">check-box</div>
+        </div>
+      
+        <div class="icon-card" data-name="check-circle">
+          <div class="icon-preview">
+            <span class="icon icon-check-circle"></span>
+          </div>
+          <div class="icon-name">check-circle</div>
+        </div>
+      
+        <div class="icon-card" data-name="check-square">
+          <div class="icon-preview">
+            <span class="icon icon-check-square"></span>
+          </div>
+          <div class="icon-name">check-square</div>
+        </div>
+      
+        <div class="icon-card" data-name="check">
+          <div class="icon-preview">
+            <span class="icon icon-check"></span>
+          </div>
+          <div class="icon-name">check</div>
+        </div>
+      
+        <div class="icon-card" data-name="chevron-up-down">
+          <div class="icon-preview">
+            <span class="icon icon-chevron-up-down"></span>
+          </div>
+          <div class="icon-name">chevron-up-down</div>
+        </div>
+      
+        <div class="icon-card" data-name="chevron-down">
+          <div class="icon-preview">
+            <span class="icon icon-chevron-down"></span>
+          </div>
+          <div class="icon-name">chevron-down</div>
+        </div>
+      
+        <div class="icon-card" data-name="chevron-left">
+          <div class="icon-preview">
+            <span class="icon icon-chevron-left"></span>
+          </div>
+          <div class="icon-name">chevron-left</div>
+        </div>
+      
+        <div class="icon-card" data-name="chevron-right">
+          <div class="icon-preview">
+            <span class="icon icon-chevron-right"></span>
+          </div>
+          <div class="icon-name">chevron-right</div>
+        </div>
+      
+        <div class="icon-card" data-name="chevron-up">
+          <div class="icon-preview">
+            <span class="icon icon-chevron-up"></span>
+          </div>
+          <div class="icon-name">chevron-up</div>
+        </div>
+      
+        <div class="icon-card" data-name="chevrons-down">
+          <div class="icon-preview">
+            <span class="icon icon-chevrons-down"></span>
+          </div>
+          <div class="icon-name">chevrons-down</div>
+        </div>
+      
+        <div class="icon-card" data-name="chevrons-left">
+          <div class="icon-preview">
+            <span class="icon icon-chevrons-left"></span>
+          </div>
+          <div class="icon-name">chevrons-left</div>
+        </div>
+      
+        <div class="icon-card" data-name="chevrons-right">
+          <div class="icon-preview">
+            <span class="icon icon-chevrons-right"></span>
+          </div>
+          <div class="icon-name">chevrons-right</div>
+        </div>
+      
+        <div class="icon-card" data-name="chevrons-up">
+          <div class="icon-preview">
+            <span class="icon icon-chevrons-up"></span>
+          </div>
+          <div class="icon-name">chevrons-up</div>
+        </div>
+      
+        <div class="icon-card" data-name="child-24-months-17-years">
+          <div class="icon-preview">
+            <span class="icon icon-child-24-months-17-years"></span>
+          </div>
+          <div class="icon-name">child-24-months-17-years</div>
+        </div>
+      
+        <div class="icon-card" data-name="chrome">
+          <div class="icon-preview">
+            <span class="icon icon-chrome"></span>
+          </div>
+          <div class="icon-name">chrome</div>
+        </div>
+      
+        <div class="icon-card" data-name="circle-with-dot">
+          <div class="icon-preview">
+            <span class="icon icon-circle-with-dot"></span>
+          </div>
+          <div class="icon-name">circle-with-dot</div>
+        </div>
+      
+        <div class="icon-card" data-name="circle">
+          <div class="icon-preview">
+            <span class="icon icon-circle"></span>
+          </div>
+          <div class="icon-name">circle</div>
+        </div>
+      
+        <div class="icon-card" data-name="clinical-note">
+          <div class="icon-preview">
+            <span class="icon icon-clinical-note"></span>
+          </div>
+          <div class="icon-name">clinical-note</div>
+        </div>
+      
+        <div class="icon-card" data-name="clinical-red-dot">
+          <div class="icon-preview">
+            <span class="icon icon-clinical-red-dot"></span>
+          </div>
+          <div class="icon-name">clinical-red-dot</div>
+        </div>
+      
+        <div class="icon-card" data-name="clinical">
+          <div class="icon-preview">
+            <span class="icon icon-clinical"></span>
+          </div>
+          <div class="icon-name">clinical</div>
+        </div>
+      
+        <div class="icon-card" data-name="clipboard">
+          <div class="icon-preview">
+            <span class="icon icon-clipboard"></span>
+          </div>
+          <div class="icon-name">clipboard</div>
+        </div>
+      
+        <div class="icon-card" data-name="clock">
+          <div class="icon-preview">
+            <span class="icon icon-clock"></span>
+          </div>
+          <div class="icon-name">clock</div>
+        </div>
+      
+        <div class="icon-card" data-name="cloud-drizzle">
+          <div class="icon-preview">
+            <span class="icon icon-cloud-drizzle"></span>
+          </div>
+          <div class="icon-name">cloud-drizzle</div>
+        </div>
+      
+        <div class="icon-card" data-name="cloud-lightning">
+          <div class="icon-preview">
+            <span class="icon icon-cloud-lightning"></span>
+          </div>
+          <div class="icon-name">cloud-lightning</div>
+        </div>
+      
+        <div class="icon-card" data-name="cloud-off">
+          <div class="icon-preview">
+            <span class="icon icon-cloud-off"></span>
+          </div>
+          <div class="icon-name">cloud-off</div>
+        </div>
+      
+        <div class="icon-card" data-name="cloud-rain">
+          <div class="icon-preview">
+            <span class="icon icon-cloud-rain"></span>
+          </div>
+          <div class="icon-name">cloud-rain</div>
+        </div>
+      
+        <div class="icon-card" data-name="cloud-snow">
+          <div class="icon-preview">
+            <span class="icon icon-cloud-snow"></span>
+          </div>
+          <div class="icon-name">cloud-snow</div>
+        </div>
+      
+        <div class="icon-card" data-name="cloud">
+          <div class="icon-preview">
+            <span class="icon icon-cloud"></span>
+          </div>
+          <div class="icon-name">cloud</div>
+        </div>
+      
+        <div class="icon-card" data-name="code">
+          <div class="icon-preview">
+            <span class="icon icon-code"></span>
+          </div>
+          <div class="icon-name">code</div>
+        </div>
+      
+        <div class="icon-card" data-name="codepen">
+          <div class="icon-preview">
+            <span class="icon icon-codepen"></span>
+          </div>
+          <div class="icon-name">codepen</div>
+        </div>
+      
+        <div class="icon-card" data-name="codesandbox">
+          <div class="icon-preview">
+            <span class="icon icon-codesandbox"></span>
+          </div>
+          <div class="icon-name">codesandbox</div>
+        </div>
+      
+        <div class="icon-card" data-name="coffee">
+          <div class="icon-preview">
+            <span class="icon icon-coffee"></span>
+          </div>
+          <div class="icon-name">coffee</div>
+        </div>
+      
+        <div class="icon-card" data-name="columns">
+          <div class="icon-preview">
+            <span class="icon icon-columns"></span>
+          </div>
+          <div class="icon-name">columns</div>
+        </div>
+      
+        <div class="icon-card" data-name="command">
+          <div class="icon-preview">
+            <span class="icon icon-command"></span>
+          </div>
+          <div class="icon-name">command</div>
+        </div>
+      
+        <div class="icon-card" data-name="compass">
+          <div class="icon-preview">
+            <span class="icon icon-compass"></span>
+          </div>
+          <div class="icon-name">compass</div>
+        </div>
+      
+        <div class="icon-card" data-name="configuration">
+          <div class="icon-preview">
+            <span class="icon icon-configuration"></span>
+          </div>
+          <div class="icon-name">configuration</div>
+        </div>
+      
+        <div class="icon-card" data-name="copy">
+          <div class="icon-preview">
+            <span class="icon icon-copy"></span>
+          </div>
+          <div class="icon-name">copy</div>
+        </div>
+      
+        <div class="icon-card" data-name="corner-down-left">
+          <div class="icon-preview">
+            <span class="icon icon-corner-down-left"></span>
+          </div>
+          <div class="icon-name">corner-down-left</div>
+        </div>
+      
+        <div class="icon-card" data-name="corner-down-right">
+          <div class="icon-preview">
+            <span class="icon icon-corner-down-right"></span>
+          </div>
+          <div class="icon-name">corner-down-right</div>
+        </div>
+      
+        <div class="icon-card" data-name="corner-left-down">
+          <div class="icon-preview">
+            <span class="icon icon-corner-left-down"></span>
+          </div>
+          <div class="icon-name">corner-left-down</div>
+        </div>
+      
+        <div class="icon-card" data-name="corner-left-up">
+          <div class="icon-preview">
+            <span class="icon icon-corner-left-up"></span>
+          </div>
+          <div class="icon-name">corner-left-up</div>
+        </div>
+      
+        <div class="icon-card" data-name="corner-right-down">
+          <div class="icon-preview">
+            <span class="icon icon-corner-right-down"></span>
+          </div>
+          <div class="icon-name">corner-right-down</div>
+        </div>
+      
+        <div class="icon-card" data-name="corner-right-up">
+          <div class="icon-preview">
+            <span class="icon icon-corner-right-up"></span>
+          </div>
+          <div class="icon-name">corner-right-up</div>
+        </div>
+      
+        <div class="icon-card" data-name="corner-up-left">
+          <div class="icon-preview">
+            <span class="icon icon-corner-up-left"></span>
+          </div>
+          <div class="icon-name">corner-up-left</div>
+        </div>
+      
+        <div class="icon-card" data-name="corner-up-right">
+          <div class="icon-preview">
+            <span class="icon icon-corner-up-right"></span>
+          </div>
+          <div class="icon-name">corner-up-right</div>
+        </div>
+      
+        <div class="icon-card" data-name="cpu">
+          <div class="icon-preview">
+            <span class="icon icon-cpu"></span>
+          </div>
+          <div class="icon-name">cpu</div>
+        </div>
+      
+        <div class="icon-card" data-name="crop">
+          <div class="icon-preview">
+            <span class="icon icon-crop"></span>
+          </div>
+          <div class="icon-name">crop</div>
+        </div>
+      
+        <div class="icon-card" data-name="crosshair">
+          <div class="icon-preview">
+            <span class="icon icon-crosshair"></span>
+          </div>
+          <div class="icon-name">crosshair</div>
+        </div>
+      
+        <div class="icon-card" data-name="cycle-count">
+          <div class="icon-preview">
+            <span class="icon icon-cycle-count"></span>
+          </div>
+          <div class="icon-name">cycle-count</div>
+        </div>
+      
+        <div class="icon-card" data-name="data-entry">
+          <div class="icon-preview">
+            <span class="icon icon-data-entry"></span>
+          </div>
+          <div class="icon-name">data-entry</div>
+        </div>
+      
+        <div class="icon-card" data-name="database">
+          <div class="icon-preview">
+            <span class="icon icon-database"></span>
+          </div>
+          <div class="icon-name">database</div>
+        </div>
+      
+        <div class="icon-card" data-name="date-of-birth">
+          <div class="icon-preview">
+            <span class="icon icon-date-of-birth"></span>
+          </div>
+          <div class="icon-name">date-of-birth</div>
+        </div>
+      
+        <div class="icon-card" data-name="deactivate-records">
+          <div class="icon-preview">
+            <span class="icon icon-deactivate-records"></span>
+          </div>
+          <div class="icon-name">deactivate-records</div>
+        </div>
+      
+        <div class="icon-card" data-name="delete">
+          <div class="icon-preview">
+            <span class="icon icon-delete"></span>
+          </div>
+          <div class="icon-name">delete</div>
+        </div>
+      
+        <div class="icon-card" data-name="disc">
+          <div class="icon-preview">
+            <span class="icon icon-disc"></span>
+          </div>
+          <div class="icon-name">disc</div>
+        </div>
+      
+        <div class="icon-card" data-name="divide-circle">
+          <div class="icon-preview">
+            <span class="icon icon-divide-circle"></span>
+          </div>
+          <div class="icon-name">divide-circle</div>
+        </div>
+      
+        <div class="icon-card" data-name="divide-square">
+          <div class="icon-preview">
+            <span class="icon icon-divide-square"></span>
+          </div>
+          <div class="icon-name">divide-square</div>
+        </div>
+      
+        <div class="icon-card" data-name="divide">
+          <div class="icon-preview">
+            <span class="icon icon-divide"></span>
+          </div>
+          <div class="icon-name">divide</div>
+        </div>
+      
+        <div class="icon-card" data-name="dollar-sign">
+          <div class="icon-preview">
+            <span class="icon icon-dollar-sign"></span>
+          </div>
+          <div class="icon-name">dollar-sign</div>
+        </div>
+      
+        <div class="icon-card" data-name="doller-circle">
+          <div class="icon-preview">
+            <span class="icon icon-doller-circle"></span>
+          </div>
+          <div class="icon-name">doller-circle</div>
+        </div>
+      
+        <div class="icon-card" data-name="dott">
+          <div class="icon-preview">
+            <span class="icon icon-dott"></span>
+          </div>
+          <div class="icon-name">dott</div>
+        </div>
+      
+        <div class="icon-card" data-name="download-reports">
+          <div class="icon-preview">
+            <span class="icon icon-download-reports"></span>
+          </div>
+          <div class="icon-name">download-reports</div>
+        </div>
+      
+        <div class="icon-card" data-name="download-cloud">
+          <div class="icon-preview">
+            <span class="icon icon-download-cloud"></span>
+          </div>
+          <div class="icon-name">download-cloud</div>
+        </div>
+      
+        <div class="icon-card" data-name="download">
+          <div class="icon-preview">
+            <span class="icon icon-download"></span>
+          </div>
+          <div class="icon-name">download</div>
+        </div>
+      
+        <div class="icon-card" data-name="dribbble">
+          <div class="icon-preview">
+            <span class="icon icon-dribbble"></span>
+          </div>
+          <div class="icon-name">dribbble</div>
+        </div>
+      
+        <div class="icon-card" data-name="droplet">
+          <div class="icon-preview">
+            <span class="icon icon-droplet"></span>
+          </div>
+          <div class="icon-name">droplet</div>
+        </div>
+      
+        <div class="icon-card" data-name="drug-catalog">
+          <div class="icon-preview">
+            <span class="icon icon-drug-catalog"></span>
+          </div>
+          <div class="icon-name">drug-catalog</div>
+        </div>
+      
+        <div class="icon-card" data-name="drug">
+          <div class="icon-preview">
+            <span class="icon icon-drug"></span>
+          </div>
+          <div class="icon-name">drug</div>
+        </div>
+      
+        <div class="icon-card" data-name="dummy">
+          <div class="icon-preview">
+            <span class="icon icon-dummy"></span>
+          </div>
+          <div class="icon-name">dummy</div>
+        </div>
+      
+        <div class="icon-card" data-name="dur">
+          <div class="icon-preview">
+            <span class="icon icon-dur"></span>
+          </div>
+          <div class="icon-name">dur</div>
+        </div>
+      
+        <div class="icon-card" data-name="edit-sig">
+          <div class="icon-preview">
+            <span class="icon icon-edit-sig"></span>
+          </div>
+          <div class="icon-name">edit-sig</div>
+        </div>
+      
+        <div class="icon-card" data-name="edit-2">
+          <div class="icon-preview">
+            <span class="icon icon-edit-2"></span>
+          </div>
+          <div class="icon-name">edit-2</div>
+        </div>
+      
+        <div class="icon-card" data-name="edit-3">
+          <div class="icon-preview">
+            <span class="icon icon-edit-3"></span>
+          </div>
+          <div class="icon-name">edit-3</div>
+        </div>
+      
+        <div class="icon-card" data-name="edit">
+          <div class="icon-preview">
+            <span class="icon icon-edit"></span>
+          </div>
+          <div class="icon-name">edit</div>
+        </div>
+      
+        <div class="icon-card" data-name="elderly-65-years">
+          <div class="icon-preview">
+            <span class="icon icon-elderly-65-years"></span>
+          </div>
+          <div class="icon-name">elderly-65-years</div>
+        </div>
+      
+        <div class="icon-card" data-name="equal">
+          <div class="icon-preview">
+            <span class="icon icon-equal"></span>
+          </div>
+          <div class="icon-name">equal</div>
+        </div>
+      
+        <div class="icon-card" data-name="external-link">
+          <div class="icon-preview">
+            <span class="icon icon-external-link"></span>
+          </div>
+          <div class="icon-name">external-link</div>
+        </div>
+      
+        <div class="icon-card" data-name="eye-off">
+          <div class="icon-preview">
+            <span class="icon icon-eye-off"></span>
+          </div>
+          <div class="icon-name">eye-off</div>
+        </div>
+      
+        <div class="icon-card" data-name="eye">
+          <div class="icon-preview">
+            <span class="icon icon-eye"></span>
+          </div>
+          <div class="icon-name">eye</div>
+        </div>
+      
+        <div class="icon-card" data-name="facebook">
+          <div class="icon-preview">
+            <span class="icon icon-facebook"></span>
+          </div>
+          <div class="icon-name">facebook</div>
+        </div>
+      
+        <div class="icon-card" data-name="fast-forward">
+          <div class="icon-preview">
+            <span class="icon icon-fast-forward"></span>
+          </div>
+          <div class="icon-name">fast-forward</div>
+        </div>
+      
+        <div class="icon-card" data-name="fax-inbound">
+          <div class="icon-preview">
+            <span class="icon icon-fax-inbound"></span>
+          </div>
+          <div class="icon-name">fax-inbound</div>
+        </div>
+      
+        <div class="icon-card" data-name="fax-outbound">
+          <div class="icon-preview">
+            <span class="icon icon-fax-outbound"></span>
+          </div>
+          <div class="icon-name">fax-outbound</div>
+        </div>
+      
+        <div class="icon-card" data-name="feather">
+          <div class="icon-preview">
+            <span class="icon icon-feather"></span>
+          </div>
+          <div class="icon-name">feather</div>
+        </div>
+      
+        <div class="icon-card" data-name="figma">
+          <div class="icon-preview">
+            <span class="icon icon-figma"></span>
+          </div>
+          <div class="icon-name">figma</div>
+        </div>
+      
+        <div class="icon-card" data-name="file-minus">
+          <div class="icon-preview">
+            <span class="icon icon-file-minus"></span>
+          </div>
+          <div class="icon-name">file-minus</div>
+        </div>
+      
+        <div class="icon-card" data-name="file-plus">
+          <div class="icon-preview">
+            <span class="icon icon-file-plus"></span>
+          </div>
+          <div class="icon-name">file-plus</div>
+        </div>
+      
+        <div class="icon-card" data-name="file-text">
+          <div class="icon-preview">
+            <span class="icon icon-file-text"></span>
+          </div>
+          <div class="icon-name">file-text</div>
+        </div>
+      
+        <div class="icon-card" data-name="file">
+          <div class="icon-preview">
+            <span class="icon icon-file"></span>
+          </div>
+          <div class="icon-name">file</div>
+        </div>
+      
+        <div class="icon-card" data-name="film">
+          <div class="icon-preview">
+            <span class="icon icon-film"></span>
+          </div>
+          <div class="icon-name">film</div>
+        </div>
+      
+        <div class="icon-card" data-name="filter-2">
+          <div class="icon-preview">
+            <span class="icon icon-filter-2"></span>
+          </div>
+          <div class="icon-name">filter-2</div>
+        </div>
+      
+        <div class="icon-card" data-name="filter">
+          <div class="icon-preview">
+            <span class="icon icon-filter"></span>
+          </div>
+          <div class="icon-name">filter</div>
+        </div>
+      
+        <div class="icon-card" data-name="financial-management">
+          <div class="icon-preview">
+            <span class="icon icon-financial-management"></span>
+          </div>
+          <div class="icon-name">financial-management</div>
+        </div>
+      
+        <div class="icon-card" data-name="financials">
+          <div class="icon-preview">
+            <span class="icon icon-financials"></span>
+          </div>
+          <div class="icon-name">financials</div>
+        </div>
+      
+        <div class="icon-card" data-name="flag-fill">
+          <div class="icon-preview">
+            <span class="icon icon-flag-fill"></span>
+          </div>
+          <div class="icon-name">flag-fill</div>
+        </div>
+      
+        <div class="icon-card" data-name="flag">
+          <div class="icon-preview">
+            <span class="icon icon-flag"></span>
+          </div>
+          <div class="icon-name">flag</div>
+        </div>
+      
+        <div class="icon-card" data-name="flow-chart">
+          <div class="icon-preview">
+            <span class="icon icon-flow-chart"></span>
+          </div>
+          <div class="icon-name">flow-chart</div>
+        </div>
+      
+        <div class="icon-card" data-name="folder-add">
+          <div class="icon-preview">
+            <span class="icon icon-folder-add"></span>
+          </div>
+          <div class="icon-name">folder-add</div>
+        </div>
+      
+        <div class="icon-card" data-name="folder-share">
+          <div class="icon-preview">
+            <span class="icon icon-folder-share"></span>
+          </div>
+          <div class="icon-name">folder-share</div>
+        </div>
+      
+        <div class="icon-card" data-name="folder-minus">
+          <div class="icon-preview">
+            <span class="icon icon-folder-minus"></span>
+          </div>
+          <div class="icon-name">folder-minus</div>
+        </div>
+      
+        <div class="icon-card" data-name="folder-plus">
+          <div class="icon-preview">
+            <span class="icon icon-folder-plus"></span>
+          </div>
+          <div class="icon-name">folder-plus</div>
+        </div>
+      
+        <div class="icon-card" data-name="folder">
+          <div class="icon-preview">
+            <span class="icon icon-folder"></span>
+          </div>
+          <div class="icon-name">folder</div>
+        </div>
+      
+        <div class="icon-card" data-name="framer">
+          <div class="icon-preview">
+            <span class="icon icon-framer"></span>
+          </div>
+          <div class="icon-name">framer</div>
+        </div>
+      
+        <div class="icon-card" data-name="frown">
+          <div class="icon-preview">
+            <span class="icon icon-frown"></span>
+          </div>
+          <div class="icon-name">frown</div>
+        </div>
+      
+        <div class="icon-card" data-name="gift">
+          <div class="icon-preview">
+            <span class="icon icon-gift"></span>
+          </div>
+          <div class="icon-name">gift</div>
+        </div>
+      
+        <div class="icon-card" data-name="git-branch">
+          <div class="icon-preview">
+            <span class="icon icon-git-branch"></span>
+          </div>
+          <div class="icon-name">git-branch</div>
+        </div>
+      
+        <div class="icon-card" data-name="git-commit">
+          <div class="icon-preview">
+            <span class="icon icon-git-commit"></span>
+          </div>
+          <div class="icon-name">git-commit</div>
+        </div>
+      
+        <div class="icon-card" data-name="git-merge">
+          <div class="icon-preview">
+            <span class="icon icon-git-merge"></span>
+          </div>
+          <div class="icon-name">git-merge</div>
+        </div>
+      
+        <div class="icon-card" data-name="git-pull-request">
+          <div class="icon-preview">
+            <span class="icon icon-git-pull-request"></span>
+          </div>
+          <div class="icon-name">git-pull-request</div>
+        </div>
+      
+        <div class="icon-card" data-name="github">
+          <div class="icon-preview">
+            <span class="icon icon-github"></span>
+          </div>
+          <div class="icon-name">github</div>
+        </div>
+      
+        <div class="icon-card" data-name="gitlab">
+          <div class="icon-preview">
+            <span class="icon icon-gitlab"></span>
+          </div>
+          <div class="icon-name">gitlab</div>
+        </div>
+      
+        <div class="icon-card" data-name="globe">
+          <div class="icon-preview">
+            <span class="icon icon-globe"></span>
+          </div>
+          <div class="icon-name">globe</div>
+        </div>
+      
+        <div class="icon-card" data-name="grid">
+          <div class="icon-preview">
+            <span class="icon icon-grid"></span>
+          </div>
+          <div class="icon-name">grid</div>
+        </div>
+      
+        <div class="icon-card" data-name="hard-drive">
+          <div class="icon-preview">
+            <span class="icon icon-hard-drive"></span>
+          </div>
+          <div class="icon-name">hard-drive</div>
+        </div>
+      
+        <div class="icon-card" data-name="hash">
+          <div class="icon-preview">
+            <span class="icon icon-hash"></span>
+          </div>
+          <div class="icon-name">hash</div>
+        </div>
+      
+        <div class="icon-card" data-name="hazardous-drug">
+          <div class="icon-preview">
+            <span class="icon icon-hazardous-drug"></span>
+          </div>
+          <div class="icon-name">hazardous-drug</div>
+        </div>
+      
+        <div class="icon-card" data-name="headphones">
+          <div class="icon-preview">
+            <span class="icon icon-headphones"></span>
+          </div>
+          <div class="icon-name">headphones</div>
+        </div>
+      
+        <div class="icon-card" data-name="health-insurance">
+          <div class="icon-preview">
+            <span class="icon icon-health-insurance"></span>
+          </div>
+          <div class="icon-name">health-insurance</div>
+        </div>
+      
+        <div class="icon-card" data-name="heart">
+          <div class="icon-preview">
+            <span class="icon icon-heart"></span>
+          </div>
+          <div class="icon-name">heart</div>
+        </div>
+      
+        <div class="icon-card" data-name="help-circle">
+          <div class="icon-preview">
+            <span class="icon icon-help-circle"></span>
+          </div>
+          <div class="icon-name">help-circle</div>
+        </div>
+      
+        <div class="icon-card" data-name="hexagon">
+          <div class="icon-preview">
+            <span class="icon icon-hexagon"></span>
+          </div>
+          <div class="icon-name">hexagon</div>
+        </div>
+      
+        <div class="icon-card" data-name="hold-drag">
+          <div class="icon-preview">
+            <span class="icon icon-hold-drag"></span>
+          </div>
+          <div class="icon-name">hold-drag</div>
+        </div>
+      
+        <div class="icon-card" data-name="home">
+          <div class="icon-preview">
+            <span class="icon icon-home"></span>
+          </div>
+          <div class="icon-name">home</div>
+        </div>
+      
+        <div class="icon-card" data-name="image">
+          <div class="icon-preview">
+            <span class="icon icon-image"></span>
+          </div>
+          <div class="icon-name">image</div>
+        </div>
+      
+        <div class="icon-card" data-name="immunization">
+          <div class="icon-preview">
+            <span class="icon icon-immunization"></span>
+          </div>
+          <div class="icon-name">immunization</div>
+        </div>
+      
+        <div class="icon-card" data-name="inbox">
+          <div class="icon-preview">
+            <span class="icon icon-inbox"></span>
+          </div>
+          <div class="icon-name">inbox</div>
+        </div>
+      
+        <div class="icon-card" data-name="info">
+          <div class="icon-preview">
+            <span class="icon icon-info"></span>
+          </div>
+          <div class="icon-name">info</div>
+        </div>
+      
+        <div class="icon-card" data-name="instagram">
+          <div class="icon-preview">
+            <span class="icon icon-instagram"></span>
+          </div>
+          <div class="icon-name">instagram</div>
+        </div>
+      
+        <div class="icon-card" data-name="integrations">
+          <div class="icon-preview">
+            <span class="icon icon-integrations"></span>
+          </div>
+          <div class="icon-name">integrations</div>
+        </div>
+      
+        <div class="icon-card" data-name="intial-review">
+          <div class="icon-preview">
+            <span class="icon icon-intial-review"></span>
+          </div>
+          <div class="icon-name">intial-review</div>
+        </div>
+      
+        <div class="icon-card" data-name="inventory">
+          <div class="icon-preview">
+            <span class="icon icon-inventory"></span>
+          </div>
+          <div class="icon-name">inventory</div>
+        </div>
+      
+        <div class="icon-card" data-name="invoices">
+          <div class="icon-preview">
+            <span class="icon icon-invoices"></span>
+          </div>
+          <div class="icon-name">invoices</div>
+        </div>
+      
+        <div class="icon-card" data-name="italic">
+          <div class="icon-preview">
+            <span class="icon icon-italic"></span>
+          </div>
+          <div class="icon-name">italic</div>
+        </div>
+      
+        <div class="icon-card" data-name="kareem">
+          <div class="icon-preview">
+            <span class="icon icon-kareem"></span>
+          </div>
+          <div class="icon-name">kareem</div>
+        </div>
+      
+        <div class="icon-card" data-name="key">
+          <div class="icon-preview">
+            <span class="icon icon-key"></span>
+          </div>
+          <div class="icon-name">key</div>
+        </div>
+      
+        <div class="icon-card" data-name="layers">
+          <div class="icon-preview">
+            <span class="icon icon-layers"></span>
+          </div>
+          <div class="icon-name">layers</div>
+        </div>
+      
+        <div class="icon-card" data-name="layout">
+          <div class="icon-preview">
+            <span class="icon icon-layout"></span>
+          </div>
+          <div class="icon-name">layout</div>
+        </div>
+      
+        <div class="icon-card" data-name="life-buoy">
+          <div class="icon-preview">
+            <span class="icon icon-life-buoy"></span>
+          </div>
+          <div class="icon-name">life-buoy</div>
+        </div>
+      
+        <div class="icon-card" data-name="link-2">
+          <div class="icon-preview">
+            <span class="icon icon-link-2"></span>
+          </div>
+          <div class="icon-name">link-2</div>
+        </div>
+      
+        <div class="icon-card" data-name="link">
+          <div class="icon-preview">
+            <span class="icon icon-link"></span>
+          </div>
+          <div class="icon-name">link</div>
+        </div>
+      
+        <div class="icon-card" data-name="linkedin">
+          <div class="icon-preview">
+            <span class="icon icon-linkedin"></span>
+          </div>
+          <div class="icon-name">linkedin</div>
+        </div>
+      
+        <div class="icon-card" data-name="list">
+          <div class="icon-preview">
+            <span class="icon icon-list"></span>
+          </div>
+          <div class="icon-name">list</div>
+        </div>
+      
+        <div class="icon-card" data-name="loader">
+          <div class="icon-preview">
+            <span class="icon icon-loader"></span>
+          </div>
+          <div class="icon-name">loader</div>
+        </div>
+      
+        <div class="icon-card" data-name="lock">
+          <div class="icon-preview">
+            <span class="icon icon-lock"></span>
+          </div>
+          <div class="icon-name">lock</div>
+        </div>
+      
+        <div class="icon-card" data-name="log-in">
+          <div class="icon-preview">
+            <span class="icon icon-log-in"></span>
+          </div>
+          <div class="icon-name">log-in</div>
+        </div>
+      
+        <div class="icon-card" data-name="log-out">
+          <div class="icon-preview">
+            <span class="icon icon-log-out"></span>
+          </div>
+          <div class="icon-name">log-out</div>
+        </div>
+      
+        <div class="icon-card" data-name="mail">
+          <div class="icon-preview">
+            <span class="icon icon-mail"></span>
+          </div>
+          <div class="icon-name">mail</div>
+        </div>
+      
+        <div class="icon-card" data-name="manage-claim">
+          <div class="icon-preview">
+            <span class="icon icon-manage-claim"></span>
+          </div>
+          <div class="icon-name">manage-claim</div>
+        </div>
+      
+        <div class="icon-card" data-name="map-pin">
+          <div class="icon-preview">
+            <span class="icon icon-map-pin"></span>
+          </div>
+          <div class="icon-name">map-pin</div>
+        </div>
+      
+        <div class="icon-card" data-name="map">
+          <div class="icon-preview">
+            <span class="icon icon-map"></span>
+          </div>
+          <div class="icon-name">map</div>
+        </div>
+      
+        <div class="icon-card" data-name="maximize-2">
+          <div class="icon-preview">
+            <span class="icon icon-maximize-2"></span>
+          </div>
+          <div class="icon-name">maximize-2</div>
+        </div>
+      
+        <div class="icon-card" data-name="medications">
+          <div class="icon-preview">
+            <span class="icon icon-medications"></span>
+          </div>
+          <div class="icon-name">medications</div>
+        </div>
+      
+        <div class="icon-card" data-name="meh">
+          <div class="icon-preview">
+            <span class="icon icon-meh"></span>
+          </div>
+          <div class="icon-name">meh</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-cycle-count">
+          <div class="icon-preview">
+            <span class="icon icon-menu-cycle-count"></span>
+          </div>
+          <div class="icon-name">menu-cycle-count</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-accumulations">
+          <div class="icon-preview">
+            <span class="icon icon-menu-accumulations"></span>
+          </div>
+          <div class="icon-name">menu-accumulations</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-add">
+          <div class="icon-preview">
+            <span class="icon icon-menu-add"></span>
+          </div>
+          <div class="icon-name">menu-add</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-admin">
+          <div class="icon-preview">
+            <span class="icon icon-menu-admin"></span>
+          </div>
+          <div class="icon-name">menu-admin</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-audit-tool">
+          <div class="icon-preview">
+            <span class="icon icon-menu-audit-tool"></span>
+          </div>
+          <div class="icon-name">menu-audit-tool</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-chat-red-dot">
+          <div class="icon-preview">
+            <span class="icon icon-menu-chat-red-dot"></span>
+          </div>
+          <div class="icon-name">menu-chat-red-dot</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-chat">
+          <div class="icon-preview">
+            <span class="icon icon-menu-chat"></span>
+          </div>
+          <div class="icon-name">menu-chat</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-claim">
+          <div class="icon-preview">
+            <span class="icon icon-menu-claim"></span>
+          </div>
+          <div class="icon-name">menu-claim</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-claims-manager">
+          <div class="icon-preview">
+            <span class="icon icon-menu-claims-manager"></span>
+          </div>
+          <div class="icon-name">menu-claims-manager</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-claims">
+          <div class="icon-preview">
+            <span class="icon icon-menu-claims"></span>
+          </div>
+          <div class="icon-name">menu-claims</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-configuration">
+          <div class="icon-preview">
+            <span class="icon icon-menu-configuration"></span>
+          </div>
+          <div class="icon-name">menu-configuration</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-dashboard">
+          <div class="icon-preview">
+            <span class="icon icon-menu-dashboard"></span>
+          </div>
+          <div class="icon-name">menu-dashboard</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-drug-catalog">
+          <div class="icon-preview">
+            <span class="icon icon-menu-drug-catalog"></span>
+          </div>
+          <div class="icon-name">menu-drug-catalog</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-fill-start">
+          <div class="icon-preview">
+            <span class="icon icon-menu-fill-start"></span>
+          </div>
+          <div class="icon-name">menu-fill-start</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-final-review">
+          <div class="icon-preview">
+            <span class="icon icon-menu-final-review"></span>
+          </div>
+          <div class="icon-name">menu-final-review</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-financial-management">
+          <div class="icon-preview">
+            <span class="icon icon-menu-financial-management"></span>
+          </div>
+          <div class="icon-name">menu-financial-management</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-financial">
+          <div class="icon-preview">
+            <span class="icon icon-menu-financial"></span>
+          </div>
+          <div class="icon-name">menu-financial</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-initial-review">
+          <div class="icon-preview">
+            <span class="icon icon-menu-initial-review"></span>
+          </div>
+          <div class="icon-name">menu-initial-review</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-integrations">
+          <div class="icon-preview">
+            <span class="icon icon-menu-integrations"></span>
+          </div>
+          <div class="icon-name">menu-integrations</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-inv-optimization">
+          <div class="icon-preview">
+            <span class="icon icon-menu-inv-optimization"></span>
+          </div>
+          <div class="icon-name">menu-inv-optimization</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-inventory">
+          <div class="icon-preview">
+            <span class="icon icon-menu-inventory"></span>
+          </div>
+          <div class="icon-name">menu-inventory</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-invoices">
+          <div class="icon-preview">
+            <span class="icon icon-menu-invoices"></span>
+          </div>
+          <div class="icon-name">menu-invoices</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-location">
+          <div class="icon-preview">
+            <span class="icon icon-menu-location"></span>
+          </div>
+          <div class="icon-name">menu-location</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-medicine">
+          <div class="icon-preview">
+            <span class="icon icon-menu-medicine"></span>
+          </div>
+          <div class="icon-name">menu-medicine</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-member">
+          <div class="icon-preview">
+            <span class="icon icon-menu-member"></span>
+          </div>
+          <div class="icon-name">menu-member</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-orde-with-time">
+          <div class="icon-preview">
+            <span class="icon icon-menu-orde-with-time"></span>
+          </div>
+          <div class="icon-name">menu-orde-with-time</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-order-entry">
+          <div class="icon-preview">
+            <span class="icon icon-menu-order-entry"></span>
+          </div>
+          <div class="icon-name">menu-order-entry</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-order">
+          <div class="icon-preview">
+            <span class="icon icon-menu-order"></span>
+          </div>
+          <div class="icon-name">menu-order</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-patient-module">
+          <div class="icon-preview">
+            <span class="icon icon-menu-patient-module"></span>
+          </div>
+          <div class="icon-name">menu-patient-module</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-payor">
+          <div class="icon-preview">
+            <span class="icon icon-menu-payor"></span>
+          </div>
+          <div class="icon-name">menu-payor</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-pending">
+          <div class="icon-preview">
+            <span class="icon icon-menu-pending"></span>
+          </div>
+          <div class="icon-name">menu-pending</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-pharmacy-reports">
+          <div class="icon-preview">
+            <span class="icon icon-menu-pharmacy-reports"></span>
+          </div>
+          <div class="icon-name">menu-pharmacy-reports</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-pharmacy">
+          <div class="icon-preview">
+            <span class="icon icon-menu-pharmacy"></span>
+          </div>
+          <div class="icon-name">menu-pharmacy</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-precriber">
+          <div class="icon-preview">
+            <span class="icon icon-menu-precriber"></span>
+          </div>
+          <div class="icon-name">menu-precriber</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-prescriber">
+          <div class="icon-preview">
+            <span class="icon icon-menu-prescriber"></span>
+          </div>
+          <div class="icon-name">menu-prescriber</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-reports">
+          <div class="icon-preview">
+            <span class="icon icon-menu-reports"></span>
+          </div>
+          <div class="icon-name">menu-reports</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-rx-manager">
+          <div class="icon-preview">
+            <span class="icon icon-menu-rx-manager"></span>
+          </div>
+          <div class="icon-name">menu-rx-manager</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-taskboard">
+          <div class="icon-preview">
+            <span class="icon icon-menu-taskboard"></span>
+          </div>
+          <div class="icon-name">menu-taskboard</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-workflow">
+          <div class="icon-preview">
+            <span class="icon icon-menu-workflow"></span>
+          </div>
+          <div class="icon-name">menu-workflow</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu-dollar">
+          <div class="icon-preview">
+            <span class="icon icon-menu-dollar"></span>
+          </div>
+          <div class="icon-name">menu-dollar</div>
+        </div>
+      
+        <div class="icon-card" data-name="menu">
+          <div class="icon-preview">
+            <span class="icon icon-menu"></span>
+          </div>
+          <div class="icon-name">menu</div>
+        </div>
+      
+        <div class="icon-card" data-name="message-circle">
+          <div class="icon-preview">
+            <span class="icon icon-message-circle"></span>
+          </div>
+          <div class="icon-name">message-circle</div>
+        </div>
+      
+        <div class="icon-card" data-name="message-square">
+          <div class="icon-preview">
+            <span class="icon icon-message-square"></span>
+          </div>
+          <div class="icon-name">message-square</div>
+        </div>
+      
+        <div class="icon-card" data-name="mic-off">
+          <div class="icon-preview">
+            <span class="icon icon-mic-off"></span>
+          </div>
+          <div class="icon-name">mic-off</div>
+        </div>
+      
+        <div class="icon-card" data-name="mic">
+          <div class="icon-preview">
+            <span class="icon icon-mic"></span>
+          </div>
+          <div class="icon-name">mic</div>
+        </div>
+      
+        <div class="icon-card" data-name="minimize-2">
+          <div class="icon-preview">
+            <span class="icon icon-minimize-2"></span>
+          </div>
+          <div class="icon-name">minimize-2</div>
+        </div>
+      
+        <div class="icon-card" data-name="minus-circle">
+          <div class="icon-preview">
+            <span class="icon icon-minus-circle"></span>
+          </div>
+          <div class="icon-name">minus-circle</div>
+        </div>
+      
+        <div class="icon-card" data-name="minus-square">
+          <div class="icon-preview">
+            <span class="icon icon-minus-square"></span>
+          </div>
+          <div class="icon-name">minus-square</div>
+        </div>
+      
+        <div class="icon-card" data-name="minus">
+          <div class="icon-preview">
+            <span class="icon icon-minus"></span>
+          </div>
+          <div class="icon-name">minus</div>
+        </div>
+      
+        <div class="icon-card" data-name="monitor">
+          <div class="icon-preview">
+            <span class="icon icon-monitor"></span>
+          </div>
+          <div class="icon-name">monitor</div>
+        </div>
+      
+        <div class="icon-card" data-name="moon">
+          <div class="icon-preview">
+            <span class="icon icon-moon"></span>
+          </div>
+          <div class="icon-name">moon</div>
+        </div>
+      
+        <div class="icon-card" data-name="more-horizontal">
+          <div class="icon-preview">
+            <span class="icon icon-more-horizontal"></span>
+          </div>
+          <div class="icon-name">more-horizontal</div>
+        </div>
+      
+        <div class="icon-card" data-name="more-vertical">
+          <div class="icon-preview">
+            <span class="icon icon-more-vertical"></span>
+          </div>
+          <div class="icon-name">more-vertical</div>
+        </div>
+      
+        <div class="icon-card" data-name="mouse-pointer">
+          <div class="icon-preview">
+            <span class="icon icon-mouse-pointer"></span>
+          </div>
+          <div class="icon-name">mouse-pointer</div>
+        </div>
+      
+        <div class="icon-card" data-name="move">
+          <div class="icon-preview">
+            <span class="icon icon-move"></span>
+          </div>
+          <div class="icon-name">move</div>
+        </div>
+      
+        <div class="icon-card" data-name="music">
+          <div class="icon-preview">
+            <span class="icon icon-music"></span>
+          </div>
+          <div class="icon-name">music</div>
+        </div>
+      
+        <div class="icon-card" data-name="navigation-2">
+          <div class="icon-preview">
+            <span class="icon icon-navigation-2"></span>
+          </div>
+          <div class="icon-name">navigation-2</div>
+        </div>
+      
+        <div class="icon-card" data-name="navigation">
+          <div class="icon-preview">
+            <span class="icon icon-navigation"></span>
+          </div>
+          <div class="icon-name">navigation</div>
+        </div>
+      
+        <div class="icon-card" data-name="notification-number">
+          <div class="icon-preview">
+            <span class="icon icon-notification-number"></span>
+          </div>
+          <div class="icon-name">notification-number</div>
+        </div>
+      
+        <div class="icon-card" data-name="octagon">
+          <div class="icon-preview">
+            <span class="icon icon-octagon"></span>
+          </div>
+          <div class="icon-name">octagon</div>
+        </div>
+      
+        <div class="icon-card" data-name="on-order">
+          <div class="icon-preview">
+            <span class="icon icon-on-order"></span>
+          </div>
+          <div class="icon-name">on-order</div>
+        </div>
+      
+        <div class="icon-card" data-name="order-history">
+          <div class="icon-preview">
+            <span class="icon icon-order-history"></span>
+          </div>
+          <div class="icon-name">order-history</div>
+        </div>
+      
+        <div class="icon-card" data-name="order-list">
+          <div class="icon-preview">
+            <span class="icon icon-order-list"></span>
+          </div>
+          <div class="icon-name">order-list</div>
+        </div>
+      
+        <div class="icon-card" data-name="org">
+          <div class="icon-preview">
+            <span class="icon icon-org"></span>
+          </div>
+          <div class="icon-name">org</div>
+        </div>
+      
+        <div class="icon-card" data-name="package">
+          <div class="icon-preview">
+            <span class="icon icon-package"></span>
+          </div>
+          <div class="icon-name">package</div>
+        </div>
+      
+        <div class="icon-card" data-name="pac-packaging">
+          <div class="icon-preview">
+            <span class="icon icon-pac-packaging"></span>
+          </div>
+          <div class="icon-name">pac-packaging</div>
+        </div>
+      
+        <div class="icon-card" data-name="paperclip">
+          <div class="icon-preview">
+            <span class="icon icon-paperclip"></span>
+          </div>
+          <div class="icon-name">paperclip</div>
+        </div>
+      
+        <div class="icon-card" data-name="pause-fill">
+          <div class="icon-preview">
+            <span class="icon icon-pause-fill"></span>
+          </div>
+          <div class="icon-name">pause-fill</div>
+        </div>
+      
+        <div class="icon-card" data-name="pause-circle">
+          <div class="icon-preview">
+            <span class="icon icon-pause-circle"></span>
+          </div>
+          <div class="icon-name">pause-circle</div>
+        </div>
+      
+        <div class="icon-card" data-name="pause">
+          <div class="icon-preview">
+            <span class="icon icon-pause"></span>
+          </div>
+          <div class="icon-name">pause</div>
+        </div>
+      
+        <div class="icon-card" data-name="payor">
+          <div class="icon-preview">
+            <span class="icon icon-payor"></span>
+          </div>
+          <div class="icon-name">payor</div>
+        </div>
+      
+        <div class="icon-card" data-name="pen-tool">
+          <div class="icon-preview">
+            <span class="icon icon-pen-tool"></span>
+          </div>
+          <div class="icon-name">pen-tool</div>
+        </div>
+      
+        <div class="icon-card" data-name="pending">
+          <div class="icon-preview">
+            <span class="icon icon-pending"></span>
+          </div>
+          <div class="icon-name">pending</div>
+        </div>
+      
+        <div class="icon-card" data-name="percent">
+          <div class="icon-preview">
+            <span class="icon icon-percent"></span>
+          </div>
+          <div class="icon-name">percent</div>
+        </div>
+      
+        <div class="icon-card" data-name="pharmacy-reports">
+          <div class="icon-preview">
+            <span class="icon icon-pharmacy-reports"></span>
+          </div>
+          <div class="icon-name">pharmacy-reports</div>
+        </div>
+      
+        <div class="icon-card" data-name="phone-add">
+          <div class="icon-preview">
+            <span class="icon icon-phone-add"></span>
+          </div>
+          <div class="icon-name">phone-add</div>
+        </div>
+      
+        <div class="icon-card" data-name="phone-call">
+          <div class="icon-preview">
+            <span class="icon icon-phone-call"></span>
+          </div>
+          <div class="icon-name">phone-call</div>
+        </div>
+      
+        <div class="icon-card" data-name="phone-forwarded">
+          <div class="icon-preview">
+            <span class="icon icon-phone-forwarded"></span>
+          </div>
+          <div class="icon-name">phone-forwarded</div>
+        </div>
+      
+        <div class="icon-card" data-name="phone-incoming">
+          <div class="icon-preview">
+            <span class="icon icon-phone-incoming"></span>
+          </div>
+          <div class="icon-name">phone-incoming</div>
+        </div>
+      
+        <div class="icon-card" data-name="phone-missed">
+          <div class="icon-preview">
+            <span class="icon icon-phone-missed"></span>
+          </div>
+          <div class="icon-name">phone-missed</div>
+        </div>
+      
+        <div class="icon-card" data-name="phone-off">
+          <div class="icon-preview">
+            <span class="icon icon-phone-off"></span>
+          </div>
+          <div class="icon-name">phone-off</div>
+        </div>
+      
+        <div class="icon-card" data-name="phone-outgoing">
+          <div class="icon-preview">
+            <span class="icon icon-phone-outgoing"></span>
+          </div>
+          <div class="icon-name">phone-outgoing</div>
+        </div>
+      
+        <div class="icon-card" data-name="phone">
+          <div class="icon-preview">
+            <span class="icon icon-phone"></span>
+          </div>
+          <div class="icon-name">phone</div>
+        </div>
+      
+        <div class="icon-card" data-name="pie-chart">
+          <div class="icon-preview">
+            <span class="icon icon-pie-chart"></span>
+          </div>
+          <div class="icon-name">pie-chart</div>
+        </div>
+      
+        <div class="icon-card" data-name="play-fill">
+          <div class="icon-preview">
+            <span class="icon icon-play-fill"></span>
+          </div>
+          <div class="icon-name">play-fill</div>
+        </div>
+      
+        <div class="icon-card" data-name="play-circle">
+          <div class="icon-preview">
+            <span class="icon icon-play-circle"></span>
+          </div>
+          <div class="icon-name">play-circle</div>
+        </div>
+      
+        <div class="icon-card" data-name="play">
+          <div class="icon-preview">
+            <span class="icon icon-play"></span>
+          </div>
+          <div class="icon-name">play</div>
+        </div>
+      
+        <div class="icon-card" data-name="plus-circle">
+          <div class="icon-preview">
+            <span class="icon icon-plus-circle"></span>
+          </div>
+          <div class="icon-name">plus-circle</div>
+        </div>
+      
+        <div class="icon-card" data-name="plus-square">
+          <div class="icon-preview">
+            <span class="icon icon-plus-square"></span>
+          </div>
+          <div class="icon-name">plus-square</div>
+        </div>
+      
+        <div class="icon-card" data-name="plus">
+          <div class="icon-preview">
+            <span class="icon icon-plus"></span>
+          </div>
+          <div class="icon-name">plus</div>
+        </div>
+      
+        <div class="icon-card" data-name="pocket">
+          <div class="icon-preview">
+            <span class="icon icon-pocket"></span>
+          </div>
+          <div class="icon-name">pocket</div>
+        </div>
+      
+        <div class="icon-card" data-name="power">
+          <div class="icon-preview">
+            <span class="icon icon-power"></span>
+          </div>
+          <div class="icon-name">power</div>
+        </div>
+      
+        <div class="icon-card" data-name="prescription-history">
+          <div class="icon-preview">
+            <span class="icon icon-prescription-history"></span>
+          </div>
+          <div class="icon-name">prescription-history</div>
+        </div>
+      
+        <div class="icon-card" data-name="prescription-pending">
+          <div class="icon-preview">
+            <span class="icon icon-prescription-pending"></span>
+          </div>
+          <div class="icon-name">prescription-pending</div>
+        </div>
+      
+        <div class="icon-card" data-name="prescription-transfer">
+          <div class="icon-preview">
+            <span class="icon icon-prescription-transfer"></span>
+          </div>
+          <div class="icon-name">prescription-transfer</div>
+        </div>
+      
+        <div class="icon-card" data-name="price-cut">
+          <div class="icon-preview">
+            <span class="icon icon-price-cut"></span>
+          </div>
+          <div class="icon-name">price-cut</div>
+        </div>
+      
+        <div class="icon-card" data-name="products-inventory">
+          <div class="icon-preview">
+            <span class="icon icon-products-inventory"></span>
+          </div>
+          <div class="icon-name">products-inventory</div>
+        </div>
+      
+        <div class="icon-card" data-name="programs">
+          <div class="icon-preview">
+            <span class="icon icon-programs"></span>
+          </div>
+          <div class="icon-name">programs</div>
+        </div>
+      
+        <div class="icon-card" data-name="progress-active">
+          <div class="icon-preview">
+            <span class="icon icon-progress-active"></span>
+          </div>
+          <div class="icon-name">progress-active</div>
+        </div>
+      
+        <div class="icon-card" data-name="prscriber">
+          <div class="icon-preview">
+            <span class="icon icon-prscriber"></span>
+          </div>
+          <div class="icon-name">prscriber</div>
+        </div>
+      
+        <div class="icon-card" data-name="radio">
+          <div class="icon-preview">
+            <span class="icon icon-radio"></span>
+          </div>
+          <div class="icon-name">radio</div>
+        </div>
+      
+        <div class="icon-card" data-name="re-assign">
+          <div class="icon-preview">
+            <span class="icon icon-re-assign"></span>
+          </div>
+          <div class="icon-name">re-assign</div>
+        </div>
+      
+        <div class="icon-card" data-name="re-claim">
+          <div class="icon-preview">
+            <span class="icon icon-re-claim"></span>
+          </div>
+          <div class="icon-name">re-claim</div>
+        </div>
+      
+        <div class="icon-card" data-name="re-print">
+          <div class="icon-preview">
+            <span class="icon icon-re-print"></span>
+          </div>
+          <div class="icon-name">re-print</div>
+        </div>
+      
+        <div class="icon-card" data-name="receive-order">
+          <div class="icon-preview">
+            <span class="icon icon-receive-order"></span>
+          </div>
+          <div class="icon-name">receive-order</div>
+        </div>
+      
+        <div class="icon-card" data-name="re-claim-white">
+          <div class="icon-preview">
+            <span class="icon icon-re-claim-white"></span>
+          </div>
+          <div class="icon-name">re-claim-white</div>
+        </div>
+      
+        <div class="icon-card" data-name="red-dot">
+          <div class="icon-preview">
+            <span class="icon icon-red-dot"></span>
+          </div>
+          <div class="icon-name">red-dot</div>
+        </div>
+      
+        <div class="icon-card" data-name="redo">
+          <div class="icon-preview">
+            <span class="icon icon-redo"></span>
+          </div>
+          <div class="icon-name">redo</div>
+        </div>
+      
+        <div class="icon-card" data-name="refill">
+          <div class="icon-preview">
+            <span class="icon icon-refill"></span>
+          </div>
+          <div class="icon-name">refill</div>
+        </div>
+      
+        <div class="icon-card" data-name="refresh-ccw">
+          <div class="icon-preview">
+            <span class="icon icon-refresh-ccw"></span>
+          </div>
+          <div class="icon-name">refresh-ccw</div>
+        </div>
+      
+        <div class="icon-card" data-name="refresh-cw">
+          <div class="icon-preview">
+            <span class="icon icon-refresh-cw"></span>
+          </div>
+          <div class="icon-name">refresh-cw</div>
+        </div>
+      
+        <div class="icon-card" data-name="repeat">
+          <div class="icon-preview">
+            <span class="icon icon-repeat"></span>
+          </div>
+          <div class="icon-name">repeat</div>
+        </div>
+      
+        <div class="icon-card" data-name="replenishment">
+          <div class="icon-preview">
+            <span class="icon icon-replenishment"></span>
+          </div>
+          <div class="icon-name">replenishment</div>
+        </div>
+      
+        <div class="icon-card" data-name="reports-1">
+          <div class="icon-preview">
+            <span class="icon icon-reports-1"></span>
+          </div>
+          <div class="icon-name">reports-1</div>
+        </div>
+      
+        <div class="icon-card" data-name="reports-dot">
+          <div class="icon-preview">
+            <span class="icon icon-reports-dot"></span>
+          </div>
+          <div class="icon-name">reports-dot</div>
+        </div>
+      
+        <div class="icon-card" data-name="reports">
+          <div class="icon-preview">
+            <span class="icon icon-reports"></span>
+          </div>
+          <div class="icon-name">reports</div>
+        </div>
+      
+        <div class="icon-card" data-name="request-mail">
+          <div class="icon-preview">
+            <span class="icon icon-request-mail"></span>
+          </div>
+          <div class="icon-name">request-mail</div>
+        </div>
+      
+        <div class="icon-card" data-name="reset-password">
+          <div class="icon-preview">
+            <span class="icon icon-reset-password"></span>
+          </div>
+          <div class="icon-name">reset-password</div>
+        </div>
+      
+        <div class="icon-card" data-name="rewind">
+          <div class="icon-preview">
+            <span class="icon icon-rewind"></span>
+          </div>
+          <div class="icon-name">rewind</div>
+        </div>
+      
+        <div class="icon-card" data-name="ritation-left">
+          <div class="icon-preview">
+            <span class="icon icon-ritation-left"></span>
+          </div>
+          <div class="icon-name">ritation-left</div>
+        </div>
+      
+        <div class="icon-card" data-name="rotate-ccw">
+          <div class="icon-preview">
+            <span class="icon icon-rotate-ccw"></span>
+          </div>
+          <div class="icon-name">rotate-ccw</div>
+        </div>
+      
+        <div class="icon-card" data-name="rotate-cw">
+          <div class="icon-preview">
+            <span class="icon icon-rotate-cw"></span>
+          </div>
+          <div class="icon-name">rotate-cw</div>
+        </div>
+      
+        <div class="icon-card" data-name="rotation-right">
+          <div class="icon-preview">
+            <span class="icon icon-rotation-right"></span>
+          </div>
+          <div class="icon-name">rotation-right</div>
+        </div>
+      
+        <div class="icon-card" data-name="row">
+          <div class="icon-preview">
+            <span class="icon icon-row"></span>
+          </div>
+          <div class="icon-name">row</div>
+        </div>
+      
+        <div class="icon-card" data-name="rss">
+          <div class="icon-preview">
+            <span class="icon icon-rss"></span>
+          </div>
+          <div class="icon-name">rss</div>
+        </div>
+      
+        <div class="icon-card" data-name="rx-manager">
+          <div class="icon-preview">
+            <span class="icon icon-rx-manager"></span>
+          </div>
+          <div class="icon-name">rx-manager</div>
+        </div>
+      
+        <div class="icon-card" data-name="save">
+          <div class="icon-preview">
+            <span class="icon icon-save"></span>
+          </div>
+          <div class="icon-name">save</div>
+        </div>
+      
+        <div class="icon-card" data-name="scan-barcode">
+          <div class="icon-preview">
+            <span class="icon icon-scan-barcode"></span>
+          </div>
+          <div class="icon-name">scan-barcode</div>
+        </div>
+      
+        <div class="icon-card" data-name="scan-document">
+          <div class="icon-preview">
+            <span class="icon icon-scan-document"></span>
+          </div>
+          <div class="icon-name">scan-document</div>
+        </div>
+      
+        <div class="icon-card" data-name="scissors">
+          <div class="icon-preview">
+            <span class="icon icon-scissors"></span>
+          </div>
+          <div class="icon-name">scissors</div>
+        </div>
+      
+        <div class="icon-card" data-name="search-po">
+          <div class="icon-preview">
+            <span class="icon icon-search-po"></span>
+          </div>
+          <div class="icon-name">search-po</div>
+        </div>
+      
+        <div class="icon-card" data-name="search">
+          <div class="icon-preview">
+            <span class="icon icon-search"></span>
+          </div>
+          <div class="icon-name">search</div>
+        </div>
+      
+        <div class="icon-card" data-name="send-back">
+          <div class="icon-preview">
+            <span class="icon icon-send-back"></span>
+          </div>
+          <div class="icon-name">send-back</div>
+        </div>
+      
+        <div class="icon-card" data-name="send">
+          <div class="icon-preview">
+            <span class="icon icon-send"></span>
+          </div>
+          <div class="icon-name">send</div>
+        </div>
+      
+        <div class="icon-card" data-name="server">
+          <div class="icon-preview">
+            <span class="icon icon-server"></span>
+          </div>
+          <div class="icon-name">server</div>
+        </div>
+      
+        <div class="icon-card" data-name="settings">
+          <div class="icon-preview">
+            <span class="icon icon-settings"></span>
+          </div>
+          <div class="icon-name">settings</div>
+        </div>
+      
+        <div class="icon-card" data-name="share-2">
+          <div class="icon-preview">
+            <span class="icon icon-share-2"></span>
+          </div>
+          <div class="icon-name">share-2</div>
+        </div>
+      
+        <div class="icon-card" data-name="share">
+          <div class="icon-preview">
+            <span class="icon icon-share"></span>
+          </div>
+          <div class="icon-name">share</div>
+        </div>
+      
+        <div class="icon-card" data-name="shield-off">
+          <div class="icon-preview">
+            <span class="icon icon-shield-off"></span>
+          </div>
+          <div class="icon-name">shield-off</div>
+        </div>
+      
+        <div class="icon-card" data-name="shield">
+          <div class="icon-preview">
+            <span class="icon icon-shield"></span>
+          </div>
+          <div class="icon-name">shield</div>
+        </div>
+      
+        <div class="icon-card" data-name="shopping-bag">
+          <div class="icon-preview">
+            <span class="icon icon-shopping-bag"></span>
+          </div>
+          <div class="icon-name">shopping-bag</div>
+        </div>
+      
+        <div class="icon-card" data-name="shopping-cart">
+          <div class="icon-preview">
+            <span class="icon icon-shopping-cart"></span>
+          </div>
+          <div class="icon-name">shopping-cart</div>
+        </div>
+      
+        <div class="icon-card" data-name="shuffle">
+          <div class="icon-preview">
+            <span class="icon icon-shuffle"></span>
+          </div>
+          <div class="icon-name">shuffle</div>
+        </div>
+      
+        <div class="icon-card" data-name="sidebar">
+          <div class="icon-preview">
+            <span class="icon icon-sidebar"></span>
+          </div>
+          <div class="icon-name">sidebar</div>
+        </div>
+      
+        <div class="icon-card" data-name="skip-back">
+          <div class="icon-preview">
+            <span class="icon icon-skip-back"></span>
+          </div>
+          <div class="icon-name">skip-back</div>
+        </div>
+      
+        <div class="icon-card" data-name="skip-forward">
+          <div class="icon-preview">
+            <span class="icon icon-skip-forward"></span>
+          </div>
+          <div class="icon-name">skip-forward</div>
+        </div>
+      
+        <div class="icon-card" data-name="slack">
+          <div class="icon-preview">
+            <span class="icon icon-slack"></span>
+          </div>
+          <div class="icon-name">slack</div>
+        </div>
+      
+        <div class="icon-card" data-name="slash">
+          <div class="icon-preview">
+            <span class="icon icon-slash"></span>
+          </div>
+          <div class="icon-name">slash</div>
+        </div>
+      
+        <div class="icon-card" data-name="sliders">
+          <div class="icon-preview">
+            <span class="icon icon-sliders"></span>
+          </div>
+          <div class="icon-name">sliders</div>
+        </div>
+      
+        <div class="icon-card" data-name="smartphone">
+          <div class="icon-preview">
+            <span class="icon icon-smartphone"></span>
+          </div>
+          <div class="icon-name">smartphone</div>
+        </div>
+      
+        <div class="icon-card" data-name="smile">
+          <div class="icon-preview">
+            <span class="icon icon-smile"></span>
+          </div>
+          <div class="icon-name">smile</div>
+        </div>
+      
+        <div class="icon-card" data-name="speaker">
+          <div class="icon-preview">
+            <span class="icon icon-speaker"></span>
+          </div>
+          <div class="icon-name">speaker</div>
+        </div>
+      
+        <div class="icon-card" data-name="square">
+          <div class="icon-preview">
+            <span class="icon icon-square"></span>
+          </div>
+          <div class="icon-name">square</div>
+        </div>
+      
+        <div class="icon-card" data-name="star">
+          <div class="icon-preview">
+            <span class="icon icon-star"></span>
+          </div>
+          <div class="icon-name">star</div>
+        </div>
+      
+        <div class="icon-card" data-name="stop-circle">
+          <div class="icon-preview">
+            <span class="icon icon-stop-circle"></span>
+          </div>
+          <div class="icon-name">stop-circle</div>
+        </div>
+      
+        <div class="icon-card" data-name="sun">
+          <div class="icon-preview">
+            <span class="icon icon-sun"></span>
+          </div>
+          <div class="icon-name">sun</div>
+        </div>
+      
+        <div class="icon-card" data-name="sunrise">
+          <div class="icon-preview">
+            <span class="icon icon-sunrise"></span>
+          </div>
+          <div class="icon-name">sunrise</div>
+        </div>
+      
+        <div class="icon-card" data-name="sunset">
+          <div class="icon-preview">
+            <span class="icon icon-sunset"></span>
+          </div>
+          <div class="icon-name">sunset</div>
+        </div>
+      
+        <div class="icon-card" data-name="swap-screen">
+          <div class="icon-preview">
+            <span class="icon icon-swap-screen"></span>
+          </div>
+          <div class="icon-name">swap-screen</div>
+        </div>
+      
+        <div class="icon-card" data-name="table">
+          <div class="icon-preview">
+            <span class="icon icon-table"></span>
+          </div>
+          <div class="icon-name">table</div>
+        </div>
+      
+        <div class="icon-card" data-name="tablet">
+          <div class="icon-preview">
+            <span class="icon icon-tablet"></span>
+          </div>
+          <div class="icon-name">tablet</div>
+        </div>
+      
+        <div class="icon-card" data-name="tag">
+          <div class="icon-preview">
+            <span class="icon icon-tag"></span>
+          </div>
+          <div class="icon-name">tag</div>
+        </div>
+      
+        <div class="icon-card" data-name="target">
+          <div class="icon-preview">
+            <span class="icon icon-target"></span>
+          </div>
+          <div class="icon-name">target</div>
+        </div>
+      
+        <div class="icon-card" data-name="tasks">
+          <div class="icon-preview">
+            <span class="icon icon-tasks"></span>
+          </div>
+          <div class="icon-name">tasks</div>
+        </div>
+      
+        <div class="icon-card" data-name="terminal">
+          <div class="icon-preview">
+            <span class="icon icon-terminal"></span>
+          </div>
+          <div class="icon-name">terminal</div>
+        </div>
+      
+        <div class="icon-card" data-name="thermometer">
+          <div class="icon-preview">
+            <span class="icon icon-thermometer"></span>
+          </div>
+          <div class="icon-name">thermometer</div>
+        </div>
+      
+        <div class="icon-card" data-name="thumbs-down">
+          <div class="icon-preview">
+            <span class="icon icon-thumbs-down"></span>
+          </div>
+          <div class="icon-name">thumbs-down</div>
+        </div>
+      
+        <div class="icon-card" data-name="thumbs-up">
+          <div class="icon-preview">
+            <span class="icon icon-thumbs-up"></span>
+          </div>
+          <div class="icon-name">thumbs-up</div>
+        </div>
+      
+        <div class="icon-card" data-name="to-be-ordered">
+          <div class="icon-preview">
+            <span class="icon icon-to-be-ordered"></span>
+          </div>
+          <div class="icon-name">to-be-ordered</div>
+        </div>
+      
+        <div class="icon-card" data-name="toggle-left">
+          <div class="icon-preview">
+            <span class="icon icon-toggle-left"></span>
+          </div>
+          <div class="icon-name">toggle-left</div>
+        </div>
+      
+        <div class="icon-card" data-name="toggle-right">
+          <div class="icon-preview">
+            <span class="icon icon-toggle-right"></span>
+          </div>
+          <div class="icon-name">toggle-right</div>
+        </div>
+      
+        <div class="icon-card" data-name="tool">
+          <div class="icon-preview">
+            <span class="icon icon-tool"></span>
+          </div>
+          <div class="icon-name">tool</div>
+        </div>
+      
+        <div class="icon-card" data-name="tracking">
+          <div class="icon-preview">
+            <span class="icon icon-tracking"></span>
+          </div>
+          <div class="icon-name">tracking</div>
+        </div>
+      
+        <div class="icon-card" data-name="transfer-out">
+          <div class="icon-preview">
+            <span class="icon icon-transfer-out"></span>
+          </div>
+          <div class="icon-name">transfer-out</div>
+        </div>
+      
+        <div class="icon-card" data-name="trash-2">
+          <div class="icon-preview">
+            <span class="icon icon-trash-2"></span>
+          </div>
+          <div class="icon-name">trash-2</div>
+        </div>
+      
+        <div class="icon-card" data-name="trash">
+          <div class="icon-preview">
+            <span class="icon icon-trash"></span>
+          </div>
+          <div class="icon-name">trash</div>
+        </div>
+      
+        <div class="icon-card" data-name="trello">
+          <div class="icon-preview">
+            <span class="icon icon-trello"></span>
+          </div>
+          <div class="icon-name">trello</div>
+        </div>
+      
+        <div class="icon-card" data-name="trending-down">
+          <div class="icon-preview">
+            <span class="icon icon-trending-down"></span>
+          </div>
+          <div class="icon-name">trending-down</div>
+        </div>
+      
+        <div class="icon-card" data-name="trending-up">
+          <div class="icon-preview">
+            <span class="icon icon-trending-up"></span>
+          </div>
+          <div class="icon-name">trending-up</div>
+        </div>
+      
+        <div class="icon-card" data-name="triangle">
+          <div class="icon-preview">
+            <span class="icon icon-triangle"></span>
+          </div>
+          <div class="icon-name">triangle</div>
+        </div>
+      
+        <div class="icon-card" data-name="truck">
+          <div class="icon-preview">
+            <span class="icon icon-truck"></span>
+          </div>
+          <div class="icon-name">truck</div>
+        </div>
+      
+        <div class="icon-card" data-name="tv">
+          <div class="icon-preview">
+            <span class="icon icon-tv"></span>
+          </div>
+          <div class="icon-name">tv</div>
+        </div>
+      
+        <div class="icon-card" data-name="twitch">
+          <div class="icon-preview">
+            <span class="icon icon-twitch"></span>
+          </div>
+          <div class="icon-name">twitch</div>
+        </div>
+      
+        <div class="icon-card" data-name="twitter">
+          <div class="icon-preview">
+            <span class="icon icon-twitter"></span>
+          </div>
+          <div class="icon-name">twitter</div>
+        </div>
+      
+        <div class="icon-card" data-name="type">
+          <div class="icon-preview">
+            <span class="icon icon-type"></span>
+          </div>
+          <div class="icon-name">type</div>
+        </div>
+      
+        <div class="icon-card" data-name="umbrella">
+          <div class="icon-preview">
+            <span class="icon icon-umbrella"></span>
+          </div>
+          <div class="icon-name">umbrella</div>
+        </div>
+      
+        <div class="icon-card" data-name="underline">
+          <div class="icon-preview">
+            <span class="icon icon-underline"></span>
+          </div>
+          <div class="icon-name">underline</div>
+        </div>
+      
+        <div class="icon-card" data-name="undo">
+          <div class="icon-preview">
+            <span class="icon icon-undo"></span>
+          </div>
+          <div class="icon-name">undo</div>
+        </div>
+      
+        <div class="icon-card" data-name="unlock">
+          <div class="icon-preview">
+            <span class="icon icon-unlock"></span>
+          </div>
+          <div class="icon-name">unlock</div>
+        </div>
+      
+        <div class="icon-card" data-name="upload-cloud">
+          <div class="icon-preview">
+            <span class="icon icon-upload-cloud"></span>
+          </div>
+          <div class="icon-name">upload-cloud</div>
+        </div>
+      
+        <div class="icon-card" data-name="upload">
+          <div class="icon-preview">
+            <span class="icon icon-upload"></span>
+          </div>
+          <div class="icon-name">upload</div>
+        </div>
+      
+        <div class="icon-card" data-name="user-locked">
+          <div class="icon-preview">
+            <span class="icon icon-user-locked"></span>
+          </div>
+          <div class="icon-name">user-locked</div>
+        </div>
+      
+        <div class="icon-card" data-name="user-check">
+          <div class="icon-preview">
+            <span class="icon icon-user-check"></span>
+          </div>
+          <div class="icon-name">user-check</div>
+        </div>
+      
+        <div class="icon-card" data-name="user-minus">
+          <div class="icon-preview">
+            <span class="icon icon-user-minus"></span>
+          </div>
+          <div class="icon-name">user-minus</div>
+        </div>
+      
+        <div class="icon-card" data-name="user-plus">
+          <div class="icon-preview">
+            <span class="icon icon-user-plus"></span>
+          </div>
+          <div class="icon-name">user-plus</div>
+        </div>
+      
+        <div class="icon-card" data-name="user-x">
+          <div class="icon-preview">
+            <span class="icon icon-user-x"></span>
+          </div>
+          <div class="icon-name">user-x</div>
+        </div>
+      
+        <div class="icon-card" data-name="user">
+          <div class="icon-preview">
+            <span class="icon icon-user"></span>
+          </div>
+          <div class="icon-name">user</div>
+        </div>
+      
+        <div class="icon-card" data-name="users">
+          <div class="icon-preview">
+            <span class="icon icon-users"></span>
+          </div>
+          <div class="icon-name">users</div>
+        </div>
+      
+        <div class="icon-card" data-name="variant293">
+          <div class="icon-preview">
+            <span class="icon icon-variant293"></span>
+          </div>
+          <div class="icon-name">variant293</div>
+        </div>
+      
+        <div class="icon-card" data-name="variant410">
+          <div class="icon-preview">
+            <span class="icon icon-variant410"></span>
+          </div>
+          <div class="icon-name">variant410</div>
+        </div>
+      
+        <div class="icon-card" data-name="variant422">
+          <div class="icon-preview">
+            <span class="icon icon-variant422"></span>
+          </div>
+          <div class="icon-name">variant422</div>
+        </div>
+      
+        <div class="icon-card" data-name="veterinary-patient">
+          <div class="icon-preview">
+            <span class="icon icon-veterinary-patient"></span>
+          </div>
+          <div class="icon-name">veterinary-patient</div>
+        </div>
+      
+        <div class="icon-card" data-name="video-off">
+          <div class="icon-preview">
+            <span class="icon icon-video-off"></span>
+          </div>
+          <div class="icon-name">video-off</div>
+        </div>
+      
+        <div class="icon-card" data-name="video">
+          <div class="icon-preview">
+            <span class="icon icon-video"></span>
+          </div>
+          <div class="icon-name">video</div>
+        </div>
+      
+        <div class="icon-card" data-name="view-claims">
+          <div class="icon-preview">
+            <span class="icon icon-view-claims"></span>
+          </div>
+          <div class="icon-name">view-claims</div>
+        </div>
+      
+        <div class="icon-card" data-name="view-po">
+          <div class="icon-preview">
+            <span class="icon icon-view-po"></span>
+          </div>
+          <div class="icon-name">view-po</div>
+        </div>
+      
+        <div class="icon-card" data-name="vital-signs">
+          <div class="icon-preview">
+            <span class="icon icon-vital-signs"></span>
+          </div>
+          <div class="icon-name">vital-signs</div>
+        </div>
+      
+        <div class="icon-card" data-name="voicemail">
+          <div class="icon-preview">
+            <span class="icon icon-voicemail"></span>
+          </div>
+          <div class="icon-name">voicemail</div>
+        </div>
+      
+        <div class="icon-card" data-name="volume-1">
+          <div class="icon-preview">
+            <span class="icon icon-volume-1"></span>
+          </div>
+          <div class="icon-name">volume-1</div>
+        </div>
+      
+        <div class="icon-card" data-name="volume-2">
+          <div class="icon-preview">
+            <span class="icon icon-volume-2"></span>
+          </div>
+          <div class="icon-name">volume-2</div>
+        </div>
+      
+        <div class="icon-card" data-name="volume-x">
+          <div class="icon-preview">
+            <span class="icon icon-volume-x"></span>
+          </div>
+          <div class="icon-name">volume-x</div>
+        </div>
+      
+        <div class="icon-card" data-name="volume">
+          <div class="icon-preview">
+            <span class="icon icon-volume"></span>
+          </div>
+          <div class="icon-name">volume</div>
+        </div>
+      
+        <div class="icon-card" data-name="warning">
+          <div class="icon-preview">
+            <span class="icon icon-warning"></span>
+          </div>
+          <div class="icon-name">warning</div>
+        </div>
+      
+        <div class="icon-card" data-name="watch">
+          <div class="icon-preview">
+            <span class="icon icon-watch"></span>
+          </div>
+          <div class="icon-name">watch</div>
+        </div>
+      
+        <div class="icon-card" data-name="wholesale">
+          <div class="icon-preview">
+            <span class="icon icon-wholesale"></span>
+          </div>
+          <div class="icon-name">wholesale</div>
+        </div>
+      
+        <div class="icon-card" data-name="wifi-off">
+          <div class="icon-preview">
+            <span class="icon icon-wifi-off"></span>
+          </div>
+          <div class="icon-name">wifi-off</div>
+        </div>
+      
+        <div class="icon-card" data-name="wifi">
+          <div class="icon-preview">
+            <span class="icon icon-wifi"></span>
+          </div>
+          <div class="icon-name">wifi</div>
+        </div>
+      
+        <div class="icon-card" data-name="wind">
+          <div class="icon-preview">
+            <span class="icon icon-wind"></span>
+          </div>
+          <div class="icon-name">wind</div>
+        </div>
+      
+        <div class="icon-card" data-name="x-circle">
+          <div class="icon-preview">
+            <span class="icon icon-x-circle"></span>
+          </div>
+          <div class="icon-name">x-circle</div>
+        </div>
+      
+        <div class="icon-card" data-name="x-octagon">
+          <div class="icon-preview">
+            <span class="icon icon-x-octagon"></span>
+          </div>
+          <div class="icon-name">x-octagon</div>
+        </div>
+      
+        <div class="icon-card" data-name="x-square">
+          <div class="icon-preview">
+            <span class="icon icon-x-square"></span>
+          </div>
+          <div class="icon-name">x-square</div>
+        </div>
+      
+        <div class="icon-card" data-name="x">
+          <div class="icon-preview">
+            <span class="icon icon-x"></span>
+          </div>
+          <div class="icon-name">x</div>
+        </div>
+      
+        <div class="icon-card" data-name="youtube">
+          <div class="icon-preview">
+            <span class="icon icon-youtube"></span>
+          </div>
+          <div class="icon-name">youtube</div>
+        </div>
+      
+        <div class="icon-card" data-name="zap-off">
+          <div class="icon-preview">
+            <span class="icon icon-zap-off"></span>
+          </div>
+          <div class="icon-name">zap-off</div>
+        </div>
+      
+        <div class="icon-card" data-name="zap">
+          <div class="icon-preview">
+            <span class="icon icon-zap"></span>
+          </div>
+          <div class="icon-name">zap</div>
+        </div>
+      
+        <div class="icon-card" data-name="zoom-in">
+          <div class="icon-preview">
+            <span class="icon icon-zoom-in"></span>
+          </div>
+          <div class="icon-name">zoom-in</div>
+        </div>
+      
+        <div class="icon-card" data-name="zoom-out">
+          <div class="icon-preview">
+            <span class="icon icon-zoom-out"></span>
+          </div>
+          <div class="icon-name">zoom-out</div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+
+  <script>
+    const search = document.getElementById('search');
+    const colorChips = document.querySelectorAll('#color-select .chip');
+    const sizeChips = document.querySelectorAll('#size-select .chip');
+    const cards = document.querySelectorAll('.icon-card');
+    const toast = document.getElementById('toast');
+    const root = document.documentElement;
+
+    // Search Filtering
+    search.addEventListener('input', (e) => {
+      const val = e.target.value.toLowerCase();
+      cards.forEach(card => {
+        const name = card.dataset.name;
+        card.style.display = name.includes(val) ? 'block' : 'none';
+      });
+    });
+
+    // Color Toggling
+    colorChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        colorChips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        const color = chip.dataset.color;
+        root.style.setProperty('--dynamic-color', color);
+        
+        // If color is white or very light, provide dark contrast background
+        if (color.toLowerCase() === '#ffffff') {
+          root.style.setProperty('--card-bg-override', 'rgba(15, 23, 42, 0.9)');
+        } else {
+          root.style.setProperty('--card-bg-override', 'rgba(255, 255, 255, 0.65)');
+        }
+      });
+    });
+
+    // Size Toggling
+    sizeChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        sizeChips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        root.style.setProperty('--dynamic-size', chip.dataset.size);
+      });
+    });
+
+    // Copy to clipboard
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const name = card.dataset.name;
+        const code = '\x3Cspan class="icon icon-' + name + '"\x3E\x3C/span\x3E';
+        navigator.clipboard.writeText(code);
+        toast.textContent = 'Copied: ' + code;
+        toast.className = 'toast show';
+        setTimeout(() => toast.className = 'toast', 2000);
+      });
+    });
+  </script>
+</body>
+</html>
