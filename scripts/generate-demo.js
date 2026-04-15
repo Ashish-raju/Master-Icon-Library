@@ -270,6 +270,17 @@ function generateDemo() {
       --state-border: transparent;
       --state-icon-color: #FFFFFF;
     }
+    [data-active-state="disabled"] {
+      --state-bg: #D3D3D3;
+      --state-border: transparent;
+      --state-icon-color: #757575;
+    }
+
+    .chip-group.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+      filter: grayscale(1);
+    }
 
     .icon-card .icon-name {
       font-size: 13px;
@@ -351,6 +362,7 @@ function generateDemo() {
             <button class="chip active" data-state="none">No Background</button>
             <button class="chip" data-state="hover">Hover BG</button>
             <button class="chip" data-state="selected">Selected BG</button>
+            <button class="chip" data-state="disabled">Disabled BG</button>
           </div>
         </div>
       </div>
@@ -400,6 +412,7 @@ function generateDemo() {
   <script>
     const search = document.getElementById('search');
     const colorChips = document.querySelectorAll('#color-select .chip');
+    const colorGroup = document.getElementById('color-select');
     const sizeChips = document.querySelectorAll('#size-select .chip');
     const stateChips = document.querySelectorAll('#state-select .chip');
     const syntaxChips = document.querySelectorAll('#syntax-select .chip');
@@ -450,7 +463,15 @@ function generateDemo() {
       chip.addEventListener('click', () => {
         stateChips.forEach(c => c.classList.remove('active'));
         chip.classList.add('active');
-        root.setAttribute('data-active-state', chip.dataset.state);
+        const state = chip.dataset.state;
+        root.setAttribute('data-active-state', state);
+
+        // Disable colors if state is not 'none'
+        if (state !== 'none') {
+          colorGroup.classList.add('disabled');
+        } else {
+          colorGroup.classList.remove('disabled');
+        }
       });
     });
 

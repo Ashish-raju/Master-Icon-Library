@@ -57,9 +57,11 @@ flowchart LR
 ## 📏 3. Design System Standards
 
 ### 3.1 Geometric Constraints
-- **Square ViewBox:** All icons must be designed on a square grid (e.g., 24x24).
-- **Dimensional Sanitization:** The compiler strips root `width` and `height` to prevent coordinate bloating while preserving internal `mask` and `clipPath` dimensions.
-- **Monochromatic Requirement:** Gradients and multi-color fills are automatically stripped. Design for `currentColor`.
+- **State Previews:** Instantly test icons against standard brand states (**Primary, Success, Error, Disabled**).
+- **Conditional Controls:** Selection of interaction states (Hover, Selected, Disabled) automatically locks global color pills to reflect the fixed brand coloring logic for those states.
+- **Smart Contrast:** Includes a "White on Dark" algorithm that automatically detects light icon states and provides a high-contrast card background.
+- **Size Simulation:** Toggle between 8px and 24px to ensure geographic balance at all scales.
+- **Instant Code Snippets:** Clicking any icon instantly copies the exact HTML usage syntax to the clipboard. Design for `currentColor`.
 
 ### 3.2 Naming Logic
 Assets are automatically normalized from Figma property strings to `kebab-case`:
