@@ -63,6 +63,7 @@ To ensure high-fidelity rendering across Web, iOS, and Android formats, every ic
 
 ### 📐 3.1 Geometry Guidelines
 - **Uniform Square Grid:** Icons must be designed on a square canvas (e.g., 16x16, 24x24). Non-square viewboxes are automatically rejected to prevent stretching during rendering.
+- **Dimensional Sanitization:** The compiler automatically strips fixed `width` and `height` attributes from source SVGs. This ensures that the `viewBox` is the only source of truth for the coordinate system, preventing "invisible" icons caused by coordinate expansion.
 - **Flattened Shapes:** While the pipeline *can* fix strokes, designers are encouraged to flatten complex boolean layers (Subtract/Union) into a single compound path for consistency.
 - **No Gradients/Masks:** Font glyphs are monochromatic. Icons containing gradients, radial blends, or masks will trigger an immediate validation error.
 - **Payload Constraint:** Individual SVGs must remain under **15KB**. High-density vectors are blocked to prevent UI performance degradation.

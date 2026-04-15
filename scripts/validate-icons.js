@@ -80,6 +80,12 @@ function validateAndNormalize() {
     const normalizedName = normalizeName(file);
 
     let normalizedContent = content;
+    
+    // Absolute Dimensional Sanitization: Strip width/height to force viewBox as the only truth
+    normalizedContent = normalizedContent
+      .replace(/\s(width|height)=\u0022[\d\.]+\u0022/g, '')
+      .replace(/\s(width|height)='[\d\.]+'/g, '');
+
     if (!normalizedContent.includes('xmlns=')) {
       normalizedContent = normalizedContent.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ');
     }
