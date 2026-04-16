@@ -1,3 +1,12 @@
+:root {
+  --icon-action: #702C62;
+  --icon-success: #339900;
+  --icon-warning: #FF7C00;
+  --icon-error: #E54141;
+  --icon-disabled: #9E9E9E;
+  --icon-on-action: #FFFFFF;
+}
+
 @font-face {
   font-family: "MyIcons";
   src: url("./myicons.woff2") format("woff2");
@@ -21,9 +30,6 @@
   overflow: hidden;
 }
 
-.icon-sm { font-size: 12px; }
-.icon-lg { font-size: 20px; }
-.icon-xl { font-size: 24px; }
 
 .icon-100:before { font-family: "MyIcons" !important; content: "\ea01"; }
 .icon-activity:before { font-family: "MyIcons" !important; content: "\ea02"; }
@@ -404,65 +410,121 @@
 .icon-target:before { font-family: "MyIcons" !important; content: "\eb79"; }
 .icon-tasks:before { font-family: "MyIcons" !important; content: "\eb7a"; }
 .icon-terminal:before { font-family: "MyIcons" !important; content: "\eb7b"; }
-.icon-thermometer:before { font-family: "MyIcons" !important; content: "\eb7c"; }
-.icon-thumbs-down:before { font-family: "MyIcons" !important; content: "\eb7d"; }
-.icon-thumbs-up:before { font-family: "MyIcons" !important; content: "\eb7e"; }
-.icon-to-be-ordered:before { font-family: "MyIcons" !important; content: "\eb7f"; }
-.icon-toggle-left:before { font-family: "MyIcons" !important; content: "\eb80"; }
-.icon-toggle-right:before { font-family: "MyIcons" !important; content: "\eb81"; }
-.icon-tool:before { font-family: "MyIcons" !important; content: "\eb82"; }
-.icon-tracking:before { font-family: "MyIcons" !important; content: "\eb83"; }
-.icon-transfer-out:before { font-family: "MyIcons" !important; content: "\eb84"; }
-.icon-trash:before { font-family: "MyIcons" !important; content: "\eb85"; }
-.icon-trash-2:before { font-family: "MyIcons" !important; content: "\eb86"; }
-.icon-trello:before { font-family: "MyIcons" !important; content: "\eb87"; }
-.icon-trending-down:before { font-family: "MyIcons" !important; content: "\eb88"; }
-.icon-trending-up:before { font-family: "MyIcons" !important; content: "\eb89"; }
-.icon-triangle:before { font-family: "MyIcons" !important; content: "\eb8a"; }
-.icon-truck:before { font-family: "MyIcons" !important; content: "\eb8b"; }
-.icon-tv:before { font-family: "MyIcons" !important; content: "\eb8c"; }
-.icon-twitch:before { font-family: "MyIcons" !important; content: "\eb8d"; }
-.icon-twitter:before { font-family: "MyIcons" !important; content: "\eb8e"; }
-.icon-type:before { font-family: "MyIcons" !important; content: "\eb8f"; }
-.icon-umbrella:before { font-family: "MyIcons" !important; content: "\eb90"; }
-.icon-underline:before { font-family: "MyIcons" !important; content: "\eb91"; }
-.icon-undo:before { font-family: "MyIcons" !important; content: "\eb92"; }
-.icon-unlock:before { font-family: "MyIcons" !important; content: "\eb93"; }
-.icon-upload:before { font-family: "MyIcons" !important; content: "\eb94"; }
-.icon-upload-cloud:before { font-family: "MyIcons" !important; content: "\eb95"; }
-.icon-user:before { font-family: "MyIcons" !important; content: "\eb96"; }
-.icon-user-check:before { font-family: "MyIcons" !important; content: "\eb97"; }
-.icon-user-locked:before { font-family: "MyIcons" !important; content: "\eb98"; }
-.icon-user-minus:before { font-family: "MyIcons" !important; content: "\eb99"; }
-.icon-user-plus:before { font-family: "MyIcons" !important; content: "\eb9a"; }
-.icon-user-x:before { font-family: "MyIcons" !important; content: "\eb9b"; }
-.icon-users:before { font-family: "MyIcons" !important; content: "\eb9c"; }
-.icon-variant293:before { font-family: "MyIcons" !important; content: "\eb9d"; }
-.icon-variant410:before { font-family: "MyIcons" !important; content: "\eb9e"; }
-.icon-variant422:before { font-family: "MyIcons" !important; content: "\eb9f"; }
-.icon-veterinary-patient:before { font-family: "MyIcons" !important; content: "\eba0"; }
-.icon-video:before { font-family: "MyIcons" !important; content: "\eba1"; }
-.icon-video-off:before { font-family: "MyIcons" !important; content: "\eba2"; }
-.icon-view-claims:before { font-family: "MyIcons" !important; content: "\eba3"; }
-.icon-view-po:before { font-family: "MyIcons" !important; content: "\eba4"; }
-.icon-vital-signs:before { font-family: "MyIcons" !important; content: "\eba5"; }
-.icon-voicemail:before { font-family: "MyIcons" !important; content: "\eba6"; }
-.icon-volume:before { font-family: "MyIcons" !important; content: "\eba7"; }
-.icon-volume-1:before { font-family: "MyIcons" !important; content: "\eba8"; }
-.icon-volume-2:before { font-family: "MyIcons" !important; content: "\eba9"; }
-.icon-volume-x:before { font-family: "MyIcons" !important; content: "\ebaa"; }
-.icon-warning:before { font-family: "MyIcons" !important; content: "\ebab"; }
-.icon-watch:before { font-family: "MyIcons" !important; content: "\ebac"; }
-.icon-wholesale:before { font-family: "MyIcons" !important; content: "\ebad"; }
-.icon-wifi:before { font-family: "MyIcons" !important; content: "\ebae"; }
-.icon-wifi-off:before { font-family: "MyIcons" !important; content: "\ebaf"; }
-.icon-wind:before { font-family: "MyIcons" !important; content: "\ebb0"; }
-.icon-x:before { font-family: "MyIcons" !important; content: "\ebb1"; }
-.icon-x-circle:before { font-family: "MyIcons" !important; content: "\ebb2"; }
-.icon-x-octagon:before { font-family: "MyIcons" !important; content: "\ebb3"; }
-.icon-x-square:before { font-family: "MyIcons" !important; content: "\ebb4"; }
-.icon-youtube:before { font-family: "MyIcons" !important; content: "\ebb5"; }
-.icon-zap:before { font-family: "MyIcons" !important; content: "\ebb6"; }
-.icon-zap-off:before { font-family: "MyIcons" !important; content: "\ebb7"; }
-.icon-zoom-in:before { font-family: "MyIcons" !important; content: "\ebb8"; }
-.icon-zoom-out:before { font-family: "MyIcons" !important; content: "\ebb9"; }
+.icon-test:before { font-family: "MyIcons" !important; content: "\eb7c"; }
+.icon-thermometer:before { font-family: "MyIcons" !important; content: "\eb7d"; }
+.icon-thumbs-down:before { font-family: "MyIcons" !important; content: "\eb7e"; }
+.icon-thumbs-up:before { font-family: "MyIcons" !important; content: "\eb7f"; }
+.icon-to-be-ordered:before { font-family: "MyIcons" !important; content: "\eb80"; }
+.icon-toggle-left:before { font-family: "MyIcons" !important; content: "\eb81"; }
+.icon-toggle-right:before { font-family: "MyIcons" !important; content: "\eb82"; }
+.icon-tool:before { font-family: "MyIcons" !important; content: "\eb83"; }
+.icon-tracking:before { font-family: "MyIcons" !important; content: "\eb84"; }
+.icon-transfer-out:before { font-family: "MyIcons" !important; content: "\eb85"; }
+.icon-trash:before { font-family: "MyIcons" !important; content: "\eb86"; }
+.icon-trash-2:before { font-family: "MyIcons" !important; content: "\eb87"; }
+.icon-trello:before { font-family: "MyIcons" !important; content: "\eb88"; }
+.icon-trending-down:before { font-family: "MyIcons" !important; content: "\eb89"; }
+.icon-trending-up:before { font-family: "MyIcons" !important; content: "\eb8a"; }
+.icon-triangle:before { font-family: "MyIcons" !important; content: "\eb8b"; }
+.icon-truck:before { font-family: "MyIcons" !important; content: "\eb8c"; }
+.icon-tv:before { font-family: "MyIcons" !important; content: "\eb8d"; }
+.icon-twitch:before { font-family: "MyIcons" !important; content: "\eb8e"; }
+.icon-twitter:before { font-family: "MyIcons" !important; content: "\eb8f"; }
+.icon-type:before { font-family: "MyIcons" !important; content: "\eb90"; }
+.icon-umbrella:before { font-family: "MyIcons" !important; content: "\eb91"; }
+.icon-underline:before { font-family: "MyIcons" !important; content: "\eb92"; }
+.icon-undo:before { font-family: "MyIcons" !important; content: "\eb93"; }
+.icon-unlock:before { font-family: "MyIcons" !important; content: "\eb94"; }
+.icon-upload:before { font-family: "MyIcons" !important; content: "\eb95"; }
+.icon-upload-cloud:before { font-family: "MyIcons" !important; content: "\eb96"; }
+.icon-user:before { font-family: "MyIcons" !important; content: "\eb97"; }
+.icon-user-check:before { font-family: "MyIcons" !important; content: "\eb98"; }
+.icon-user-locked:before { font-family: "MyIcons" !important; content: "\eb99"; }
+.icon-user-minus:before { font-family: "MyIcons" !important; content: "\eb9a"; }
+.icon-user-plus:before { font-family: "MyIcons" !important; content: "\eb9b"; }
+.icon-user-x:before { font-family: "MyIcons" !important; content: "\eb9c"; }
+.icon-users:before { font-family: "MyIcons" !important; content: "\eb9d"; }
+.icon-variant293:before { font-family: "MyIcons" !important; content: "\eb9e"; }
+.icon-variant410:before { font-family: "MyIcons" !important; content: "\eb9f"; }
+.icon-variant422:before { font-family: "MyIcons" !important; content: "\eba0"; }
+.icon-veterinary-patient:before { font-family: "MyIcons" !important; content: "\eba1"; }
+.icon-video:before { font-family: "MyIcons" !important; content: "\eba2"; }
+.icon-video-off:before { font-family: "MyIcons" !important; content: "\eba3"; }
+.icon-view-claims:before { font-family: "MyIcons" !important; content: "\eba4"; }
+.icon-view-po:before { font-family: "MyIcons" !important; content: "\eba5"; }
+.icon-vital-signs:before { font-family: "MyIcons" !important; content: "\eba6"; }
+.icon-voicemail:before { font-family: "MyIcons" !important; content: "\eba7"; }
+.icon-volume:before { font-family: "MyIcons" !important; content: "\eba8"; }
+.icon-volume-1:before { font-family: "MyIcons" !important; content: "\eba9"; }
+.icon-volume-2:before { font-family: "MyIcons" !important; content: "\ebaa"; }
+.icon-volume-x:before { font-family: "MyIcons" !important; content: "\ebab"; }
+.icon-warning:before { font-family: "MyIcons" !important; content: "\ebac"; }
+.icon-watch:before { font-family: "MyIcons" !important; content: "\ebad"; }
+.icon-wholesale:before { font-family: "MyIcons" !important; content: "\ebae"; }
+.icon-wifi:before { font-family: "MyIcons" !important; content: "\ebaf"; }
+.icon-wifi-off:before { font-family: "MyIcons" !important; content: "\ebb0"; }
+.icon-wind:before { font-family: "MyIcons" !important; content: "\ebb1"; }
+.icon-x:before { font-family: "MyIcons" !important; content: "\ebb2"; }
+.icon-x-circle:before { font-family: "MyIcons" !important; content: "\ebb3"; }
+.icon-x-octagon:before { font-family: "MyIcons" !important; content: "\ebb4"; }
+.icon-x-square:before { font-family: "MyIcons" !important; content: "\ebb5"; }
+.icon-youtube:before { font-family: "MyIcons" !important; content: "\ebb6"; }
+.icon-zap:before { font-family: "MyIcons" !important; content: "\ebb7"; }
+.icon-zap-off:before { font-family: "MyIcons" !important; content: "\ebb8"; }
+.icon-zoom-in:before { font-family: "MyIcons" !important; content: "\ebb9"; }
+.icon-zoom-out:before { font-family: "MyIcons" !important; content: "\ebba"; }
+/* Professional Scales */
+.icon-8  { font-size: 8px !important; }
+.icon-12 { font-size: 12px !important; }
+.icon-14 { font-size: 14px !important; }
+.icon-16 { font-size: 16px !important; }
+.icon-20 { font-size: 20px !important; }
+.icon-24 { font-size: 24px !important; }
+
+/* Color Utilities: Map both Brand and Surface colors */
+/* Action: Using the specific Hover Surface color #DBCAD8 as requested */
+.p-clr-primary { --p-icon-fill: #702C62; --p-icon-surface: #DBCAD8; color: var(--p-icon-fill) !important; }
+
+.p-clr-success { --p-icon-fill: #339900; --p-icon-surface: #CCE5B3; color: var(--p-icon-fill) !important; }
+.p-clr-warning { --p-icon-fill: #FF7C00; --p-icon-surface: #FFD9BF; color: var(--p-icon-fill) !important; }
+.p-clr-error   { --p-icon-fill: #E54141; --p-icon-surface: #F8CFCF; color: var(--p-icon-fill) !important; }
+
+/* On Action: Always White icon, specific BG colors as requested */
+.p-clr-on-action { --p-icon-fill: #702C62; --p-icon-surface: #381631; color: #FFFFFF !important; }
+
+/* Muted: Gray icon, Gray Surface, Intermediate Selected BG */
+.p-clr-muted { --p-icon-fill: #8D8D8D; --p-icon-surface: #E0E0E0; color: #9E9E9E !important; }
+
+/* State Utilities */
+.p-state-hover {
+  background: var(--p-icon-surface, #702C62) !important;
+  border-radius: 4px !important;
+  padding: 4px !important;
+  margin: 2px !important;
+  box-sizing: content-box !important;
+  color: var(--p-icon-fill, #702C62) !important;
+  display: inline-flex !important;
+}
+
+/* Color Overrides for States: Ensure legibility on Action surface hover */
+.p-clr-on-action.p-state-hover { color: #ffffff !important; }
+
+.p-state-selected {
+  background: var(--p-icon-fill, #702C62) !important;
+  border-radius: 4px !important;
+  padding: 4px !important;
+  margin: 2px !important;
+  box-sizing: content-box !important;
+  color: #ffffff !important;
+  display: inline-flex !important;
+}
+
+.p-state-disabled {
+  background: #E0E0E0 !important;
+  border-radius: 4px !important;
+  padding: 4px !important;
+  margin: 2px !important;
+  box-sizing: content-box !important;
+  color: #9E9E9E !important;
+  display: inline-flex !important;
+}

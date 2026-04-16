@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Master Icon Library</title>
-  <link rel="stylesheet" href="../dist/font/icons.css">
+  <link rel="stylesheet" href="../dist/font/icons.css?v=1776347692853">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -14,17 +14,34 @@
       --glass-border: rgba(255, 255, 255, 0.5);
       --text: #0f172a;
       --subtext: #475569;
-      
-      /* Dynamic Settings */
-      --dynamic-color: #702C62;
-      --dynamic-size: 16px;
       --card-bg-override: rgba(255, 255, 255, 0.65);
-      
-      /* State Styles */
-      --state-bg: transparent;
-      --state-border: transparent;
-      --state-icon-color: var(--dynamic-color);
     }
+
+    /* Professional Inlined Utilities */
+    .p-clr-primary   { --p-icon-fill: #702C62 !important; --p-icon-surface: #DBCAD8 !important; color: var(--p-icon-fill) !important; }
+    .p-clr-success   { --p-icon-fill: #339900 !important; --p-icon-surface: #CCE5B3 !important; color: var(--p-icon-fill) !important; }
+    .p-clr-warning   { --p-icon-fill: #FF7C00 !important; --p-icon-surface: #FFD9BF !important; color: var(--p-icon-fill) !important; }
+    .p-clr-error     { --p-icon-fill: #E54141 !important; --p-icon-surface: #F8CFCF !important; color: var(--p-icon-fill) !important; }
+    
+    /* On Action Implementation */
+    .p-clr-on-action { --p-icon-fill: #702C62 !important; --p-icon-surface: #381631 !important; color: #FFFFFF !important; }
+    .p-clr-on-action.p-state-hover { color: #FFFFFF !important; }
+    
+    /* Muted Implementation */
+    .p-clr-muted     { --p-icon-fill: #8D8D8D !important; --p-icon-surface: #E0E0E0 !important; color: #9E9E9E !important; }
+
+    .p-state-hover, .p-state-selected, .p-state-disabled {
+      border-radius: 4px !important;
+      padding: 4px !important;
+      margin: 2px !important;
+      box-sizing: content-box !important;
+      display: inline-flex !important;
+    }
+    .p-state-hover    { background: var(--p-icon-surface, #702C62) !important; color: var(--p-icon-fill, #702C62) !important; }
+    .p-clr-primary.p-state-hover { color: #702C62 !important; } /* Restore primary color for light hover */
+    
+    .p-state-selected { background: var(--p-icon-fill, #702C62) !important; color: #ffffff !important; }
+    .p-state-disabled { background: #E0E0E0 !important; color: #9E9E9E !important; }
 
     * { box-sizing: border-box; }
 
@@ -222,50 +239,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      border-radius: 2px;
-      background: var(--state-bg);
-      border: 2px solid var(--state-border);
-      padding: 2px;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .icon-card .icon-preview .icon {
-      color: var(--state-icon-color);
-      font-size: var(--dynamic-size);
-      width: 1em;
-      height: 1em;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-    }
-
-    /* State Logic */
-    [data-active-state="none"] {
-      --state-bg: transparent;
-      --state-border: transparent;
-      --state-icon-color: var(--dynamic-color);
-    }
-    [data-active-state="hover"] {
-      --state-bg: #DBCAD8;
-      --state-border: transparent;
-      --state-icon-color: #702C62;
-    }
-    [data-active-state="selected"] {
-      --state-bg: #702C62;
-      --state-border: transparent;
-      --state-icon-color: #FFFFFF;
-    }
-    [data-active-state="disabled"] {
-      --state-bg: #D3D3D3;
-      --state-border: transparent;
-      --state-icon-color: #757575;
-    }
-
-    .chip-group.disabled {
-      opacity: 0.5;
-      pointer-events: none;
-      filter: grayscale(1);
     }
 
     .icon-card .icon-name {
@@ -316,7 +290,7 @@
   <div class="wrapper">
     <div class="header">
       <h1>Master Icon Library</h1>
-      <div class="subtitle">Select states to interactively preview geometries and copy exact implementation codes.</div>
+      <div class="subtitle">A professional utility-class system for modern web interfaces.</div>
     </div>
     
     <div class="controls-panel">
@@ -326,54 +300,50 @@
       
       <div class="control-row">
         <div class="control-group">
-          <label>Color State Mappings</label>
+          <label>Branding Themes</label>
           <div class="chip-group" id="color-select">
-            <button class="chip active" data-color="#702C62"><span class="color-swatch" style="background:#702C62;"></span> Action / Info (#702C62)</button>
-            <button class="chip" data-color="#542149"><span class="color-swatch" style="background:#542149;"></span> Action Hover (#542149)</button>
-            <button class="chip" data-color="#212121"><span class="color-swatch" style="background:#212121;"></span> Dark / Text (#212121)</button>
-            <button class="chip" data-color="#9E9E9E"><span class="color-swatch" style="background:#9E9E9E;"></span> Disabled (#9E9E9E)</button>
-            <button class="chip" data-color="#757575"><span class="color-swatch" style="background:#757575;"></span> On Disabled (#757575)</button>
-            <button class="chip" data-color="#339900"><span class="color-swatch" style="background:#339900;"></span> Success (#339900)</button>
-            <button class="chip" data-color="#FF7C00"><span class="color-swatch" style="background:#FF7C00;"></span> Warning (#FF7C00)</button>
-            <button class="chip" data-color="#E54141"><span class="color-swatch" style="background:#E54141;"></span> Error (#E54141)</button>
-            <button class="chip" data-color="#FFFFFF"><span class="color-swatch" style="background:#FFFFFF;"></span> On Action (#FFFFFF)</button>
+            <button class="chip active" data-class="p-clr-primary" data-hex="#702C62" data-label="Action"><span class="color-swatch" style="background:#702C62;"></span> Action / Info (#702C62)</button>
+            <button class="chip" data-class="p-clr-success" data-hex="#339900" data-label="Success"><span class="color-swatch" style="background:#339900;"></span> Success (#339900)</button>
+            <button class="chip" data-class="p-clr-warning" data-hex="#FF7C00" data-label="Warning"><span class="color-swatch" style="background:#FF7C00;"></span> Warning (#FF7C00)</button>
+            <button class="chip" data-class="p-clr-error" data-hex="#E54141" data-label="Error"><span class="color-swatch" style="background:#E54141;"></span> Error (#E54141)</button>
+            <button class="chip" data-class="p-clr-on-action" data-hex="#FFFFFF" data-label="White"><span class="color-swatch" style="background:#FFFFFF;"></span> On Action (#FFFFFF)</button>
+            <button class="chip" data-class="p-clr-muted" data-hex="#9E9E9E" data-label="Muted"><span class="color-swatch" style="background:#9E9E9E;"></span> Disabled (#9E9E9E)</button>
           </div>
         </div>
       </div>
 
       <div class="control-row">
         <div class="control-group">
-          <label>Interaction States Preview</label>
+          <label>Interaction Geometries</label>
           <div class="chip-group" id="state-select">
-            <button class="chip active" data-state="none">No Background</button>
-            <button class="chip" data-state="hover">Hover BG</button>
-            <button class="chip" data-state="selected">Selected BG</button>
-            <button class="chip" data-state="disabled">Disabled BG</button>
+            <button class="chip active" data-class="none">No Background</button>
+            <button class="chip" data-class="p-state-hover">Hover BG</button>
+            <button class="chip" data-class="p-state-selected">Selected BG</button>
+            <button class="chip" data-class="p-state-disabled">Disabled BG</button>
           </div>
         </div>
       </div>
 
       <div class="control-row">
         <div class="control-group">
-          <label>Geometric Scale / Font Size</label>
+          <label>Standard Scales</label>
           <div class="chip-group" id="size-select">
-            <button class="chip" data-size="8px">8px</button>
-            <button class="chip" data-size="12px">12px</button>
-            <button class="chip" data-size="14px">14px</button>
-            <button class="chip active" data-size="16px">16px</button>
-            <button class="chip" data-size="20px">20px</button>
-            <button class="chip" data-size="24px">24px</button>
+            <button class="chip" data-class="icon-8" data-size="8px">8px</button>
+            <button class="chip" data-class="icon-12" data-size="12px">12px</button>
+            <button class="chip" data-class="icon-14" data-size="14px">14px</button>
+            <button class="chip active" data-class="icon-16" data-size="16px">16px</button>
+            <button class="chip" data-class="icon-20" data-size="20px">20px</button>
+            <button class="chip" data-class="icon-24" data-size="24px">24px</button>
           </div>
         </div>
       </div>
 
       <div class="control-row">
         <div class="control-group">
-          <label>Implementation Syntax</label>
+          <label>Professional Syntax</label>
           <div class="chip-group" id="syntax-select">
-            <button class="chip" data-syntax="html">HTML / Standard</button>
-            <button class="chip active" data-syntax="react">React (className)</button>
-            <button class="chip" data-syntax="angular">Angular / Vue</button>
+            <button class="chip" data-syntax="html">HTML / ClassList</button>
+            <button class="chip active" data-syntax="react">React (Prop-based)</button>
           </div>
         </div>
       </div>
@@ -384,7 +354,7 @@
         <div class="icon-card" data-name="100">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-100"></span>
+              <span class="icon icon-100 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">100</div>
@@ -393,7 +363,7 @@
         <div class="icon-card" data-name="new-user-profile-icon">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-new-user-profile-icon"></span>
+              <span class="icon icon-new-user-profile-icon icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">new-user-profile-icon</div>
@@ -402,7 +372,7 @@
         <div class="icon-card" data-name="activity">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-activity"></span>
+              <span class="icon icon-activity icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">activity</div>
@@ -411,7 +381,7 @@
         <div class="icon-card" data-name="add-product">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-add-product"></span>
+              <span class="icon icon-add-product icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">add-product</div>
@@ -420,7 +390,7 @@
         <div class="icon-card" data-name="admin">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-admin"></span>
+              <span class="icon icon-admin icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">admin</div>
@@ -429,7 +399,7 @@
         <div class="icon-card" data-name="ai-next">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-ai-next"></span>
+              <span class="icon icon-ai-next icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">ai-next</div>
@@ -438,7 +408,7 @@
         <div class="icon-card" data-name="ai">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-ai"></span>
+              <span class="icon icon-ai icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">ai</div>
@@ -447,7 +417,7 @@
         <div class="icon-card" data-name="airplay">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-airplay"></span>
+              <span class="icon icon-airplay icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">airplay</div>
@@ -456,7 +426,7 @@
         <div class="icon-card" data-name="alert-circle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-alert-circle"></span>
+              <span class="icon icon-alert-circle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">alert-circle</div>
@@ -465,7 +435,7 @@
         <div class="icon-card" data-name="alert-octagon">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-alert-octagon"></span>
+              <span class="icon icon-alert-octagon icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">alert-octagon</div>
@@ -474,7 +444,7 @@
         <div class="icon-card" data-name="alert-triangle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-alert-triangle"></span>
+              <span class="icon icon-alert-triangle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">alert-triangle</div>
@@ -483,7 +453,7 @@
         <div class="icon-card" data-name="align-center-1">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-align-center-1"></span>
+              <span class="icon icon-align-center-1 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">align-center-1</div>
@@ -492,7 +462,7 @@
         <div class="icon-card" data-name="align-center-2">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-align-center-2"></span>
+              <span class="icon icon-align-center-2 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">align-center-2</div>
@@ -501,7 +471,7 @@
         <div class="icon-card" data-name="align-center-3">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-align-center-3"></span>
+              <span class="icon icon-align-center-3 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">align-center-3</div>
@@ -510,7 +480,7 @@
         <div class="icon-card" data-name="align-center-4">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-align-center-4"></span>
+              <span class="icon icon-align-center-4 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">align-center-4</div>
@@ -519,7 +489,7 @@
         <div class="icon-card" data-name="align-center-5">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-align-center-5"></span>
+              <span class="icon icon-align-center-5 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">align-center-5</div>
@@ -528,7 +498,7 @@
         <div class="icon-card" data-name="align-center">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-align-center"></span>
+              <span class="icon icon-align-center icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">align-center</div>
@@ -537,7 +507,7 @@
         <div class="icon-card" data-name="align-justify">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-align-justify"></span>
+              <span class="icon icon-align-justify icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">align-justify</div>
@@ -546,7 +516,7 @@
         <div class="icon-card" data-name="align-left">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-align-left"></span>
+              <span class="icon icon-align-left icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">align-left</div>
@@ -555,7 +525,7 @@
         <div class="icon-card" data-name="align-right">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-align-right"></span>
+              <span class="icon icon-align-right icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">align-right</div>
@@ -564,7 +534,7 @@
         <div class="icon-card" data-name="analytics-fill">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-analytics-fill"></span>
+              <span class="icon icon-analytics-fill icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">analytics-fill</div>
@@ -573,7 +543,7 @@
         <div class="icon-card" data-name="analytics">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-analytics"></span>
+              <span class="icon icon-analytics icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">analytics</div>
@@ -582,7 +552,7 @@
         <div class="icon-card" data-name="anchor">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-anchor"></span>
+              <span class="icon icon-anchor icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">anchor</div>
@@ -591,7 +561,7 @@
         <div class="icon-card" data-name="aperture">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-aperture"></span>
+              <span class="icon icon-aperture icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">aperture</div>
@@ -600,7 +570,7 @@
         <div class="icon-card" data-name="archive">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-archive"></span>
+              <span class="icon icon-archive icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">archive</div>
@@ -609,7 +579,7 @@
         <div class="icon-card" data-name="arrow-down-circle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-arrow-down-circle"></span>
+              <span class="icon icon-arrow-down-circle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">arrow-down-circle</div>
@@ -618,7 +588,7 @@
         <div class="icon-card" data-name="arrow-down-left">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-arrow-down-left"></span>
+              <span class="icon icon-arrow-down-left icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">arrow-down-left</div>
@@ -627,7 +597,7 @@
         <div class="icon-card" data-name="arrow-down-right">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-arrow-down-right"></span>
+              <span class="icon icon-arrow-down-right icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">arrow-down-right</div>
@@ -636,7 +606,7 @@
         <div class="icon-card" data-name="arrow-down">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-arrow-down"></span>
+              <span class="icon icon-arrow-down icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">arrow-down</div>
@@ -645,7 +615,7 @@
         <div class="icon-card" data-name="arrow-left-circle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-arrow-left-circle"></span>
+              <span class="icon icon-arrow-left-circle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">arrow-left-circle</div>
@@ -654,7 +624,7 @@
         <div class="icon-card" data-name="arrow-left">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-arrow-left"></span>
+              <span class="icon icon-arrow-left icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">arrow-left</div>
@@ -663,7 +633,7 @@
         <div class="icon-card" data-name="arrow-right-circle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-arrow-right-circle"></span>
+              <span class="icon icon-arrow-right-circle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">arrow-right-circle</div>
@@ -672,7 +642,7 @@
         <div class="icon-card" data-name="arrow-right">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-arrow-right"></span>
+              <span class="icon icon-arrow-right icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">arrow-right</div>
@@ -681,7 +651,7 @@
         <div class="icon-card" data-name="arrow-up-circle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-arrow-up-circle"></span>
+              <span class="icon icon-arrow-up-circle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">arrow-up-circle</div>
@@ -690,7 +660,7 @@
         <div class="icon-card" data-name="arrow-up-left">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-arrow-up-left"></span>
+              <span class="icon icon-arrow-up-left icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">arrow-up-left</div>
@@ -699,7 +669,7 @@
         <div class="icon-card" data-name="arrow-up-right">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-arrow-up-right"></span>
+              <span class="icon icon-arrow-up-right icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">arrow-up-right</div>
@@ -708,7 +678,7 @@
         <div class="icon-card" data-name="arrow-up">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-arrow-up"></span>
+              <span class="icon icon-arrow-up icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">arrow-up</div>
@@ -717,7 +687,7 @@
         <div class="icon-card" data-name="at-sign">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-at-sign"></span>
+              <span class="icon icon-at-sign icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">at-sign</div>
@@ -726,7 +696,7 @@
         <div class="icon-card" data-name="audit">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-audit"></span>
+              <span class="icon icon-audit icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">audit</div>
@@ -735,7 +705,7 @@
         <div class="icon-card" data-name="award">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-award"></span>
+              <span class="icon icon-award icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">award</div>
@@ -744,7 +714,7 @@
         <div class="icon-card" data-name="baby-0-23-months">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-baby-0-23-months"></span>
+              <span class="icon icon-baby-0-23-months icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">baby-0-23-months</div>
@@ -753,7 +723,7 @@
         <div class="icon-card" data-name="bar-chart-2">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-bar-chart-2"></span>
+              <span class="icon icon-bar-chart-2 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">bar-chart-2</div>
@@ -762,7 +732,7 @@
         <div class="icon-card" data-name="bar-chart">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-bar-chart"></span>
+              <span class="icon icon-bar-chart icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">bar-chart</div>
@@ -771,7 +741,7 @@
         <div class="icon-card" data-name="battery-charging">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-battery-charging"></span>
+              <span class="icon icon-battery-charging icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">battery-charging</div>
@@ -780,7 +750,7 @@
         <div class="icon-card" data-name="battery">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-battery"></span>
+              <span class="icon icon-battery icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">battery</div>
@@ -789,7 +759,7 @@
         <div class="icon-card" data-name="bell-off">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-bell-off"></span>
+              <span class="icon icon-bell-off icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">bell-off</div>
@@ -798,7 +768,7 @@
         <div class="icon-card" data-name="bell">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-bell"></span>
+              <span class="icon icon-bell icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">bell</div>
@@ -807,7 +777,7 @@
         <div class="icon-card" data-name="bluetooth">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-bluetooth"></span>
+              <span class="icon icon-bluetooth icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">bluetooth</div>
@@ -816,7 +786,7 @@
         <div class="icon-card" data-name="bold">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-bold"></span>
+              <span class="icon icon-bold icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">bold</div>
@@ -825,7 +795,7 @@
         <div class="icon-card" data-name="book-open">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-book-open"></span>
+              <span class="icon icon-book-open icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">book-open</div>
@@ -834,7 +804,7 @@
         <div class="icon-card" data-name="book">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-book"></span>
+              <span class="icon icon-book icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">book</div>
@@ -843,7 +813,7 @@
         <div class="icon-card" data-name="bookmark-flag">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-bookmark-flag"></span>
+              <span class="icon icon-bookmark-flag icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">bookmark-flag</div>
@@ -852,7 +822,7 @@
         <div class="icon-card" data-name="bookmark">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-bookmark"></span>
+              <span class="icon icon-bookmark icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">bookmark</div>
@@ -861,7 +831,7 @@
         <div class="icon-card" data-name="box">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-box"></span>
+              <span class="icon icon-box icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">box</div>
@@ -870,7 +840,7 @@
         <div class="icon-card" data-name="briefcase">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-briefcase"></span>
+              <span class="icon icon-briefcase icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">briefcase</div>
@@ -879,7 +849,7 @@
         <div class="icon-card" data-name="calendar">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-calendar"></span>
+              <span class="icon icon-calendar icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">calendar</div>
@@ -888,7 +858,7 @@
         <div class="icon-card" data-name="camera-off">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-camera-off"></span>
+              <span class="icon icon-camera-off icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">camera-off</div>
@@ -897,7 +867,7 @@
         <div class="icon-card" data-name="camera">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-camera"></span>
+              <span class="icon icon-camera icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">camera</div>
@@ -906,7 +876,7 @@
         <div class="icon-card" data-name="card-credit">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-card-credit"></span>
+              <span class="icon icon-card-credit icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">card-credit</div>
@@ -915,7 +885,7 @@
         <div class="icon-card" data-name="cast">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-cast"></span>
+              <span class="icon icon-cast icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">cast</div>
@@ -924,7 +894,7 @@
         <div class="icon-card" data-name="chat">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-chat"></span>
+              <span class="icon icon-chat icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">chat</div>
@@ -933,7 +903,7 @@
         <div class="icon-card" data-name="check-box">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-check-box"></span>
+              <span class="icon icon-check-box icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">check-box</div>
@@ -942,7 +912,7 @@
         <div class="icon-card" data-name="check-circle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-check-circle"></span>
+              <span class="icon icon-check-circle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">check-circle</div>
@@ -951,7 +921,7 @@
         <div class="icon-card" data-name="check-square">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-check-square"></span>
+              <span class="icon icon-check-square icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">check-square</div>
@@ -960,7 +930,7 @@
         <div class="icon-card" data-name="check">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-check"></span>
+              <span class="icon icon-check icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">check</div>
@@ -969,7 +939,7 @@
         <div class="icon-card" data-name="chevron-up-down">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-chevron-up-down"></span>
+              <span class="icon icon-chevron-up-down icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">chevron-up-down</div>
@@ -978,7 +948,7 @@
         <div class="icon-card" data-name="chevron-down">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-chevron-down"></span>
+              <span class="icon icon-chevron-down icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">chevron-down</div>
@@ -987,7 +957,7 @@
         <div class="icon-card" data-name="chevron-left">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-chevron-left"></span>
+              <span class="icon icon-chevron-left icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">chevron-left</div>
@@ -996,7 +966,7 @@
         <div class="icon-card" data-name="chevron-right">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-chevron-right"></span>
+              <span class="icon icon-chevron-right icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">chevron-right</div>
@@ -1005,7 +975,7 @@
         <div class="icon-card" data-name="chevron-up">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-chevron-up"></span>
+              <span class="icon icon-chevron-up icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">chevron-up</div>
@@ -1014,7 +984,7 @@
         <div class="icon-card" data-name="chevrons-down">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-chevrons-down"></span>
+              <span class="icon icon-chevrons-down icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">chevrons-down</div>
@@ -1023,7 +993,7 @@
         <div class="icon-card" data-name="chevrons-left">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-chevrons-left"></span>
+              <span class="icon icon-chevrons-left icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">chevrons-left</div>
@@ -1032,7 +1002,7 @@
         <div class="icon-card" data-name="chevrons-right">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-chevrons-right"></span>
+              <span class="icon icon-chevrons-right icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">chevrons-right</div>
@@ -1041,7 +1011,7 @@
         <div class="icon-card" data-name="chevrons-up">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-chevrons-up"></span>
+              <span class="icon icon-chevrons-up icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">chevrons-up</div>
@@ -1050,7 +1020,7 @@
         <div class="icon-card" data-name="child-24-months-17-years">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-child-24-months-17-years"></span>
+              <span class="icon icon-child-24-months-17-years icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">child-24-months-17-years</div>
@@ -1059,7 +1029,7 @@
         <div class="icon-card" data-name="chrome">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-chrome"></span>
+              <span class="icon icon-chrome icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">chrome</div>
@@ -1068,7 +1038,7 @@
         <div class="icon-card" data-name="circle-with-dot">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-circle-with-dot"></span>
+              <span class="icon icon-circle-with-dot icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">circle-with-dot</div>
@@ -1077,7 +1047,7 @@
         <div class="icon-card" data-name="circle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-circle"></span>
+              <span class="icon icon-circle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">circle</div>
@@ -1086,7 +1056,7 @@
         <div class="icon-card" data-name="clinical-note">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-clinical-note"></span>
+              <span class="icon icon-clinical-note icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">clinical-note</div>
@@ -1095,7 +1065,7 @@
         <div class="icon-card" data-name="clinical-red-dot">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-clinical-red-dot"></span>
+              <span class="icon icon-clinical-red-dot icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">clinical-red-dot</div>
@@ -1104,7 +1074,7 @@
         <div class="icon-card" data-name="clinical">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-clinical"></span>
+              <span class="icon icon-clinical icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">clinical</div>
@@ -1113,7 +1083,7 @@
         <div class="icon-card" data-name="clipboard">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-clipboard"></span>
+              <span class="icon icon-clipboard icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">clipboard</div>
@@ -1122,7 +1092,7 @@
         <div class="icon-card" data-name="clock">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-clock"></span>
+              <span class="icon icon-clock icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">clock</div>
@@ -1131,7 +1101,7 @@
         <div class="icon-card" data-name="cloud-drizzle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-cloud-drizzle"></span>
+              <span class="icon icon-cloud-drizzle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">cloud-drizzle</div>
@@ -1140,7 +1110,7 @@
         <div class="icon-card" data-name="cloud-lightning">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-cloud-lightning"></span>
+              <span class="icon icon-cloud-lightning icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">cloud-lightning</div>
@@ -1149,7 +1119,7 @@
         <div class="icon-card" data-name="cloud-off">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-cloud-off"></span>
+              <span class="icon icon-cloud-off icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">cloud-off</div>
@@ -1158,7 +1128,7 @@
         <div class="icon-card" data-name="cloud-rain">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-cloud-rain"></span>
+              <span class="icon icon-cloud-rain icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">cloud-rain</div>
@@ -1167,7 +1137,7 @@
         <div class="icon-card" data-name="cloud-snow">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-cloud-snow"></span>
+              <span class="icon icon-cloud-snow icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">cloud-snow</div>
@@ -1176,7 +1146,7 @@
         <div class="icon-card" data-name="cloud">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-cloud"></span>
+              <span class="icon icon-cloud icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">cloud</div>
@@ -1185,7 +1155,7 @@
         <div class="icon-card" data-name="code">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-code"></span>
+              <span class="icon icon-code icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">code</div>
@@ -1194,7 +1164,7 @@
         <div class="icon-card" data-name="codepen">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-codepen"></span>
+              <span class="icon icon-codepen icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">codepen</div>
@@ -1203,7 +1173,7 @@
         <div class="icon-card" data-name="codesandbox">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-codesandbox"></span>
+              <span class="icon icon-codesandbox icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">codesandbox</div>
@@ -1212,7 +1182,7 @@
         <div class="icon-card" data-name="coffee">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-coffee"></span>
+              <span class="icon icon-coffee icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">coffee</div>
@@ -1221,7 +1191,7 @@
         <div class="icon-card" data-name="columns">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-columns"></span>
+              <span class="icon icon-columns icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">columns</div>
@@ -1230,7 +1200,7 @@
         <div class="icon-card" data-name="command">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-command"></span>
+              <span class="icon icon-command icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">command</div>
@@ -1239,7 +1209,7 @@
         <div class="icon-card" data-name="compass">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-compass"></span>
+              <span class="icon icon-compass icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">compass</div>
@@ -1248,7 +1218,7 @@
         <div class="icon-card" data-name="configuration">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-configuration"></span>
+              <span class="icon icon-configuration icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">configuration</div>
@@ -1257,7 +1227,7 @@
         <div class="icon-card" data-name="copy">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-copy"></span>
+              <span class="icon icon-copy icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">copy</div>
@@ -1266,7 +1236,7 @@
         <div class="icon-card" data-name="corner-down-left">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-corner-down-left"></span>
+              <span class="icon icon-corner-down-left icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">corner-down-left</div>
@@ -1275,7 +1245,7 @@
         <div class="icon-card" data-name="corner-down-right">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-corner-down-right"></span>
+              <span class="icon icon-corner-down-right icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">corner-down-right</div>
@@ -1284,7 +1254,7 @@
         <div class="icon-card" data-name="corner-left-down">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-corner-left-down"></span>
+              <span class="icon icon-corner-left-down icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">corner-left-down</div>
@@ -1293,7 +1263,7 @@
         <div class="icon-card" data-name="corner-left-up">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-corner-left-up"></span>
+              <span class="icon icon-corner-left-up icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">corner-left-up</div>
@@ -1302,7 +1272,7 @@
         <div class="icon-card" data-name="corner-right-down">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-corner-right-down"></span>
+              <span class="icon icon-corner-right-down icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">corner-right-down</div>
@@ -1311,7 +1281,7 @@
         <div class="icon-card" data-name="corner-right-up">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-corner-right-up"></span>
+              <span class="icon icon-corner-right-up icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">corner-right-up</div>
@@ -1320,7 +1290,7 @@
         <div class="icon-card" data-name="corner-up-left">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-corner-up-left"></span>
+              <span class="icon icon-corner-up-left icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">corner-up-left</div>
@@ -1329,7 +1299,7 @@
         <div class="icon-card" data-name="corner-up-right">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-corner-up-right"></span>
+              <span class="icon icon-corner-up-right icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">corner-up-right</div>
@@ -1338,7 +1308,7 @@
         <div class="icon-card" data-name="cpu">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-cpu"></span>
+              <span class="icon icon-cpu icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">cpu</div>
@@ -1347,7 +1317,7 @@
         <div class="icon-card" data-name="crop">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-crop"></span>
+              <span class="icon icon-crop icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">crop</div>
@@ -1356,7 +1326,7 @@
         <div class="icon-card" data-name="crosshair">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-crosshair"></span>
+              <span class="icon icon-crosshair icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">crosshair</div>
@@ -1365,7 +1335,7 @@
         <div class="icon-card" data-name="cycle-count">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-cycle-count"></span>
+              <span class="icon icon-cycle-count icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">cycle-count</div>
@@ -1374,7 +1344,7 @@
         <div class="icon-card" data-name="data-entry">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-data-entry"></span>
+              <span class="icon icon-data-entry icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">data-entry</div>
@@ -1383,7 +1353,7 @@
         <div class="icon-card" data-name="database">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-database"></span>
+              <span class="icon icon-database icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">database</div>
@@ -1392,7 +1362,7 @@
         <div class="icon-card" data-name="date-of-birth">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-date-of-birth"></span>
+              <span class="icon icon-date-of-birth icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">date-of-birth</div>
@@ -1401,7 +1371,7 @@
         <div class="icon-card" data-name="deactivate-records">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-deactivate-records"></span>
+              <span class="icon icon-deactivate-records icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">deactivate-records</div>
@@ -1410,7 +1380,7 @@
         <div class="icon-card" data-name="delete">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-delete"></span>
+              <span class="icon icon-delete icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">delete</div>
@@ -1419,7 +1389,7 @@
         <div class="icon-card" data-name="disc">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-disc"></span>
+              <span class="icon icon-disc icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">disc</div>
@@ -1428,7 +1398,7 @@
         <div class="icon-card" data-name="divide-circle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-divide-circle"></span>
+              <span class="icon icon-divide-circle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">divide-circle</div>
@@ -1437,7 +1407,7 @@
         <div class="icon-card" data-name="divide-square">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-divide-square"></span>
+              <span class="icon icon-divide-square icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">divide-square</div>
@@ -1446,7 +1416,7 @@
         <div class="icon-card" data-name="divide">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-divide"></span>
+              <span class="icon icon-divide icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">divide</div>
@@ -1455,7 +1425,7 @@
         <div class="icon-card" data-name="dollar-sign">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-dollar-sign"></span>
+              <span class="icon icon-dollar-sign icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">dollar-sign</div>
@@ -1464,7 +1434,7 @@
         <div class="icon-card" data-name="doller-circle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-doller-circle"></span>
+              <span class="icon icon-doller-circle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">doller-circle</div>
@@ -1473,7 +1443,7 @@
         <div class="icon-card" data-name="dott">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-dott"></span>
+              <span class="icon icon-dott icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">dott</div>
@@ -1482,7 +1452,7 @@
         <div class="icon-card" data-name="download-reports">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-download-reports"></span>
+              <span class="icon icon-download-reports icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">download-reports</div>
@@ -1491,7 +1461,7 @@
         <div class="icon-card" data-name="download-cloud">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-download-cloud"></span>
+              <span class="icon icon-download-cloud icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">download-cloud</div>
@@ -1500,7 +1470,7 @@
         <div class="icon-card" data-name="download">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-download"></span>
+              <span class="icon icon-download icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">download</div>
@@ -1509,7 +1479,7 @@
         <div class="icon-card" data-name="dribbble">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-dribbble"></span>
+              <span class="icon icon-dribbble icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">dribbble</div>
@@ -1518,7 +1488,7 @@
         <div class="icon-card" data-name="droplet">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-droplet"></span>
+              <span class="icon icon-droplet icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">droplet</div>
@@ -1527,7 +1497,7 @@
         <div class="icon-card" data-name="drug-catalog">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-drug-catalog"></span>
+              <span class="icon icon-drug-catalog icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">drug-catalog</div>
@@ -1536,7 +1506,7 @@
         <div class="icon-card" data-name="drug">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-drug"></span>
+              <span class="icon icon-drug icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">drug</div>
@@ -1545,7 +1515,7 @@
         <div class="icon-card" data-name="dummy">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-dummy"></span>
+              <span class="icon icon-dummy icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">dummy</div>
@@ -1554,7 +1524,7 @@
         <div class="icon-card" data-name="dur">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-dur"></span>
+              <span class="icon icon-dur icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">dur</div>
@@ -1563,7 +1533,7 @@
         <div class="icon-card" data-name="edit-sig">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-edit-sig"></span>
+              <span class="icon icon-edit-sig icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">edit-sig</div>
@@ -1572,7 +1542,7 @@
         <div class="icon-card" data-name="edit-2">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-edit-2"></span>
+              <span class="icon icon-edit-2 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">edit-2</div>
@@ -1581,7 +1551,7 @@
         <div class="icon-card" data-name="edit-3">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-edit-3"></span>
+              <span class="icon icon-edit-3 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">edit-3</div>
@@ -1590,7 +1560,7 @@
         <div class="icon-card" data-name="edit">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-edit"></span>
+              <span class="icon icon-edit icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">edit</div>
@@ -1599,7 +1569,7 @@
         <div class="icon-card" data-name="elderly-65-years">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-elderly-65-years"></span>
+              <span class="icon icon-elderly-65-years icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">elderly-65-years</div>
@@ -1608,7 +1578,7 @@
         <div class="icon-card" data-name="equal">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-equal"></span>
+              <span class="icon icon-equal icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">equal</div>
@@ -1617,7 +1587,7 @@
         <div class="icon-card" data-name="external-link">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-external-link"></span>
+              <span class="icon icon-external-link icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">external-link</div>
@@ -1626,7 +1596,7 @@
         <div class="icon-card" data-name="eye-off">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-eye-off"></span>
+              <span class="icon icon-eye-off icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">eye-off</div>
@@ -1635,7 +1605,7 @@
         <div class="icon-card" data-name="eye">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-eye"></span>
+              <span class="icon icon-eye icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">eye</div>
@@ -1644,7 +1614,7 @@
         <div class="icon-card" data-name="facebook">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-facebook"></span>
+              <span class="icon icon-facebook icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">facebook</div>
@@ -1653,7 +1623,7 @@
         <div class="icon-card" data-name="fast-forward">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-fast-forward"></span>
+              <span class="icon icon-fast-forward icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">fast-forward</div>
@@ -1662,7 +1632,7 @@
         <div class="icon-card" data-name="fax-inbound">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-fax-inbound"></span>
+              <span class="icon icon-fax-inbound icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">fax-inbound</div>
@@ -1671,7 +1641,7 @@
         <div class="icon-card" data-name="fax-outbound">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-fax-outbound"></span>
+              <span class="icon icon-fax-outbound icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">fax-outbound</div>
@@ -1680,7 +1650,7 @@
         <div class="icon-card" data-name="feather">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-feather"></span>
+              <span class="icon icon-feather icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">feather</div>
@@ -1689,7 +1659,7 @@
         <div class="icon-card" data-name="figma">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-figma"></span>
+              <span class="icon icon-figma icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">figma</div>
@@ -1698,7 +1668,7 @@
         <div class="icon-card" data-name="file-minus">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-file-minus"></span>
+              <span class="icon icon-file-minus icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">file-minus</div>
@@ -1707,7 +1677,7 @@
         <div class="icon-card" data-name="file-plus">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-file-plus"></span>
+              <span class="icon icon-file-plus icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">file-plus</div>
@@ -1716,7 +1686,7 @@
         <div class="icon-card" data-name="file-text">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-file-text"></span>
+              <span class="icon icon-file-text icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">file-text</div>
@@ -1725,7 +1695,7 @@
         <div class="icon-card" data-name="file">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-file"></span>
+              <span class="icon icon-file icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">file</div>
@@ -1734,7 +1704,7 @@
         <div class="icon-card" data-name="film">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-film"></span>
+              <span class="icon icon-film icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">film</div>
@@ -1743,7 +1713,7 @@
         <div class="icon-card" data-name="filter-2">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-filter-2"></span>
+              <span class="icon icon-filter-2 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">filter-2</div>
@@ -1752,7 +1722,7 @@
         <div class="icon-card" data-name="filter">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-filter"></span>
+              <span class="icon icon-filter icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">filter</div>
@@ -1761,7 +1731,7 @@
         <div class="icon-card" data-name="financial-management">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-financial-management"></span>
+              <span class="icon icon-financial-management icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">financial-management</div>
@@ -1770,7 +1740,7 @@
         <div class="icon-card" data-name="financials">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-financials"></span>
+              <span class="icon icon-financials icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">financials</div>
@@ -1779,7 +1749,7 @@
         <div class="icon-card" data-name="flag-fill">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-flag-fill"></span>
+              <span class="icon icon-flag-fill icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">flag-fill</div>
@@ -1788,7 +1758,7 @@
         <div class="icon-card" data-name="flag">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-flag"></span>
+              <span class="icon icon-flag icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">flag</div>
@@ -1797,7 +1767,7 @@
         <div class="icon-card" data-name="flow-chart">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-flow-chart"></span>
+              <span class="icon icon-flow-chart icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">flow-chart</div>
@@ -1806,7 +1776,7 @@
         <div class="icon-card" data-name="folder-add">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-folder-add"></span>
+              <span class="icon icon-folder-add icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">folder-add</div>
@@ -1815,7 +1785,7 @@
         <div class="icon-card" data-name="folder-share">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-folder-share"></span>
+              <span class="icon icon-folder-share icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">folder-share</div>
@@ -1824,7 +1794,7 @@
         <div class="icon-card" data-name="folder-minus">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-folder-minus"></span>
+              <span class="icon icon-folder-minus icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">folder-minus</div>
@@ -1833,7 +1803,7 @@
         <div class="icon-card" data-name="folder-plus">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-folder-plus"></span>
+              <span class="icon icon-folder-plus icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">folder-plus</div>
@@ -1842,7 +1812,7 @@
         <div class="icon-card" data-name="folder">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-folder"></span>
+              <span class="icon icon-folder icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">folder</div>
@@ -1851,7 +1821,7 @@
         <div class="icon-card" data-name="framer">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-framer"></span>
+              <span class="icon icon-framer icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">framer</div>
@@ -1860,7 +1830,7 @@
         <div class="icon-card" data-name="frown">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-frown"></span>
+              <span class="icon icon-frown icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">frown</div>
@@ -1869,7 +1839,7 @@
         <div class="icon-card" data-name="gift">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-gift"></span>
+              <span class="icon icon-gift icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">gift</div>
@@ -1878,7 +1848,7 @@
         <div class="icon-card" data-name="git-branch">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-git-branch"></span>
+              <span class="icon icon-git-branch icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">git-branch</div>
@@ -1887,7 +1857,7 @@
         <div class="icon-card" data-name="git-commit">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-git-commit"></span>
+              <span class="icon icon-git-commit icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">git-commit</div>
@@ -1896,7 +1866,7 @@
         <div class="icon-card" data-name="git-merge">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-git-merge"></span>
+              <span class="icon icon-git-merge icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">git-merge</div>
@@ -1905,7 +1875,7 @@
         <div class="icon-card" data-name="git-pull-request">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-git-pull-request"></span>
+              <span class="icon icon-git-pull-request icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">git-pull-request</div>
@@ -1914,7 +1884,7 @@
         <div class="icon-card" data-name="github">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-github"></span>
+              <span class="icon icon-github icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">github</div>
@@ -1923,7 +1893,7 @@
         <div class="icon-card" data-name="gitlab">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-gitlab"></span>
+              <span class="icon icon-gitlab icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">gitlab</div>
@@ -1932,7 +1902,7 @@
         <div class="icon-card" data-name="globe">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-globe"></span>
+              <span class="icon icon-globe icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">globe</div>
@@ -1941,7 +1911,7 @@
         <div class="icon-card" data-name="grid">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-grid"></span>
+              <span class="icon icon-grid icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">grid</div>
@@ -1950,7 +1920,7 @@
         <div class="icon-card" data-name="hard-drive">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-hard-drive"></span>
+              <span class="icon icon-hard-drive icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">hard-drive</div>
@@ -1959,7 +1929,7 @@
         <div class="icon-card" data-name="hash">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-hash"></span>
+              <span class="icon icon-hash icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">hash</div>
@@ -1968,7 +1938,7 @@
         <div class="icon-card" data-name="hazardous-drug">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-hazardous-drug"></span>
+              <span class="icon icon-hazardous-drug icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">hazardous-drug</div>
@@ -1977,7 +1947,7 @@
         <div class="icon-card" data-name="headphones">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-headphones"></span>
+              <span class="icon icon-headphones icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">headphones</div>
@@ -1986,7 +1956,7 @@
         <div class="icon-card" data-name="health-insurance">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-health-insurance"></span>
+              <span class="icon icon-health-insurance icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">health-insurance</div>
@@ -1995,7 +1965,7 @@
         <div class="icon-card" data-name="heart">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-heart"></span>
+              <span class="icon icon-heart icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">heart</div>
@@ -2004,7 +1974,7 @@
         <div class="icon-card" data-name="help-circle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-help-circle"></span>
+              <span class="icon icon-help-circle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">help-circle</div>
@@ -2013,7 +1983,7 @@
         <div class="icon-card" data-name="hexagon">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-hexagon"></span>
+              <span class="icon icon-hexagon icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">hexagon</div>
@@ -2022,7 +1992,7 @@
         <div class="icon-card" data-name="hold-drag">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-hold-drag"></span>
+              <span class="icon icon-hold-drag icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">hold-drag</div>
@@ -2031,7 +2001,7 @@
         <div class="icon-card" data-name="home">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-home"></span>
+              <span class="icon icon-home icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">home</div>
@@ -2040,7 +2010,7 @@
         <div class="icon-card" data-name="image">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-image"></span>
+              <span class="icon icon-image icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">image</div>
@@ -2049,7 +2019,7 @@
         <div class="icon-card" data-name="immunization">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-immunization"></span>
+              <span class="icon icon-immunization icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">immunization</div>
@@ -2058,7 +2028,7 @@
         <div class="icon-card" data-name="inbox">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-inbox"></span>
+              <span class="icon icon-inbox icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">inbox</div>
@@ -2067,7 +2037,7 @@
         <div class="icon-card" data-name="info">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-info"></span>
+              <span class="icon icon-info icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">info</div>
@@ -2076,7 +2046,7 @@
         <div class="icon-card" data-name="instagram">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-instagram"></span>
+              <span class="icon icon-instagram icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">instagram</div>
@@ -2085,7 +2055,7 @@
         <div class="icon-card" data-name="integrations">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-integrations"></span>
+              <span class="icon icon-integrations icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">integrations</div>
@@ -2094,7 +2064,7 @@
         <div class="icon-card" data-name="intial-review">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-intial-review"></span>
+              <span class="icon icon-intial-review icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">intial-review</div>
@@ -2103,7 +2073,7 @@
         <div class="icon-card" data-name="inventory">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-inventory"></span>
+              <span class="icon icon-inventory icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">inventory</div>
@@ -2112,7 +2082,7 @@
         <div class="icon-card" data-name="invoices">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-invoices"></span>
+              <span class="icon icon-invoices icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">invoices</div>
@@ -2121,7 +2091,7 @@
         <div class="icon-card" data-name="italic">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-italic"></span>
+              <span class="icon icon-italic icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">italic</div>
@@ -2130,7 +2100,7 @@
         <div class="icon-card" data-name="kareem">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-kareem"></span>
+              <span class="icon icon-kareem icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">kareem</div>
@@ -2139,7 +2109,7 @@
         <div class="icon-card" data-name="key">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-key"></span>
+              <span class="icon icon-key icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">key</div>
@@ -2148,7 +2118,7 @@
         <div class="icon-card" data-name="layers">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-layers"></span>
+              <span class="icon icon-layers icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">layers</div>
@@ -2157,7 +2127,7 @@
         <div class="icon-card" data-name="layout">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-layout"></span>
+              <span class="icon icon-layout icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">layout</div>
@@ -2166,7 +2136,7 @@
         <div class="icon-card" data-name="life-buoy">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-life-buoy"></span>
+              <span class="icon icon-life-buoy icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">life-buoy</div>
@@ -2175,7 +2145,7 @@
         <div class="icon-card" data-name="link-2">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-link-2"></span>
+              <span class="icon icon-link-2 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">link-2</div>
@@ -2184,7 +2154,7 @@
         <div class="icon-card" data-name="link">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-link"></span>
+              <span class="icon icon-link icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">link</div>
@@ -2193,7 +2163,7 @@
         <div class="icon-card" data-name="linkedin">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-linkedin"></span>
+              <span class="icon icon-linkedin icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">linkedin</div>
@@ -2202,7 +2172,7 @@
         <div class="icon-card" data-name="list">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-list"></span>
+              <span class="icon icon-list icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">list</div>
@@ -2211,7 +2181,7 @@
         <div class="icon-card" data-name="loader">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-loader"></span>
+              <span class="icon icon-loader icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">loader</div>
@@ -2220,7 +2190,7 @@
         <div class="icon-card" data-name="lock">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-lock"></span>
+              <span class="icon icon-lock icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">lock</div>
@@ -2229,7 +2199,7 @@
         <div class="icon-card" data-name="log-in">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-log-in"></span>
+              <span class="icon icon-log-in icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">log-in</div>
@@ -2238,7 +2208,7 @@
         <div class="icon-card" data-name="log-out">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-log-out"></span>
+              <span class="icon icon-log-out icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">log-out</div>
@@ -2247,7 +2217,7 @@
         <div class="icon-card" data-name="mail">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-mail"></span>
+              <span class="icon icon-mail icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">mail</div>
@@ -2256,7 +2226,7 @@
         <div class="icon-card" data-name="manage-claim">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-manage-claim"></span>
+              <span class="icon icon-manage-claim icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">manage-claim</div>
@@ -2265,7 +2235,7 @@
         <div class="icon-card" data-name="map-pin">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-map-pin"></span>
+              <span class="icon icon-map-pin icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">map-pin</div>
@@ -2274,7 +2244,7 @@
         <div class="icon-card" data-name="map">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-map"></span>
+              <span class="icon icon-map icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">map</div>
@@ -2283,7 +2253,7 @@
         <div class="icon-card" data-name="maximize-2">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-maximize-2"></span>
+              <span class="icon icon-maximize-2 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">maximize-2</div>
@@ -2292,7 +2262,7 @@
         <div class="icon-card" data-name="medications">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-medications"></span>
+              <span class="icon icon-medications icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">medications</div>
@@ -2301,7 +2271,7 @@
         <div class="icon-card" data-name="meh">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-meh"></span>
+              <span class="icon icon-meh icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">meh</div>
@@ -2310,7 +2280,7 @@
         <div class="icon-card" data-name="menu-cycle-count">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-cycle-count"></span>
+              <span class="icon icon-menu-cycle-count icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-cycle-count</div>
@@ -2319,7 +2289,7 @@
         <div class="icon-card" data-name="menu-accumulations">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-accumulations"></span>
+              <span class="icon icon-menu-accumulations icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-accumulations</div>
@@ -2328,7 +2298,7 @@
         <div class="icon-card" data-name="menu-add">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-add"></span>
+              <span class="icon icon-menu-add icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-add</div>
@@ -2337,7 +2307,7 @@
         <div class="icon-card" data-name="menu-admin">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-admin"></span>
+              <span class="icon icon-menu-admin icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-admin</div>
@@ -2346,7 +2316,7 @@
         <div class="icon-card" data-name="menu-audit-tool">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-audit-tool"></span>
+              <span class="icon icon-menu-audit-tool icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-audit-tool</div>
@@ -2355,7 +2325,7 @@
         <div class="icon-card" data-name="menu-chat-red-dot">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-chat-red-dot"></span>
+              <span class="icon icon-menu-chat-red-dot icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-chat-red-dot</div>
@@ -2364,7 +2334,7 @@
         <div class="icon-card" data-name="menu-chat">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-chat"></span>
+              <span class="icon icon-menu-chat icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-chat</div>
@@ -2373,7 +2343,7 @@
         <div class="icon-card" data-name="menu-claim">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-claim"></span>
+              <span class="icon icon-menu-claim icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-claim</div>
@@ -2382,7 +2352,7 @@
         <div class="icon-card" data-name="menu-claims-manager">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-claims-manager"></span>
+              <span class="icon icon-menu-claims-manager icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-claims-manager</div>
@@ -2391,7 +2361,7 @@
         <div class="icon-card" data-name="menu-claims">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-claims"></span>
+              <span class="icon icon-menu-claims icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-claims</div>
@@ -2400,7 +2370,7 @@
         <div class="icon-card" data-name="menu-configuration">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-configuration"></span>
+              <span class="icon icon-menu-configuration icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-configuration</div>
@@ -2409,7 +2379,7 @@
         <div class="icon-card" data-name="menu-dashboard">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-dashboard"></span>
+              <span class="icon icon-menu-dashboard icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-dashboard</div>
@@ -2418,7 +2388,7 @@
         <div class="icon-card" data-name="menu-drug-catalog">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-drug-catalog"></span>
+              <span class="icon icon-menu-drug-catalog icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-drug-catalog</div>
@@ -2427,7 +2397,7 @@
         <div class="icon-card" data-name="menu-fill-start">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-fill-start"></span>
+              <span class="icon icon-menu-fill-start icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-fill-start</div>
@@ -2436,7 +2406,7 @@
         <div class="icon-card" data-name="menu-final-review">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-final-review"></span>
+              <span class="icon icon-menu-final-review icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-final-review</div>
@@ -2445,7 +2415,7 @@
         <div class="icon-card" data-name="menu-financial-management">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-financial-management"></span>
+              <span class="icon icon-menu-financial-management icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-financial-management</div>
@@ -2454,7 +2424,7 @@
         <div class="icon-card" data-name="menu-financial">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-financial"></span>
+              <span class="icon icon-menu-financial icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-financial</div>
@@ -2463,7 +2433,7 @@
         <div class="icon-card" data-name="menu-initial-review">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-initial-review"></span>
+              <span class="icon icon-menu-initial-review icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-initial-review</div>
@@ -2472,7 +2442,7 @@
         <div class="icon-card" data-name="menu-integrations">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-integrations"></span>
+              <span class="icon icon-menu-integrations icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-integrations</div>
@@ -2481,7 +2451,7 @@
         <div class="icon-card" data-name="menu-inv-optimization">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-inv-optimization"></span>
+              <span class="icon icon-menu-inv-optimization icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-inv-optimization</div>
@@ -2490,7 +2460,7 @@
         <div class="icon-card" data-name="menu-inventory">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-inventory"></span>
+              <span class="icon icon-menu-inventory icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-inventory</div>
@@ -2499,7 +2469,7 @@
         <div class="icon-card" data-name="menu-invoices">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-invoices"></span>
+              <span class="icon icon-menu-invoices icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-invoices</div>
@@ -2508,7 +2478,7 @@
         <div class="icon-card" data-name="menu-location">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-location"></span>
+              <span class="icon icon-menu-location icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-location</div>
@@ -2517,7 +2487,7 @@
         <div class="icon-card" data-name="menu-medicine">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-medicine"></span>
+              <span class="icon icon-menu-medicine icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-medicine</div>
@@ -2526,7 +2496,7 @@
         <div class="icon-card" data-name="menu-member">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-member"></span>
+              <span class="icon icon-menu-member icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-member</div>
@@ -2535,7 +2505,7 @@
         <div class="icon-card" data-name="menu-orde-with-time">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-orde-with-time"></span>
+              <span class="icon icon-menu-orde-with-time icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-orde-with-time</div>
@@ -2544,7 +2514,7 @@
         <div class="icon-card" data-name="menu-order-entry">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-order-entry"></span>
+              <span class="icon icon-menu-order-entry icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-order-entry</div>
@@ -2553,7 +2523,7 @@
         <div class="icon-card" data-name="menu-order">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-order"></span>
+              <span class="icon icon-menu-order icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-order</div>
@@ -2562,7 +2532,7 @@
         <div class="icon-card" data-name="menu-patient-module">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-patient-module"></span>
+              <span class="icon icon-menu-patient-module icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-patient-module</div>
@@ -2571,7 +2541,7 @@
         <div class="icon-card" data-name="menu-payor">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-payor"></span>
+              <span class="icon icon-menu-payor icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-payor</div>
@@ -2580,7 +2550,7 @@
         <div class="icon-card" data-name="menu-pending">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-pending"></span>
+              <span class="icon icon-menu-pending icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-pending</div>
@@ -2589,7 +2559,7 @@
         <div class="icon-card" data-name="menu-pharmacy-reports">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-pharmacy-reports"></span>
+              <span class="icon icon-menu-pharmacy-reports icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-pharmacy-reports</div>
@@ -2598,7 +2568,7 @@
         <div class="icon-card" data-name="menu-pharmacy">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-pharmacy"></span>
+              <span class="icon icon-menu-pharmacy icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-pharmacy</div>
@@ -2607,7 +2577,7 @@
         <div class="icon-card" data-name="menu-precriber">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-precriber"></span>
+              <span class="icon icon-menu-precriber icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-precriber</div>
@@ -2616,7 +2586,7 @@
         <div class="icon-card" data-name="menu-prescriber">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-prescriber"></span>
+              <span class="icon icon-menu-prescriber icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-prescriber</div>
@@ -2625,7 +2595,7 @@
         <div class="icon-card" data-name="menu-reports">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-reports"></span>
+              <span class="icon icon-menu-reports icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-reports</div>
@@ -2634,7 +2604,7 @@
         <div class="icon-card" data-name="menu-rx-manager">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-rx-manager"></span>
+              <span class="icon icon-menu-rx-manager icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-rx-manager</div>
@@ -2643,7 +2613,7 @@
         <div class="icon-card" data-name="menu-taskboard">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-taskboard"></span>
+              <span class="icon icon-menu-taskboard icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-taskboard</div>
@@ -2652,7 +2622,7 @@
         <div class="icon-card" data-name="menu-workflow">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-workflow"></span>
+              <span class="icon icon-menu-workflow icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-workflow</div>
@@ -2661,7 +2631,7 @@
         <div class="icon-card" data-name="menu-dollar">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu-dollar"></span>
+              <span class="icon icon-menu-dollar icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu-dollar</div>
@@ -2670,7 +2640,7 @@
         <div class="icon-card" data-name="menu">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-menu"></span>
+              <span class="icon icon-menu icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">menu</div>
@@ -2679,7 +2649,7 @@
         <div class="icon-card" data-name="message-circle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-message-circle"></span>
+              <span class="icon icon-message-circle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">message-circle</div>
@@ -2688,7 +2658,7 @@
         <div class="icon-card" data-name="message-square">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-message-square"></span>
+              <span class="icon icon-message-square icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">message-square</div>
@@ -2697,7 +2667,7 @@
         <div class="icon-card" data-name="mic-off">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-mic-off"></span>
+              <span class="icon icon-mic-off icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">mic-off</div>
@@ -2706,7 +2676,7 @@
         <div class="icon-card" data-name="mic">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-mic"></span>
+              <span class="icon icon-mic icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">mic</div>
@@ -2715,7 +2685,7 @@
         <div class="icon-card" data-name="minimize-2">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-minimize-2"></span>
+              <span class="icon icon-minimize-2 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">minimize-2</div>
@@ -2724,7 +2694,7 @@
         <div class="icon-card" data-name="minus-circle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-minus-circle"></span>
+              <span class="icon icon-minus-circle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">minus-circle</div>
@@ -2733,7 +2703,7 @@
         <div class="icon-card" data-name="minus-square">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-minus-square"></span>
+              <span class="icon icon-minus-square icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">minus-square</div>
@@ -2742,7 +2712,7 @@
         <div class="icon-card" data-name="minus">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-minus"></span>
+              <span class="icon icon-minus icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">minus</div>
@@ -2751,7 +2721,7 @@
         <div class="icon-card" data-name="monitor">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-monitor"></span>
+              <span class="icon icon-monitor icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">monitor</div>
@@ -2760,7 +2730,7 @@
         <div class="icon-card" data-name="moon">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-moon"></span>
+              <span class="icon icon-moon icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">moon</div>
@@ -2769,7 +2739,7 @@
         <div class="icon-card" data-name="more-horizontal">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-more-horizontal"></span>
+              <span class="icon icon-more-horizontal icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">more-horizontal</div>
@@ -2778,7 +2748,7 @@
         <div class="icon-card" data-name="more-vertical">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-more-vertical"></span>
+              <span class="icon icon-more-vertical icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">more-vertical</div>
@@ -2787,7 +2757,7 @@
         <div class="icon-card" data-name="mouse-pointer">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-mouse-pointer"></span>
+              <span class="icon icon-mouse-pointer icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">mouse-pointer</div>
@@ -2796,7 +2766,7 @@
         <div class="icon-card" data-name="move">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-move"></span>
+              <span class="icon icon-move icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">move</div>
@@ -2805,7 +2775,7 @@
         <div class="icon-card" data-name="music">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-music"></span>
+              <span class="icon icon-music icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">music</div>
@@ -2814,7 +2784,7 @@
         <div class="icon-card" data-name="navigation-2">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-navigation-2"></span>
+              <span class="icon icon-navigation-2 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">navigation-2</div>
@@ -2823,7 +2793,7 @@
         <div class="icon-card" data-name="navigation">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-navigation"></span>
+              <span class="icon icon-navigation icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">navigation</div>
@@ -2832,7 +2802,7 @@
         <div class="icon-card" data-name="notification-number">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-notification-number"></span>
+              <span class="icon icon-notification-number icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">notification-number</div>
@@ -2841,7 +2811,7 @@
         <div class="icon-card" data-name="octagon">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-octagon"></span>
+              <span class="icon icon-octagon icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">octagon</div>
@@ -2850,7 +2820,7 @@
         <div class="icon-card" data-name="on-order">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-on-order"></span>
+              <span class="icon icon-on-order icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">on-order</div>
@@ -2859,7 +2829,7 @@
         <div class="icon-card" data-name="order-history">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-order-history"></span>
+              <span class="icon icon-order-history icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">order-history</div>
@@ -2868,7 +2838,7 @@
         <div class="icon-card" data-name="order-list">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-order-list"></span>
+              <span class="icon icon-order-list icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">order-list</div>
@@ -2877,7 +2847,7 @@
         <div class="icon-card" data-name="org">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-org"></span>
+              <span class="icon icon-org icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">org</div>
@@ -2886,7 +2856,7 @@
         <div class="icon-card" data-name="package">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-package"></span>
+              <span class="icon icon-package icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">package</div>
@@ -2895,7 +2865,7 @@
         <div class="icon-card" data-name="pac-packaging">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-pac-packaging"></span>
+              <span class="icon icon-pac-packaging icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">pac-packaging</div>
@@ -2904,7 +2874,7 @@
         <div class="icon-card" data-name="paperclip">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-paperclip"></span>
+              <span class="icon icon-paperclip icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">paperclip</div>
@@ -2913,7 +2883,7 @@
         <div class="icon-card" data-name="pause-fill">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-pause-fill"></span>
+              <span class="icon icon-pause-fill icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">pause-fill</div>
@@ -2922,7 +2892,7 @@
         <div class="icon-card" data-name="pause-circle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-pause-circle"></span>
+              <span class="icon icon-pause-circle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">pause-circle</div>
@@ -2931,7 +2901,7 @@
         <div class="icon-card" data-name="pause">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-pause"></span>
+              <span class="icon icon-pause icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">pause</div>
@@ -2940,7 +2910,7 @@
         <div class="icon-card" data-name="payor">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-payor"></span>
+              <span class="icon icon-payor icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">payor</div>
@@ -2949,7 +2919,7 @@
         <div class="icon-card" data-name="pen-tool">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-pen-tool"></span>
+              <span class="icon icon-pen-tool icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">pen-tool</div>
@@ -2958,7 +2928,7 @@
         <div class="icon-card" data-name="pending">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-pending"></span>
+              <span class="icon icon-pending icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">pending</div>
@@ -2967,7 +2937,7 @@
         <div class="icon-card" data-name="percent">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-percent"></span>
+              <span class="icon icon-percent icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">percent</div>
@@ -2976,7 +2946,7 @@
         <div class="icon-card" data-name="pharmacy-reports">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-pharmacy-reports"></span>
+              <span class="icon icon-pharmacy-reports icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">pharmacy-reports</div>
@@ -2985,7 +2955,7 @@
         <div class="icon-card" data-name="phone-add">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-phone-add"></span>
+              <span class="icon icon-phone-add icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">phone-add</div>
@@ -2994,7 +2964,7 @@
         <div class="icon-card" data-name="phone-call">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-phone-call"></span>
+              <span class="icon icon-phone-call icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">phone-call</div>
@@ -3003,7 +2973,7 @@
         <div class="icon-card" data-name="phone-forwarded">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-phone-forwarded"></span>
+              <span class="icon icon-phone-forwarded icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">phone-forwarded</div>
@@ -3012,7 +2982,7 @@
         <div class="icon-card" data-name="phone-incoming">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-phone-incoming"></span>
+              <span class="icon icon-phone-incoming icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">phone-incoming</div>
@@ -3021,7 +2991,7 @@
         <div class="icon-card" data-name="phone-missed">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-phone-missed"></span>
+              <span class="icon icon-phone-missed icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">phone-missed</div>
@@ -3030,7 +3000,7 @@
         <div class="icon-card" data-name="phone-off">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-phone-off"></span>
+              <span class="icon icon-phone-off icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">phone-off</div>
@@ -3039,7 +3009,7 @@
         <div class="icon-card" data-name="phone-outgoing">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-phone-outgoing"></span>
+              <span class="icon icon-phone-outgoing icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">phone-outgoing</div>
@@ -3048,7 +3018,7 @@
         <div class="icon-card" data-name="phone">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-phone"></span>
+              <span class="icon icon-phone icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">phone</div>
@@ -3057,7 +3027,7 @@
         <div class="icon-card" data-name="pie-chart">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-pie-chart"></span>
+              <span class="icon icon-pie-chart icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">pie-chart</div>
@@ -3066,7 +3036,7 @@
         <div class="icon-card" data-name="play-fill">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-play-fill"></span>
+              <span class="icon icon-play-fill icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">play-fill</div>
@@ -3075,7 +3045,7 @@
         <div class="icon-card" data-name="play-circle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-play-circle"></span>
+              <span class="icon icon-play-circle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">play-circle</div>
@@ -3084,7 +3054,7 @@
         <div class="icon-card" data-name="play">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-play"></span>
+              <span class="icon icon-play icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">play</div>
@@ -3093,7 +3063,7 @@
         <div class="icon-card" data-name="plus-circle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-plus-circle"></span>
+              <span class="icon icon-plus-circle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">plus-circle</div>
@@ -3102,7 +3072,7 @@
         <div class="icon-card" data-name="plus-square">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-plus-square"></span>
+              <span class="icon icon-plus-square icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">plus-square</div>
@@ -3111,7 +3081,7 @@
         <div class="icon-card" data-name="plus">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-plus"></span>
+              <span class="icon icon-plus icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">plus</div>
@@ -3120,7 +3090,7 @@
         <div class="icon-card" data-name="pocket">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-pocket"></span>
+              <span class="icon icon-pocket icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">pocket</div>
@@ -3129,7 +3099,7 @@
         <div class="icon-card" data-name="power">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-power"></span>
+              <span class="icon icon-power icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">power</div>
@@ -3138,7 +3108,7 @@
         <div class="icon-card" data-name="prescription-history">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-prescription-history"></span>
+              <span class="icon icon-prescription-history icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">prescription-history</div>
@@ -3147,7 +3117,7 @@
         <div class="icon-card" data-name="prescription-pending">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-prescription-pending"></span>
+              <span class="icon icon-prescription-pending icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">prescription-pending</div>
@@ -3156,7 +3126,7 @@
         <div class="icon-card" data-name="prescription-transfer">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-prescription-transfer"></span>
+              <span class="icon icon-prescription-transfer icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">prescription-transfer</div>
@@ -3165,7 +3135,7 @@
         <div class="icon-card" data-name="price-cut">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-price-cut"></span>
+              <span class="icon icon-price-cut icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">price-cut</div>
@@ -3174,7 +3144,7 @@
         <div class="icon-card" data-name="products-inventory">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-products-inventory"></span>
+              <span class="icon icon-products-inventory icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">products-inventory</div>
@@ -3183,7 +3153,7 @@
         <div class="icon-card" data-name="programs">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-programs"></span>
+              <span class="icon icon-programs icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">programs</div>
@@ -3192,7 +3162,7 @@
         <div class="icon-card" data-name="progress-active">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-progress-active"></span>
+              <span class="icon icon-progress-active icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">progress-active</div>
@@ -3201,7 +3171,7 @@
         <div class="icon-card" data-name="prscriber">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-prscriber"></span>
+              <span class="icon icon-prscriber icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">prscriber</div>
@@ -3210,7 +3180,7 @@
         <div class="icon-card" data-name="radio">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-radio"></span>
+              <span class="icon icon-radio icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">radio</div>
@@ -3219,7 +3189,7 @@
         <div class="icon-card" data-name="re-assign">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-re-assign"></span>
+              <span class="icon icon-re-assign icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">re-assign</div>
@@ -3228,7 +3198,7 @@
         <div class="icon-card" data-name="re-claim">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-re-claim"></span>
+              <span class="icon icon-re-claim icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">re-claim</div>
@@ -3237,7 +3207,7 @@
         <div class="icon-card" data-name="re-print">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-re-print"></span>
+              <span class="icon icon-re-print icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">re-print</div>
@@ -3246,7 +3216,7 @@
         <div class="icon-card" data-name="receive-order">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-receive-order"></span>
+              <span class="icon icon-receive-order icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">receive-order</div>
@@ -3255,7 +3225,7 @@
         <div class="icon-card" data-name="re-claim-white">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-re-claim-white"></span>
+              <span class="icon icon-re-claim-white icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">re-claim-white</div>
@@ -3264,7 +3234,7 @@
         <div class="icon-card" data-name="red-dot">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-red-dot"></span>
+              <span class="icon icon-red-dot icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">red-dot</div>
@@ -3273,7 +3243,7 @@
         <div class="icon-card" data-name="redo">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-redo"></span>
+              <span class="icon icon-redo icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">redo</div>
@@ -3282,7 +3252,7 @@
         <div class="icon-card" data-name="refill">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-refill"></span>
+              <span class="icon icon-refill icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">refill</div>
@@ -3291,7 +3261,7 @@
         <div class="icon-card" data-name="refresh-ccw">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-refresh-ccw"></span>
+              <span class="icon icon-refresh-ccw icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">refresh-ccw</div>
@@ -3300,7 +3270,7 @@
         <div class="icon-card" data-name="refresh-cw">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-refresh-cw"></span>
+              <span class="icon icon-refresh-cw icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">refresh-cw</div>
@@ -3309,7 +3279,7 @@
         <div class="icon-card" data-name="repeat">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-repeat"></span>
+              <span class="icon icon-repeat icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">repeat</div>
@@ -3318,7 +3288,7 @@
         <div class="icon-card" data-name="replenishment">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-replenishment"></span>
+              <span class="icon icon-replenishment icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">replenishment</div>
@@ -3327,7 +3297,7 @@
         <div class="icon-card" data-name="reports-1">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-reports-1"></span>
+              <span class="icon icon-reports-1 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">reports-1</div>
@@ -3336,7 +3306,7 @@
         <div class="icon-card" data-name="reports-dot">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-reports-dot"></span>
+              <span class="icon icon-reports-dot icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">reports-dot</div>
@@ -3345,7 +3315,7 @@
         <div class="icon-card" data-name="reports">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-reports"></span>
+              <span class="icon icon-reports icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">reports</div>
@@ -3354,7 +3324,7 @@
         <div class="icon-card" data-name="request-mail">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-request-mail"></span>
+              <span class="icon icon-request-mail icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">request-mail</div>
@@ -3363,7 +3333,7 @@
         <div class="icon-card" data-name="reset-password">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-reset-password"></span>
+              <span class="icon icon-reset-password icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">reset-password</div>
@@ -3372,7 +3342,7 @@
         <div class="icon-card" data-name="rewind">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-rewind"></span>
+              <span class="icon icon-rewind icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">rewind</div>
@@ -3381,7 +3351,7 @@
         <div class="icon-card" data-name="ritation-left">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-ritation-left"></span>
+              <span class="icon icon-ritation-left icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">ritation-left</div>
@@ -3390,7 +3360,7 @@
         <div class="icon-card" data-name="rotate-ccw">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-rotate-ccw"></span>
+              <span class="icon icon-rotate-ccw icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">rotate-ccw</div>
@@ -3399,7 +3369,7 @@
         <div class="icon-card" data-name="rotate-cw">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-rotate-cw"></span>
+              <span class="icon icon-rotate-cw icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">rotate-cw</div>
@@ -3408,7 +3378,7 @@
         <div class="icon-card" data-name="rotation-right">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-rotation-right"></span>
+              <span class="icon icon-rotation-right icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">rotation-right</div>
@@ -3417,7 +3387,7 @@
         <div class="icon-card" data-name="row">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-row"></span>
+              <span class="icon icon-row icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">row</div>
@@ -3426,7 +3396,7 @@
         <div class="icon-card" data-name="rss">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-rss"></span>
+              <span class="icon icon-rss icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">rss</div>
@@ -3435,7 +3405,7 @@
         <div class="icon-card" data-name="rx-manager">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-rx-manager"></span>
+              <span class="icon icon-rx-manager icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">rx-manager</div>
@@ -3444,7 +3414,7 @@
         <div class="icon-card" data-name="save">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-save"></span>
+              <span class="icon icon-save icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">save</div>
@@ -3453,7 +3423,7 @@
         <div class="icon-card" data-name="scan-barcode">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-scan-barcode"></span>
+              <span class="icon icon-scan-barcode icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">scan-barcode</div>
@@ -3462,7 +3432,7 @@
         <div class="icon-card" data-name="scan-document">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-scan-document"></span>
+              <span class="icon icon-scan-document icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">scan-document</div>
@@ -3471,7 +3441,7 @@
         <div class="icon-card" data-name="scissors">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-scissors"></span>
+              <span class="icon icon-scissors icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">scissors</div>
@@ -3480,7 +3450,7 @@
         <div class="icon-card" data-name="search-po">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-search-po"></span>
+              <span class="icon icon-search-po icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">search-po</div>
@@ -3489,7 +3459,7 @@
         <div class="icon-card" data-name="search">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-search"></span>
+              <span class="icon icon-search icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">search</div>
@@ -3498,7 +3468,7 @@
         <div class="icon-card" data-name="send-back">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-send-back"></span>
+              <span class="icon icon-send-back icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">send-back</div>
@@ -3507,7 +3477,7 @@
         <div class="icon-card" data-name="send">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-send"></span>
+              <span class="icon icon-send icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">send</div>
@@ -3516,7 +3486,7 @@
         <div class="icon-card" data-name="server">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-server"></span>
+              <span class="icon icon-server icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">server</div>
@@ -3525,7 +3495,7 @@
         <div class="icon-card" data-name="settings">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-settings"></span>
+              <span class="icon icon-settings icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">settings</div>
@@ -3534,7 +3504,7 @@
         <div class="icon-card" data-name="share-2">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-share-2"></span>
+              <span class="icon icon-share-2 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">share-2</div>
@@ -3543,7 +3513,7 @@
         <div class="icon-card" data-name="share">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-share"></span>
+              <span class="icon icon-share icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">share</div>
@@ -3552,7 +3522,7 @@
         <div class="icon-card" data-name="shield-off">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-shield-off"></span>
+              <span class="icon icon-shield-off icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">shield-off</div>
@@ -3561,7 +3531,7 @@
         <div class="icon-card" data-name="shield">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-shield"></span>
+              <span class="icon icon-shield icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">shield</div>
@@ -3570,7 +3540,7 @@
         <div class="icon-card" data-name="shopping-bag">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-shopping-bag"></span>
+              <span class="icon icon-shopping-bag icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">shopping-bag</div>
@@ -3579,7 +3549,7 @@
         <div class="icon-card" data-name="shopping-cart">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-shopping-cart"></span>
+              <span class="icon icon-shopping-cart icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">shopping-cart</div>
@@ -3588,7 +3558,7 @@
         <div class="icon-card" data-name="shuffle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-shuffle"></span>
+              <span class="icon icon-shuffle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">shuffle</div>
@@ -3597,7 +3567,7 @@
         <div class="icon-card" data-name="sidebar">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-sidebar"></span>
+              <span class="icon icon-sidebar icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">sidebar</div>
@@ -3606,7 +3576,7 @@
         <div class="icon-card" data-name="skip-back">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-skip-back"></span>
+              <span class="icon icon-skip-back icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">skip-back</div>
@@ -3615,7 +3585,7 @@
         <div class="icon-card" data-name="skip-forward">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-skip-forward"></span>
+              <span class="icon icon-skip-forward icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">skip-forward</div>
@@ -3624,7 +3594,7 @@
         <div class="icon-card" data-name="slack">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-slack"></span>
+              <span class="icon icon-slack icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">slack</div>
@@ -3633,7 +3603,7 @@
         <div class="icon-card" data-name="slash">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-slash"></span>
+              <span class="icon icon-slash icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">slash</div>
@@ -3642,7 +3612,7 @@
         <div class="icon-card" data-name="sliders">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-sliders"></span>
+              <span class="icon icon-sliders icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">sliders</div>
@@ -3651,7 +3621,7 @@
         <div class="icon-card" data-name="smartphone">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-smartphone"></span>
+              <span class="icon icon-smartphone icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">smartphone</div>
@@ -3660,7 +3630,7 @@
         <div class="icon-card" data-name="smile">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-smile"></span>
+              <span class="icon icon-smile icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">smile</div>
@@ -3669,7 +3639,7 @@
         <div class="icon-card" data-name="speaker">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-speaker"></span>
+              <span class="icon icon-speaker icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">speaker</div>
@@ -3678,7 +3648,7 @@
         <div class="icon-card" data-name="square">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-square"></span>
+              <span class="icon icon-square icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">square</div>
@@ -3687,7 +3657,7 @@
         <div class="icon-card" data-name="star">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-star"></span>
+              <span class="icon icon-star icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">star</div>
@@ -3696,7 +3666,7 @@
         <div class="icon-card" data-name="stop-circle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-stop-circle"></span>
+              <span class="icon icon-stop-circle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">stop-circle</div>
@@ -3705,7 +3675,7 @@
         <div class="icon-card" data-name="sun">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-sun"></span>
+              <span class="icon icon-sun icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">sun</div>
@@ -3714,7 +3684,7 @@
         <div class="icon-card" data-name="sunrise">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-sunrise"></span>
+              <span class="icon icon-sunrise icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">sunrise</div>
@@ -3723,7 +3693,7 @@
         <div class="icon-card" data-name="sunset">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-sunset"></span>
+              <span class="icon icon-sunset icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">sunset</div>
@@ -3732,7 +3702,7 @@
         <div class="icon-card" data-name="swap-screen">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-swap-screen"></span>
+              <span class="icon icon-swap-screen icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">swap-screen</div>
@@ -3741,7 +3711,7 @@
         <div class="icon-card" data-name="table">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-table"></span>
+              <span class="icon icon-table icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">table</div>
@@ -3750,7 +3720,7 @@
         <div class="icon-card" data-name="tablet">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-tablet"></span>
+              <span class="icon icon-tablet icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">tablet</div>
@@ -3759,7 +3729,7 @@
         <div class="icon-card" data-name="tag">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-tag"></span>
+              <span class="icon icon-tag icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">tag</div>
@@ -3768,7 +3738,7 @@
         <div class="icon-card" data-name="target">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-target"></span>
+              <span class="icon icon-target icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">target</div>
@@ -3777,7 +3747,7 @@
         <div class="icon-card" data-name="tasks">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-tasks"></span>
+              <span class="icon icon-tasks icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">tasks</div>
@@ -3786,7 +3756,7 @@
         <div class="icon-card" data-name="terminal">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-terminal"></span>
+              <span class="icon icon-terminal icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">terminal</div>
@@ -3795,7 +3765,7 @@
         <div class="icon-card" data-name="thermometer">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-thermometer"></span>
+              <span class="icon icon-thermometer icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">thermometer</div>
@@ -3804,7 +3774,7 @@
         <div class="icon-card" data-name="thumbs-down">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-thumbs-down"></span>
+              <span class="icon icon-thumbs-down icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">thumbs-down</div>
@@ -3813,7 +3783,7 @@
         <div class="icon-card" data-name="thumbs-up">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-thumbs-up"></span>
+              <span class="icon icon-thumbs-up icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">thumbs-up</div>
@@ -3822,7 +3792,7 @@
         <div class="icon-card" data-name="to-be-ordered">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-to-be-ordered"></span>
+              <span class="icon icon-to-be-ordered icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">to-be-ordered</div>
@@ -3831,7 +3801,7 @@
         <div class="icon-card" data-name="toggle-left">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-toggle-left"></span>
+              <span class="icon icon-toggle-left icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">toggle-left</div>
@@ -3840,7 +3810,7 @@
         <div class="icon-card" data-name="toggle-right">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-toggle-right"></span>
+              <span class="icon icon-toggle-right icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">toggle-right</div>
@@ -3849,7 +3819,7 @@
         <div class="icon-card" data-name="tool">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-tool"></span>
+              <span class="icon icon-tool icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">tool</div>
@@ -3858,7 +3828,7 @@
         <div class="icon-card" data-name="tracking">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-tracking"></span>
+              <span class="icon icon-tracking icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">tracking</div>
@@ -3867,7 +3837,7 @@
         <div class="icon-card" data-name="transfer-out">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-transfer-out"></span>
+              <span class="icon icon-transfer-out icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">transfer-out</div>
@@ -3876,7 +3846,7 @@
         <div class="icon-card" data-name="trash-2">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-trash-2"></span>
+              <span class="icon icon-trash-2 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">trash-2</div>
@@ -3885,7 +3855,7 @@
         <div class="icon-card" data-name="trash">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-trash"></span>
+              <span class="icon icon-trash icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">trash</div>
@@ -3894,7 +3864,7 @@
         <div class="icon-card" data-name="trello">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-trello"></span>
+              <span class="icon icon-trello icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">trello</div>
@@ -3903,7 +3873,7 @@
         <div class="icon-card" data-name="trending-down">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-trending-down"></span>
+              <span class="icon icon-trending-down icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">trending-down</div>
@@ -3912,7 +3882,7 @@
         <div class="icon-card" data-name="trending-up">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-trending-up"></span>
+              <span class="icon icon-trending-up icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">trending-up</div>
@@ -3921,7 +3891,7 @@
         <div class="icon-card" data-name="triangle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-triangle"></span>
+              <span class="icon icon-triangle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">triangle</div>
@@ -3930,7 +3900,7 @@
         <div class="icon-card" data-name="truck">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-truck"></span>
+              <span class="icon icon-truck icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">truck</div>
@@ -3939,7 +3909,7 @@
         <div class="icon-card" data-name="tv">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-tv"></span>
+              <span class="icon icon-tv icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">tv</div>
@@ -3948,7 +3918,7 @@
         <div class="icon-card" data-name="twitch">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-twitch"></span>
+              <span class="icon icon-twitch icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">twitch</div>
@@ -3957,7 +3927,7 @@
         <div class="icon-card" data-name="twitter">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-twitter"></span>
+              <span class="icon icon-twitter icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">twitter</div>
@@ -3966,7 +3936,7 @@
         <div class="icon-card" data-name="type">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-type"></span>
+              <span class="icon icon-type icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">type</div>
@@ -3975,7 +3945,7 @@
         <div class="icon-card" data-name="umbrella">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-umbrella"></span>
+              <span class="icon icon-umbrella icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">umbrella</div>
@@ -3984,7 +3954,7 @@
         <div class="icon-card" data-name="underline">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-underline"></span>
+              <span class="icon icon-underline icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">underline</div>
@@ -3993,7 +3963,7 @@
         <div class="icon-card" data-name="undo">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-undo"></span>
+              <span class="icon icon-undo icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">undo</div>
@@ -4002,7 +3972,7 @@
         <div class="icon-card" data-name="unlock">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-unlock"></span>
+              <span class="icon icon-unlock icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">unlock</div>
@@ -4011,7 +3981,7 @@
         <div class="icon-card" data-name="upload-cloud">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-upload-cloud"></span>
+              <span class="icon icon-upload-cloud icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">upload-cloud</div>
@@ -4020,7 +3990,7 @@
         <div class="icon-card" data-name="upload">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-upload"></span>
+              <span class="icon icon-upload icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">upload</div>
@@ -4029,7 +3999,7 @@
         <div class="icon-card" data-name="user-locked">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-user-locked"></span>
+              <span class="icon icon-user-locked icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">user-locked</div>
@@ -4038,7 +4008,7 @@
         <div class="icon-card" data-name="user-check">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-user-check"></span>
+              <span class="icon icon-user-check icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">user-check</div>
@@ -4047,7 +4017,7 @@
         <div class="icon-card" data-name="user-minus">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-user-minus"></span>
+              <span class="icon icon-user-minus icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">user-minus</div>
@@ -4056,7 +4026,7 @@
         <div class="icon-card" data-name="user-plus">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-user-plus"></span>
+              <span class="icon icon-user-plus icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">user-plus</div>
@@ -4065,7 +4035,7 @@
         <div class="icon-card" data-name="user-x">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-user-x"></span>
+              <span class="icon icon-user-x icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">user-x</div>
@@ -4074,7 +4044,7 @@
         <div class="icon-card" data-name="user">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-user"></span>
+              <span class="icon icon-user icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">user</div>
@@ -4083,7 +4053,7 @@
         <div class="icon-card" data-name="users">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-users"></span>
+              <span class="icon icon-users icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">users</div>
@@ -4092,7 +4062,7 @@
         <div class="icon-card" data-name="variant293">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-variant293"></span>
+              <span class="icon icon-variant293 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">variant293</div>
@@ -4101,7 +4071,7 @@
         <div class="icon-card" data-name="variant410">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-variant410"></span>
+              <span class="icon icon-variant410 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">variant410</div>
@@ -4110,7 +4080,7 @@
         <div class="icon-card" data-name="variant422">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-variant422"></span>
+              <span class="icon icon-variant422 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">variant422</div>
@@ -4119,7 +4089,7 @@
         <div class="icon-card" data-name="veterinary-patient">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-veterinary-patient"></span>
+              <span class="icon icon-veterinary-patient icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">veterinary-patient</div>
@@ -4128,7 +4098,7 @@
         <div class="icon-card" data-name="video-off">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-video-off"></span>
+              <span class="icon icon-video-off icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">video-off</div>
@@ -4137,7 +4107,7 @@
         <div class="icon-card" data-name="video">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-video"></span>
+              <span class="icon icon-video icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">video</div>
@@ -4146,7 +4116,7 @@
         <div class="icon-card" data-name="view-claims">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-view-claims"></span>
+              <span class="icon icon-view-claims icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">view-claims</div>
@@ -4155,7 +4125,7 @@
         <div class="icon-card" data-name="view-po">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-view-po"></span>
+              <span class="icon icon-view-po icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">view-po</div>
@@ -4164,7 +4134,7 @@
         <div class="icon-card" data-name="vital-signs">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-vital-signs"></span>
+              <span class="icon icon-vital-signs icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">vital-signs</div>
@@ -4173,7 +4143,7 @@
         <div class="icon-card" data-name="voicemail">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-voicemail"></span>
+              <span class="icon icon-voicemail icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">voicemail</div>
@@ -4182,7 +4152,7 @@
         <div class="icon-card" data-name="volume-1">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-volume-1"></span>
+              <span class="icon icon-volume-1 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">volume-1</div>
@@ -4191,7 +4161,7 @@
         <div class="icon-card" data-name="volume-2">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-volume-2"></span>
+              <span class="icon icon-volume-2 icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">volume-2</div>
@@ -4200,7 +4170,7 @@
         <div class="icon-card" data-name="volume-x">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-volume-x"></span>
+              <span class="icon icon-volume-x icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">volume-x</div>
@@ -4209,7 +4179,7 @@
         <div class="icon-card" data-name="volume">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-volume"></span>
+              <span class="icon icon-volume icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">volume</div>
@@ -4218,7 +4188,7 @@
         <div class="icon-card" data-name="warning">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-warning"></span>
+              <span class="icon icon-warning icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">warning</div>
@@ -4227,7 +4197,7 @@
         <div class="icon-card" data-name="watch">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-watch"></span>
+              <span class="icon icon-watch icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">watch</div>
@@ -4236,7 +4206,7 @@
         <div class="icon-card" data-name="wholesale">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-wholesale"></span>
+              <span class="icon icon-wholesale icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">wholesale</div>
@@ -4245,7 +4215,7 @@
         <div class="icon-card" data-name="wifi-off">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-wifi-off"></span>
+              <span class="icon icon-wifi-off icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">wifi-off</div>
@@ -4254,7 +4224,7 @@
         <div class="icon-card" data-name="wifi">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-wifi"></span>
+              <span class="icon icon-wifi icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">wifi</div>
@@ -4263,7 +4233,7 @@
         <div class="icon-card" data-name="wind">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-wind"></span>
+              <span class="icon icon-wind icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">wind</div>
@@ -4272,7 +4242,7 @@
         <div class="icon-card" data-name="x-circle">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-x-circle"></span>
+              <span class="icon icon-x-circle icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">x-circle</div>
@@ -4281,7 +4251,7 @@
         <div class="icon-card" data-name="x-octagon">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-x-octagon"></span>
+              <span class="icon icon-x-octagon icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">x-octagon</div>
@@ -4290,7 +4260,7 @@
         <div class="icon-card" data-name="x-square">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-x-square"></span>
+              <span class="icon icon-x-square icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">x-square</div>
@@ -4299,7 +4269,7 @@
         <div class="icon-card" data-name="x">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-x"></span>
+              <span class="icon icon-x icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">x</div>
@@ -4308,7 +4278,7 @@
         <div class="icon-card" data-name="youtube">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-youtube"></span>
+              <span class="icon icon-youtube icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">youtube</div>
@@ -4317,7 +4287,7 @@
         <div class="icon-card" data-name="zap-off">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-zap-off"></span>
+              <span class="icon icon-zap-off icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">zap-off</div>
@@ -4326,7 +4296,7 @@
         <div class="icon-card" data-name="zap">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-zap"></span>
+              <span class="icon icon-zap icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">zap</div>
@@ -4335,7 +4305,7 @@
         <div class="icon-card" data-name="zoom-in">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-zoom-in"></span>
+              <span class="icon icon-zoom-in icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">zoom-in</div>
@@ -4344,10 +4314,19 @@
         <div class="icon-card" data-name="zoom-out">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-zoom-out"></span>
+              <span class="icon icon-zoom-out icon-16 p-clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">zoom-out</div>
+        </div>
+      
+        <div class="icon-card" data-name="test">
+          <div class="icon-preview">
+            <div class="preview-box">
+              <span class="icon icon-test icon-16 p-clr-primary"></span>
+            </div>
+          </div>
+          <div class="icon-name">test</div>
         </div>
       
     </div>
@@ -4358,7 +4337,6 @@
   <script>
     const search = document.getElementById('search');
     const colorChips = document.querySelectorAll('#color-select .chip');
-    const colorGroup = document.getElementById('color-select');
     const sizeChips = document.querySelectorAll('#size-select .chip');
     const stateChips = document.querySelectorAll('#state-select .chip');
     const syntaxChips = document.querySelectorAll('#syntax-select .chip');
@@ -4366,8 +4344,38 @@
     const toast = document.getElementById('toast');
     const root = document.documentElement;
 
-    let currentSyntax = 'react';
-    root.setAttribute('data-active-state', 'none');
+    let currentSettings = {
+      color: 'p-clr-primary',
+      hex: '#702C62',
+      size: 'icon-16',
+      sizePx: '16px',
+      state: 'none',
+      syntax: 'react'
+    };
+
+    function updatePreviews() {
+      cards.forEach(card => {
+        const icon = card.querySelector('.icon');
+        // Reset dynamic classes
+        icon.className = icon.className.replace(/icon-(8|12|14|16|20|24)/g, '').trim();
+        icon.className = icon.className.replace(/[up]-clr-(primary|success|warning|error|on-action|muted)/g, '').trim();
+        icon.className = icon.className.replace(/[up]-state-(hover|selected|disabled)/g, '').trim();
+        
+        // Add current settings
+        icon.classList.add(currentSettings.size);
+        icon.classList.add(currentSettings.color);
+        if (currentSettings.state !== 'none') {
+          icon.classList.add(currentSettings.state);
+        }
+
+        // Handle card background contrast for "On Action" (white) OR Branding "White" (p-clr-on-action)
+        if ((currentSettings.color === 'p-clr-on-action' || currentSettings.hex === '#FFFFFF') && currentSettings.state === 'none') {
+          root.style.setProperty('--card-bg-override', 'rgba(15, 23, 42, 0.9)');
+        } else {
+          root.style.setProperty('--card-bg-override', 'rgba(255, 255, 255, 0.65)');
+        }
+      });
+    }
 
     // Search Filtering
     search.addEventListener('input', (e) => {
@@ -4383,15 +4391,9 @@
       chip.addEventListener('click', () => {
         colorChips.forEach(c => c.classList.remove('active'));
         chip.classList.add('active');
-        const color = chip.dataset.color;
-        root.style.setProperty('--dynamic-color', color);
-        
-        // If color is white or very light, provide dark contrast background
-        if (color.toLowerCase() === '#ffffff') {
-          root.style.setProperty('--card-bg-override', 'rgba(15, 23, 42, 0.9)');
-        } else {
-          root.style.setProperty('--card-bg-override', 'rgba(255, 255, 255, 0.65)');
-        }
+        currentSettings.color = chip.dataset.class;
+        currentSettings.hex = chip.dataset.hex;
+        updatePreviews();
       });
     });
 
@@ -4400,24 +4402,19 @@
       chip.addEventListener('click', () => {
         sizeChips.forEach(c => c.classList.remove('active'));
         chip.classList.add('active');
-        root.style.setProperty('--dynamic-size', chip.dataset.size);
+        currentSettings.size = chip.dataset.class;
+        currentSettings.sizePx = chip.dataset.size;
+        updatePreviews();
       });
     });
 
-    // State Toggling
+    // State Toggling (Disabling logic removed as per user request - ALL pills stay enabled)
     stateChips.forEach(chip => {
       chip.addEventListener('click', () => {
         stateChips.forEach(c => c.classList.remove('active'));
         chip.classList.add('active');
-        const state = chip.dataset.state;
-        root.setAttribute('data-active-state', state);
-
-        // Disable colors if state is not 'none'
-        if (state !== 'none') {
-          colorGroup.classList.add('disabled');
-        } else {
-          colorGroup.classList.remove('disabled');
-        }
+        currentSettings.state = chip.dataset.class;
+        updatePreviews();
       });
     });
 
@@ -4426,24 +4423,32 @@
       chip.addEventListener('click', () => {
         syntaxChips.forEach(c => c.classList.remove('active'));
         chip.classList.add('active');
-        currentSyntax = chip.dataset.syntax;
+        currentSettings.syntax = chip.dataset.syntax;
       });
     });
 
-    // Copy to clipboard
+    // Copy logic
     cards.forEach(card => {
       card.addEventListener('click', () => {
         const name = card.dataset.name;
-        let code = '';
+        let snippet = '';
         
-        if (currentSyntax === 'react') {
-          code = '\x3Cspan className="icon icon-' + name + '"\x3E\x3C/span\x3E';
-        } else {
-          code = '\x3Cspan class="icon icon-' + name + '"\x3E\x3C/span\x3E';
+        const classes = ['icon', 'icon-' + name, currentSettings.size];
+        classes.push(currentSettings.color);
+        if (currentSettings.state !== 'none') {
+          classes.push(currentSettings.state);
         }
 
-        navigator.clipboard.writeText(code);
-        toast.textContent = 'Copied for ' + currentSyntax.toUpperCase() + ': ' + code;
+        const classString = classes.join(' ');
+
+        if (currentSettings.syntax === 'react') {
+          snippet = '<span className="' + classString + '"></span>';
+        } else {
+          snippet = '<span class="' + classString + '"></span>';
+        }
+
+        navigator.clipboard.writeText(snippet);
+        toast.textContent = 'Optimized ' + currentSettings.syntax.toUpperCase() + ' Copied! (' + currentSettings.sizePx + ' · ' + currentSettings.hex + ')';
         toast.className = 'toast show';
         setTimeout(() => toast.className = 'toast', 2000);
       });

@@ -1,23 +1,74 @@
+:root {
+  --icon-action: #702C62;
+  --icon-hover: #542149;
+  --icon-success: #339900;
+  --icon-warning: #FF7C00;
+  --icon-error: #E54141;
+  --icon-text: #212121;
+  --icon-disabled: #9E9E9E;
+  --icon-on-disabled: #757575;
+  --icon-on-action: #FFFFFF;
+  --icon-bg-hover: #DBCAD8;
+}
+
 @font-face {
     font-family: "{{ name }}";
     src: {{{ fontSrc }}};
 }
 
 .icon {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     line-height: 1;
-    font-size: 16px;
+    width: 1em;
+    height: 1em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-style: normal;
     font-variant: normal;
     font-weight: normal;
     text-transform: none;
+    vertical-align: middle;
 }
 
-.icon-sm { font-size: 12px; }
-.icon-lg { font-size: 20px; }
-.icon-xl { font-size: 24px; }
+/* Size Utilities */
+.icon-8  { font-size: 8px; }
+.icon-12 { font-size: 12px; }
+.icon-14 { font-size: 14px; }
+.icon-16 { font-size: 16px; }
+.icon-20 { font-size: 20px; }
+.icon-24 { font-size: 24px; }
+
+/* Color Utilities */
+.icon-primary { color: var(--icon-action); }
+.icon-success { color: var(--icon-success); }
+.icon-warning { color: var(--icon-warning); }
+.icon-error   { color: var(--icon-error); }
+.icon-on-action { color: var(--icon-on-action); }
+.icon-muted   { color: var(--icon-disabled); }
+
+/* State Utilities */
+.icon-state-hover {
+    background: var(--icon-bg-hover);
+    color: var(--icon-action);
+    border-radius: 2px;
+    padding: 2px;
+}
+
+.icon-state-selected {
+    background: var(--icon-action);
+    color: var(--icon-on-action);
+    border-radius: 2px;
+    padding: 2px;
+}
+
+.icon-state-disabled {
+    background: #D3D3D3;
+    color: var(--icon-on-disabled);
+    border-radius: 2px;
+    padding: 2px;
+}
 
 {{# each codepoints }}
 .{{ @key }}:before {
@@ -25,3 +76,4 @@
     content: "\\{{ this }}";
 }
 {{/ each }}
+
