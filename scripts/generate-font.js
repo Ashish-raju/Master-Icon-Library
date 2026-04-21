@@ -72,10 +72,8 @@ async function generateFont() {
 /* Interaction State Utilities - Using content-box to prevent 'squeezing' the icon glyph */
 .is-hover {
   background: var(--icon-bg, #DBCAD8) !important;
-  border: 2px solid transparent !important;
   border-radius: 6px !important;
   padding: 4px !important;
-  margin: 2px !important;
   box-sizing: content-box !important;
   color: var(--icon-fill, #702C62) !important;
   display: inline-flex !important;
@@ -86,22 +84,17 @@ async function generateFont() {
 
 .is-selected {
   background: var(--icon-fill, #702C62) !important;
-  border: 2px solid #ffffff !important;
   border-radius: 6px !important;
   padding: 4px !important;
-  margin: 2px !important;
   box-sizing: content-box !important;
   color: #ffffff !important;
   display: inline-flex !important;
-  box-shadow: 0 0 0 2px var(--icon-fill); /* Outer ring for visibility */
 }
 
 .is-disabled {
   background: #F5F5F5 !important;
-  border: 2px solid #E0E0E0 !important;
   border-radius: 6px !important;
   padding: 4px !important;
-  margin: 2px !important;
   box-sizing: content-box !important;
   color: #9E9E9E !important;
   display: inline-flex !important;

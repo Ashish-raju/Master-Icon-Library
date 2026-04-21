@@ -45,10 +45,8 @@ function generateDemo() {
     .clr-muted         { --icon-fill: #8D8D8D !important; --icon-bg: #E0E0E0 !important; color: #9E9E9E !important; }
 
     .is-hover, .is-selected, .is-disabled {
-      border: 2px solid transparent !important;
       border-radius: 6px !important;
       padding: 4px !important;
-      margin: 2px !important;
       box-sizing: content-box !important;
       display: inline-flex !important;
     }
@@ -57,13 +55,10 @@ function generateDemo() {
     .is-selected { 
       background: var(--icon-fill, #702C62) !important; 
       color: #ffffff !important;
-      border-color: #ffffff !important;
-      box-shadow: 0 0 0 2px var(--icon-fill) !important;
     }
     .is-disabled { 
       background: #F5F5F5 !important; 
       color: #9E9E9E !important;
-      border-color: #E0E0E0 !important;
     }
 
     * { box-sizing: border-box; }
