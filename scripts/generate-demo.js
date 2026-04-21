@@ -37,7 +37,7 @@ function generateDemo() {
 
     /* Professional Inlined Utilities */
     .clr-primary      { --icon-fill: #702C62 !important; --icon-bg: #DBCAD8 !important; color: var(--icon-fill) !important; }
-    .clr-action-hover { --icon-fill: #5D2452 !important; --icon-bg: #EEDEEA !important; color: var(--icon-fill) !important; }
+    .clr-action-hover { --icon-fill: #542149 !important; --icon-bg: #EEDEEA !important; color: var(--icon-fill) !important; }
     .clr-success       { --icon-fill: #339900 !important; --icon-bg: #CCE5B3 !important; color: var(--icon-fill) !important; }
     .clr-warning       { --icon-fill: #FF7C00 !important; --icon-bg: #FFD9BF !important; color: var(--icon-fill) !important; }
     .clr-error         { --icon-fill: #E54141 !important; --icon-bg: #F8CFCF !important; color: var(--icon-fill) !important; }
@@ -49,7 +49,7 @@ function generateDemo() {
       border-radius: 6px !important;
       padding: 4px !important;
       margin: 2px !important;
-      box-sizing: border-box !important;
+      box-sizing: content-box !important;
       display: inline-flex !important;
     }
     .is-hover    { background: var(--icon-bg, #DBCAD8) !important; color: var(--icon-fill, #702C62) !important; }
@@ -326,7 +326,7 @@ function generateDemo() {
           <label>Branding Themes</label>
           <div class="chip-group" id="color-select">
             <button class="chip active" data-class="clr-primary" data-hex="#702C62" data-label="Action"><span class="color-swatch" style="background:#702C62;"></span> Action / Info (#702C62)</button>
-            <button class="chip" data-class="clr-action-hover" data-hex="#5D2452" data-label="Action Hover"><span class="color-swatch" style="background:#5D2452;"></span> Action Hover (#5D2452)</button>
+            <button class="chip" data-class="clr-action-hover" data-hex="#542149" data-label="Action Hover"><span class="color-swatch" style="background:#542149;"></span> Action Hover (#542149)</button>
             <button class="chip" data-class="clr-success" data-hex="#339900" data-label="Success"><span class="color-swatch" style="background:#339900;"></span> Success (#339900)</button>
             <button class="chip" data-class="clr-warning" data-hex="#FF7C00" data-label="Warning"><span class="color-swatch" style="background:#FF7C00;"></span> Warning (#FF7C00)</button>
             <button class="chip" data-class="clr-error" data-hex="#E54141" data-label="Error"><span class="color-swatch" style="background:#E54141;"></span> Error (#E54141)</button>

@@ -62,21 +62,21 @@ async function generateFont() {
 
 /* Dynamic Theme Utilities (Lean & Mean) */
 .clr-primary      { --icon-fill: #702C62; --icon-bg: #DBCAD8; color: var(--icon-fill) !important; }
-.clr-action-hover { --icon-fill: #5D2452; --icon-bg: #EEDEEA; color: var(--icon-fill) !important; }
+.clr-action-hover { --icon-fill: #542149; --icon-bg: #EEDEEA; color: var(--icon-fill) !important; }
 .clr-success       { --icon-fill: #339900; --icon-bg: #CCE5B3; color: var(--icon-fill) !important; }
 .clr-warning       { --icon-fill: #FF7C00; --icon-bg: #FFD9BF; color: var(--icon-fill) !important; }
 .clr-error         { --icon-fill: #E54141; --icon-bg: #F8CFCF; color: var(--icon-fill) !important; }
 .clr-white         { --icon-fill: #FFFFFF; --icon-bg: #381631; color: var(--icon-fill) !important; }
 .clr-muted         { --icon-fill: #8D8D8D; --icon-bg: #E0E0E0; color: #9E9E9E !important; }
 
-/* Interaction State Utilities */
+/* Interaction State Utilities - Using content-box to prevent 'squeezing' the icon glyph */
 .is-hover {
   background: var(--icon-bg, #DBCAD8) !important;
   border: 2px solid transparent !important;
   border-radius: 6px !important;
   padding: 4px !important;
   margin: 2px !important;
-  box-sizing: border-box !important;
+  box-sizing: content-box !important;
   color: var(--icon-fill, #702C62) !important;
   display: inline-flex !important;
 }
@@ -90,7 +90,7 @@ async function generateFont() {
   border-radius: 6px !important;
   padding: 4px !important;
   margin: 2px !important;
-  box-sizing: border-box !important;
+  box-sizing: content-box !important;
   color: #ffffff !important;
   display: inline-flex !important;
   box-shadow: 0 0 0 2px var(--icon-fill); /* Outer ring for visibility */
@@ -102,7 +102,7 @@ async function generateFont() {
   border-radius: 6px !important;
   padding: 4px !important;
   margin: 2px !important;
-  box-sizing: border-box !important;
+  box-sizing: content-box !important;
   color: #9E9E9E !important;
   display: inline-flex !important;
 }
@@ -120,6 +120,8 @@ async function generateFont() {
 
     fs.writeFileSync(path.join(FONT_DIR, 'icons.css'), cssContent.trim() + '\n');
     console.log('🎭 Web fonts and normalized CSS and generated at dist/font/icons.css');
+    
+    return glyphs; // Return glyph data for metadata generation
   } catch (err) {
     console.error('Error generating font with webfont:', err);
     process.exit(1);

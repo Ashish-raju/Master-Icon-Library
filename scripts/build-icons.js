@@ -26,7 +26,7 @@ async function main() {
 
     // 4. Generate Font
     console.log('4️⃣ Generating Fonts...');
-    await require('./generate-font.js')();
+    const glyphs = await require('./generate-font.js')();
     console.log('');
 
     // 5. Generate Raw SVGs and Sprite
@@ -36,7 +36,7 @@ async function main() {
 
     // 6. Generate Metadata
     console.log('6️⃣ Generating Metadata...');
-    require('./generate-metadata.js')();
+    require('./generate-metadata.js')(glyphs);
     console.log('');
 
     // 7. Generate Demo

@@ -20,7 +20,7 @@ const App = () => {
   // Branding Themes configuration
   const brandingThemes = [
     { id: 'clr-primary', hex: '#702C62', label: 'Action / Info' },
-    { id: 'clr-action-hover', hex: '#5D2452', label: 'Action Hover' },
+    { id: 'clr-action-hover', hex: '#542149', label: 'Action Hover' },
     { id: 'clr-success', hex: '#339900', label: 'Success' },
     { id: 'clr-warning', hex: '#FF7C00', label: 'Warning' },
     { id: 'clr-error', hex: '#E54141', label: 'Error' },

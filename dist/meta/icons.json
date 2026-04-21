@@ -9,15 +9,6 @@
     }
   },
   {
-    "name": "new-user-profile-icon",
-    "originalName": "New_UserProfileIcon.svg",
-    "className": "icon new-user-profile-icon",
-    "paths": {
-      "svg": "dist/svg/new-user-profile-icon.svg",
-      "sprite": "dist/sprite/sprite.svg#new-user-profile-icon"
-    }
-  },
-  {
     "name": "activity",
     "originalName": "Property 1=activity.svg",
     "className": "icon activity",
@@ -45,21 +36,21 @@
     }
   },
   {
-    "name": "ai-next",
-    "originalName": "Property 1=AI Next.svg",
-    "className": "icon ai-next",
-    "paths": {
-      "svg": "dist/svg/ai-next.svg",
-      "sprite": "dist/sprite/sprite.svg#ai-next"
-    }
-  },
-  {
     "name": "ai",
     "originalName": "Property 1=AI.svg",
     "className": "icon ai",
     "paths": {
       "svg": "dist/svg/ai.svg",
       "sprite": "dist/sprite/sprite.svg#ai"
+    }
+  },
+  {
+    "name": "ai-next",
+    "originalName": "Property 1=AI Next.svg",
+    "className": "icon ai-next",
+    "paths": {
+      "svg": "dist/svg/ai-next.svg",
+      "sprite": "dist/sprite/sprite.svg#ai-next"
     }
   },
   {
@@ -96,6 +87,15 @@
     "paths": {
       "svg": "dist/svg/alert-triangle.svg",
       "sprite": "dist/sprite/sprite.svg#alert-triangle"
+    }
+  },
+  {
+    "name": "align-center",
+    "originalName": "Property 1=align-center.svg",
+    "className": "icon align-center",
+    "paths": {
+      "svg": "dist/svg/align-center.svg",
+      "sprite": "dist/sprite/sprite.svg#align-center"
     }
   },
   {
@@ -144,15 +144,6 @@
     }
   },
   {
-    "name": "align-center",
-    "originalName": "Property 1=align-center.svg",
-    "className": "icon align-center",
-    "paths": {
-      "svg": "dist/svg/align-center.svg",
-      "sprite": "dist/sprite/sprite.svg#align-center"
-    }
-  },
-  {
     "name": "align-justify",
     "originalName": "Property 1=align-justify.svg",
     "className": "icon align-justify",
@@ -180,21 +171,21 @@
     }
   },
   {
-    "name": "analytics-fill",
-    "originalName": "Property 1=Analytics Fill.svg",
-    "className": "icon analytics-fill",
-    "paths": {
-      "svg": "dist/svg/analytics-fill.svg",
-      "sprite": "dist/sprite/sprite.svg#analytics-fill"
-    }
-  },
-  {
     "name": "analytics",
     "originalName": "Property 1=Analytics.svg",
     "className": "icon analytics",
     "paths": {
       "svg": "dist/svg/analytics.svg",
       "sprite": "dist/sprite/sprite.svg#analytics"
+    }
+  },
+  {
+    "name": "analytics-fill",
+    "originalName": "Property 1=Analytics Fill.svg",
+    "className": "icon analytics-fill",
+    "paths": {
+      "svg": "dist/svg/analytics-fill.svg",
+      "sprite": "dist/sprite/sprite.svg#analytics-fill"
     }
   },
   {
@@ -225,6 +216,15 @@
     }
   },
   {
+    "name": "arrow-down",
+    "originalName": "Property 1=arrow-down.svg",
+    "className": "icon arrow-down",
+    "paths": {
+      "svg": "dist/svg/arrow-down.svg",
+      "sprite": "dist/sprite/sprite.svg#arrow-down"
+    }
+  },
+  {
     "name": "arrow-down-circle",
     "originalName": "Property 1=arrow-down-circle.svg",
     "className": "icon arrow-down-circle",
@@ -252,12 +252,12 @@
     }
   },
   {
-    "name": "arrow-down",
-    "originalName": "Property 1=arrow-down.svg",
-    "className": "icon arrow-down",
+    "name": "arrow-left",
+    "originalName": "Property 1=arrow-left.svg",
+    "className": "icon arrow-left",
     "paths": {
-      "svg": "dist/svg/arrow-down.svg",
-      "sprite": "dist/sprite/sprite.svg#arrow-down"
+      "svg": "dist/svg/arrow-left.svg",
+      "sprite": "dist/sprite/sprite.svg#arrow-left"
     }
   },
   {
@@ -270,12 +270,12 @@
     }
   },
   {
-    "name": "arrow-left",
-    "originalName": "Property 1=arrow-left.svg",
-    "className": "icon arrow-left",
+    "name": "arrow-right",
+    "originalName": "Property 1=arrow-right.svg",
+    "className": "icon arrow-right",
     "paths": {
-      "svg": "dist/svg/arrow-left.svg",
-      "sprite": "dist/sprite/sprite.svg#arrow-left"
+      "svg": "dist/svg/arrow-right.svg",
+      "sprite": "dist/sprite/sprite.svg#arrow-right"
     }
   },
   {
@@ -288,12 +288,12 @@
     }
   },
   {
-    "name": "arrow-right",
-    "originalName": "Property 1=arrow-right.svg",
-    "className": "icon arrow-right",
+    "name": "arrow-up",
+    "originalName": "Property 1=arrow-up.svg",
+    "className": "icon arrow-up",
     "paths": {
-      "svg": "dist/svg/arrow-right.svg",
-      "sprite": "dist/sprite/sprite.svg#arrow-right"
+      "svg": "dist/svg/arrow-up.svg",
+      "sprite": "dist/sprite/sprite.svg#arrow-up"
     }
   },
   {
@@ -321,15 +321,6 @@
     "paths": {
       "svg": "dist/svg/arrow-up-right.svg",
       "sprite": "dist/sprite/sprite.svg#arrow-up-right"
-    }
-  },
-  {
-    "name": "arrow-up",
-    "originalName": "Property 1=arrow-up.svg",
-    "className": "icon arrow-up",
-    "paths": {
-      "svg": "dist/svg/arrow-up.svg",
-      "sprite": "dist/sprite/sprite.svg#arrow-up"
     }
   },
   {
@@ -369,15 +360,6 @@
     }
   },
   {
-    "name": "bar-chart-2",
-    "originalName": "Property 1=bar-chart-2.svg",
-    "className": "icon bar-chart-2",
-    "paths": {
-      "svg": "dist/svg/bar-chart-2.svg",
-      "sprite": "dist/sprite/sprite.svg#bar-chart-2"
-    }
-  },
-  {
     "name": "bar-chart",
     "originalName": "Property 1=bar-chart.svg",
     "className": "icon bar-chart",
@@ -387,12 +369,12 @@
     }
   },
   {
-    "name": "battery-charging",
-    "originalName": "Property 1=battery-charging.svg",
-    "className": "icon battery-charging",
+    "name": "bar-chart-2",
+    "originalName": "Property 1=bar-chart-2.svg",
+    "className": "icon bar-chart-2",
     "paths": {
-      "svg": "dist/svg/battery-charging.svg",
-      "sprite": "dist/sprite/sprite.svg#battery-charging"
+      "svg": "dist/svg/bar-chart-2.svg",
+      "sprite": "dist/sprite/sprite.svg#bar-chart-2"
     }
   },
   {
@@ -405,12 +387,12 @@
     }
   },
   {
-    "name": "bell-off",
-    "originalName": "Property 1=bell-off.svg",
-    "className": "icon bell-off",
+    "name": "battery-charging",
+    "originalName": "Property 1=battery-charging.svg",
+    "className": "icon battery-charging",
     "paths": {
-      "svg": "dist/svg/bell-off.svg",
-      "sprite": "dist/sprite/sprite.svg#bell-off"
+      "svg": "dist/svg/battery-charging.svg",
+      "sprite": "dist/sprite/sprite.svg#battery-charging"
     }
   },
   {
@@ -420,6 +402,15 @@
     "paths": {
       "svg": "dist/svg/bell.svg",
       "sprite": "dist/sprite/sprite.svg#bell"
+    }
+  },
+  {
+    "name": "bell-off",
+    "originalName": "Property 1=bell-off.svg",
+    "className": "icon bell-off",
+    "paths": {
+      "svg": "dist/svg/bell-off.svg",
+      "sprite": "dist/sprite/sprite.svg#bell-off"
     }
   },
   {
@@ -441,15 +432,6 @@
     }
   },
   {
-    "name": "book-open",
-    "originalName": "Property 1=book-open.svg",
-    "className": "icon book-open",
-    "paths": {
-      "svg": "dist/svg/book-open.svg",
-      "sprite": "dist/sprite/sprite.svg#book-open"
-    }
-  },
-  {
     "name": "book",
     "originalName": "Property 1=book.svg",
     "className": "icon book",
@@ -459,12 +441,12 @@
     }
   },
   {
-    "name": "bookmark-flag",
-    "originalName": "Property 1=Bookmark flag.svg",
-    "className": "icon bookmark-flag",
+    "name": "book-open",
+    "originalName": "Property 1=book-open.svg",
+    "className": "icon book-open",
     "paths": {
-      "svg": "dist/svg/bookmark-flag.svg",
-      "sprite": "dist/sprite/sprite.svg#bookmark-flag"
+      "svg": "dist/svg/book-open.svg",
+      "sprite": "dist/sprite/sprite.svg#book-open"
     }
   },
   {
@@ -474,6 +456,15 @@
     "paths": {
       "svg": "dist/svg/bookmark.svg",
       "sprite": "dist/sprite/sprite.svg#bookmark"
+    }
+  },
+  {
+    "name": "bookmark-flag",
+    "originalName": "Property 1=Bookmark flag.svg",
+    "className": "icon bookmark-flag",
+    "paths": {
+      "svg": "dist/svg/bookmark-flag.svg",
+      "sprite": "dist/sprite/sprite.svg#bookmark-flag"
     }
   },
   {
@@ -504,21 +495,21 @@
     }
   },
   {
-    "name": "camera-off",
-    "originalName": "Property 1=camera-off.svg",
-    "className": "icon camera-off",
-    "paths": {
-      "svg": "dist/svg/camera-off.svg",
-      "sprite": "dist/sprite/sprite.svg#camera-off"
-    }
-  },
-  {
     "name": "camera",
     "originalName": "Property 1=camera.svg",
     "className": "icon camera",
     "paths": {
       "svg": "dist/svg/camera.svg",
       "sprite": "dist/sprite/sprite.svg#camera"
+    }
+  },
+  {
+    "name": "camera-off",
+    "originalName": "Property 1=camera-off.svg",
+    "className": "icon camera-off",
+    "paths": {
+      "svg": "dist/svg/camera-off.svg",
+      "sprite": "dist/sprite/sprite.svg#camera-off"
     }
   },
   {
@@ -549,6 +540,15 @@
     }
   },
   {
+    "name": "check",
+    "originalName": "Property 1=check.svg",
+    "className": "icon check",
+    "paths": {
+      "svg": "dist/svg/check.svg",
+      "sprite": "dist/sprite/sprite.svg#check"
+    }
+  },
+  {
     "name": "check-box",
     "originalName": "Property 1=Check Box.svg",
     "className": "icon check-box",
@@ -573,24 +573,6 @@
     "paths": {
       "svg": "dist/svg/check-square.svg",
       "sprite": "dist/sprite/sprite.svg#check-square"
-    }
-  },
-  {
-    "name": "check",
-    "originalName": "Property 1=check.svg",
-    "className": "icon check",
-    "paths": {
-      "svg": "dist/svg/check.svg",
-      "sprite": "dist/sprite/sprite.svg#check"
-    }
-  },
-  {
-    "name": "chevron-up-down",
-    "originalName": "Property 1=Chevron Up&Down.svg",
-    "className": "icon chevron-up-down",
-    "paths": {
-      "svg": "dist/svg/chevron-up-down.svg",
-      "sprite": "dist/sprite/sprite.svg#chevron-up-down"
     }
   },
   {
@@ -627,6 +609,15 @@
     "paths": {
       "svg": "dist/svg/chevron-up.svg",
       "sprite": "dist/sprite/sprite.svg#chevron-up"
+    }
+  },
+  {
+    "name": "chevron-up-down",
+    "originalName": "Property 1=Chevron Up&Down.svg",
+    "className": "icon chevron-up-down",
+    "paths": {
+      "svg": "dist/svg/chevron-up-down.svg",
+      "sprite": "dist/sprite/sprite.svg#chevron-up-down"
     }
   },
   {
@@ -684,6 +675,15 @@
     }
   },
   {
+    "name": "circle",
+    "originalName": "Property 1=circle.svg",
+    "className": "icon circle",
+    "paths": {
+      "svg": "dist/svg/circle.svg",
+      "sprite": "dist/sprite/sprite.svg#circle"
+    }
+  },
+  {
     "name": "circle-with-dot",
     "originalName": "Property 1=Circle with dot.svg",
     "className": "icon circle-with-dot",
@@ -693,12 +693,12 @@
     }
   },
   {
-    "name": "circle",
-    "originalName": "Property 1=circle.svg",
-    "className": "icon circle",
+    "name": "clinical",
+    "originalName": "Property 1=Clinical.svg",
+    "className": "icon clinical",
     "paths": {
-      "svg": "dist/svg/circle.svg",
-      "sprite": "dist/sprite/sprite.svg#circle"
+      "svg": "dist/svg/clinical.svg",
+      "sprite": "dist/sprite/sprite.svg#clinical"
     }
   },
   {
@@ -720,15 +720,6 @@
     }
   },
   {
-    "name": "clinical",
-    "originalName": "Property 1=Clinical.svg",
-    "className": "icon clinical",
-    "paths": {
-      "svg": "dist/svg/clinical.svg",
-      "sprite": "dist/sprite/sprite.svg#clinical"
-    }
-  },
-  {
     "name": "clipboard",
     "originalName": "Property 1=clipboard.svg",
     "className": "icon clipboard",
@@ -744,6 +735,15 @@
     "paths": {
       "svg": "dist/svg/clock.svg",
       "sprite": "dist/sprite/sprite.svg#clock"
+    }
+  },
+  {
+    "name": "cloud",
+    "originalName": "Property 1=cloud.svg",
+    "className": "icon cloud",
+    "paths": {
+      "svg": "dist/svg/cloud.svg",
+      "sprite": "dist/sprite/sprite.svg#cloud"
     }
   },
   {
@@ -789,15 +789,6 @@
     "paths": {
       "svg": "dist/svg/cloud-snow.svg",
       "sprite": "dist/sprite/sprite.svg#cloud-snow"
-    }
-  },
-  {
-    "name": "cloud",
-    "originalName": "Property 1=cloud.svg",
-    "className": "icon cloud",
-    "paths": {
-      "svg": "dist/svg/cloud.svg",
-      "sprite": "dist/sprite/sprite.svg#cloud"
     }
   },
   {
@@ -1044,6 +1035,15 @@
     }
   },
   {
+    "name": "divide",
+    "originalName": "Property 1=divide.svg",
+    "className": "icon divide",
+    "paths": {
+      "svg": "dist/svg/divide.svg",
+      "sprite": "dist/sprite/sprite.svg#divide"
+    }
+  },
+  {
     "name": "divide-circle",
     "originalName": "Property 1=divide-circle.svg",
     "className": "icon divide-circle",
@@ -1059,15 +1059,6 @@
     "paths": {
       "svg": "dist/svg/divide-square.svg",
       "sprite": "dist/sprite/sprite.svg#divide-square"
-    }
-  },
-  {
-    "name": "divide",
-    "originalName": "Property 1=divide.svg",
-    "className": "icon divide",
-    "paths": {
-      "svg": "dist/svg/divide.svg",
-      "sprite": "dist/sprite/sprite.svg#divide"
     }
   },
   {
@@ -1098,12 +1089,12 @@
     }
   },
   {
-    "name": "download-reports",
-    "originalName": "Property 1=Download Reports.svg",
-    "className": "icon download-reports",
+    "name": "download",
+    "originalName": "Property 1=download.svg",
+    "className": "icon download",
     "paths": {
-      "svg": "dist/svg/download-reports.svg",
-      "sprite": "dist/sprite/sprite.svg#download-reports"
+      "svg": "dist/svg/download.svg",
+      "sprite": "dist/sprite/sprite.svg#download"
     }
   },
   {
@@ -1116,12 +1107,12 @@
     }
   },
   {
-    "name": "download",
-    "originalName": "Property 1=download.svg",
-    "className": "icon download",
+    "name": "download-reports",
+    "originalName": "Property 1=Download Reports.svg",
+    "className": "icon download-reports",
     "paths": {
-      "svg": "dist/svg/download.svg",
-      "sprite": "dist/sprite/sprite.svg#download"
+      "svg": "dist/svg/download-reports.svg",
+      "sprite": "dist/sprite/sprite.svg#download-reports"
     }
   },
   {
@@ -1143,21 +1134,21 @@
     }
   },
   {
-    "name": "drug-catalog",
-    "originalName": "Property 1=Drug Catalog.svg",
-    "className": "icon drug-catalog",
-    "paths": {
-      "svg": "dist/svg/drug-catalog.svg",
-      "sprite": "dist/sprite/sprite.svg#drug-catalog"
-    }
-  },
-  {
     "name": "drug",
     "originalName": "Property 1=Drug.svg",
     "className": "icon drug",
     "paths": {
       "svg": "dist/svg/drug.svg",
       "sprite": "dist/sprite/sprite.svg#drug"
+    }
+  },
+  {
+    "name": "drug-catalog",
+    "originalName": "Property 1=Drug Catalog.svg",
+    "className": "icon drug-catalog",
+    "paths": {
+      "svg": "dist/svg/drug-catalog.svg",
+      "sprite": "dist/sprite/sprite.svg#drug-catalog"
     }
   },
   {
@@ -1179,12 +1170,12 @@
     }
   },
   {
-    "name": "edit-sig",
-    "originalName": "Property 1=Edit -Sig.svg",
-    "className": "icon edit-sig",
+    "name": "edit",
+    "originalName": "Property 1=edit.svg",
+    "className": "icon edit",
     "paths": {
-      "svg": "dist/svg/edit-sig.svg",
-      "sprite": "dist/sprite/sprite.svg#edit-sig"
+      "svg": "dist/svg/edit.svg",
+      "sprite": "dist/sprite/sprite.svg#edit"
     }
   },
   {
@@ -1206,12 +1197,12 @@
     }
   },
   {
-    "name": "edit",
-    "originalName": "Property 1=edit.svg",
-    "className": "icon edit",
+    "name": "edit-sig",
+    "originalName": "Property 1=Edit -Sig.svg",
+    "className": "icon edit-sig",
     "paths": {
-      "svg": "dist/svg/edit.svg",
-      "sprite": "dist/sprite/sprite.svg#edit"
+      "svg": "dist/svg/edit-sig.svg",
+      "sprite": "dist/sprite/sprite.svg#edit-sig"
     }
   },
   {
@@ -1242,21 +1233,21 @@
     }
   },
   {
-    "name": "eye-off",
-    "originalName": "Property 1=eye-off.svg",
-    "className": "icon eye-off",
-    "paths": {
-      "svg": "dist/svg/eye-off.svg",
-      "sprite": "dist/sprite/sprite.svg#eye-off"
-    }
-  },
-  {
     "name": "eye",
     "originalName": "Property 1=eye.svg",
     "className": "icon eye",
     "paths": {
       "svg": "dist/svg/eye.svg",
       "sprite": "dist/sprite/sprite.svg#eye"
+    }
+  },
+  {
+    "name": "eye-off",
+    "originalName": "Property 1=eye-off.svg",
+    "className": "icon eye-off",
+    "paths": {
+      "svg": "dist/svg/eye-off.svg",
+      "sprite": "dist/sprite/sprite.svg#eye-off"
     }
   },
   {
@@ -1314,6 +1305,15 @@
     }
   },
   {
+    "name": "file",
+    "originalName": "Property 1=file.svg",
+    "className": "icon file",
+    "paths": {
+      "svg": "dist/svg/file.svg",
+      "sprite": "dist/sprite/sprite.svg#file"
+    }
+  },
+  {
     "name": "file-minus",
     "originalName": "Property 1=file-minus.svg",
     "className": "icon file-minus",
@@ -1341,15 +1341,6 @@
     }
   },
   {
-    "name": "file",
-    "originalName": "Property 1=file.svg",
-    "className": "icon file",
-    "paths": {
-      "svg": "dist/svg/file.svg",
-      "sprite": "dist/sprite/sprite.svg#file"
-    }
-  },
-  {
     "name": "film",
     "originalName": "Property 1=film.svg",
     "className": "icon film",
@@ -1359,21 +1350,21 @@
     }
   },
   {
-    "name": "filter-2",
-    "originalName": "Property 1=Filter-2.svg",
-    "className": "icon filter-2",
-    "paths": {
-      "svg": "dist/svg/filter-2.svg",
-      "sprite": "dist/sprite/sprite.svg#filter-2"
-    }
-  },
-  {
     "name": "filter",
     "originalName": "Property 1=filter.svg",
     "className": "icon filter",
     "paths": {
       "svg": "dist/svg/filter.svg",
       "sprite": "dist/sprite/sprite.svg#filter"
+    }
+  },
+  {
+    "name": "filter-2",
+    "originalName": "Property 1=Filter-2.svg",
+    "className": "icon filter-2",
+    "paths": {
+      "svg": "dist/svg/filter-2.svg",
+      "sprite": "dist/sprite/sprite.svg#filter-2"
     }
   },
   {
@@ -1395,21 +1386,21 @@
     }
   },
   {
-    "name": "flag-fill",
-    "originalName": "Property 1=Flag fill.svg",
-    "className": "icon flag-fill",
-    "paths": {
-      "svg": "dist/svg/flag-fill.svg",
-      "sprite": "dist/sprite/sprite.svg#flag-fill"
-    }
-  },
-  {
     "name": "flag",
     "originalName": "Property 1=flag.svg",
     "className": "icon flag",
     "paths": {
       "svg": "dist/svg/flag.svg",
       "sprite": "dist/sprite/sprite.svg#flag"
+    }
+  },
+  {
+    "name": "flag-fill",
+    "originalName": "Property 1=Flag fill.svg",
+    "className": "icon flag-fill",
+    "paths": {
+      "svg": "dist/svg/flag-fill.svg",
+      "sprite": "dist/sprite/sprite.svg#flag-fill"
     }
   },
   {
@@ -1422,21 +1413,21 @@
     }
   },
   {
+    "name": "folder",
+    "originalName": "Property 1=folder.svg",
+    "className": "icon folder",
+    "paths": {
+      "svg": "dist/svg/folder.svg",
+      "sprite": "dist/sprite/sprite.svg#folder"
+    }
+  },
+  {
     "name": "folder-add",
     "originalName": "Property 1=Folder Add.svg",
     "className": "icon folder-add",
     "paths": {
       "svg": "dist/svg/folder-add.svg",
       "sprite": "dist/sprite/sprite.svg#folder-add"
-    }
-  },
-  {
-    "name": "folder-share",
-    "originalName": "Property 1=Folder share.svg",
-    "className": "icon folder-share",
-    "paths": {
-      "svg": "dist/svg/folder-share.svg",
-      "sprite": "dist/sprite/sprite.svg#folder-share"
     }
   },
   {
@@ -1458,12 +1449,12 @@
     }
   },
   {
-    "name": "folder",
-    "originalName": "Property 1=folder.svg",
-    "className": "icon folder",
+    "name": "folder-share",
+    "originalName": "Property 1=Folder share.svg",
+    "className": "icon folder-share",
     "paths": {
-      "svg": "dist/svg/folder.svg",
-      "sprite": "dist/sprite/sprite.svg#folder"
+      "svg": "dist/svg/folder-share.svg",
+      "sprite": "dist/sprite/sprite.svg#folder-share"
     }
   },
   {
@@ -1791,21 +1782,21 @@
     }
   },
   {
-    "name": "link-2",
-    "originalName": "Property 1=link-2.svg",
-    "className": "icon link-2",
-    "paths": {
-      "svg": "dist/svg/link-2.svg",
-      "sprite": "dist/sprite/sprite.svg#link-2"
-    }
-  },
-  {
     "name": "link",
     "originalName": "Property 1=link.svg",
     "className": "icon link",
     "paths": {
       "svg": "dist/svg/link.svg",
       "sprite": "dist/sprite/sprite.svg#link"
+    }
+  },
+  {
+    "name": "link-2",
+    "originalName": "Property 1=link-2.svg",
+    "className": "icon link-2",
+    "paths": {
+      "svg": "dist/svg/link-2.svg",
+      "sprite": "dist/sprite/sprite.svg#link-2"
     }
   },
   {
@@ -1881,21 +1872,21 @@
     }
   },
   {
-    "name": "map-pin",
-    "originalName": "Property 1=map-pin.svg",
-    "className": "icon map-pin",
-    "paths": {
-      "svg": "dist/svg/map-pin.svg",
-      "sprite": "dist/sprite/sprite.svg#map-pin"
-    }
-  },
-  {
     "name": "map",
     "originalName": "Property 1=map.svg",
     "className": "icon map",
     "paths": {
       "svg": "dist/svg/map.svg",
       "sprite": "dist/sprite/sprite.svg#map"
+    }
+  },
+  {
+    "name": "map-pin",
+    "originalName": "Property 1=map-pin.svg",
+    "className": "icon map-pin",
+    "paths": {
+      "svg": "dist/svg/map-pin.svg",
+      "sprite": "dist/sprite/sprite.svg#map-pin"
     }
   },
   {
@@ -1926,12 +1917,12 @@
     }
   },
   {
-    "name": "menu-cycle-count",
-    "originalName": "Property 1=Menu -  Cycle Count.svg",
-    "className": "icon menu-cycle-count",
+    "name": "menu",
+    "originalName": "Property 1=menu.svg",
+    "className": "icon menu",
     "paths": {
-      "svg": "dist/svg/menu-cycle-count.svg",
-      "sprite": "dist/sprite/sprite.svg#menu-cycle-count"
+      "svg": "dist/svg/menu.svg",
+      "sprite": "dist/sprite/sprite.svg#menu"
     }
   },
   {
@@ -1971,21 +1962,21 @@
     }
   },
   {
-    "name": "menu-chat-red-dot",
-    "originalName": "Property 1=Menu - Chat Red dot.svg",
-    "className": "icon menu-chat-red-dot",
-    "paths": {
-      "svg": "dist/svg/menu-chat-red-dot.svg",
-      "sprite": "dist/sprite/sprite.svg#menu-chat-red-dot"
-    }
-  },
-  {
     "name": "menu-chat",
     "originalName": "Property 1=Menu - Chat.svg",
     "className": "icon menu-chat",
     "paths": {
       "svg": "dist/svg/menu-chat.svg",
       "sprite": "dist/sprite/sprite.svg#menu-chat"
+    }
+  },
+  {
+    "name": "menu-chat-red-dot",
+    "originalName": "Property 1=Menu - Chat Red dot.svg",
+    "className": "icon menu-chat-red-dot",
+    "paths": {
+      "svg": "dist/svg/menu-chat-red-dot.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-chat-red-dot"
     }
   },
   {
@@ -1998,21 +1989,21 @@
     }
   },
   {
-    "name": "menu-claims-manager",
-    "originalName": "Property 1=Menu - Claims Manager.svg",
-    "className": "icon menu-claims-manager",
-    "paths": {
-      "svg": "dist/svg/menu-claims-manager.svg",
-      "sprite": "dist/sprite/sprite.svg#menu-claims-manager"
-    }
-  },
-  {
     "name": "menu-claims",
     "originalName": "Property 1=Menu - Claims.svg",
     "className": "icon menu-claims",
     "paths": {
       "svg": "dist/svg/menu-claims.svg",
       "sprite": "dist/sprite/sprite.svg#menu-claims"
+    }
+  },
+  {
+    "name": "menu-claims-manager",
+    "originalName": "Property 1=Menu - Claims Manager.svg",
+    "className": "icon menu-claims-manager",
+    "paths": {
+      "svg": "dist/svg/menu-claims-manager.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-claims-manager"
     }
   },
   {
@@ -2025,12 +2016,30 @@
     }
   },
   {
+    "name": "menu-cycle-count",
+    "originalName": "Property 1=Menu -  Cycle Count.svg",
+    "className": "icon menu-cycle-count",
+    "paths": {
+      "svg": "dist/svg/menu-cycle-count.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-cycle-count"
+    }
+  },
+  {
     "name": "menu-dashboard",
     "originalName": "Property 1=Menu - Dashboard.svg",
     "className": "icon menu-dashboard",
     "paths": {
       "svg": "dist/svg/menu-dashboard.svg",
       "sprite": "dist/sprite/sprite.svg#menu-dashboard"
+    }
+  },
+  {
+    "name": "menu-dollar",
+    "originalName": "Property 1=Menu- Dollar.svg",
+    "className": "icon menu-dollar",
+    "paths": {
+      "svg": "dist/svg/menu-dollar.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-dollar"
     }
   },
   {
@@ -2061,21 +2070,21 @@
     }
   },
   {
-    "name": "menu-financial-management",
-    "originalName": "Property 1=Menu - Financial Management.svg",
-    "className": "icon menu-financial-management",
-    "paths": {
-      "svg": "dist/svg/menu-financial-management.svg",
-      "sprite": "dist/sprite/sprite.svg#menu-financial-management"
-    }
-  },
-  {
     "name": "menu-financial",
     "originalName": "Property 1=Menu - Financial.svg",
     "className": "icon menu-financial",
     "paths": {
       "svg": "dist/svg/menu-financial.svg",
       "sprite": "dist/sprite/sprite.svg#menu-financial"
+    }
+  },
+  {
+    "name": "menu-financial-management",
+    "originalName": "Property 1=Menu - Financial Management.svg",
+    "className": "icon menu-financial-management",
+    "paths": {
+      "svg": "dist/svg/menu-financial-management.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-financial-management"
     }
   },
   {
@@ -2160,21 +2169,21 @@
     }
   },
   {
-    "name": "menu-order-entry",
-    "originalName": "Property 1=Menu - Order Entry.svg",
-    "className": "icon menu-order-entry",
-    "paths": {
-      "svg": "dist/svg/menu-order-entry.svg",
-      "sprite": "dist/sprite/sprite.svg#menu-order-entry"
-    }
-  },
-  {
     "name": "menu-order",
     "originalName": "Property 1=Menu - Order.svg",
     "className": "icon menu-order",
     "paths": {
       "svg": "dist/svg/menu-order.svg",
       "sprite": "dist/sprite/sprite.svg#menu-order"
+    }
+  },
+  {
+    "name": "menu-order-entry",
+    "originalName": "Property 1=Menu - Order Entry.svg",
+    "className": "icon menu-order-entry",
+    "paths": {
+      "svg": "dist/svg/menu-order-entry.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-order-entry"
     }
   },
   {
@@ -2205,21 +2214,21 @@
     }
   },
   {
-    "name": "menu-pharmacy-reports",
-    "originalName": "Property 1=Menu - Pharmacy Reports.svg",
-    "className": "icon menu-pharmacy-reports",
-    "paths": {
-      "svg": "dist/svg/menu-pharmacy-reports.svg",
-      "sprite": "dist/sprite/sprite.svg#menu-pharmacy-reports"
-    }
-  },
-  {
     "name": "menu-pharmacy",
     "originalName": "Property 1=Menu - Pharmacy.svg",
     "className": "icon menu-pharmacy",
     "paths": {
       "svg": "dist/svg/menu-pharmacy.svg",
       "sprite": "dist/sprite/sprite.svg#menu-pharmacy"
+    }
+  },
+  {
+    "name": "menu-pharmacy-reports",
+    "originalName": "Property 1=Menu - Pharmacy Reports.svg",
+    "className": "icon menu-pharmacy-reports",
+    "paths": {
+      "svg": "dist/svg/menu-pharmacy-reports.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-pharmacy-reports"
     }
   },
   {
@@ -2277,24 +2286,6 @@
     }
   },
   {
-    "name": "menu-dollar",
-    "originalName": "Property 1=Menu- Dollar.svg",
-    "className": "icon menu-dollar",
-    "paths": {
-      "svg": "dist/svg/menu-dollar.svg",
-      "sprite": "dist/sprite/sprite.svg#menu-dollar"
-    }
-  },
-  {
-    "name": "menu",
-    "originalName": "Property 1=menu.svg",
-    "className": "icon menu",
-    "paths": {
-      "svg": "dist/svg/menu.svg",
-      "sprite": "dist/sprite/sprite.svg#menu"
-    }
-  },
-  {
     "name": "message-circle",
     "originalName": "Property 1=message-circle.svg",
     "className": "icon message-circle",
@@ -2313,15 +2304,6 @@
     }
   },
   {
-    "name": "mic-off",
-    "originalName": "Property 1=mic-off.svg",
-    "className": "icon mic-off",
-    "paths": {
-      "svg": "dist/svg/mic-off.svg",
-      "sprite": "dist/sprite/sprite.svg#mic-off"
-    }
-  },
-  {
     "name": "mic",
     "originalName": "Property 1=mic.svg",
     "className": "icon mic",
@@ -2331,12 +2313,30 @@
     }
   },
   {
+    "name": "mic-off",
+    "originalName": "Property 1=mic-off.svg",
+    "className": "icon mic-off",
+    "paths": {
+      "svg": "dist/svg/mic-off.svg",
+      "sprite": "dist/sprite/sprite.svg#mic-off"
+    }
+  },
+  {
     "name": "minimize-2",
     "originalName": "Property 1=minimize-2.svg",
     "className": "icon minimize-2",
     "paths": {
       "svg": "dist/svg/minimize-2.svg",
       "sprite": "dist/sprite/sprite.svg#minimize-2"
+    }
+  },
+  {
+    "name": "minus",
+    "originalName": "Property 1=minus.svg",
+    "className": "icon minus",
+    "paths": {
+      "svg": "dist/svg/minus.svg",
+      "sprite": "dist/sprite/sprite.svg#minus"
     }
   },
   {
@@ -2355,15 +2355,6 @@
     "paths": {
       "svg": "dist/svg/minus-square.svg",
       "sprite": "dist/sprite/sprite.svg#minus-square"
-    }
-  },
-  {
-    "name": "minus",
-    "originalName": "Property 1=minus.svg",
-    "className": "icon minus",
-    "paths": {
-      "svg": "dist/svg/minus.svg",
-      "sprite": "dist/sprite/sprite.svg#minus"
     }
   },
   {
@@ -2430,6 +2421,15 @@
     }
   },
   {
+    "name": "navigation",
+    "originalName": "Property 1=navigation.svg",
+    "className": "icon navigation",
+    "paths": {
+      "svg": "dist/svg/navigation.svg",
+      "sprite": "dist/sprite/sprite.svg#navigation"
+    }
+  },
+  {
     "name": "navigation-2",
     "originalName": "Property 1=navigation-2.svg",
     "className": "icon navigation-2",
@@ -2439,12 +2439,12 @@
     }
   },
   {
-    "name": "navigation",
-    "originalName": "Property 1=navigation.svg",
-    "className": "icon navigation",
+    "name": "new-user-profile-icon",
+    "originalName": "New_UserProfileIcon.svg",
+    "className": "icon new-user-profile-icon",
     "paths": {
-      "svg": "dist/svg/navigation.svg",
-      "sprite": "dist/sprite/sprite.svg#navigation"
+      "svg": "dist/svg/new-user-profile-icon.svg",
+      "sprite": "dist/sprite/sprite.svg#new-user-profile-icon"
     }
   },
   {
@@ -2502,21 +2502,21 @@
     }
   },
   {
-    "name": "package",
-    "originalName": "Property 1=package.svg",
-    "className": "icon package",
-    "paths": {
-      "svg": "dist/svg/package.svg",
-      "sprite": "dist/sprite/sprite.svg#package"
-    }
-  },
-  {
     "name": "pac-packaging",
     "originalName": "Property 1=PacPackaging.svg",
     "className": "icon pac-packaging",
     "paths": {
       "svg": "dist/svg/pac-packaging.svg",
       "sprite": "dist/sprite/sprite.svg#pac-packaging"
+    }
+  },
+  {
+    "name": "package",
+    "originalName": "Property 1=package.svg",
+    "className": "icon package",
+    "paths": {
+      "svg": "dist/svg/package.svg",
+      "sprite": "dist/sprite/sprite.svg#package"
     }
   },
   {
@@ -2529,12 +2529,12 @@
     }
   },
   {
-    "name": "pause-fill",
-    "originalName": "Property 1=Pause (fill).svg",
-    "className": "icon pause-fill",
+    "name": "pause",
+    "originalName": "Property 1=pause.svg",
+    "className": "icon pause",
     "paths": {
-      "svg": "dist/svg/pause-fill.svg",
-      "sprite": "dist/sprite/sprite.svg#pause-fill"
+      "svg": "dist/svg/pause.svg",
+      "sprite": "dist/sprite/sprite.svg#pause"
     }
   },
   {
@@ -2547,12 +2547,12 @@
     }
   },
   {
-    "name": "pause",
-    "originalName": "Property 1=pause.svg",
-    "className": "icon pause",
+    "name": "pause-fill",
+    "originalName": "Property 1=Pause (fill).svg",
+    "className": "icon pause-fill",
     "paths": {
-      "svg": "dist/svg/pause.svg",
-      "sprite": "dist/sprite/sprite.svg#pause"
+      "svg": "dist/svg/pause-fill.svg",
+      "sprite": "dist/sprite/sprite.svg#pause-fill"
     }
   },
   {
@@ -2598,6 +2598,15 @@
     "paths": {
       "svg": "dist/svg/pharmacy-reports.svg",
       "sprite": "dist/sprite/sprite.svg#pharmacy-reports"
+    }
+  },
+  {
+    "name": "phone",
+    "originalName": "Property 1=phone.svg",
+    "className": "icon phone",
+    "paths": {
+      "svg": "dist/svg/phone.svg",
+      "sprite": "dist/sprite/sprite.svg#phone"
     }
   },
   {
@@ -2664,15 +2673,6 @@
     }
   },
   {
-    "name": "phone",
-    "originalName": "Property 1=phone.svg",
-    "className": "icon phone",
-    "paths": {
-      "svg": "dist/svg/phone.svg",
-      "sprite": "dist/sprite/sprite.svg#phone"
-    }
-  },
-  {
     "name": "pie-chart",
     "originalName": "Property 1=pie-chart.svg",
     "className": "icon pie-chart",
@@ -2682,12 +2682,12 @@
     }
   },
   {
-    "name": "play-fill",
-    "originalName": "Property 1=Play (fill).svg",
-    "className": "icon play-fill",
+    "name": "play",
+    "originalName": "Property 1=play.svg",
+    "className": "icon play",
     "paths": {
-      "svg": "dist/svg/play-fill.svg",
-      "sprite": "dist/sprite/sprite.svg#play-fill"
+      "svg": "dist/svg/play.svg",
+      "sprite": "dist/sprite/sprite.svg#play"
     }
   },
   {
@@ -2700,12 +2700,21 @@
     }
   },
   {
-    "name": "play",
-    "originalName": "Property 1=play.svg",
-    "className": "icon play",
+    "name": "play-fill",
+    "originalName": "Property 1=Play (fill).svg",
+    "className": "icon play-fill",
     "paths": {
-      "svg": "dist/svg/play.svg",
-      "sprite": "dist/sprite/sprite.svg#play"
+      "svg": "dist/svg/play-fill.svg",
+      "sprite": "dist/sprite/sprite.svg#play-fill"
+    }
+  },
+  {
+    "name": "plus",
+    "originalName": "Property 1=plus.svg",
+    "className": "icon plus",
+    "paths": {
+      "svg": "dist/svg/plus.svg",
+      "sprite": "dist/sprite/sprite.svg#plus"
     }
   },
   {
@@ -2724,15 +2733,6 @@
     "paths": {
       "svg": "dist/svg/plus-square.svg",
       "sprite": "dist/sprite/sprite.svg#plus-square"
-    }
-  },
-  {
-    "name": "plus",
-    "originalName": "Property 1=plus.svg",
-    "className": "icon plus",
-    "paths": {
-      "svg": "dist/svg/plus.svg",
-      "sprite": "dist/sprite/sprite.svg#plus"
     }
   },
   {
@@ -2853,6 +2853,15 @@
     }
   },
   {
+    "name": "re-claim-white",
+    "originalName": "Property 1=ReClaim-White..svg",
+    "className": "icon re-claim-white",
+    "paths": {
+      "svg": "dist/svg/re-claim-white.svg",
+      "sprite": "dist/sprite/sprite.svg#re-claim-white"
+    }
+  },
+  {
     "name": "re-print",
     "originalName": "Property 1=Re-Print.svg",
     "className": "icon re-print",
@@ -2868,15 +2877,6 @@
     "paths": {
       "svg": "dist/svg/receive-order.svg",
       "sprite": "dist/sprite/sprite.svg#receive-order"
-    }
-  },
-  {
-    "name": "re-claim-white",
-    "originalName": "Property 1=ReClaim-White..svg",
-    "className": "icon re-claim-white",
-    "paths": {
-      "svg": "dist/svg/re-claim-white.svg",
-      "sprite": "dist/sprite/sprite.svg#re-claim-white"
     }
   },
   {
@@ -2943,6 +2943,15 @@
     }
   },
   {
+    "name": "reports",
+    "originalName": "Property 1=Reports.svg",
+    "className": "icon reports",
+    "paths": {
+      "svg": "dist/svg/reports.svg",
+      "sprite": "dist/sprite/sprite.svg#reports"
+    }
+  },
+  {
     "name": "reports-1",
     "originalName": "Property 1=Reports -1.svg",
     "className": "icon reports-1",
@@ -2958,15 +2967,6 @@
     "paths": {
       "svg": "dist/svg/reports-dot.svg",
       "sprite": "dist/sprite/sprite.svg#reports-dot"
-    }
-  },
-  {
-    "name": "reports",
-    "originalName": "Property 1=Reports.svg",
-    "className": "icon reports",
-    "paths": {
-      "svg": "dist/svg/reports.svg",
-      "sprite": "dist/sprite/sprite.svg#reports"
     }
   },
   {
@@ -3096,15 +3096,6 @@
     }
   },
   {
-    "name": "search-po",
-    "originalName": "Property 1=Search PO.svg",
-    "className": "icon search-po",
-    "paths": {
-      "svg": "dist/svg/search-po.svg",
-      "sprite": "dist/sprite/sprite.svg#search-po"
-    }
-  },
-  {
     "name": "search",
     "originalName": "Property 1=search.svg",
     "className": "icon search",
@@ -3114,12 +3105,12 @@
     }
   },
   {
-    "name": "send-back",
-    "originalName": "Property 1=Send Back.svg",
-    "className": "icon send-back",
+    "name": "search-po",
+    "originalName": "Property 1=Search PO.svg",
+    "className": "icon search-po",
     "paths": {
-      "svg": "dist/svg/send-back.svg",
-      "sprite": "dist/sprite/sprite.svg#send-back"
+      "svg": "dist/svg/search-po.svg",
+      "sprite": "dist/sprite/sprite.svg#search-po"
     }
   },
   {
@@ -3129,6 +3120,15 @@
     "paths": {
       "svg": "dist/svg/send.svg",
       "sprite": "dist/sprite/sprite.svg#send"
+    }
+  },
+  {
+    "name": "send-back",
+    "originalName": "Property 1=Send Back.svg",
+    "className": "icon send-back",
+    "paths": {
+      "svg": "dist/svg/send-back.svg",
+      "sprite": "dist/sprite/sprite.svg#send-back"
     }
   },
   {
@@ -3150,15 +3150,6 @@
     }
   },
   {
-    "name": "share-2",
-    "originalName": "Property 1=share-2.svg",
-    "className": "icon share-2",
-    "paths": {
-      "svg": "dist/svg/share-2.svg",
-      "sprite": "dist/sprite/sprite.svg#share-2"
-    }
-  },
-  {
     "name": "share",
     "originalName": "Property 1=share.svg",
     "className": "icon share",
@@ -3168,12 +3159,12 @@
     }
   },
   {
-    "name": "shield-off",
-    "originalName": "Property 1=shield-off.svg",
-    "className": "icon shield-off",
+    "name": "share-2",
+    "originalName": "Property 1=share-2.svg",
+    "className": "icon share-2",
     "paths": {
-      "svg": "dist/svg/shield-off.svg",
-      "sprite": "dist/sprite/sprite.svg#shield-off"
+      "svg": "dist/svg/share-2.svg",
+      "sprite": "dist/sprite/sprite.svg#share-2"
     }
   },
   {
@@ -3183,6 +3174,15 @@
     "paths": {
       "svg": "dist/svg/shield.svg",
       "sprite": "dist/sprite/sprite.svg#shield"
+    }
+  },
+  {
+    "name": "shield-off",
+    "originalName": "Property 1=shield-off.svg",
+    "className": "icon shield-off",
+    "paths": {
+      "svg": "dist/svg/shield-off.svg",
+      "sprite": "dist/sprite/sprite.svg#shield-off"
     }
   },
   {
@@ -3411,6 +3411,24 @@
     }
   },
   {
+    "name": "test",
+    "originalName": "Test.svg",
+    "className": "icon test",
+    "paths": {
+      "svg": "dist/svg/test.svg",
+      "sprite": "dist/sprite/sprite.svg#test"
+    }
+  },
+  {
+    "name": "test3012",
+    "originalName": "Test3012.svg",
+    "className": "icon test3012",
+    "paths": {
+      "svg": "dist/svg/test3012.svg",
+      "sprite": "dist/sprite/sprite.svg#test3012"
+    }
+  },
+  {
     "name": "thermometer",
     "originalName": "Property 1=thermometer.svg",
     "className": "icon thermometer",
@@ -3492,21 +3510,21 @@
     }
   },
   {
-    "name": "trash-2",
-    "originalName": "Property 1=trash-2.svg",
-    "className": "icon trash-2",
-    "paths": {
-      "svg": "dist/svg/trash-2.svg",
-      "sprite": "dist/sprite/sprite.svg#trash-2"
-    }
-  },
-  {
     "name": "trash",
     "originalName": "Property 1=trash.svg",
     "className": "icon trash",
     "paths": {
       "svg": "dist/svg/trash.svg",
       "sprite": "dist/sprite/sprite.svg#trash"
+    }
+  },
+  {
+    "name": "trash-2",
+    "originalName": "Property 1=trash-2.svg",
+    "className": "icon trash-2",
+    "paths": {
+      "svg": "dist/svg/trash-2.svg",
+      "sprite": "dist/sprite/sprite.svg#trash-2"
     }
   },
   {
@@ -3627,15 +3645,6 @@
     }
   },
   {
-    "name": "upload-cloud",
-    "originalName": "Property 1=upload-cloud.svg",
-    "className": "icon upload-cloud",
-    "paths": {
-      "svg": "dist/svg/upload-cloud.svg",
-      "sprite": "dist/sprite/sprite.svg#upload-cloud"
-    }
-  },
-  {
     "name": "upload",
     "originalName": "Property 1=upload.svg",
     "className": "icon upload",
@@ -3645,12 +3654,21 @@
     }
   },
   {
-    "name": "user-locked",
-    "originalName": "Property 1=User Locked.svg",
-    "className": "icon user-locked",
+    "name": "upload-cloud",
+    "originalName": "Property 1=upload-cloud.svg",
+    "className": "icon upload-cloud",
     "paths": {
-      "svg": "dist/svg/user-locked.svg",
-      "sprite": "dist/sprite/sprite.svg#user-locked"
+      "svg": "dist/svg/upload-cloud.svg",
+      "sprite": "dist/sprite/sprite.svg#upload-cloud"
+    }
+  },
+  {
+    "name": "user",
+    "originalName": "Property 1=user.svg",
+    "className": "icon user",
+    "paths": {
+      "svg": "dist/svg/user.svg",
+      "sprite": "dist/sprite/sprite.svg#user"
     }
   },
   {
@@ -3660,6 +3678,15 @@
     "paths": {
       "svg": "dist/svg/user-check.svg",
       "sprite": "dist/sprite/sprite.svg#user-check"
+    }
+  },
+  {
+    "name": "user-locked",
+    "originalName": "Property 1=User Locked.svg",
+    "className": "icon user-locked",
+    "paths": {
+      "svg": "dist/svg/user-locked.svg",
+      "sprite": "dist/sprite/sprite.svg#user-locked"
     }
   },
   {
@@ -3687,15 +3714,6 @@
     "paths": {
       "svg": "dist/svg/user-x.svg",
       "sprite": "dist/sprite/sprite.svg#user-x"
-    }
-  },
-  {
-    "name": "user",
-    "originalName": "Property 1=user.svg",
-    "className": "icon user",
-    "paths": {
-      "svg": "dist/svg/user.svg",
-      "sprite": "dist/sprite/sprite.svg#user"
     }
   },
   {
@@ -3744,21 +3762,21 @@
     }
   },
   {
-    "name": "video-off",
-    "originalName": "Property 1=video-off.svg",
-    "className": "icon video-off",
-    "paths": {
-      "svg": "dist/svg/video-off.svg",
-      "sprite": "dist/sprite/sprite.svg#video-off"
-    }
-  },
-  {
     "name": "video",
     "originalName": "Property 1=video.svg",
     "className": "icon video",
     "paths": {
       "svg": "dist/svg/video.svg",
       "sprite": "dist/sprite/sprite.svg#video"
+    }
+  },
+  {
+    "name": "video-off",
+    "originalName": "Property 1=video-off.svg",
+    "className": "icon video-off",
+    "paths": {
+      "svg": "dist/svg/video-off.svg",
+      "sprite": "dist/sprite/sprite.svg#video-off"
     }
   },
   {
@@ -3798,6 +3816,15 @@
     }
   },
   {
+    "name": "volume",
+    "originalName": "Property 1=volume.svg",
+    "className": "icon volume",
+    "paths": {
+      "svg": "dist/svg/volume.svg",
+      "sprite": "dist/sprite/sprite.svg#volume"
+    }
+  },
+  {
     "name": "volume-1",
     "originalName": "Property 1=volume-1.svg",
     "className": "icon volume-1",
@@ -3822,15 +3849,6 @@
     "paths": {
       "svg": "dist/svg/volume-x.svg",
       "sprite": "dist/sprite/sprite.svg#volume-x"
-    }
-  },
-  {
-    "name": "volume",
-    "originalName": "Property 1=volume.svg",
-    "className": "icon volume",
-    "paths": {
-      "svg": "dist/svg/volume.svg",
-      "sprite": "dist/sprite/sprite.svg#volume"
     }
   },
   {
@@ -3861,15 +3879,6 @@
     }
   },
   {
-    "name": "wifi-off",
-    "originalName": "Property 1=wifi-off.svg",
-    "className": "icon wifi-off",
-    "paths": {
-      "svg": "dist/svg/wifi-off.svg",
-      "sprite": "dist/sprite/sprite.svg#wifi-off"
-    }
-  },
-  {
     "name": "wifi",
     "originalName": "Property 1=wifi.svg",
     "className": "icon wifi",
@@ -3879,12 +3888,30 @@
     }
   },
   {
+    "name": "wifi-off",
+    "originalName": "Property 1=wifi-off.svg",
+    "className": "icon wifi-off",
+    "paths": {
+      "svg": "dist/svg/wifi-off.svg",
+      "sprite": "dist/sprite/sprite.svg#wifi-off"
+    }
+  },
+  {
     "name": "wind",
     "originalName": "Property 1=wind.svg",
     "className": "icon wind",
     "paths": {
       "svg": "dist/svg/wind.svg",
       "sprite": "dist/sprite/sprite.svg#wind"
+    }
+  },
+  {
+    "name": "x",
+    "originalName": "Property 1=x.svg",
+    "className": "icon x",
+    "paths": {
+      "svg": "dist/svg/x.svg",
+      "sprite": "dist/sprite/sprite.svg#x"
     }
   },
   {
@@ -3915,15 +3942,6 @@
     }
   },
   {
-    "name": "x",
-    "originalName": "Property 1=x.svg",
-    "className": "icon x",
-    "paths": {
-      "svg": "dist/svg/x.svg",
-      "sprite": "dist/sprite/sprite.svg#x"
-    }
-  },
-  {
     "name": "youtube",
     "originalName": "Property 1=youtube.svg",
     "className": "icon youtube",
@@ -3933,21 +3951,21 @@
     }
   },
   {
-    "name": "zap-off",
-    "originalName": "Property 1=zap-off.svg",
-    "className": "icon zap-off",
-    "paths": {
-      "svg": "dist/svg/zap-off.svg",
-      "sprite": "dist/sprite/sprite.svg#zap-off"
-    }
-  },
-  {
     "name": "zap",
     "originalName": "Property 1=zap.svg",
     "className": "icon zap",
     "paths": {
       "svg": "dist/svg/zap.svg",
       "sprite": "dist/sprite/sprite.svg#zap"
+    }
+  },
+  {
+    "name": "zap-off",
+    "originalName": "Property 1=zap-off.svg",
+    "className": "icon zap-off",
+    "paths": {
+      "svg": "dist/svg/zap-off.svg",
+      "sprite": "dist/sprite/sprite.svg#zap-off"
     }
   },
   {
@@ -3966,24 +3984,6 @@
     "paths": {
       "svg": "dist/svg/zoom-out.svg",
       "sprite": "dist/sprite/sprite.svg#zoom-out"
-    }
-  },
-  {
-    "name": "test",
-    "originalName": "Test.svg",
-    "className": "icon test",
-    "paths": {
-      "svg": "dist/svg/test.svg",
-      "sprite": "dist/sprite/sprite.svg#test"
-    }
-  },
-  {
-    "name": "test3012",
-    "originalName": "Test3012.svg",
-    "className": "icon test3012",
-    "paths": {
-      "svg": "dist/svg/test3012.svg",
-      "sprite": "dist/sprite/sprite.svg#test3012"
     }
   }
 ]
