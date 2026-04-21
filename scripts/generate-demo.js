@@ -8,7 +8,10 @@ function generateDemo() {
   fs.mkdirSync(DEMO_DIR, { recursive: true });
   
   const metaPath = path.join(DIST_META_DIR, 'icons.json');
-  if (!fs.existsSync(metaPath)) return;
+  if (!fs.existsSync(metaPath)) {
+    console.warn('⚠️ No metadata found. Build dist first.');
+    return;
+  }
 
   const iconsData = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
   
@@ -17,7 +20,8 @@ function generateDemo() {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Master Icon Library</title>
+  <title>Ashish Icon Library | Searchable Gallery</title>
+  <!-- Relative paths ensure it works in both local dev and GitHub Pages subpaths -->
   <link rel="stylesheet" href="../dist/font/icons.css?v=${Date.now()}">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -32,30 +36,25 @@ function generateDemo() {
     }
 
     /* Professional Inlined Utilities */
-    .p-clr-primary   { --p-icon-fill: #702C62 !important; --p-icon-surface: #DBCAD8 !important; color: var(--p-icon-fill) !important; }
-    .p-clr-success   { --p-icon-fill: #339900 !important; --p-icon-surface: #CCE5B3 !important; color: var(--p-icon-fill) !important; }
-    .p-clr-warning   { --p-icon-fill: #FF7C00 !important; --p-icon-surface: #FFD9BF !important; color: var(--p-icon-fill) !important; }
-    .p-clr-error     { --p-icon-fill: #E54141 !important; --p-icon-surface: #F8CFCF !important; color: var(--p-icon-fill) !important; }
-    
-    /* On Action Implementation */
-    .p-clr-on-action { --p-icon-fill: #702C62 !important; --p-icon-surface: #381631 !important; color: #FFFFFF !important; }
-    .p-clr-on-action.p-state-hover { color: #FFFFFF !important; }
-    
-    /* Muted Implementation */
-    .p-clr-muted     { --p-icon-fill: #8D8D8D !important; --p-icon-surface: #E0E0E0 !important; color: #9E9E9E !important; }
+    .clr-primary   { --icon-fill: #702C62 !important; --icon-bg: #DBCAD8 !important; color: var(--icon-fill) !important; }
+    .clr-success   { --icon-fill: #339900 !important; --icon-bg: #CCE5B3 !important; color: var(--icon-fill) !important; }
+    .clr-warning   { --icon-fill: #FF7C00 !important; --icon-bg: #FFD9BF !important; color: var(--icon-fill) !important; }
+    .clr-error     { --icon-fill: #E54141 !important; --icon-bg: #F8CFCF !important; color: var(--icon-fill) !important; }
+    .clr-white     { --icon-fill: #FFFFFF !important; --icon-bg: #381631 !important; color: var(--icon-fill) !important; }
+    .clr-muted     { --icon-fill: #8D8D8D !important; --icon-bg: #E0E0E0 !important; color: #9E9E9E !important; }
 
-    .p-state-hover, .p-state-selected, .p-state-disabled {
+    .is-hover, .is-selected, .is-disabled {
       border-radius: 4px !important;
       padding: 4px !important;
       margin: 2px !important;
       box-sizing: content-box !important;
       display: inline-flex !important;
     }
-    .p-state-hover    { background: var(--p-icon-surface, #702C62) !important; color: var(--p-icon-fill, #702C62) !important; }
-    .p-clr-primary.p-state-hover { color: #702C62 !important; } /* Restore primary color for light hover */
+    .is-hover    { background: var(--icon-bg, #702C62) !important; color: var(--icon-fill, #702C62) !important; }
+    .clr-primary.is-hover, .clr-white.is-hover { color: #ffffff !important; }
     
-    .p-state-selected { background: var(--p-icon-fill, #702C62) !important; color: #ffffff !important; }
-    .p-state-disabled { background: #E0E0E0 !important; color: #9E9E9E !important; }
+    .is-selected { background: var(--icon-fill, #702C62) !important; color: #ffffff !important; }
+    .is-disabled { background: #E0E0E0 !important; color: #9E9E9E !important; }
 
     * { box-sizing: border-box; }
 
@@ -303,8 +302,8 @@ function generateDemo() {
 
   <div class="wrapper">
     <div class="header">
-      <h1>Master Icon Library</h1>
-      <div class="subtitle">A professional utility-class system for modern web interfaces.</div>
+      <h1>Ashish Icon Library</h1>
+      <div class="subtitle">Search, preview and consume premium icons for your React applications.</div>
     </div>
     
     <div class="controls-panel">
@@ -316,12 +315,12 @@ function generateDemo() {
         <div class="control-group">
           <label>Branding Themes</label>
           <div class="chip-group" id="color-select">
-            <button class="chip active" data-class="p-clr-primary" data-hex="#702C62" data-label="Action"><span class="color-swatch" style="background:#702C62;"></span> Action / Info (#702C62)</button>
-            <button class="chip" data-class="p-clr-success" data-hex="#339900" data-label="Success"><span class="color-swatch" style="background:#339900;"></span> Success (#339900)</button>
-            <button class="chip" data-class="p-clr-warning" data-hex="#FF7C00" data-label="Warning"><span class="color-swatch" style="background:#FF7C00;"></span> Warning (#FF7C00)</button>
-            <button class="chip" data-class="p-clr-error" data-hex="#E54141" data-label="Error"><span class="color-swatch" style="background:#E54141;"></span> Error (#E54141)</button>
-            <button class="chip" data-class="p-clr-on-action" data-hex="#FFFFFF" data-label="White"><span class="color-swatch" style="background:#FFFFFF;"></span> On Action (#FFFFFF)</button>
-            <button class="chip" data-class="p-clr-muted" data-hex="#9E9E9E" data-label="Muted"><span class="color-swatch" style="background:#9E9E9E;"></span> Disabled (#9E9E9E)</button>
+            <button class="chip active" data-class="clr-primary" data-hex="#702C62" data-label="Action"><span class="color-swatch" style="background:#702C62;"></span> Action / Info (#702C62)</button>
+            <button class="chip" data-class="clr-success" data-hex="#339900" data-label="Success"><span class="color-swatch" style="background:#339900;"></span> Success (#339900)</button>
+            <button class="chip" data-class="clr-warning" data-hex="#FF7C00" data-label="Warning"><span class="color-swatch" style="background:#FF7C00;"></span> Warning (#FF7C00)</button>
+            <button class="chip" data-class="clr-error" data-hex="#E54141" data-label="Error"><span class="color-swatch" style="background:#E54141;"></span> Error (#E54141)</button>
+            <button class="chip" data-class="clr-white" data-hex="#FFFFFF" data-label="White"><span class="color-swatch" style="background:#FFFFFF;"></span> On Action (#FFFFFF)</button>
+            <button class="chip" data-class="clr-muted" data-hex="#9E9E9E" data-label="Muted"><span class="color-swatch" style="background:#9E9E9E;"></span> Disabled (#9E9E9E)</button>
           </div>
         </div>
       </div>
@@ -331,9 +330,9 @@ function generateDemo() {
           <label>Interaction Geometries</label>
           <div class="chip-group" id="state-select">
             <button class="chip active" data-class="none">No Background</button>
-            <button class="chip" data-class="p-state-hover">Hover BG</button>
-            <button class="chip" data-class="p-state-selected">Selected BG</button>
-            <button class="chip" data-class="p-state-disabled">Disabled BG</button>
+            <button class="chip" data-class="is-hover">Hover BG</button>
+            <button class="chip" data-class="is-selected">Selected BG</button>
+            <button class="chip" data-class="is-disabled">Disabled BG</button>
           </div>
         </div>
       </div>
@@ -342,38 +341,38 @@ function generateDemo() {
         <div class="control-group">
           <label>Standard Scales</label>
           <div class="chip-group" id="size-select">
-            <button class="chip" data-class="icon-8" data-size="8px">8px</button>
-            <button class="chip" data-class="icon-12" data-size="12px">12px</button>
-            <button class="chip" data-class="icon-14" data-size="14px">14px</button>
-            <button class="chip active" data-class="icon-16" data-size="16px">16px</button>
-            <button class="chip" data-class="icon-20" data-size="20px">20px</button>
-            <button class="chip" data-class="icon-24" data-size="24px">24px</button>
+            <button class="chip" data-class="icon-sm" data-size="12px">sm (12px)</button>
+            <button class="chip active" data-class="none" data-size="16px">default (16px)</button>
+            <button class="chip" data-class="icon-lg" data-size="20px">lg (20px)</button>
+            <button class="chip" data-class="icon-xl" data-size="24px">xl (24px)</button>
           </div>
         </div>
       </div>
 
       <div class="control-row">
         <div class="control-group">
-          <label>Professional Syntax</label>
+          <label>NPM Consumption Syntax</label>
           <div class="chip-group" id="syntax-select">
-            <button class="chip" data-syntax="html">HTML / ClassList</button>
-            <button class="chip active" data-syntax="react">React (Prop-based)</button>
+            <button class="chip active" data-syntax="react">React (className)</button>
+            <button class="chip" data-syntax="html">HTML (class)</button>
           </div>
         </div>
       </div>
     </div>
 
     <div class="grid" id="grid">
-      ${iconsData.map(icon => `
-        <div class="icon-card" data-name="${icon.name}">
+      ${iconsData.map(icon => {
+        const selector = /^\d/.test(icon.name) ? 'i-' + icon.name : icon.name;
+        return `
+        <div class="icon-card" data-name="${icon.name}" data-selector="${selector}">
           <div class="icon-preview">
             <div class="preview-box">
-              <span class="icon icon-${icon.name} icon-16 p-clr-primary"></span>
+              <span class="icon ${selector} clr-primary"></span>
             </div>
           </div>
           <div class="icon-name">${icon.name}</div>
         </div>
-      `).join('')}
+      `;}).join('')}
     </div>
   </div>
 
@@ -390,9 +389,9 @@ function generateDemo() {
     const root = document.documentElement;
 
     let currentSettings = {
-      color: 'p-clr-primary',
+      color: 'clr-primary',
       hex: '#702C62',
-      size: 'icon-16',
+      size: 'none',
       sizePx: '16px',
       state: 'none',
       syntax: 'react'
@@ -401,20 +400,18 @@ function generateDemo() {
     function updatePreviews() {
       cards.forEach(card => {
         const icon = card.querySelector('.icon');
+        const selector = card.dataset.selector;
+        
         // Reset dynamic classes
-        icon.className = icon.className.replace(/icon-(8|12|14|16|20|24)/g, '').trim();
-        icon.className = icon.className.replace(/[up]-clr-(primary|success|warning|error|on-action|muted)/g, '').trim();
-        icon.className = icon.className.replace(/[up]-state-(hover|selected|disabled)/g, '').trim();
+        icon.className = 'icon ' + selector;
         
         // Add current settings
-        icon.classList.add(currentSettings.size);
+        if (currentSettings.size !== 'none') icon.classList.add(currentSettings.size);
         icon.classList.add(currentSettings.color);
-        if (currentSettings.state !== 'none') {
-          icon.classList.add(currentSettings.state);
-        }
+        if (currentSettings.state !== 'none') icon.classList.add(currentSettings.state);
 
-        // Handle card background contrast for "On Action" (white) OR Branding "White" (p-clr-on-action)
-        if ((currentSettings.color === 'p-clr-on-action' || currentSettings.hex === '#FFFFFF') && currentSettings.state === 'none') {
+        // Handle card background contrast for "White" theme
+        if ((currentSettings.color === 'clr-white') && currentSettings.state === 'none') {
           root.style.setProperty('--card-bg-override', 'rgba(15, 23, 42, 0.9)');
         } else {
           root.style.setProperty('--card-bg-override', 'rgba(255, 255, 255, 0.65)');
@@ -453,7 +450,7 @@ function generateDemo() {
       });
     });
 
-    // State Toggling (Disabling logic removed as per user request - ALL pills stay enabled)
+    // State Toggling
     stateChips.forEach(chip => {
       chip.addEventListener('click', () => {
         stateChips.forEach(c => c.classList.remove('active'));
@@ -475,14 +472,13 @@ function generateDemo() {
     // Copy logic
     cards.forEach(card => {
       card.addEventListener('click', () => {
-        const name = card.dataset.name;
+        const selector = card.dataset.selector;
         let snippet = '';
         
-        const classes = ['icon', 'icon-' + name, currentSettings.size];
+        const classes = ['icon', selector];
+        if (currentSettings.size !== 'none') classes.push(currentSettings.size);
         classes.push(currentSettings.color);
-        if (currentSettings.state !== 'none') {
-          classes.push(currentSettings.state);
-        }
+        if (currentSettings.state !== 'none') classes.push(currentSettings.state);
 
         const classString = classes.join(' ');
 
@@ -493,7 +489,7 @@ function generateDemo() {
         }
 
         navigator.clipboard.writeText(snippet);
-        toast.textContent = 'Optimized ' + currentSettings.syntax.toUpperCase() + ' Copied! (' + currentSettings.sizePx + ' · ' + currentSettings.hex + ')';
+        toast.textContent = 'Optimized ' + currentSettings.syntax.toUpperCase() + ' Copied! (' + currentSettings.sizePx + ')';
         toast.className = 'toast show';
         setTimeout(() => toast.className = 'toast', 2000);
       });
@@ -503,7 +499,7 @@ function generateDemo() {
 </html>`;
 
   fs.writeFileSync(path.join(DEMO_DIR, 'index.html'), html);
-  console.log('🎨 Demo page explicitly generated at demo/index.html');
+  console.log('🎨 Ashish Demo page generated at demo/index.html');
 }
 
 if (require.main === module) {

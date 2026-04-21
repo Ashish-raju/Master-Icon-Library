@@ -1,32 +1,44 @@
 {
-  "name": "my-icon-library",
-  "version": "1.0.0",
-  "description": "Production-ready automated icon library pipeline",
-  "main": "dist/meta/icons.json",
+  "name": "ashish-icon-library",
+  "version": "1.1.0",
+  "description": "Premium automated icon library for React applications",
+  "main": "index.js",
   "style": "dist/font/icons.css",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
-    ".": "./dist/meta/icons.json",
+    ".": "./index.js",
     "./font": "./dist/font/icons.css",
-    "./svg/*": "./dist/svg/*",
-    "./sprite": "./dist/sprite/sprite.svg"
+    "./meta": "./dist/meta/icons.json",
+    "./map": "./dist/meta/icons-map.json",
+    "./sprite": "./dist/sprite/sprite.svg",
+    "./svg/*": "./dist/svg/*"
   },
   "files": [
     "dist",
-    "demo"
+    "index.js",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
-    "icons": "npm run icons:build",
-    "icons:clean": "node scripts/clean.js",
-    "icons:validate": "node scripts/validate-icons.js",
-    "icons:build": "node scripts/build-icons.js",
-    "icons:demo": "node scripts/generate-demo.js"
+    "build": "node scripts/build-icons.js",
+    "clean": "node scripts/clean.js",
+    "validate": "node scripts/validate-icons.js",
+    "demo": "node scripts/generate-demo.js"
   },
-  "dependencies": {
+  "devDependencies": {
     "fantasticon": "^4.1.0",
+    "fs-extra": "^11.1.1",
+    "glob": "^10.3.10",
     "oslllo-svg-fixer": "^6.0.1",
     "svgo": "^3.2.0",
     "webfont": "^11.2.26"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashish-raju/Master-Icon-Library.git"
+  },
+  "author": "Ashish",
   "license": "MIT"
 }

@@ -1,76 +1,87 @@
-# 💎 Master Icon Library 
+# ashish-icon-library
 
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
-[![Design System](https://img.shields.io/badge/design--system-validated-blue.svg)]()
-[![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)]()
+A premium, automated icon library designed for modern React applications. Features professional utility classes for sizing, branding, and interaction states.
 
-An enterprise-grade, automated iconography pipeline that serves as a single source of truth for SVG and font-based icon distribution. Engineered for strict design-system compliance and multi-framework interoperability.
+[🚀 **View Live Searchable Gallery**](https://Ashish-raju.github.io/Master-Icon-Library/demo/)
 
----
+## 📦 Installation
 
-## ✨ Key Features
-
-*   **⚡ Automated Optimization**: Built-in SVG compiler that handles stroke-to-path conversion, payload minification, and geometry normalization.
-*   **🛡️ Geometric Gatekeeping**: Strict validation layers prevent non-square, oversized, or complex assets from entering the production build.
-*   **🎨 CSS-Driven Theming**: All icons are normalized to `currentColor` for instant CSS styling. No hardcoded brand styles.
-*   **⚛️ Framework First**: Native support for **React (`className`)**, Angular, and Vue.
-*   **🎭 Premium Interactivity**: Includes a glassmorphism master demo with live state previews (Hover, Selected) and one-click code extraction.
-
----
-
-## 🏗️ High-Level Architecture
-
-```mermaid
-graph LR
-    A[Design Specs] -->|Gatekeep| B(Validation Engine)
-    B -->|Cleanse| C(Stroke Fixer)
-    C -->|Minimize| D(SVGO Optimizer)
-    D -->|Compile| E{Asset Pool}
-    E --> F[WebFont Generator]
-    E --> G[SVG Sprite Engine]
-    E --> H[Metadata Hub]
-    F & G & H --> I[Interactive Demo]
-```
-
----
-
-## 🚀 Quick Start
-
-### Installation
 ```bash
-npm install
+npm install ashish-icon-library
 ```
 
-### Build the Library
-```bash
-npm run icons
+## 🛠 Usage
+
+### 1. Import the Font Styles
+Import the CSS in your application entry file (e.g., `index.js` or `App.js`):
+
+```javascript
+import "ashish-icon-library/font";
 ```
 
----
+### 2. Use in JSX
+Apply the `.icon` base class followed by the icon name:
 
-## 💻 Usage
-
-### React (Primary)
 ```jsx
-// 1. Import CSS in root
-import 'master-icon-library/dist/font/icons.css';
+// Standard 16px icon
+<span className="icon user"></span>
 
-// 2. Implementation
-<span className="icon icon-activity" />
+// Large 20px icon
+<span className="icon settings icon-lg"></span>
 ```
 
-### SVG Sprite (Performance)
-```html
-<svg class="icon"><use xlink:href="dist/sprite/sprite.svg#activity"></use></svg>
+## 📏 Sizing Utilities
+
+| Class | Size |
+| :--- | :--- |
+| `.icon-sm` | 12px |
+| *(default)* | 16px |
+| `.icon-lg` | 20px |
+| `.icon-xl` | 24px |
+
+## 🎨 Branding & Interaction Utilities
+
+The library includes "lean and mean" utilities for dynamic theming:
+
+### Branding Colors
+- `.clr-primary`: Main brand color
+- `.clr-success`: Success green
+- `.clr-warning`: Warning orange
+- `.clr-error`: Error red
+- `.clr-white`: Forced white (on dark backgrounds)
+
+### Interaction States
+- `.is-hover`: Professional hover background effect
+- `.is-selected`: Direct selection state
+- `.is-disabled`: Greyscale disabled state
+
+**Example:**
+```jsx
+<span className="icon activity clr-success is-hover"></span>
 ```
 
 ---
 
-## 📖 Extended Documentation
+## 👩‍💻 For Maintainers
 
-For a deep-dive into the technical architecture, design system specifications, and customization guides, please refer to the [**Technical Documentation**](./DOCUMENTATION.md).
+### 1. Adding New Icons
+1. Drop your `.svg` files into the `/icons-svg` folder.
+2. Ensure they are optimized (flat fills, no strokes if possible, though the pipeline handles stroke conversion).
+3. Run the build command.
+
+### 2. Rebuilding Assets
+```bash
+npm run build
+```
+
+### 3. Publishing to NPM
+We use GitHub Actions for automated publishing. Simply create a new **Release** in GitHub, and the `publish.yml` workflow will:
+1. Validate all SVGs.
+2. Build all production assets into `/dist`.
+3. Publish the package to the public NPM registry.
+4. Deploy the latest gallery to GitHub Pages.
 
 ---
 
-**© 2026 Enterprise Icon Pipeline Team**
-*Engineered for Excellence.*
+## 📄 License
+MIT © Ashish

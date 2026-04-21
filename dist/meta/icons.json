@@ -3976,5 +3976,14 @@
       "svg": "dist/svg/test.svg",
       "sprite": "dist/sprite/sprite.svg#test"
     }
+  },
+  {
+    "name": "test3012",
+    "originalName": "Test3012.svg",
+    "className": "icon test3012",
+    "paths": {
+      "svg": "dist/svg/test3012.svg",
+      "sprite": "dist/sprite/sprite.svg#test3012"
+    }
   }
 ]
