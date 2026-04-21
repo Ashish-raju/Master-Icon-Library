@@ -1,0 +1,3989 @@
+[
+  {
+    "name": "100",
+    "originalName": "Property 1=100.svg",
+    "className": "icon i-100",
+    "paths": {
+      "svg": "dist/svg/100.svg",
+      "sprite": "dist/sprite/sprite.svg#100"
+    }
+  },
+  {
+    "name": "activity",
+    "originalName": "Property 1=activity.svg",
+    "className": "icon activity",
+    "paths": {
+      "svg": "dist/svg/activity.svg",
+      "sprite": "dist/sprite/sprite.svg#activity"
+    }
+  },
+  {
+    "name": "add-product",
+    "originalName": "Property 1=Add Product.svg",
+    "className": "icon add-product",
+    "paths": {
+      "svg": "dist/svg/add-product.svg",
+      "sprite": "dist/sprite/sprite.svg#add-product"
+    }
+  },
+  {
+    "name": "admin",
+    "originalName": "Property 1=Admin.svg",
+    "className": "icon admin",
+    "paths": {
+      "svg": "dist/svg/admin.svg",
+      "sprite": "dist/sprite/sprite.svg#admin"
+    }
+  },
+  {
+    "name": "ai",
+    "originalName": "Property 1=AI.svg",
+    "className": "icon ai",
+    "paths": {
+      "svg": "dist/svg/ai.svg",
+      "sprite": "dist/sprite/sprite.svg#ai"
+    }
+  },
+  {
+    "name": "ai-next",
+    "originalName": "Property 1=AI Next.svg",
+    "className": "icon ai-next",
+    "paths": {
+      "svg": "dist/svg/ai-next.svg",
+      "sprite": "dist/sprite/sprite.svg#ai-next"
+    }
+  },
+  {
+    "name": "airplay",
+    "originalName": "Property 1=airplay.svg",
+    "className": "icon airplay",
+    "paths": {
+      "svg": "dist/svg/airplay.svg",
+      "sprite": "dist/sprite/sprite.svg#airplay"
+    }
+  },
+  {
+    "name": "alert-circle",
+    "originalName": "Property 1=alert-circle.svg",
+    "className": "icon alert-circle",
+    "paths": {
+      "svg": "dist/svg/alert-circle.svg",
+      "sprite": "dist/sprite/sprite.svg#alert-circle"
+    }
+  },
+  {
+    "name": "alert-octagon",
+    "originalName": "Property 1=alert-octagon.svg",
+    "className": "icon alert-octagon",
+    "paths": {
+      "svg": "dist/svg/alert-octagon.svg",
+      "sprite": "dist/sprite/sprite.svg#alert-octagon"
+    }
+  },
+  {
+    "name": "alert-triangle",
+    "originalName": "Property 1=alert-triangle.svg",
+    "className": "icon alert-triangle",
+    "paths": {
+      "svg": "dist/svg/alert-triangle.svg",
+      "sprite": "dist/sprite/sprite.svg#alert-triangle"
+    }
+  },
+  {
+    "name": "align-center",
+    "originalName": "Property 1=align-center.svg",
+    "className": "icon align-center",
+    "paths": {
+      "svg": "dist/svg/align-center.svg",
+      "sprite": "dist/sprite/sprite.svg#align-center"
+    }
+  },
+  {
+    "name": "align-center-1",
+    "originalName": "Property 1=align-center-1.svg",
+    "className": "icon align-center-1",
+    "paths": {
+      "svg": "dist/svg/align-center-1.svg",
+      "sprite": "dist/sprite/sprite.svg#align-center-1"
+    }
+  },
+  {
+    "name": "align-center-2",
+    "originalName": "Property 1=align-center-2.svg",
+    "className": "icon align-center-2",
+    "paths": {
+      "svg": "dist/svg/align-center-2.svg",
+      "sprite": "dist/sprite/sprite.svg#align-center-2"
+    }
+  },
+  {
+    "name": "align-center-3",
+    "originalName": "Property 1=align-center-3.svg",
+    "className": "icon align-center-3",
+    "paths": {
+      "svg": "dist/svg/align-center-3.svg",
+      "sprite": "dist/sprite/sprite.svg#align-center-3"
+    }
+  },
+  {
+    "name": "align-center-4",
+    "originalName": "Property 1=align-center-4.svg",
+    "className": "icon align-center-4",
+    "paths": {
+      "svg": "dist/svg/align-center-4.svg",
+      "sprite": "dist/sprite/sprite.svg#align-center-4"
+    }
+  },
+  {
+    "name": "align-center-5",
+    "originalName": "Property 1=align-center-5.svg",
+    "className": "icon align-center-5",
+    "paths": {
+      "svg": "dist/svg/align-center-5.svg",
+      "sprite": "dist/sprite/sprite.svg#align-center-5"
+    }
+  },
+  {
+    "name": "align-justify",
+    "originalName": "Property 1=align-justify.svg",
+    "className": "icon align-justify",
+    "paths": {
+      "svg": "dist/svg/align-justify.svg",
+      "sprite": "dist/sprite/sprite.svg#align-justify"
+    }
+  },
+  {
+    "name": "align-left",
+    "originalName": "Property 1=align-left.svg",
+    "className": "icon align-left",
+    "paths": {
+      "svg": "dist/svg/align-left.svg",
+      "sprite": "dist/sprite/sprite.svg#align-left"
+    }
+  },
+  {
+    "name": "align-right",
+    "originalName": "Property 1=align-right.svg",
+    "className": "icon align-right",
+    "paths": {
+      "svg": "dist/svg/align-right.svg",
+      "sprite": "dist/sprite/sprite.svg#align-right"
+    }
+  },
+  {
+    "name": "analytics",
+    "originalName": "Property 1=Analytics.svg",
+    "className": "icon analytics",
+    "paths": {
+      "svg": "dist/svg/analytics.svg",
+      "sprite": "dist/sprite/sprite.svg#analytics"
+    }
+  },
+  {
+    "name": "analytics-fill",
+    "originalName": "Property 1=Analytics Fill.svg",
+    "className": "icon analytics-fill",
+    "paths": {
+      "svg": "dist/svg/analytics-fill.svg",
+      "sprite": "dist/sprite/sprite.svg#analytics-fill"
+    }
+  },
+  {
+    "name": "anchor",
+    "originalName": "Property 1=anchor.svg",
+    "className": "icon anchor",
+    "paths": {
+      "svg": "dist/svg/anchor.svg",
+      "sprite": "dist/sprite/sprite.svg#anchor"
+    }
+  },
+  {
+    "name": "aperture",
+    "originalName": "Property 1=aperture.svg",
+    "className": "icon aperture",
+    "paths": {
+      "svg": "dist/svg/aperture.svg",
+      "sprite": "dist/sprite/sprite.svg#aperture"
+    }
+  },
+  {
+    "name": "archive",
+    "originalName": "Property 1=archive.svg",
+    "className": "icon archive",
+    "paths": {
+      "svg": "dist/svg/archive.svg",
+      "sprite": "dist/sprite/sprite.svg#archive"
+    }
+  },
+  {
+    "name": "arrow-down",
+    "originalName": "Property 1=arrow-down.svg",
+    "className": "icon arrow-down",
+    "paths": {
+      "svg": "dist/svg/arrow-down.svg",
+      "sprite": "dist/sprite/sprite.svg#arrow-down"
+    }
+  },
+  {
+    "name": "arrow-down-circle",
+    "originalName": "Property 1=arrow-down-circle.svg",
+    "className": "icon arrow-down-circle",
+    "paths": {
+      "svg": "dist/svg/arrow-down-circle.svg",
+      "sprite": "dist/sprite/sprite.svg#arrow-down-circle"
+    }
+  },
+  {
+    "name": "arrow-down-left",
+    "originalName": "Property 1=arrow-down-left.svg",
+    "className": "icon arrow-down-left",
+    "paths": {
+      "svg": "dist/svg/arrow-down-left.svg",
+      "sprite": "dist/sprite/sprite.svg#arrow-down-left"
+    }
+  },
+  {
+    "name": "arrow-down-right",
+    "originalName": "Property 1=arrow-down-right.svg",
+    "className": "icon arrow-down-right",
+    "paths": {
+      "svg": "dist/svg/arrow-down-right.svg",
+      "sprite": "dist/sprite/sprite.svg#arrow-down-right"
+    }
+  },
+  {
+    "name": "arrow-left",
+    "originalName": "Property 1=arrow-left.svg",
+    "className": "icon arrow-left",
+    "paths": {
+      "svg": "dist/svg/arrow-left.svg",
+      "sprite": "dist/sprite/sprite.svg#arrow-left"
+    }
+  },
+  {
+    "name": "arrow-left-circle",
+    "originalName": "Property 1=arrow-left-circle.svg",
+    "className": "icon arrow-left-circle",
+    "paths": {
+      "svg": "dist/svg/arrow-left-circle.svg",
+      "sprite": "dist/sprite/sprite.svg#arrow-left-circle"
+    }
+  },
+  {
+    "name": "arrow-right",
+    "originalName": "Property 1=arrow-right.svg",
+    "className": "icon arrow-right",
+    "paths": {
+      "svg": "dist/svg/arrow-right.svg",
+      "sprite": "dist/sprite/sprite.svg#arrow-right"
+    }
+  },
+  {
+    "name": "arrow-right-circle",
+    "originalName": "Property 1=arrow-right-circle.svg",
+    "className": "icon arrow-right-circle",
+    "paths": {
+      "svg": "dist/svg/arrow-right-circle.svg",
+      "sprite": "dist/sprite/sprite.svg#arrow-right-circle"
+    }
+  },
+  {
+    "name": "arrow-up",
+    "originalName": "Property 1=arrow-up.svg",
+    "className": "icon arrow-up",
+    "paths": {
+      "svg": "dist/svg/arrow-up.svg",
+      "sprite": "dist/sprite/sprite.svg#arrow-up"
+    }
+  },
+  {
+    "name": "arrow-up-circle",
+    "originalName": "Property 1=arrow-up-circle.svg",
+    "className": "icon arrow-up-circle",
+    "paths": {
+      "svg": "dist/svg/arrow-up-circle.svg",
+      "sprite": "dist/sprite/sprite.svg#arrow-up-circle"
+    }
+  },
+  {
+    "name": "arrow-up-left",
+    "originalName": "Property 1=arrow-up-left.svg",
+    "className": "icon arrow-up-left",
+    "paths": {
+      "svg": "dist/svg/arrow-up-left.svg",
+      "sprite": "dist/sprite/sprite.svg#arrow-up-left"
+    }
+  },
+  {
+    "name": "arrow-up-right",
+    "originalName": "Property 1=arrow-up-right.svg",
+    "className": "icon arrow-up-right",
+    "paths": {
+      "svg": "dist/svg/arrow-up-right.svg",
+      "sprite": "dist/sprite/sprite.svg#arrow-up-right"
+    }
+  },
+  {
+    "name": "at-sign",
+    "originalName": "Property 1=at-sign.svg",
+    "className": "icon at-sign",
+    "paths": {
+      "svg": "dist/svg/at-sign.svg",
+      "sprite": "dist/sprite/sprite.svg#at-sign"
+    }
+  },
+  {
+    "name": "audit",
+    "originalName": "Property 1=Audit.svg",
+    "className": "icon audit",
+    "paths": {
+      "svg": "dist/svg/audit.svg",
+      "sprite": "dist/sprite/sprite.svg#audit"
+    }
+  },
+  {
+    "name": "award",
+    "originalName": "Property 1=award.svg",
+    "className": "icon award",
+    "paths": {
+      "svg": "dist/svg/award.svg",
+      "sprite": "dist/sprite/sprite.svg#award"
+    }
+  },
+  {
+    "name": "baby-0-23-months",
+    "originalName": "Property 1=Baby (0-23 Months).svg",
+    "className": "icon baby-0-23-months",
+    "paths": {
+      "svg": "dist/svg/baby-0-23-months.svg",
+      "sprite": "dist/sprite/sprite.svg#baby-0-23-months"
+    }
+  },
+  {
+    "name": "bar-chart",
+    "originalName": "Property 1=bar-chart.svg",
+    "className": "icon bar-chart",
+    "paths": {
+      "svg": "dist/svg/bar-chart.svg",
+      "sprite": "dist/sprite/sprite.svg#bar-chart"
+    }
+  },
+  {
+    "name": "bar-chart-2",
+    "originalName": "Property 1=bar-chart-2.svg",
+    "className": "icon bar-chart-2",
+    "paths": {
+      "svg": "dist/svg/bar-chart-2.svg",
+      "sprite": "dist/sprite/sprite.svg#bar-chart-2"
+    }
+  },
+  {
+    "name": "battery",
+    "originalName": "Property 1=battery.svg",
+    "className": "icon battery",
+    "paths": {
+      "svg": "dist/svg/battery.svg",
+      "sprite": "dist/sprite/sprite.svg#battery"
+    }
+  },
+  {
+    "name": "battery-charging",
+    "originalName": "Property 1=battery-charging.svg",
+    "className": "icon battery-charging",
+    "paths": {
+      "svg": "dist/svg/battery-charging.svg",
+      "sprite": "dist/sprite/sprite.svg#battery-charging"
+    }
+  },
+  {
+    "name": "bell",
+    "originalName": "Property 1=bell.svg",
+    "className": "icon bell",
+    "paths": {
+      "svg": "dist/svg/bell.svg",
+      "sprite": "dist/sprite/sprite.svg#bell"
+    }
+  },
+  {
+    "name": "bell-off",
+    "originalName": "Property 1=bell-off.svg",
+    "className": "icon bell-off",
+    "paths": {
+      "svg": "dist/svg/bell-off.svg",
+      "sprite": "dist/sprite/sprite.svg#bell-off"
+    }
+  },
+  {
+    "name": "bluetooth",
+    "originalName": "Property 1=bluetooth.svg",
+    "className": "icon bluetooth",
+    "paths": {
+      "svg": "dist/svg/bluetooth.svg",
+      "sprite": "dist/sprite/sprite.svg#bluetooth"
+    }
+  },
+  {
+    "name": "bold",
+    "originalName": "Property 1=bold.svg",
+    "className": "icon bold",
+    "paths": {
+      "svg": "dist/svg/bold.svg",
+      "sprite": "dist/sprite/sprite.svg#bold"
+    }
+  },
+  {
+    "name": "book",
+    "originalName": "Property 1=book.svg",
+    "className": "icon book",
+    "paths": {
+      "svg": "dist/svg/book.svg",
+      "sprite": "dist/sprite/sprite.svg#book"
+    }
+  },
+  {
+    "name": "book-open",
+    "originalName": "Property 1=book-open.svg",
+    "className": "icon book-open",
+    "paths": {
+      "svg": "dist/svg/book-open.svg",
+      "sprite": "dist/sprite/sprite.svg#book-open"
+    }
+  },
+  {
+    "name": "bookmark",
+    "originalName": "Property 1=bookmark.svg",
+    "className": "icon bookmark",
+    "paths": {
+      "svg": "dist/svg/bookmark.svg",
+      "sprite": "dist/sprite/sprite.svg#bookmark"
+    }
+  },
+  {
+    "name": "bookmark-flag",
+    "originalName": "Property 1=Bookmark flag.svg",
+    "className": "icon bookmark-flag",
+    "paths": {
+      "svg": "dist/svg/bookmark-flag.svg",
+      "sprite": "dist/sprite/sprite.svg#bookmark-flag"
+    }
+  },
+  {
+    "name": "box",
+    "originalName": "Property 1=box.svg",
+    "className": "icon box",
+    "paths": {
+      "svg": "dist/svg/box.svg",
+      "sprite": "dist/sprite/sprite.svg#box"
+    }
+  },
+  {
+    "name": "briefcase",
+    "originalName": "Property 1=briefcase.svg",
+    "className": "icon briefcase",
+    "paths": {
+      "svg": "dist/svg/briefcase.svg",
+      "sprite": "dist/sprite/sprite.svg#briefcase"
+    }
+  },
+  {
+    "name": "calendar",
+    "originalName": "Property 1=calendar.svg",
+    "className": "icon calendar",
+    "paths": {
+      "svg": "dist/svg/calendar.svg",
+      "sprite": "dist/sprite/sprite.svg#calendar"
+    }
+  },
+  {
+    "name": "camera",
+    "originalName": "Property 1=camera.svg",
+    "className": "icon camera",
+    "paths": {
+      "svg": "dist/svg/camera.svg",
+      "sprite": "dist/sprite/sprite.svg#camera"
+    }
+  },
+  {
+    "name": "camera-off",
+    "originalName": "Property 1=camera-off.svg",
+    "className": "icon camera-off",
+    "paths": {
+      "svg": "dist/svg/camera-off.svg",
+      "sprite": "dist/sprite/sprite.svg#camera-off"
+    }
+  },
+  {
+    "name": "card-credit",
+    "originalName": "Property 1=Card Credit.svg",
+    "className": "icon card-credit",
+    "paths": {
+      "svg": "dist/svg/card-credit.svg",
+      "sprite": "dist/sprite/sprite.svg#card-credit"
+    }
+  },
+  {
+    "name": "cast",
+    "originalName": "Property 1=cast.svg",
+    "className": "icon cast",
+    "paths": {
+      "svg": "dist/svg/cast.svg",
+      "sprite": "dist/sprite/sprite.svg#cast"
+    }
+  },
+  {
+    "name": "chat",
+    "originalName": "Property 1=Chat.svg",
+    "className": "icon chat",
+    "paths": {
+      "svg": "dist/svg/chat.svg",
+      "sprite": "dist/sprite/sprite.svg#chat"
+    }
+  },
+  {
+    "name": "check",
+    "originalName": "Property 1=check.svg",
+    "className": "icon check",
+    "paths": {
+      "svg": "dist/svg/check.svg",
+      "sprite": "dist/sprite/sprite.svg#check"
+    }
+  },
+  {
+    "name": "check-box",
+    "originalName": "Property 1=Check Box.svg",
+    "className": "icon check-box",
+    "paths": {
+      "svg": "dist/svg/check-box.svg",
+      "sprite": "dist/sprite/sprite.svg#check-box"
+    }
+  },
+  {
+    "name": "check-circle",
+    "originalName": "Property 1=check-circle.svg",
+    "className": "icon check-circle",
+    "paths": {
+      "svg": "dist/svg/check-circle.svg",
+      "sprite": "dist/sprite/sprite.svg#check-circle"
+    }
+  },
+  {
+    "name": "check-square",
+    "originalName": "Property 1=check-square.svg",
+    "className": "icon check-square",
+    "paths": {
+      "svg": "dist/svg/check-square.svg",
+      "sprite": "dist/sprite/sprite.svg#check-square"
+    }
+  },
+  {
+    "name": "chevron-down",
+    "originalName": "Property 1=chevron-down.svg",
+    "className": "icon chevron-down",
+    "paths": {
+      "svg": "dist/svg/chevron-down.svg",
+      "sprite": "dist/sprite/sprite.svg#chevron-down"
+    }
+  },
+  {
+    "name": "chevron-left",
+    "originalName": "Property 1=chevron-left.svg",
+    "className": "icon chevron-left",
+    "paths": {
+      "svg": "dist/svg/chevron-left.svg",
+      "sprite": "dist/sprite/sprite.svg#chevron-left"
+    }
+  },
+  {
+    "name": "chevron-right",
+    "originalName": "Property 1=chevron-right.svg",
+    "className": "icon chevron-right",
+    "paths": {
+      "svg": "dist/svg/chevron-right.svg",
+      "sprite": "dist/sprite/sprite.svg#chevron-right"
+    }
+  },
+  {
+    "name": "chevron-up",
+    "originalName": "Property 1=chevron-up.svg",
+    "className": "icon chevron-up",
+    "paths": {
+      "svg": "dist/svg/chevron-up.svg",
+      "sprite": "dist/sprite/sprite.svg#chevron-up"
+    }
+  },
+  {
+    "name": "chevron-up-down",
+    "originalName": "Property 1=Chevron Up&Down.svg",
+    "className": "icon chevron-up-down",
+    "paths": {
+      "svg": "dist/svg/chevron-up-down.svg",
+      "sprite": "dist/sprite/sprite.svg#chevron-up-down"
+    }
+  },
+  {
+    "name": "chevrons-down",
+    "originalName": "Property 1=chevrons-down.svg",
+    "className": "icon chevrons-down",
+    "paths": {
+      "svg": "dist/svg/chevrons-down.svg",
+      "sprite": "dist/sprite/sprite.svg#chevrons-down"
+    }
+  },
+  {
+    "name": "chevrons-left",
+    "originalName": "Property 1=chevrons-left.svg",
+    "className": "icon chevrons-left",
+    "paths": {
+      "svg": "dist/svg/chevrons-left.svg",
+      "sprite": "dist/sprite/sprite.svg#chevrons-left"
+    }
+  },
+  {
+    "name": "chevrons-right",
+    "originalName": "Property 1=chevrons-right.svg",
+    "className": "icon chevrons-right",
+    "paths": {
+      "svg": "dist/svg/chevrons-right.svg",
+      "sprite": "dist/sprite/sprite.svg#chevrons-right"
+    }
+  },
+  {
+    "name": "chevrons-up",
+    "originalName": "Property 1=chevrons-up.svg",
+    "className": "icon chevrons-up",
+    "paths": {
+      "svg": "dist/svg/chevrons-up.svg",
+      "sprite": "dist/sprite/sprite.svg#chevrons-up"
+    }
+  },
+  {
+    "name": "child-24-months-17-years",
+    "originalName": "Property 1=Child (24 Months - 17 Years).svg",
+    "className": "icon child-24-months-17-years",
+    "paths": {
+      "svg": "dist/svg/child-24-months-17-years.svg",
+      "sprite": "dist/sprite/sprite.svg#child-24-months-17-years"
+    }
+  },
+  {
+    "name": "chrome",
+    "originalName": "Property 1=chrome.svg",
+    "className": "icon chrome",
+    "paths": {
+      "svg": "dist/svg/chrome.svg",
+      "sprite": "dist/sprite/sprite.svg#chrome"
+    }
+  },
+  {
+    "name": "circle",
+    "originalName": "Property 1=circle.svg",
+    "className": "icon circle",
+    "paths": {
+      "svg": "dist/svg/circle.svg",
+      "sprite": "dist/sprite/sprite.svg#circle"
+    }
+  },
+  {
+    "name": "circle-with-dot",
+    "originalName": "Property 1=Circle with dot.svg",
+    "className": "icon circle-with-dot",
+    "paths": {
+      "svg": "dist/svg/circle-with-dot.svg",
+      "sprite": "dist/sprite/sprite.svg#circle-with-dot"
+    }
+  },
+  {
+    "name": "clinical",
+    "originalName": "Property 1=Clinical.svg",
+    "className": "icon clinical",
+    "paths": {
+      "svg": "dist/svg/clinical.svg",
+      "sprite": "dist/sprite/sprite.svg#clinical"
+    }
+  },
+  {
+    "name": "clinical-note",
+    "originalName": "Property 1=Clinical Note.svg",
+    "className": "icon clinical-note",
+    "paths": {
+      "svg": "dist/svg/clinical-note.svg",
+      "sprite": "dist/sprite/sprite.svg#clinical-note"
+    }
+  },
+  {
+    "name": "clinical-red-dot",
+    "originalName": "Property 1=Clinical red dot.svg",
+    "className": "icon clinical-red-dot",
+    "paths": {
+      "svg": "dist/svg/clinical-red-dot.svg",
+      "sprite": "dist/sprite/sprite.svg#clinical-red-dot"
+    }
+  },
+  {
+    "name": "clipboard",
+    "originalName": "Property 1=clipboard.svg",
+    "className": "icon clipboard",
+    "paths": {
+      "svg": "dist/svg/clipboard.svg",
+      "sprite": "dist/sprite/sprite.svg#clipboard"
+    }
+  },
+  {
+    "name": "clock",
+    "originalName": "Property 1=clock.svg",
+    "className": "icon clock",
+    "paths": {
+      "svg": "dist/svg/clock.svg",
+      "sprite": "dist/sprite/sprite.svg#clock"
+    }
+  },
+  {
+    "name": "cloud",
+    "originalName": "Property 1=cloud.svg",
+    "className": "icon cloud",
+    "paths": {
+      "svg": "dist/svg/cloud.svg",
+      "sprite": "dist/sprite/sprite.svg#cloud"
+    }
+  },
+  {
+    "name": "cloud-drizzle",
+    "originalName": "Property 1=cloud-drizzle.svg",
+    "className": "icon cloud-drizzle",
+    "paths": {
+      "svg": "dist/svg/cloud-drizzle.svg",
+      "sprite": "dist/sprite/sprite.svg#cloud-drizzle"
+    }
+  },
+  {
+    "name": "cloud-lightning",
+    "originalName": "Property 1=cloud-lightning.svg",
+    "className": "icon cloud-lightning",
+    "paths": {
+      "svg": "dist/svg/cloud-lightning.svg",
+      "sprite": "dist/sprite/sprite.svg#cloud-lightning"
+    }
+  },
+  {
+    "name": "cloud-off",
+    "originalName": "Property 1=cloud-off.svg",
+    "className": "icon cloud-off",
+    "paths": {
+      "svg": "dist/svg/cloud-off.svg",
+      "sprite": "dist/sprite/sprite.svg#cloud-off"
+    }
+  },
+  {
+    "name": "cloud-rain",
+    "originalName": "Property 1=cloud-rain.svg",
+    "className": "icon cloud-rain",
+    "paths": {
+      "svg": "dist/svg/cloud-rain.svg",
+      "sprite": "dist/sprite/sprite.svg#cloud-rain"
+    }
+  },
+  {
+    "name": "cloud-snow",
+    "originalName": "Property 1=cloud-snow.svg",
+    "className": "icon cloud-snow",
+    "paths": {
+      "svg": "dist/svg/cloud-snow.svg",
+      "sprite": "dist/sprite/sprite.svg#cloud-snow"
+    }
+  },
+  {
+    "name": "code",
+    "originalName": "Property 1=code.svg",
+    "className": "icon code",
+    "paths": {
+      "svg": "dist/svg/code.svg",
+      "sprite": "dist/sprite/sprite.svg#code"
+    }
+  },
+  {
+    "name": "codepen",
+    "originalName": "Property 1=codepen.svg",
+    "className": "icon codepen",
+    "paths": {
+      "svg": "dist/svg/codepen.svg",
+      "sprite": "dist/sprite/sprite.svg#codepen"
+    }
+  },
+  {
+    "name": "codesandbox",
+    "originalName": "Property 1=codesandbox.svg",
+    "className": "icon codesandbox",
+    "paths": {
+      "svg": "dist/svg/codesandbox.svg",
+      "sprite": "dist/sprite/sprite.svg#codesandbox"
+    }
+  },
+  {
+    "name": "coffee",
+    "originalName": "Property 1=coffee.svg",
+    "className": "icon coffee",
+    "paths": {
+      "svg": "dist/svg/coffee.svg",
+      "sprite": "dist/sprite/sprite.svg#coffee"
+    }
+  },
+  {
+    "name": "columns",
+    "originalName": "Property 1=columns.svg",
+    "className": "icon columns",
+    "paths": {
+      "svg": "dist/svg/columns.svg",
+      "sprite": "dist/sprite/sprite.svg#columns"
+    }
+  },
+  {
+    "name": "command",
+    "originalName": "Property 1=command.svg",
+    "className": "icon command",
+    "paths": {
+      "svg": "dist/svg/command.svg",
+      "sprite": "dist/sprite/sprite.svg#command"
+    }
+  },
+  {
+    "name": "compass",
+    "originalName": "Property 1=compass.svg",
+    "className": "icon compass",
+    "paths": {
+      "svg": "dist/svg/compass.svg",
+      "sprite": "dist/sprite/sprite.svg#compass"
+    }
+  },
+  {
+    "name": "configuration",
+    "originalName": "Property 1=Configuration.svg",
+    "className": "icon configuration",
+    "paths": {
+      "svg": "dist/svg/configuration.svg",
+      "sprite": "dist/sprite/sprite.svg#configuration"
+    }
+  },
+  {
+    "name": "copy",
+    "originalName": "Property 1=copy.svg",
+    "className": "icon copy",
+    "paths": {
+      "svg": "dist/svg/copy.svg",
+      "sprite": "dist/sprite/sprite.svg#copy"
+    }
+  },
+  {
+    "name": "corner-down-left",
+    "originalName": "Property 1=corner-down-left.svg",
+    "className": "icon corner-down-left",
+    "paths": {
+      "svg": "dist/svg/corner-down-left.svg",
+      "sprite": "dist/sprite/sprite.svg#corner-down-left"
+    }
+  },
+  {
+    "name": "corner-down-right",
+    "originalName": "Property 1=corner-down-right.svg",
+    "className": "icon corner-down-right",
+    "paths": {
+      "svg": "dist/svg/corner-down-right.svg",
+      "sprite": "dist/sprite/sprite.svg#corner-down-right"
+    }
+  },
+  {
+    "name": "corner-left-down",
+    "originalName": "Property 1=corner-left-down.svg",
+    "className": "icon corner-left-down",
+    "paths": {
+      "svg": "dist/svg/corner-left-down.svg",
+      "sprite": "dist/sprite/sprite.svg#corner-left-down"
+    }
+  },
+  {
+    "name": "corner-left-up",
+    "originalName": "Property 1=corner-left-up.svg",
+    "className": "icon corner-left-up",
+    "paths": {
+      "svg": "dist/svg/corner-left-up.svg",
+      "sprite": "dist/sprite/sprite.svg#corner-left-up"
+    }
+  },
+  {
+    "name": "corner-right-down",
+    "originalName": "Property 1=corner-right-down.svg",
+    "className": "icon corner-right-down",
+    "paths": {
+      "svg": "dist/svg/corner-right-down.svg",
+      "sprite": "dist/sprite/sprite.svg#corner-right-down"
+    }
+  },
+  {
+    "name": "corner-right-up",
+    "originalName": "Property 1=corner-right-up.svg",
+    "className": "icon corner-right-up",
+    "paths": {
+      "svg": "dist/svg/corner-right-up.svg",
+      "sprite": "dist/sprite/sprite.svg#corner-right-up"
+    }
+  },
+  {
+    "name": "corner-up-left",
+    "originalName": "Property 1=corner-up-left.svg",
+    "className": "icon corner-up-left",
+    "paths": {
+      "svg": "dist/svg/corner-up-left.svg",
+      "sprite": "dist/sprite/sprite.svg#corner-up-left"
+    }
+  },
+  {
+    "name": "corner-up-right",
+    "originalName": "Property 1=corner-up-right.svg",
+    "className": "icon corner-up-right",
+    "paths": {
+      "svg": "dist/svg/corner-up-right.svg",
+      "sprite": "dist/sprite/sprite.svg#corner-up-right"
+    }
+  },
+  {
+    "name": "cpu",
+    "originalName": "Property 1=cpu.svg",
+    "className": "icon cpu",
+    "paths": {
+      "svg": "dist/svg/cpu.svg",
+      "sprite": "dist/sprite/sprite.svg#cpu"
+    }
+  },
+  {
+    "name": "crop",
+    "originalName": "Property 1=crop.svg",
+    "className": "icon crop",
+    "paths": {
+      "svg": "dist/svg/crop.svg",
+      "sprite": "dist/sprite/sprite.svg#crop"
+    }
+  },
+  {
+    "name": "crosshair",
+    "originalName": "Property 1=crosshair.svg",
+    "className": "icon crosshair",
+    "paths": {
+      "svg": "dist/svg/crosshair.svg",
+      "sprite": "dist/sprite/sprite.svg#crosshair"
+    }
+  },
+  {
+    "name": "cycle-count",
+    "originalName": "Property 1=Cycle Count.svg",
+    "className": "icon cycle-count",
+    "paths": {
+      "svg": "dist/svg/cycle-count.svg",
+      "sprite": "dist/sprite/sprite.svg#cycle-count"
+    }
+  },
+  {
+    "name": "data-entry",
+    "originalName": "Property 1=Data Entry.svg",
+    "className": "icon data-entry",
+    "paths": {
+      "svg": "dist/svg/data-entry.svg",
+      "sprite": "dist/sprite/sprite.svg#data-entry"
+    }
+  },
+  {
+    "name": "database",
+    "originalName": "Property 1=database.svg",
+    "className": "icon database",
+    "paths": {
+      "svg": "dist/svg/database.svg",
+      "sprite": "dist/sprite/sprite.svg#database"
+    }
+  },
+  {
+    "name": "date-of-birth",
+    "originalName": "Property 1=Date of birth.svg",
+    "className": "icon date-of-birth",
+    "paths": {
+      "svg": "dist/svg/date-of-birth.svg",
+      "sprite": "dist/sprite/sprite.svg#date-of-birth"
+    }
+  },
+  {
+    "name": "deactivate-records",
+    "originalName": "Property 1=Deactivate Records.svg",
+    "className": "icon deactivate-records",
+    "paths": {
+      "svg": "dist/svg/deactivate-records.svg",
+      "sprite": "dist/sprite/sprite.svg#deactivate-records"
+    }
+  },
+  {
+    "name": "delete",
+    "originalName": "Property 1=delete.svg",
+    "className": "icon delete",
+    "paths": {
+      "svg": "dist/svg/delete.svg",
+      "sprite": "dist/sprite/sprite.svg#delete"
+    }
+  },
+  {
+    "name": "disc",
+    "originalName": "Property 1=disc.svg",
+    "className": "icon disc",
+    "paths": {
+      "svg": "dist/svg/disc.svg",
+      "sprite": "dist/sprite/sprite.svg#disc"
+    }
+  },
+  {
+    "name": "divide",
+    "originalName": "Property 1=divide.svg",
+    "className": "icon divide",
+    "paths": {
+      "svg": "dist/svg/divide.svg",
+      "sprite": "dist/sprite/sprite.svg#divide"
+    }
+  },
+  {
+    "name": "divide-circle",
+    "originalName": "Property 1=divide-circle.svg",
+    "className": "icon divide-circle",
+    "paths": {
+      "svg": "dist/svg/divide-circle.svg",
+      "sprite": "dist/sprite/sprite.svg#divide-circle"
+    }
+  },
+  {
+    "name": "divide-square",
+    "originalName": "Property 1=divide-square.svg",
+    "className": "icon divide-square",
+    "paths": {
+      "svg": "dist/svg/divide-square.svg",
+      "sprite": "dist/sprite/sprite.svg#divide-square"
+    }
+  },
+  {
+    "name": "dollar-sign",
+    "originalName": "Property 1=dollar-sign.svg",
+    "className": "icon dollar-sign",
+    "paths": {
+      "svg": "dist/svg/dollar-sign.svg",
+      "sprite": "dist/sprite/sprite.svg#dollar-sign"
+    }
+  },
+  {
+    "name": "doller-circle",
+    "originalName": "Property 1=Doller Circle.svg",
+    "className": "icon doller-circle",
+    "paths": {
+      "svg": "dist/svg/doller-circle.svg",
+      "sprite": "dist/sprite/sprite.svg#doller-circle"
+    }
+  },
+  {
+    "name": "dott",
+    "originalName": "Property 1=Dott.svg",
+    "className": "icon dott",
+    "paths": {
+      "svg": "dist/svg/dott.svg",
+      "sprite": "dist/sprite/sprite.svg#dott"
+    }
+  },
+  {
+    "name": "download",
+    "originalName": "Property 1=download.svg",
+    "className": "icon download",
+    "paths": {
+      "svg": "dist/svg/download.svg",
+      "sprite": "dist/sprite/sprite.svg#download"
+    }
+  },
+  {
+    "name": "download-cloud",
+    "originalName": "Property 1=download-cloud.svg",
+    "className": "icon download-cloud",
+    "paths": {
+      "svg": "dist/svg/download-cloud.svg",
+      "sprite": "dist/sprite/sprite.svg#download-cloud"
+    }
+  },
+  {
+    "name": "download-reports",
+    "originalName": "Property 1=Download Reports.svg",
+    "className": "icon download-reports",
+    "paths": {
+      "svg": "dist/svg/download-reports.svg",
+      "sprite": "dist/sprite/sprite.svg#download-reports"
+    }
+  },
+  {
+    "name": "dribbble",
+    "originalName": "Property 1=dribbble.svg",
+    "className": "icon dribbble",
+    "paths": {
+      "svg": "dist/svg/dribbble.svg",
+      "sprite": "dist/sprite/sprite.svg#dribbble"
+    }
+  },
+  {
+    "name": "droplet",
+    "originalName": "Property 1=droplet.svg",
+    "className": "icon droplet",
+    "paths": {
+      "svg": "dist/svg/droplet.svg",
+      "sprite": "dist/sprite/sprite.svg#droplet"
+    }
+  },
+  {
+    "name": "drug",
+    "originalName": "Property 1=Drug.svg",
+    "className": "icon drug",
+    "paths": {
+      "svg": "dist/svg/drug.svg",
+      "sprite": "dist/sprite/sprite.svg#drug"
+    }
+  },
+  {
+    "name": "drug-catalog",
+    "originalName": "Property 1=Drug Catalog.svg",
+    "className": "icon drug-catalog",
+    "paths": {
+      "svg": "dist/svg/drug-catalog.svg",
+      "sprite": "dist/sprite/sprite.svg#drug-catalog"
+    }
+  },
+  {
+    "name": "dummy",
+    "originalName": "Property 1=Dummy.svg",
+    "className": "icon dummy",
+    "paths": {
+      "svg": "dist/svg/dummy.svg",
+      "sprite": "dist/sprite/sprite.svg#dummy"
+    }
+  },
+  {
+    "name": "dur",
+    "originalName": "Property 1=DUR.svg",
+    "className": "icon dur",
+    "paths": {
+      "svg": "dist/svg/dur.svg",
+      "sprite": "dist/sprite/sprite.svg#dur"
+    }
+  },
+  {
+    "name": "edit",
+    "originalName": "Property 1=edit.svg",
+    "className": "icon edit",
+    "paths": {
+      "svg": "dist/svg/edit.svg",
+      "sprite": "dist/sprite/sprite.svg#edit"
+    }
+  },
+  {
+    "name": "edit-2",
+    "originalName": "Property 1=edit-2.svg",
+    "className": "icon edit-2",
+    "paths": {
+      "svg": "dist/svg/edit-2.svg",
+      "sprite": "dist/sprite/sprite.svg#edit-2"
+    }
+  },
+  {
+    "name": "edit-3",
+    "originalName": "Property 1=edit-3.svg",
+    "className": "icon edit-3",
+    "paths": {
+      "svg": "dist/svg/edit-3.svg",
+      "sprite": "dist/sprite/sprite.svg#edit-3"
+    }
+  },
+  {
+    "name": "edit-sig",
+    "originalName": "Property 1=Edit -Sig.svg",
+    "className": "icon edit-sig",
+    "paths": {
+      "svg": "dist/svg/edit-sig.svg",
+      "sprite": "dist/sprite/sprite.svg#edit-sig"
+    }
+  },
+  {
+    "name": "elderly-65-years",
+    "originalName": "Property 1=Elderly (65+ years).svg",
+    "className": "icon elderly-65-years",
+    "paths": {
+      "svg": "dist/svg/elderly-65-years.svg",
+      "sprite": "dist/sprite/sprite.svg#elderly-65-years"
+    }
+  },
+  {
+    "name": "equal",
+    "originalName": "Property 1=Equal.svg",
+    "className": "icon equal",
+    "paths": {
+      "svg": "dist/svg/equal.svg",
+      "sprite": "dist/sprite/sprite.svg#equal"
+    }
+  },
+  {
+    "name": "external-link",
+    "originalName": "Property 1=external-link.svg",
+    "className": "icon external-link",
+    "paths": {
+      "svg": "dist/svg/external-link.svg",
+      "sprite": "dist/sprite/sprite.svg#external-link"
+    }
+  },
+  {
+    "name": "eye",
+    "originalName": "Property 1=eye.svg",
+    "className": "icon eye",
+    "paths": {
+      "svg": "dist/svg/eye.svg",
+      "sprite": "dist/sprite/sprite.svg#eye"
+    }
+  },
+  {
+    "name": "eye-off",
+    "originalName": "Property 1=eye-off.svg",
+    "className": "icon eye-off",
+    "paths": {
+      "svg": "dist/svg/eye-off.svg",
+      "sprite": "dist/sprite/sprite.svg#eye-off"
+    }
+  },
+  {
+    "name": "facebook",
+    "originalName": "Property 1=facebook.svg",
+    "className": "icon facebook",
+    "paths": {
+      "svg": "dist/svg/facebook.svg",
+      "sprite": "dist/sprite/sprite.svg#facebook"
+    }
+  },
+  {
+    "name": "fast-forward",
+    "originalName": "Property 1=fast-forward.svg",
+    "className": "icon fast-forward",
+    "paths": {
+      "svg": "dist/svg/fast-forward.svg",
+      "sprite": "dist/sprite/sprite.svg#fast-forward"
+    }
+  },
+  {
+    "name": "fax-inbound",
+    "originalName": "Property 1=Fax - Inbound.svg",
+    "className": "icon fax-inbound",
+    "paths": {
+      "svg": "dist/svg/fax-inbound.svg",
+      "sprite": "dist/sprite/sprite.svg#fax-inbound"
+    }
+  },
+  {
+    "name": "fax-outbound",
+    "originalName": "Property 1=fax - Outbound.svg",
+    "className": "icon fax-outbound",
+    "paths": {
+      "svg": "dist/svg/fax-outbound.svg",
+      "sprite": "dist/sprite/sprite.svg#fax-outbound"
+    }
+  },
+  {
+    "name": "feather",
+    "originalName": "Property 1=feather.svg",
+    "className": "icon feather",
+    "paths": {
+      "svg": "dist/svg/feather.svg",
+      "sprite": "dist/sprite/sprite.svg#feather"
+    }
+  },
+  {
+    "name": "figma",
+    "originalName": "Property 1=figma.svg",
+    "className": "icon figma",
+    "paths": {
+      "svg": "dist/svg/figma.svg",
+      "sprite": "dist/sprite/sprite.svg#figma"
+    }
+  },
+  {
+    "name": "file",
+    "originalName": "Property 1=file.svg",
+    "className": "icon file",
+    "paths": {
+      "svg": "dist/svg/file.svg",
+      "sprite": "dist/sprite/sprite.svg#file"
+    }
+  },
+  {
+    "name": "file-minus",
+    "originalName": "Property 1=file-minus.svg",
+    "className": "icon file-minus",
+    "paths": {
+      "svg": "dist/svg/file-minus.svg",
+      "sprite": "dist/sprite/sprite.svg#file-minus"
+    }
+  },
+  {
+    "name": "file-plus",
+    "originalName": "Property 1=file-plus.svg",
+    "className": "icon file-plus",
+    "paths": {
+      "svg": "dist/svg/file-plus.svg",
+      "sprite": "dist/sprite/sprite.svg#file-plus"
+    }
+  },
+  {
+    "name": "file-text",
+    "originalName": "Property 1=file-text.svg",
+    "className": "icon file-text",
+    "paths": {
+      "svg": "dist/svg/file-text.svg",
+      "sprite": "dist/sprite/sprite.svg#file-text"
+    }
+  },
+  {
+    "name": "film",
+    "originalName": "Property 1=film.svg",
+    "className": "icon film",
+    "paths": {
+      "svg": "dist/svg/film.svg",
+      "sprite": "dist/sprite/sprite.svg#film"
+    }
+  },
+  {
+    "name": "filter",
+    "originalName": "Property 1=filter.svg",
+    "className": "icon filter",
+    "paths": {
+      "svg": "dist/svg/filter.svg",
+      "sprite": "dist/sprite/sprite.svg#filter"
+    }
+  },
+  {
+    "name": "filter-2",
+    "originalName": "Property 1=Filter-2.svg",
+    "className": "icon filter-2",
+    "paths": {
+      "svg": "dist/svg/filter-2.svg",
+      "sprite": "dist/sprite/sprite.svg#filter-2"
+    }
+  },
+  {
+    "name": "financial-management",
+    "originalName": "Property 1=FInancial Management.svg",
+    "className": "icon financial-management",
+    "paths": {
+      "svg": "dist/svg/financial-management.svg",
+      "sprite": "dist/sprite/sprite.svg#financial-management"
+    }
+  },
+  {
+    "name": "financials",
+    "originalName": "Property 1=Financials.svg",
+    "className": "icon financials",
+    "paths": {
+      "svg": "dist/svg/financials.svg",
+      "sprite": "dist/sprite/sprite.svg#financials"
+    }
+  },
+  {
+    "name": "flag",
+    "originalName": "Property 1=flag.svg",
+    "className": "icon flag",
+    "paths": {
+      "svg": "dist/svg/flag.svg",
+      "sprite": "dist/sprite/sprite.svg#flag"
+    }
+  },
+  {
+    "name": "flag-fill",
+    "originalName": "Property 1=Flag fill.svg",
+    "className": "icon flag-fill",
+    "paths": {
+      "svg": "dist/svg/flag-fill.svg",
+      "sprite": "dist/sprite/sprite.svg#flag-fill"
+    }
+  },
+  {
+    "name": "flow-chart",
+    "originalName": "Property 1=Flow Chart.svg",
+    "className": "icon flow-chart",
+    "paths": {
+      "svg": "dist/svg/flow-chart.svg",
+      "sprite": "dist/sprite/sprite.svg#flow-chart"
+    }
+  },
+  {
+    "name": "folder",
+    "originalName": "Property 1=folder.svg",
+    "className": "icon folder",
+    "paths": {
+      "svg": "dist/svg/folder.svg",
+      "sprite": "dist/sprite/sprite.svg#folder"
+    }
+  },
+  {
+    "name": "folder-add",
+    "originalName": "Property 1=Folder Add.svg",
+    "className": "icon folder-add",
+    "paths": {
+      "svg": "dist/svg/folder-add.svg",
+      "sprite": "dist/sprite/sprite.svg#folder-add"
+    }
+  },
+  {
+    "name": "folder-minus",
+    "originalName": "Property 1=folder-minus.svg",
+    "className": "icon folder-minus",
+    "paths": {
+      "svg": "dist/svg/folder-minus.svg",
+      "sprite": "dist/sprite/sprite.svg#folder-minus"
+    }
+  },
+  {
+    "name": "folder-plus",
+    "originalName": "Property 1=folder-plus.svg",
+    "className": "icon folder-plus",
+    "paths": {
+      "svg": "dist/svg/folder-plus.svg",
+      "sprite": "dist/sprite/sprite.svg#folder-plus"
+    }
+  },
+  {
+    "name": "folder-share",
+    "originalName": "Property 1=Folder share.svg",
+    "className": "icon folder-share",
+    "paths": {
+      "svg": "dist/svg/folder-share.svg",
+      "sprite": "dist/sprite/sprite.svg#folder-share"
+    }
+  },
+  {
+    "name": "framer",
+    "originalName": "Property 1=framer.svg",
+    "className": "icon framer",
+    "paths": {
+      "svg": "dist/svg/framer.svg",
+      "sprite": "dist/sprite/sprite.svg#framer"
+    }
+  },
+  {
+    "name": "frown",
+    "originalName": "Property 1=frown.svg",
+    "className": "icon frown",
+    "paths": {
+      "svg": "dist/svg/frown.svg",
+      "sprite": "dist/sprite/sprite.svg#frown"
+    }
+  },
+  {
+    "name": "gift",
+    "originalName": "Property 1=gift.svg",
+    "className": "icon gift",
+    "paths": {
+      "svg": "dist/svg/gift.svg",
+      "sprite": "dist/sprite/sprite.svg#gift"
+    }
+  },
+  {
+    "name": "git-branch",
+    "originalName": "Property 1=git-branch.svg",
+    "className": "icon git-branch",
+    "paths": {
+      "svg": "dist/svg/git-branch.svg",
+      "sprite": "dist/sprite/sprite.svg#git-branch"
+    }
+  },
+  {
+    "name": "git-commit",
+    "originalName": "Property 1=git-commit.svg",
+    "className": "icon git-commit",
+    "paths": {
+      "svg": "dist/svg/git-commit.svg",
+      "sprite": "dist/sprite/sprite.svg#git-commit"
+    }
+  },
+  {
+    "name": "git-merge",
+    "originalName": "Property 1=git-merge.svg",
+    "className": "icon git-merge",
+    "paths": {
+      "svg": "dist/svg/git-merge.svg",
+      "sprite": "dist/sprite/sprite.svg#git-merge"
+    }
+  },
+  {
+    "name": "git-pull-request",
+    "originalName": "Property 1=git-pull-request.svg",
+    "className": "icon git-pull-request",
+    "paths": {
+      "svg": "dist/svg/git-pull-request.svg",
+      "sprite": "dist/sprite/sprite.svg#git-pull-request"
+    }
+  },
+  {
+    "name": "github",
+    "originalName": "Property 1=github.svg",
+    "className": "icon github",
+    "paths": {
+      "svg": "dist/svg/github.svg",
+      "sprite": "dist/sprite/sprite.svg#github"
+    }
+  },
+  {
+    "name": "gitlab",
+    "originalName": "Property 1=gitlab.svg",
+    "className": "icon gitlab",
+    "paths": {
+      "svg": "dist/svg/gitlab.svg",
+      "sprite": "dist/sprite/sprite.svg#gitlab"
+    }
+  },
+  {
+    "name": "globe",
+    "originalName": "Property 1=globe.svg",
+    "className": "icon globe",
+    "paths": {
+      "svg": "dist/svg/globe.svg",
+      "sprite": "dist/sprite/sprite.svg#globe"
+    }
+  },
+  {
+    "name": "grid",
+    "originalName": "Property 1=grid.svg",
+    "className": "icon grid",
+    "paths": {
+      "svg": "dist/svg/grid.svg",
+      "sprite": "dist/sprite/sprite.svg#grid"
+    }
+  },
+  {
+    "name": "hard-drive",
+    "originalName": "Property 1=hard-drive.svg",
+    "className": "icon hard-drive",
+    "paths": {
+      "svg": "dist/svg/hard-drive.svg",
+      "sprite": "dist/sprite/sprite.svg#hard-drive"
+    }
+  },
+  {
+    "name": "hash",
+    "originalName": "Property 1=hash.svg",
+    "className": "icon hash",
+    "paths": {
+      "svg": "dist/svg/hash.svg",
+      "sprite": "dist/sprite/sprite.svg#hash"
+    }
+  },
+  {
+    "name": "hazardous-drug",
+    "originalName": "Property 1=hazardous drug.svg",
+    "className": "icon hazardous-drug",
+    "paths": {
+      "svg": "dist/svg/hazardous-drug.svg",
+      "sprite": "dist/sprite/sprite.svg#hazardous-drug"
+    }
+  },
+  {
+    "name": "headphones",
+    "originalName": "Property 1=headphones.svg",
+    "className": "icon headphones",
+    "paths": {
+      "svg": "dist/svg/headphones.svg",
+      "sprite": "dist/sprite/sprite.svg#headphones"
+    }
+  },
+  {
+    "name": "health-insurance",
+    "originalName": "Property 1=Health Insurance.svg",
+    "className": "icon health-insurance",
+    "paths": {
+      "svg": "dist/svg/health-insurance.svg",
+      "sprite": "dist/sprite/sprite.svg#health-insurance"
+    }
+  },
+  {
+    "name": "heart",
+    "originalName": "Property 1=heart.svg",
+    "className": "icon heart",
+    "paths": {
+      "svg": "dist/svg/heart.svg",
+      "sprite": "dist/sprite/sprite.svg#heart"
+    }
+  },
+  {
+    "name": "help-circle",
+    "originalName": "Property 1=help-circle.svg",
+    "className": "icon help-circle",
+    "paths": {
+      "svg": "dist/svg/help-circle.svg",
+      "sprite": "dist/sprite/sprite.svg#help-circle"
+    }
+  },
+  {
+    "name": "hexagon",
+    "originalName": "Property 1=hexagon.svg",
+    "className": "icon hexagon",
+    "paths": {
+      "svg": "dist/svg/hexagon.svg",
+      "sprite": "dist/sprite/sprite.svg#hexagon"
+    }
+  },
+  {
+    "name": "hold-drag",
+    "originalName": "Property 1=Hold & Drag.svg",
+    "className": "icon hold-drag",
+    "paths": {
+      "svg": "dist/svg/hold-drag.svg",
+      "sprite": "dist/sprite/sprite.svg#hold-drag"
+    }
+  },
+  {
+    "name": "home",
+    "originalName": "Property 1=home.svg",
+    "className": "icon home",
+    "paths": {
+      "svg": "dist/svg/home.svg",
+      "sprite": "dist/sprite/sprite.svg#home"
+    }
+  },
+  {
+    "name": "image",
+    "originalName": "Property 1=image.svg",
+    "className": "icon image",
+    "paths": {
+      "svg": "dist/svg/image.svg",
+      "sprite": "dist/sprite/sprite.svg#image"
+    }
+  },
+  {
+    "name": "immunization",
+    "originalName": "Property 1=Immunization.svg",
+    "className": "icon immunization",
+    "paths": {
+      "svg": "dist/svg/immunization.svg",
+      "sprite": "dist/sprite/sprite.svg#immunization"
+    }
+  },
+  {
+    "name": "inbox",
+    "originalName": "Property 1=inbox.svg",
+    "className": "icon inbox",
+    "paths": {
+      "svg": "dist/svg/inbox.svg",
+      "sprite": "dist/sprite/sprite.svg#inbox"
+    }
+  },
+  {
+    "name": "info",
+    "originalName": "Property 1=info.svg",
+    "className": "icon info",
+    "paths": {
+      "svg": "dist/svg/info.svg",
+      "sprite": "dist/sprite/sprite.svg#info"
+    }
+  },
+  {
+    "name": "instagram",
+    "originalName": "Property 1=instagram.svg",
+    "className": "icon instagram",
+    "paths": {
+      "svg": "dist/svg/instagram.svg",
+      "sprite": "dist/sprite/sprite.svg#instagram"
+    }
+  },
+  {
+    "name": "integrations",
+    "originalName": "Property 1=Integrations.svg",
+    "className": "icon integrations",
+    "paths": {
+      "svg": "dist/svg/integrations.svg",
+      "sprite": "dist/sprite/sprite.svg#integrations"
+    }
+  },
+  {
+    "name": "intial-review",
+    "originalName": "Property 1=Intial Review.svg",
+    "className": "icon intial-review",
+    "paths": {
+      "svg": "dist/svg/intial-review.svg",
+      "sprite": "dist/sprite/sprite.svg#intial-review"
+    }
+  },
+  {
+    "name": "inventory",
+    "originalName": "Property 1=Inventory.svg",
+    "className": "icon inventory",
+    "paths": {
+      "svg": "dist/svg/inventory.svg",
+      "sprite": "dist/sprite/sprite.svg#inventory"
+    }
+  },
+  {
+    "name": "invoices",
+    "originalName": "Property 1=Invoices.svg",
+    "className": "icon invoices",
+    "paths": {
+      "svg": "dist/svg/invoices.svg",
+      "sprite": "dist/sprite/sprite.svg#invoices"
+    }
+  },
+  {
+    "name": "italic",
+    "originalName": "Property 1=italic.svg",
+    "className": "icon italic",
+    "paths": {
+      "svg": "dist/svg/italic.svg",
+      "sprite": "dist/sprite/sprite.svg#italic"
+    }
+  },
+  {
+    "name": "kareem",
+    "originalName": "Property 1=Kareem.svg",
+    "className": "icon kareem",
+    "paths": {
+      "svg": "dist/svg/kareem.svg",
+      "sprite": "dist/sprite/sprite.svg#kareem"
+    }
+  },
+  {
+    "name": "key",
+    "originalName": "Property 1=key.svg",
+    "className": "icon key",
+    "paths": {
+      "svg": "dist/svg/key.svg",
+      "sprite": "dist/sprite/sprite.svg#key"
+    }
+  },
+  {
+    "name": "layers",
+    "originalName": "Property 1=layers.svg",
+    "className": "icon layers",
+    "paths": {
+      "svg": "dist/svg/layers.svg",
+      "sprite": "dist/sprite/sprite.svg#layers"
+    }
+  },
+  {
+    "name": "layout",
+    "originalName": "Property 1=layout.svg",
+    "className": "icon layout",
+    "paths": {
+      "svg": "dist/svg/layout.svg",
+      "sprite": "dist/sprite/sprite.svg#layout"
+    }
+  },
+  {
+    "name": "life-buoy",
+    "originalName": "Property 1=life-buoy.svg",
+    "className": "icon life-buoy",
+    "paths": {
+      "svg": "dist/svg/life-buoy.svg",
+      "sprite": "dist/sprite/sprite.svg#life-buoy"
+    }
+  },
+  {
+    "name": "link",
+    "originalName": "Property 1=link.svg",
+    "className": "icon link",
+    "paths": {
+      "svg": "dist/svg/link.svg",
+      "sprite": "dist/sprite/sprite.svg#link"
+    }
+  },
+  {
+    "name": "link-2",
+    "originalName": "Property 1=link-2.svg",
+    "className": "icon link-2",
+    "paths": {
+      "svg": "dist/svg/link-2.svg",
+      "sprite": "dist/sprite/sprite.svg#link-2"
+    }
+  },
+  {
+    "name": "linkedin",
+    "originalName": "Property 1=linkedin.svg",
+    "className": "icon linkedin",
+    "paths": {
+      "svg": "dist/svg/linkedin.svg",
+      "sprite": "dist/sprite/sprite.svg#linkedin"
+    }
+  },
+  {
+    "name": "list",
+    "originalName": "Property 1=list.svg",
+    "className": "icon list",
+    "paths": {
+      "svg": "dist/svg/list.svg",
+      "sprite": "dist/sprite/sprite.svg#list"
+    }
+  },
+  {
+    "name": "loader",
+    "originalName": "Property 1=loader.svg",
+    "className": "icon loader",
+    "paths": {
+      "svg": "dist/svg/loader.svg",
+      "sprite": "dist/sprite/sprite.svg#loader"
+    }
+  },
+  {
+    "name": "lock",
+    "originalName": "Property 1=lock.svg",
+    "className": "icon lock",
+    "paths": {
+      "svg": "dist/svg/lock.svg",
+      "sprite": "dist/sprite/sprite.svg#lock"
+    }
+  },
+  {
+    "name": "log-in",
+    "originalName": "Property 1=log-in.svg",
+    "className": "icon log-in",
+    "paths": {
+      "svg": "dist/svg/log-in.svg",
+      "sprite": "dist/sprite/sprite.svg#log-in"
+    }
+  },
+  {
+    "name": "log-out",
+    "originalName": "Property 1=log-out.svg",
+    "className": "icon log-out",
+    "paths": {
+      "svg": "dist/svg/log-out.svg",
+      "sprite": "dist/sprite/sprite.svg#log-out"
+    }
+  },
+  {
+    "name": "mail",
+    "originalName": "Property 1=mail.svg",
+    "className": "icon mail",
+    "paths": {
+      "svg": "dist/svg/mail.svg",
+      "sprite": "dist/sprite/sprite.svg#mail"
+    }
+  },
+  {
+    "name": "manage-claim",
+    "originalName": "Property 1=Manage claim.svg",
+    "className": "icon manage-claim",
+    "paths": {
+      "svg": "dist/svg/manage-claim.svg",
+      "sprite": "dist/sprite/sprite.svg#manage-claim"
+    }
+  },
+  {
+    "name": "map",
+    "originalName": "Property 1=map.svg",
+    "className": "icon map",
+    "paths": {
+      "svg": "dist/svg/map.svg",
+      "sprite": "dist/sprite/sprite.svg#map"
+    }
+  },
+  {
+    "name": "map-pin",
+    "originalName": "Property 1=map-pin.svg",
+    "className": "icon map-pin",
+    "paths": {
+      "svg": "dist/svg/map-pin.svg",
+      "sprite": "dist/sprite/sprite.svg#map-pin"
+    }
+  },
+  {
+    "name": "maximize-2",
+    "originalName": "Property 1=maximize-2.svg",
+    "className": "icon maximize-2",
+    "paths": {
+      "svg": "dist/svg/maximize-2.svg",
+      "sprite": "dist/sprite/sprite.svg#maximize-2"
+    }
+  },
+  {
+    "name": "medications",
+    "originalName": "Property 1=Medications.svg",
+    "className": "icon medications",
+    "paths": {
+      "svg": "dist/svg/medications.svg",
+      "sprite": "dist/sprite/sprite.svg#medications"
+    }
+  },
+  {
+    "name": "meh",
+    "originalName": "Property 1=meh.svg",
+    "className": "icon meh",
+    "paths": {
+      "svg": "dist/svg/meh.svg",
+      "sprite": "dist/sprite/sprite.svg#meh"
+    }
+  },
+  {
+    "name": "menu",
+    "originalName": "Property 1=menu.svg",
+    "className": "icon menu",
+    "paths": {
+      "svg": "dist/svg/menu.svg",
+      "sprite": "dist/sprite/sprite.svg#menu"
+    }
+  },
+  {
+    "name": "menu-accumulations",
+    "originalName": "Property 1=Menu - Accumulations.svg",
+    "className": "icon menu-accumulations",
+    "paths": {
+      "svg": "dist/svg/menu-accumulations.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-accumulations"
+    }
+  },
+  {
+    "name": "menu-add",
+    "originalName": "Property 1=Menu - Add.svg",
+    "className": "icon menu-add",
+    "paths": {
+      "svg": "dist/svg/menu-add.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-add"
+    }
+  },
+  {
+    "name": "menu-admin",
+    "originalName": "Property 1=Menu - Admin.svg",
+    "className": "icon menu-admin",
+    "paths": {
+      "svg": "dist/svg/menu-admin.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-admin"
+    }
+  },
+  {
+    "name": "menu-audit-tool",
+    "originalName": "Property 1=Menu - Audit tool.svg",
+    "className": "icon menu-audit-tool",
+    "paths": {
+      "svg": "dist/svg/menu-audit-tool.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-audit-tool"
+    }
+  },
+  {
+    "name": "menu-chat",
+    "originalName": "Property 1=Menu - Chat.svg",
+    "className": "icon menu-chat",
+    "paths": {
+      "svg": "dist/svg/menu-chat.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-chat"
+    }
+  },
+  {
+    "name": "menu-chat-red-dot",
+    "originalName": "Property 1=Menu - Chat Red dot.svg",
+    "className": "icon menu-chat-red-dot",
+    "paths": {
+      "svg": "dist/svg/menu-chat-red-dot.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-chat-red-dot"
+    }
+  },
+  {
+    "name": "menu-claim",
+    "originalName": "Property 1=Menu - Claim.svg",
+    "className": "icon menu-claim",
+    "paths": {
+      "svg": "dist/svg/menu-claim.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-claim"
+    }
+  },
+  {
+    "name": "menu-claims",
+    "originalName": "Property 1=Menu - Claims.svg",
+    "className": "icon menu-claims",
+    "paths": {
+      "svg": "dist/svg/menu-claims.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-claims"
+    }
+  },
+  {
+    "name": "menu-claims-manager",
+    "originalName": "Property 1=Menu - Claims Manager.svg",
+    "className": "icon menu-claims-manager",
+    "paths": {
+      "svg": "dist/svg/menu-claims-manager.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-claims-manager"
+    }
+  },
+  {
+    "name": "menu-configuration",
+    "originalName": "Property 1=Menu - Configuration.svg",
+    "className": "icon menu-configuration",
+    "paths": {
+      "svg": "dist/svg/menu-configuration.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-configuration"
+    }
+  },
+  {
+    "name": "menu-cycle-count",
+    "originalName": "Property 1=Menu -  Cycle Count.svg",
+    "className": "icon menu-cycle-count",
+    "paths": {
+      "svg": "dist/svg/menu-cycle-count.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-cycle-count"
+    }
+  },
+  {
+    "name": "menu-dashboard",
+    "originalName": "Property 1=Menu - Dashboard.svg",
+    "className": "icon menu-dashboard",
+    "paths": {
+      "svg": "dist/svg/menu-dashboard.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-dashboard"
+    }
+  },
+  {
+    "name": "menu-dollar",
+    "originalName": "Property 1=Menu- Dollar.svg",
+    "className": "icon menu-dollar",
+    "paths": {
+      "svg": "dist/svg/menu-dollar.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-dollar"
+    }
+  },
+  {
+    "name": "menu-drug-catalog",
+    "originalName": "Property 1=Menu - Drug Catalog.svg",
+    "className": "icon menu-drug-catalog",
+    "paths": {
+      "svg": "dist/svg/menu-drug-catalog.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-drug-catalog"
+    }
+  },
+  {
+    "name": "menu-fill-start",
+    "originalName": "Property 1=Menu - Fill Start.svg",
+    "className": "icon menu-fill-start",
+    "paths": {
+      "svg": "dist/svg/menu-fill-start.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-fill-start"
+    }
+  },
+  {
+    "name": "menu-final-review",
+    "originalName": "Property 1=Menu - Final Review.svg",
+    "className": "icon menu-final-review",
+    "paths": {
+      "svg": "dist/svg/menu-final-review.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-final-review"
+    }
+  },
+  {
+    "name": "menu-financial",
+    "originalName": "Property 1=Menu - Financial.svg",
+    "className": "icon menu-financial",
+    "paths": {
+      "svg": "dist/svg/menu-financial.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-financial"
+    }
+  },
+  {
+    "name": "menu-financial-management",
+    "originalName": "Property 1=Menu - Financial Management.svg",
+    "className": "icon menu-financial-management",
+    "paths": {
+      "svg": "dist/svg/menu-financial-management.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-financial-management"
+    }
+  },
+  {
+    "name": "menu-initial-review",
+    "originalName": "Property 1=Menu - Initial Review.svg",
+    "className": "icon menu-initial-review",
+    "paths": {
+      "svg": "dist/svg/menu-initial-review.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-initial-review"
+    }
+  },
+  {
+    "name": "menu-integrations",
+    "originalName": "Property 1=Menu - Integrations.svg",
+    "className": "icon menu-integrations",
+    "paths": {
+      "svg": "dist/svg/menu-integrations.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-integrations"
+    }
+  },
+  {
+    "name": "menu-inv-optimization",
+    "originalName": "Property 1=Menu - Inv Optimization.svg",
+    "className": "icon menu-inv-optimization",
+    "paths": {
+      "svg": "dist/svg/menu-inv-optimization.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-inv-optimization"
+    }
+  },
+  {
+    "name": "menu-inventory",
+    "originalName": "Property 1=Menu - Inventory.svg",
+    "className": "icon menu-inventory",
+    "paths": {
+      "svg": "dist/svg/menu-inventory.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-inventory"
+    }
+  },
+  {
+    "name": "menu-invoices",
+    "originalName": "Property 1=Menu - Invoices.svg",
+    "className": "icon menu-invoices",
+    "paths": {
+      "svg": "dist/svg/menu-invoices.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-invoices"
+    }
+  },
+  {
+    "name": "menu-location",
+    "originalName": "Property 1=Menu - Location.svg",
+    "className": "icon menu-location",
+    "paths": {
+      "svg": "dist/svg/menu-location.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-location"
+    }
+  },
+  {
+    "name": "menu-medicine",
+    "originalName": "Property 1=Menu - Medicine.svg",
+    "className": "icon menu-medicine",
+    "paths": {
+      "svg": "dist/svg/menu-medicine.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-medicine"
+    }
+  },
+  {
+    "name": "menu-member",
+    "originalName": "Property 1=Menu - Member.svg",
+    "className": "icon menu-member",
+    "paths": {
+      "svg": "dist/svg/menu-member.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-member"
+    }
+  },
+  {
+    "name": "menu-orde-with-time",
+    "originalName": "Property 1=Menu - Orde with time.svg",
+    "className": "icon menu-orde-with-time",
+    "paths": {
+      "svg": "dist/svg/menu-orde-with-time.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-orde-with-time"
+    }
+  },
+  {
+    "name": "menu-order",
+    "originalName": "Property 1=Menu - Order.svg",
+    "className": "icon menu-order",
+    "paths": {
+      "svg": "dist/svg/menu-order.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-order"
+    }
+  },
+  {
+    "name": "menu-order-entry",
+    "originalName": "Property 1=Menu - Order Entry.svg",
+    "className": "icon menu-order-entry",
+    "paths": {
+      "svg": "dist/svg/menu-order-entry.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-order-entry"
+    }
+  },
+  {
+    "name": "menu-patient-module",
+    "originalName": "Property 1=Menu - Patient Module.svg",
+    "className": "icon menu-patient-module",
+    "paths": {
+      "svg": "dist/svg/menu-patient-module.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-patient-module"
+    }
+  },
+  {
+    "name": "menu-payor",
+    "originalName": "Property 1=Menu - Payor.svg",
+    "className": "icon menu-payor",
+    "paths": {
+      "svg": "dist/svg/menu-payor.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-payor"
+    }
+  },
+  {
+    "name": "menu-pending",
+    "originalName": "Property 1=Menu - Pending.svg",
+    "className": "icon menu-pending",
+    "paths": {
+      "svg": "dist/svg/menu-pending.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-pending"
+    }
+  },
+  {
+    "name": "menu-pharmacy",
+    "originalName": "Property 1=Menu - Pharmacy.svg",
+    "className": "icon menu-pharmacy",
+    "paths": {
+      "svg": "dist/svg/menu-pharmacy.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-pharmacy"
+    }
+  },
+  {
+    "name": "menu-pharmacy-reports",
+    "originalName": "Property 1=Menu - Pharmacy Reports.svg",
+    "className": "icon menu-pharmacy-reports",
+    "paths": {
+      "svg": "dist/svg/menu-pharmacy-reports.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-pharmacy-reports"
+    }
+  },
+  {
+    "name": "menu-precriber",
+    "originalName": "Property 1=Menu - Precriber.svg",
+    "className": "icon menu-precriber",
+    "paths": {
+      "svg": "dist/svg/menu-precriber.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-precriber"
+    }
+  },
+  {
+    "name": "menu-prescriber",
+    "originalName": "Property 1=Menu - Prescriber.svg",
+    "className": "icon menu-prescriber",
+    "paths": {
+      "svg": "dist/svg/menu-prescriber.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-prescriber"
+    }
+  },
+  {
+    "name": "menu-reports",
+    "originalName": "Property 1=Menu - Reports.svg",
+    "className": "icon menu-reports",
+    "paths": {
+      "svg": "dist/svg/menu-reports.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-reports"
+    }
+  },
+  {
+    "name": "menu-rx-manager",
+    "originalName": "Property 1=Menu - Rx Manager.svg",
+    "className": "icon menu-rx-manager",
+    "paths": {
+      "svg": "dist/svg/menu-rx-manager.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-rx-manager"
+    }
+  },
+  {
+    "name": "menu-taskboard",
+    "originalName": "Property 1=Menu - Taskboard.svg",
+    "className": "icon menu-taskboard",
+    "paths": {
+      "svg": "dist/svg/menu-taskboard.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-taskboard"
+    }
+  },
+  {
+    "name": "menu-workflow",
+    "originalName": "Property 1=Menu - Workflow.svg",
+    "className": "icon menu-workflow",
+    "paths": {
+      "svg": "dist/svg/menu-workflow.svg",
+      "sprite": "dist/sprite/sprite.svg#menu-workflow"
+    }
+  },
+  {
+    "name": "message-circle",
+    "originalName": "Property 1=message-circle.svg",
+    "className": "icon message-circle",
+    "paths": {
+      "svg": "dist/svg/message-circle.svg",
+      "sprite": "dist/sprite/sprite.svg#message-circle"
+    }
+  },
+  {
+    "name": "message-square",
+    "originalName": "Property 1=message-square.svg",
+    "className": "icon message-square",
+    "paths": {
+      "svg": "dist/svg/message-square.svg",
+      "sprite": "dist/sprite/sprite.svg#message-square"
+    }
+  },
+  {
+    "name": "mic",
+    "originalName": "Property 1=mic.svg",
+    "className": "icon mic",
+    "paths": {
+      "svg": "dist/svg/mic.svg",
+      "sprite": "dist/sprite/sprite.svg#mic"
+    }
+  },
+  {
+    "name": "mic-off",
+    "originalName": "Property 1=mic-off.svg",
+    "className": "icon mic-off",
+    "paths": {
+      "svg": "dist/svg/mic-off.svg",
+      "sprite": "dist/sprite/sprite.svg#mic-off"
+    }
+  },
+  {
+    "name": "minimize-2",
+    "originalName": "Property 1=minimize-2.svg",
+    "className": "icon minimize-2",
+    "paths": {
+      "svg": "dist/svg/minimize-2.svg",
+      "sprite": "dist/sprite/sprite.svg#minimize-2"
+    }
+  },
+  {
+    "name": "minus",
+    "originalName": "Property 1=minus.svg",
+    "className": "icon minus",
+    "paths": {
+      "svg": "dist/svg/minus.svg",
+      "sprite": "dist/sprite/sprite.svg#minus"
+    }
+  },
+  {
+    "name": "minus-circle",
+    "originalName": "Property 1=minus-circle.svg",
+    "className": "icon minus-circle",
+    "paths": {
+      "svg": "dist/svg/minus-circle.svg",
+      "sprite": "dist/sprite/sprite.svg#minus-circle"
+    }
+  },
+  {
+    "name": "minus-square",
+    "originalName": "Property 1=minus-square.svg",
+    "className": "icon minus-square",
+    "paths": {
+      "svg": "dist/svg/minus-square.svg",
+      "sprite": "dist/sprite/sprite.svg#minus-square"
+    }
+  },
+  {
+    "name": "monitor",
+    "originalName": "Property 1=monitor.svg",
+    "className": "icon monitor",
+    "paths": {
+      "svg": "dist/svg/monitor.svg",
+      "sprite": "dist/sprite/sprite.svg#monitor"
+    }
+  },
+  {
+    "name": "moon",
+    "originalName": "Property 1=moon.svg",
+    "className": "icon moon",
+    "paths": {
+      "svg": "dist/svg/moon.svg",
+      "sprite": "dist/sprite/sprite.svg#moon"
+    }
+  },
+  {
+    "name": "more-horizontal",
+    "originalName": "Property 1=more-horizontal.svg",
+    "className": "icon more-horizontal",
+    "paths": {
+      "svg": "dist/svg/more-horizontal.svg",
+      "sprite": "dist/sprite/sprite.svg#more-horizontal"
+    }
+  },
+  {
+    "name": "more-vertical",
+    "originalName": "Property 1=more-vertical.svg",
+    "className": "icon more-vertical",
+    "paths": {
+      "svg": "dist/svg/more-vertical.svg",
+      "sprite": "dist/sprite/sprite.svg#more-vertical"
+    }
+  },
+  {
+    "name": "mouse-pointer",
+    "originalName": "Property 1=mouse-pointer.svg",
+    "className": "icon mouse-pointer",
+    "paths": {
+      "svg": "dist/svg/mouse-pointer.svg",
+      "sprite": "dist/sprite/sprite.svg#mouse-pointer"
+    }
+  },
+  {
+    "name": "move",
+    "originalName": "Property 1=move.svg",
+    "className": "icon move",
+    "paths": {
+      "svg": "dist/svg/move.svg",
+      "sprite": "dist/sprite/sprite.svg#move"
+    }
+  },
+  {
+    "name": "music",
+    "originalName": "Property 1=music.svg",
+    "className": "icon music",
+    "paths": {
+      "svg": "dist/svg/music.svg",
+      "sprite": "dist/sprite/sprite.svg#music"
+    }
+  },
+  {
+    "name": "navigation",
+    "originalName": "Property 1=navigation.svg",
+    "className": "icon navigation",
+    "paths": {
+      "svg": "dist/svg/navigation.svg",
+      "sprite": "dist/sprite/sprite.svg#navigation"
+    }
+  },
+  {
+    "name": "navigation-2",
+    "originalName": "Property 1=navigation-2.svg",
+    "className": "icon navigation-2",
+    "paths": {
+      "svg": "dist/svg/navigation-2.svg",
+      "sprite": "dist/sprite/sprite.svg#navigation-2"
+    }
+  },
+  {
+    "name": "new-user-profile-icon",
+    "originalName": "New_UserProfileIcon.svg",
+    "className": "icon new-user-profile-icon",
+    "paths": {
+      "svg": "dist/svg/new-user-profile-icon.svg",
+      "sprite": "dist/sprite/sprite.svg#new-user-profile-icon"
+    }
+  },
+  {
+    "name": "notification-number",
+    "originalName": "Property 1=Notification ( number).svg",
+    "className": "icon notification-number",
+    "paths": {
+      "svg": "dist/svg/notification-number.svg",
+      "sprite": "dist/sprite/sprite.svg#notification-number"
+    }
+  },
+  {
+    "name": "octagon",
+    "originalName": "Property 1=octagon.svg",
+    "className": "icon octagon",
+    "paths": {
+      "svg": "dist/svg/octagon.svg",
+      "sprite": "dist/sprite/sprite.svg#octagon"
+    }
+  },
+  {
+    "name": "on-order",
+    "originalName": "Property 1=On Order.svg",
+    "className": "icon on-order",
+    "paths": {
+      "svg": "dist/svg/on-order.svg",
+      "sprite": "dist/sprite/sprite.svg#on-order"
+    }
+  },
+  {
+    "name": "order-history",
+    "originalName": "Property 1=Order History.svg",
+    "className": "icon order-history",
+    "paths": {
+      "svg": "dist/svg/order-history.svg",
+      "sprite": "dist/sprite/sprite.svg#order-history"
+    }
+  },
+  {
+    "name": "order-list",
+    "originalName": "Property 1=Order List.svg",
+    "className": "icon order-list",
+    "paths": {
+      "svg": "dist/svg/order-list.svg",
+      "sprite": "dist/sprite/sprite.svg#order-list"
+    }
+  },
+  {
+    "name": "org",
+    "originalName": "Property 1=Org.svg",
+    "className": "icon org",
+    "paths": {
+      "svg": "dist/svg/org.svg",
+      "sprite": "dist/sprite/sprite.svg#org"
+    }
+  },
+  {
+    "name": "pac-packaging",
+    "originalName": "Property 1=PacPackaging.svg",
+    "className": "icon pac-packaging",
+    "paths": {
+      "svg": "dist/svg/pac-packaging.svg",
+      "sprite": "dist/sprite/sprite.svg#pac-packaging"
+    }
+  },
+  {
+    "name": "package",
+    "originalName": "Property 1=package.svg",
+    "className": "icon package",
+    "paths": {
+      "svg": "dist/svg/package.svg",
+      "sprite": "dist/sprite/sprite.svg#package"
+    }
+  },
+  {
+    "name": "paperclip",
+    "originalName": "Property 1=paperclip.svg",
+    "className": "icon paperclip",
+    "paths": {
+      "svg": "dist/svg/paperclip.svg",
+      "sprite": "dist/sprite/sprite.svg#paperclip"
+    }
+  },
+  {
+    "name": "pause",
+    "originalName": "Property 1=pause.svg",
+    "className": "icon pause",
+    "paths": {
+      "svg": "dist/svg/pause.svg",
+      "sprite": "dist/sprite/sprite.svg#pause"
+    }
+  },
+  {
+    "name": "pause-circle",
+    "originalName": "Property 1=pause-circle.svg",
+    "className": "icon pause-circle",
+    "paths": {
+      "svg": "dist/svg/pause-circle.svg",
+      "sprite": "dist/sprite/sprite.svg#pause-circle"
+    }
+  },
+  {
+    "name": "pause-fill",
+    "originalName": "Property 1=Pause (fill).svg",
+    "className": "icon pause-fill",
+    "paths": {
+      "svg": "dist/svg/pause-fill.svg",
+      "sprite": "dist/sprite/sprite.svg#pause-fill"
+    }
+  },
+  {
+    "name": "payor",
+    "originalName": "Property 1=payor.svg",
+    "className": "icon payor",
+    "paths": {
+      "svg": "dist/svg/payor.svg",
+      "sprite": "dist/sprite/sprite.svg#payor"
+    }
+  },
+  {
+    "name": "pen-tool",
+    "originalName": "Property 1=pen-tool.svg",
+    "className": "icon pen-tool",
+    "paths": {
+      "svg": "dist/svg/pen-tool.svg",
+      "sprite": "dist/sprite/sprite.svg#pen-tool"
+    }
+  },
+  {
+    "name": "pending",
+    "originalName": "Property 1=Pending.svg",
+    "className": "icon pending",
+    "paths": {
+      "svg": "dist/svg/pending.svg",
+      "sprite": "dist/sprite/sprite.svg#pending"
+    }
+  },
+  {
+    "name": "percent",
+    "originalName": "Property 1=percent.svg",
+    "className": "icon percent",
+    "paths": {
+      "svg": "dist/svg/percent.svg",
+      "sprite": "dist/sprite/sprite.svg#percent"
+    }
+  },
+  {
+    "name": "pharmacy-reports",
+    "originalName": "Property 1=Pharmacy Reports.svg",
+    "className": "icon pharmacy-reports",
+    "paths": {
+      "svg": "dist/svg/pharmacy-reports.svg",
+      "sprite": "dist/sprite/sprite.svg#pharmacy-reports"
+    }
+  },
+  {
+    "name": "phone",
+    "originalName": "Property 1=phone.svg",
+    "className": "icon phone",
+    "paths": {
+      "svg": "dist/svg/phone.svg",
+      "sprite": "dist/sprite/sprite.svg#phone"
+    }
+  },
+  {
+    "name": "phone-add",
+    "originalName": "Property 1=Phone Add.svg",
+    "className": "icon phone-add",
+    "paths": {
+      "svg": "dist/svg/phone-add.svg",
+      "sprite": "dist/sprite/sprite.svg#phone-add"
+    }
+  },
+  {
+    "name": "phone-call",
+    "originalName": "Property 1=phone-call.svg",
+    "className": "icon phone-call",
+    "paths": {
+      "svg": "dist/svg/phone-call.svg",
+      "sprite": "dist/sprite/sprite.svg#phone-call"
+    }
+  },
+  {
+    "name": "phone-forwarded",
+    "originalName": "Property 1=phone-forwarded.svg",
+    "className": "icon phone-forwarded",
+    "paths": {
+      "svg": "dist/svg/phone-forwarded.svg",
+      "sprite": "dist/sprite/sprite.svg#phone-forwarded"
+    }
+  },
+  {
+    "name": "phone-incoming",
+    "originalName": "Property 1=phone-incoming.svg",
+    "className": "icon phone-incoming",
+    "paths": {
+      "svg": "dist/svg/phone-incoming.svg",
+      "sprite": "dist/sprite/sprite.svg#phone-incoming"
+    }
+  },
+  {
+    "name": "phone-missed",
+    "originalName": "Property 1=phone-missed.svg",
+    "className": "icon phone-missed",
+    "paths": {
+      "svg": "dist/svg/phone-missed.svg",
+      "sprite": "dist/sprite/sprite.svg#phone-missed"
+    }
+  },
+  {
+    "name": "phone-off",
+    "originalName": "Property 1=phone-off.svg",
+    "className": "icon phone-off",
+    "paths": {
+      "svg": "dist/svg/phone-off.svg",
+      "sprite": "dist/sprite/sprite.svg#phone-off"
+    }
+  },
+  {
+    "name": "phone-outgoing",
+    "originalName": "Property 1=phone-outgoing.svg",
+    "className": "icon phone-outgoing",
+    "paths": {
+      "svg": "dist/svg/phone-outgoing.svg",
+      "sprite": "dist/sprite/sprite.svg#phone-outgoing"
+    }
+  },
+  {
+    "name": "pie-chart",
+    "originalName": "Property 1=pie-chart.svg",
+    "className": "icon pie-chart",
+    "paths": {
+      "svg": "dist/svg/pie-chart.svg",
+      "sprite": "dist/sprite/sprite.svg#pie-chart"
+    }
+  },
+  {
+    "name": "play",
+    "originalName": "Property 1=play.svg",
+    "className": "icon play",
+    "paths": {
+      "svg": "dist/svg/play.svg",
+      "sprite": "dist/sprite/sprite.svg#play"
+    }
+  },
+  {
+    "name": "play-circle",
+    "originalName": "Property 1=play-circle.svg",
+    "className": "icon play-circle",
+    "paths": {
+      "svg": "dist/svg/play-circle.svg",
+      "sprite": "dist/sprite/sprite.svg#play-circle"
+    }
+  },
+  {
+    "name": "play-fill",
+    "originalName": "Property 1=Play (fill).svg",
+    "className": "icon play-fill",
+    "paths": {
+      "svg": "dist/svg/play-fill.svg",
+      "sprite": "dist/sprite/sprite.svg#play-fill"
+    }
+  },
+  {
+    "name": "plus",
+    "originalName": "Property 1=plus.svg",
+    "className": "icon plus",
+    "paths": {
+      "svg": "dist/svg/plus.svg",
+      "sprite": "dist/sprite/sprite.svg#plus"
+    }
+  },
+  {
+    "name": "plus-circle",
+    "originalName": "Property 1=plus-circle.svg",
+    "className": "icon plus-circle",
+    "paths": {
+      "svg": "dist/svg/plus-circle.svg",
+      "sprite": "dist/sprite/sprite.svg#plus-circle"
+    }
+  },
+  {
+    "name": "plus-square",
+    "originalName": "Property 1=plus-square.svg",
+    "className": "icon plus-square",
+    "paths": {
+      "svg": "dist/svg/plus-square.svg",
+      "sprite": "dist/sprite/sprite.svg#plus-square"
+    }
+  },
+  {
+    "name": "pocket",
+    "originalName": "Property 1=pocket.svg",
+    "className": "icon pocket",
+    "paths": {
+      "svg": "dist/svg/pocket.svg",
+      "sprite": "dist/sprite/sprite.svg#pocket"
+    }
+  },
+  {
+    "name": "power",
+    "originalName": "Property 1=power.svg",
+    "className": "icon power",
+    "paths": {
+      "svg": "dist/svg/power.svg",
+      "sprite": "dist/sprite/sprite.svg#power"
+    }
+  },
+  {
+    "name": "prescription-history",
+    "originalName": "Property 1=prescription History.svg",
+    "className": "icon prescription-history",
+    "paths": {
+      "svg": "dist/svg/prescription-history.svg",
+      "sprite": "dist/sprite/sprite.svg#prescription-history"
+    }
+  },
+  {
+    "name": "prescription-pending",
+    "originalName": "Property 1=prescription Pending.svg",
+    "className": "icon prescription-pending",
+    "paths": {
+      "svg": "dist/svg/prescription-pending.svg",
+      "sprite": "dist/sprite/sprite.svg#prescription-pending"
+    }
+  },
+  {
+    "name": "prescription-transfer",
+    "originalName": "Property 1=prescription Transfer.svg",
+    "className": "icon prescription-transfer",
+    "paths": {
+      "svg": "dist/svg/prescription-transfer.svg",
+      "sprite": "dist/sprite/sprite.svg#prescription-transfer"
+    }
+  },
+  {
+    "name": "price-cut",
+    "originalName": "Property 1=Price Cut.svg",
+    "className": "icon price-cut",
+    "paths": {
+      "svg": "dist/svg/price-cut.svg",
+      "sprite": "dist/sprite/sprite.svg#price-cut"
+    }
+  },
+  {
+    "name": "products-inventory",
+    "originalName": "Property 1=Products Inventory.svg",
+    "className": "icon products-inventory",
+    "paths": {
+      "svg": "dist/svg/products-inventory.svg",
+      "sprite": "dist/sprite/sprite.svg#products-inventory"
+    }
+  },
+  {
+    "name": "programs",
+    "originalName": "Property 1=Programs.svg",
+    "className": "icon programs",
+    "paths": {
+      "svg": "dist/svg/programs.svg",
+      "sprite": "dist/sprite/sprite.svg#programs"
+    }
+  },
+  {
+    "name": "progress-active",
+    "originalName": "Property 1=Progress Active.svg",
+    "className": "icon progress-active",
+    "paths": {
+      "svg": "dist/svg/progress-active.svg",
+      "sprite": "dist/sprite/sprite.svg#progress-active"
+    }
+  },
+  {
+    "name": "prscriber",
+    "originalName": "Property 1=Prscriber.svg",
+    "className": "icon prscriber",
+    "paths": {
+      "svg": "dist/svg/prscriber.svg",
+      "sprite": "dist/sprite/sprite.svg#prscriber"
+    }
+  },
+  {
+    "name": "radio",
+    "originalName": "Property 1=radio.svg",
+    "className": "icon radio",
+    "paths": {
+      "svg": "dist/svg/radio.svg",
+      "sprite": "dist/sprite/sprite.svg#radio"
+    }
+  },
+  {
+    "name": "re-assign",
+    "originalName": "Property 1=Re-Assign.svg",
+    "className": "icon re-assign",
+    "paths": {
+      "svg": "dist/svg/re-assign.svg",
+      "sprite": "dist/sprite/sprite.svg#re-assign"
+    }
+  },
+  {
+    "name": "re-claim",
+    "originalName": "Property 1=Re-Claim.svg",
+    "className": "icon re-claim",
+    "paths": {
+      "svg": "dist/svg/re-claim.svg",
+      "sprite": "dist/sprite/sprite.svg#re-claim"
+    }
+  },
+  {
+    "name": "re-claim-white",
+    "originalName": "Property 1=ReClaim-White..svg",
+    "className": "icon re-claim-white",
+    "paths": {
+      "svg": "dist/svg/re-claim-white.svg",
+      "sprite": "dist/sprite/sprite.svg#re-claim-white"
+    }
+  },
+  {
+    "name": "re-print",
+    "originalName": "Property 1=Re-Print.svg",
+    "className": "icon re-print",
+    "paths": {
+      "svg": "dist/svg/re-print.svg",
+      "sprite": "dist/sprite/sprite.svg#re-print"
+    }
+  },
+  {
+    "name": "receive-order",
+    "originalName": "Property 1=Receive Order.svg",
+    "className": "icon receive-order",
+    "paths": {
+      "svg": "dist/svg/receive-order.svg",
+      "sprite": "dist/sprite/sprite.svg#receive-order"
+    }
+  },
+  {
+    "name": "red-dot",
+    "originalName": "Property 1=Red Dot.svg",
+    "className": "icon red-dot",
+    "paths": {
+      "svg": "dist/svg/red-dot.svg",
+      "sprite": "dist/sprite/sprite.svg#red-dot"
+    }
+  },
+  {
+    "name": "redo",
+    "originalName": "Property 1=Redo.svg",
+    "className": "icon redo",
+    "paths": {
+      "svg": "dist/svg/redo.svg",
+      "sprite": "dist/sprite/sprite.svg#redo"
+    }
+  },
+  {
+    "name": "refill",
+    "originalName": "Property 1=Refill.svg",
+    "className": "icon refill",
+    "paths": {
+      "svg": "dist/svg/refill.svg",
+      "sprite": "dist/sprite/sprite.svg#refill"
+    }
+  },
+  {
+    "name": "refresh-ccw",
+    "originalName": "Property 1=refresh-ccw.svg",
+    "className": "icon refresh-ccw",
+    "paths": {
+      "svg": "dist/svg/refresh-ccw.svg",
+      "sprite": "dist/sprite/sprite.svg#refresh-ccw"
+    }
+  },
+  {
+    "name": "refresh-cw",
+    "originalName": "Property 1=refresh-cw.svg",
+    "className": "icon refresh-cw",
+    "paths": {
+      "svg": "dist/svg/refresh-cw.svg",
+      "sprite": "dist/sprite/sprite.svg#refresh-cw"
+    }
+  },
+  {
+    "name": "repeat",
+    "originalName": "Property 1=repeat.svg",
+    "className": "icon repeat",
+    "paths": {
+      "svg": "dist/svg/repeat.svg",
+      "sprite": "dist/sprite/sprite.svg#repeat"
+    }
+  },
+  {
+    "name": "replenishment",
+    "originalName": "Property 1=Replenishment.svg",
+    "className": "icon replenishment",
+    "paths": {
+      "svg": "dist/svg/replenishment.svg",
+      "sprite": "dist/sprite/sprite.svg#replenishment"
+    }
+  },
+  {
+    "name": "reports",
+    "originalName": "Property 1=Reports.svg",
+    "className": "icon reports",
+    "paths": {
+      "svg": "dist/svg/reports.svg",
+      "sprite": "dist/sprite/sprite.svg#reports"
+    }
+  },
+  {
+    "name": "reports-1",
+    "originalName": "Property 1=Reports -1.svg",
+    "className": "icon reports-1",
+    "paths": {
+      "svg": "dist/svg/reports-1.svg",
+      "sprite": "dist/sprite/sprite.svg#reports-1"
+    }
+  },
+  {
+    "name": "reports-dot",
+    "originalName": "Property 1=Reports-Dot.svg",
+    "className": "icon reports-dot",
+    "paths": {
+      "svg": "dist/svg/reports-dot.svg",
+      "sprite": "dist/sprite/sprite.svg#reports-dot"
+    }
+  },
+  {
+    "name": "request-mail",
+    "originalName": "Property 1=Request Mail.svg",
+    "className": "icon request-mail",
+    "paths": {
+      "svg": "dist/svg/request-mail.svg",
+      "sprite": "dist/sprite/sprite.svg#request-mail"
+    }
+  },
+  {
+    "name": "reset-password",
+    "originalName": "Property 1=Reset Password.svg",
+    "className": "icon reset-password",
+    "paths": {
+      "svg": "dist/svg/reset-password.svg",
+      "sprite": "dist/sprite/sprite.svg#reset-password"
+    }
+  },
+  {
+    "name": "rewind",
+    "originalName": "Property 1=rewind.svg",
+    "className": "icon rewind",
+    "paths": {
+      "svg": "dist/svg/rewind.svg",
+      "sprite": "dist/sprite/sprite.svg#rewind"
+    }
+  },
+  {
+    "name": "ritation-left",
+    "originalName": "Property 1=Ritation Left.svg",
+    "className": "icon ritation-left",
+    "paths": {
+      "svg": "dist/svg/ritation-left.svg",
+      "sprite": "dist/sprite/sprite.svg#ritation-left"
+    }
+  },
+  {
+    "name": "rotate-ccw",
+    "originalName": "Property 1=rotate-ccw.svg",
+    "className": "icon rotate-ccw",
+    "paths": {
+      "svg": "dist/svg/rotate-ccw.svg",
+      "sprite": "dist/sprite/sprite.svg#rotate-ccw"
+    }
+  },
+  {
+    "name": "rotate-cw",
+    "originalName": "Property 1=rotate-cw.svg",
+    "className": "icon rotate-cw",
+    "paths": {
+      "svg": "dist/svg/rotate-cw.svg",
+      "sprite": "dist/sprite/sprite.svg#rotate-cw"
+    }
+  },
+  {
+    "name": "rotation-right",
+    "originalName": "Property 1=Rotation Right.svg",
+    "className": "icon rotation-right",
+    "paths": {
+      "svg": "dist/svg/rotation-right.svg",
+      "sprite": "dist/sprite/sprite.svg#rotation-right"
+    }
+  },
+  {
+    "name": "row",
+    "originalName": "Property 1=Row.svg",
+    "className": "icon row",
+    "paths": {
+      "svg": "dist/svg/row.svg",
+      "sprite": "dist/sprite/sprite.svg#row"
+    }
+  },
+  {
+    "name": "rss",
+    "originalName": "Property 1=rss.svg",
+    "className": "icon rss",
+    "paths": {
+      "svg": "dist/svg/rss.svg",
+      "sprite": "dist/sprite/sprite.svg#rss"
+    }
+  },
+  {
+    "name": "rx-manager",
+    "originalName": "Property 1=Rx Manager.svg",
+    "className": "icon rx-manager",
+    "paths": {
+      "svg": "dist/svg/rx-manager.svg",
+      "sprite": "dist/sprite/sprite.svg#rx-manager"
+    }
+  },
+  {
+    "name": "save",
+    "originalName": "Property 1=save.svg",
+    "className": "icon save",
+    "paths": {
+      "svg": "dist/svg/save.svg",
+      "sprite": "dist/sprite/sprite.svg#save"
+    }
+  },
+  {
+    "name": "scan-barcode",
+    "originalName": "Property 1=Scan Barcode.svg",
+    "className": "icon scan-barcode",
+    "paths": {
+      "svg": "dist/svg/scan-barcode.svg",
+      "sprite": "dist/sprite/sprite.svg#scan-barcode"
+    }
+  },
+  {
+    "name": "scan-document",
+    "originalName": "Property 1=Scan Document.svg",
+    "className": "icon scan-document",
+    "paths": {
+      "svg": "dist/svg/scan-document.svg",
+      "sprite": "dist/sprite/sprite.svg#scan-document"
+    }
+  },
+  {
+    "name": "scissors",
+    "originalName": "Property 1=scissors.svg",
+    "className": "icon scissors",
+    "paths": {
+      "svg": "dist/svg/scissors.svg",
+      "sprite": "dist/sprite/sprite.svg#scissors"
+    }
+  },
+  {
+    "name": "search",
+    "originalName": "Property 1=search.svg",
+    "className": "icon search",
+    "paths": {
+      "svg": "dist/svg/search.svg",
+      "sprite": "dist/sprite/sprite.svg#search"
+    }
+  },
+  {
+    "name": "search-po",
+    "originalName": "Property 1=Search PO.svg",
+    "className": "icon search-po",
+    "paths": {
+      "svg": "dist/svg/search-po.svg",
+      "sprite": "dist/sprite/sprite.svg#search-po"
+    }
+  },
+  {
+    "name": "send",
+    "originalName": "Property 1=send.svg",
+    "className": "icon send",
+    "paths": {
+      "svg": "dist/svg/send.svg",
+      "sprite": "dist/sprite/sprite.svg#send"
+    }
+  },
+  {
+    "name": "send-back",
+    "originalName": "Property 1=Send Back.svg",
+    "className": "icon send-back",
+    "paths": {
+      "svg": "dist/svg/send-back.svg",
+      "sprite": "dist/sprite/sprite.svg#send-back"
+    }
+  },
+  {
+    "name": "server",
+    "originalName": "Property 1=server.svg",
+    "className": "icon server",
+    "paths": {
+      "svg": "dist/svg/server.svg",
+      "sprite": "dist/sprite/sprite.svg#server"
+    }
+  },
+  {
+    "name": "settings",
+    "originalName": "Property 1=settings.svg",
+    "className": "icon settings",
+    "paths": {
+      "svg": "dist/svg/settings.svg",
+      "sprite": "dist/sprite/sprite.svg#settings"
+    }
+  },
+  {
+    "name": "share",
+    "originalName": "Property 1=share.svg",
+    "className": "icon share",
+    "paths": {
+      "svg": "dist/svg/share.svg",
+      "sprite": "dist/sprite/sprite.svg#share"
+    }
+  },
+  {
+    "name": "share-2",
+    "originalName": "Property 1=share-2.svg",
+    "className": "icon share-2",
+    "paths": {
+      "svg": "dist/svg/share-2.svg",
+      "sprite": "dist/sprite/sprite.svg#share-2"
+    }
+  },
+  {
+    "name": "shield",
+    "originalName": "Property 1=shield.svg",
+    "className": "icon shield",
+    "paths": {
+      "svg": "dist/svg/shield.svg",
+      "sprite": "dist/sprite/sprite.svg#shield"
+    }
+  },
+  {
+    "name": "shield-off",
+    "originalName": "Property 1=shield-off.svg",
+    "className": "icon shield-off",
+    "paths": {
+      "svg": "dist/svg/shield-off.svg",
+      "sprite": "dist/sprite/sprite.svg#shield-off"
+    }
+  },
+  {
+    "name": "shopping-bag",
+    "originalName": "Property 1=shopping-bag.svg",
+    "className": "icon shopping-bag",
+    "paths": {
+      "svg": "dist/svg/shopping-bag.svg",
+      "sprite": "dist/sprite/sprite.svg#shopping-bag"
+    }
+  },
+  {
+    "name": "shopping-cart",
+    "originalName": "Property 1=shopping-cart.svg",
+    "className": "icon shopping-cart",
+    "paths": {
+      "svg": "dist/svg/shopping-cart.svg",
+      "sprite": "dist/sprite/sprite.svg#shopping-cart"
+    }
+  },
+  {
+    "name": "shuffle",
+    "originalName": "Property 1=shuffle.svg",
+    "className": "icon shuffle",
+    "paths": {
+      "svg": "dist/svg/shuffle.svg",
+      "sprite": "dist/sprite/sprite.svg#shuffle"
+    }
+  },
+  {
+    "name": "sidebar",
+    "originalName": "Property 1=sidebar.svg",
+    "className": "icon sidebar",
+    "paths": {
+      "svg": "dist/svg/sidebar.svg",
+      "sprite": "dist/sprite/sprite.svg#sidebar"
+    }
+  },
+  {
+    "name": "skip-back",
+    "originalName": "Property 1=skip-back.svg",
+    "className": "icon skip-back",
+    "paths": {
+      "svg": "dist/svg/skip-back.svg",
+      "sprite": "dist/sprite/sprite.svg#skip-back"
+    }
+  },
+  {
+    "name": "skip-forward",
+    "originalName": "Property 1=skip-forward.svg",
+    "className": "icon skip-forward",
+    "paths": {
+      "svg": "dist/svg/skip-forward.svg",
+      "sprite": "dist/sprite/sprite.svg#skip-forward"
+    }
+  },
+  {
+    "name": "slack",
+    "originalName": "Property 1=slack.svg",
+    "className": "icon slack",
+    "paths": {
+      "svg": "dist/svg/slack.svg",
+      "sprite": "dist/sprite/sprite.svg#slack"
+    }
+  },
+  {
+    "name": "slash",
+    "originalName": "Property 1=slash.svg",
+    "className": "icon slash",
+    "paths": {
+      "svg": "dist/svg/slash.svg",
+      "sprite": "dist/sprite/sprite.svg#slash"
+    }
+  },
+  {
+    "name": "sliders",
+    "originalName": "Property 1=sliders.svg",
+    "className": "icon sliders",
+    "paths": {
+      "svg": "dist/svg/sliders.svg",
+      "sprite": "dist/sprite/sprite.svg#sliders"
+    }
+  },
+  {
+    "name": "smartphone",
+    "originalName": "Property 1=smartphone.svg",
+    "className": "icon smartphone",
+    "paths": {
+      "svg": "dist/svg/smartphone.svg",
+      "sprite": "dist/sprite/sprite.svg#smartphone"
+    }
+  },
+  {
+    "name": "smile",
+    "originalName": "Property 1=smile.svg",
+    "className": "icon smile",
+    "paths": {
+      "svg": "dist/svg/smile.svg",
+      "sprite": "dist/sprite/sprite.svg#smile"
+    }
+  },
+  {
+    "name": "speaker",
+    "originalName": "Property 1=speaker.svg",
+    "className": "icon speaker",
+    "paths": {
+      "svg": "dist/svg/speaker.svg",
+      "sprite": "dist/sprite/sprite.svg#speaker"
+    }
+  },
+  {
+    "name": "square",
+    "originalName": "Property 1=square.svg",
+    "className": "icon square",
+    "paths": {
+      "svg": "dist/svg/square.svg",
+      "sprite": "dist/sprite/sprite.svg#square"
+    }
+  },
+  {
+    "name": "star",
+    "originalName": "Property 1=star.svg",
+    "className": "icon star",
+    "paths": {
+      "svg": "dist/svg/star.svg",
+      "sprite": "dist/sprite/sprite.svg#star"
+    }
+  },
+  {
+    "name": "stop-circle",
+    "originalName": "Property 1=stop-circle.svg",
+    "className": "icon stop-circle",
+    "paths": {
+      "svg": "dist/svg/stop-circle.svg",
+      "sprite": "dist/sprite/sprite.svg#stop-circle"
+    }
+  },
+  {
+    "name": "sun",
+    "originalName": "Property 1=sun.svg",
+    "className": "icon sun",
+    "paths": {
+      "svg": "dist/svg/sun.svg",
+      "sprite": "dist/sprite/sprite.svg#sun"
+    }
+  },
+  {
+    "name": "sunrise",
+    "originalName": "Property 1=sunrise.svg",
+    "className": "icon sunrise",
+    "paths": {
+      "svg": "dist/svg/sunrise.svg",
+      "sprite": "dist/sprite/sprite.svg#sunrise"
+    }
+  },
+  {
+    "name": "sunset",
+    "originalName": "Property 1=sunset.svg",
+    "className": "icon sunset",
+    "paths": {
+      "svg": "dist/svg/sunset.svg",
+      "sprite": "dist/sprite/sprite.svg#sunset"
+    }
+  },
+  {
+    "name": "swap-screen",
+    "originalName": "Property 1=Swap screen.svg",
+    "className": "icon swap-screen",
+    "paths": {
+      "svg": "dist/svg/swap-screen.svg",
+      "sprite": "dist/sprite/sprite.svg#swap-screen"
+    }
+  },
+  {
+    "name": "table",
+    "originalName": "Property 1=table.svg",
+    "className": "icon table",
+    "paths": {
+      "svg": "dist/svg/table.svg",
+      "sprite": "dist/sprite/sprite.svg#table"
+    }
+  },
+  {
+    "name": "tablet",
+    "originalName": "Property 1=tablet.svg",
+    "className": "icon tablet",
+    "paths": {
+      "svg": "dist/svg/tablet.svg",
+      "sprite": "dist/sprite/sprite.svg#tablet"
+    }
+  },
+  {
+    "name": "tag",
+    "originalName": "Property 1=tag.svg",
+    "className": "icon tag",
+    "paths": {
+      "svg": "dist/svg/tag.svg",
+      "sprite": "dist/sprite/sprite.svg#tag"
+    }
+  },
+  {
+    "name": "target",
+    "originalName": "Property 1=target.svg",
+    "className": "icon target",
+    "paths": {
+      "svg": "dist/svg/target.svg",
+      "sprite": "dist/sprite/sprite.svg#target"
+    }
+  },
+  {
+    "name": "tasks",
+    "originalName": "Property 1=Tasks.svg",
+    "className": "icon tasks",
+    "paths": {
+      "svg": "dist/svg/tasks.svg",
+      "sprite": "dist/sprite/sprite.svg#tasks"
+    }
+  },
+  {
+    "name": "terminal",
+    "originalName": "Property 1=terminal.svg",
+    "className": "icon terminal",
+    "paths": {
+      "svg": "dist/svg/terminal.svg",
+      "sprite": "dist/sprite/sprite.svg#terminal"
+    }
+  },
+  {
+    "name": "test",
+    "originalName": "Test.svg",
+    "className": "icon test",
+    "paths": {
+      "svg": "dist/svg/test.svg",
+      "sprite": "dist/sprite/sprite.svg#test"
+    }
+  },
+  {
+    "name": "test3012",
+    "originalName": "Test3012.svg",
+    "className": "icon test3012",
+    "paths": {
+      "svg": "dist/svg/test3012.svg",
+      "sprite": "dist/sprite/sprite.svg#test3012"
+    }
+  },
+  {
+    "name": "thermometer",
+    "originalName": "Property 1=thermometer.svg",
+    "className": "icon thermometer",
+    "paths": {
+      "svg": "dist/svg/thermometer.svg",
+      "sprite": "dist/sprite/sprite.svg#thermometer"
+    }
+  },
+  {
+    "name": "thumbs-down",
+    "originalName": "Property 1=thumbs-down.svg",
+    "className": "icon thumbs-down",
+    "paths": {
+      "svg": "dist/svg/thumbs-down.svg",
+      "sprite": "dist/sprite/sprite.svg#thumbs-down"
+    }
+  },
+  {
+    "name": "thumbs-up",
+    "originalName": "Property 1=thumbs-up.svg",
+    "className": "icon thumbs-up",
+    "paths": {
+      "svg": "dist/svg/thumbs-up.svg",
+      "sprite": "dist/sprite/sprite.svg#thumbs-up"
+    }
+  },
+  {
+    "name": "to-be-ordered",
+    "originalName": "Property 1=To Be Ordered.svg",
+    "className": "icon to-be-ordered",
+    "paths": {
+      "svg": "dist/svg/to-be-ordered.svg",
+      "sprite": "dist/sprite/sprite.svg#to-be-ordered"
+    }
+  },
+  {
+    "name": "toggle-left",
+    "originalName": "Property 1=toggle-left.svg",
+    "className": "icon toggle-left",
+    "paths": {
+      "svg": "dist/svg/toggle-left.svg",
+      "sprite": "dist/sprite/sprite.svg#toggle-left"
+    }
+  },
+  {
+    "name": "toggle-right",
+    "originalName": "Property 1=toggle-right.svg",
+    "className": "icon toggle-right",
+    "paths": {
+      "svg": "dist/svg/toggle-right.svg",
+      "sprite": "dist/sprite/sprite.svg#toggle-right"
+    }
+  },
+  {
+    "name": "tool",
+    "originalName": "Property 1=tool.svg",
+    "className": "icon tool",
+    "paths": {
+      "svg": "dist/svg/tool.svg",
+      "sprite": "dist/sprite/sprite.svg#tool"
+    }
+  },
+  {
+    "name": "tracking",
+    "originalName": "Property 1=Tracking.svg",
+    "className": "icon tracking",
+    "paths": {
+      "svg": "dist/svg/tracking.svg",
+      "sprite": "dist/sprite/sprite.svg#tracking"
+    }
+  },
+  {
+    "name": "transfer-out",
+    "originalName": "Property 1=Transfer Out.svg",
+    "className": "icon transfer-out",
+    "paths": {
+      "svg": "dist/svg/transfer-out.svg",
+      "sprite": "dist/sprite/sprite.svg#transfer-out"
+    }
+  },
+  {
+    "name": "trash",
+    "originalName": "Property 1=trash.svg",
+    "className": "icon trash",
+    "paths": {
+      "svg": "dist/svg/trash.svg",
+      "sprite": "dist/sprite/sprite.svg#trash"
+    }
+  },
+  {
+    "name": "trash-2",
+    "originalName": "Property 1=trash-2.svg",
+    "className": "icon trash-2",
+    "paths": {
+      "svg": "dist/svg/trash-2.svg",
+      "sprite": "dist/sprite/sprite.svg#trash-2"
+    }
+  },
+  {
+    "name": "trello",
+    "originalName": "Property 1=trello.svg",
+    "className": "icon trello",
+    "paths": {
+      "svg": "dist/svg/trello.svg",
+      "sprite": "dist/sprite/sprite.svg#trello"
+    }
+  },
+  {
+    "name": "trending-down",
+    "originalName": "Property 1=trending-down.svg",
+    "className": "icon trending-down",
+    "paths": {
+      "svg": "dist/svg/trending-down.svg",
+      "sprite": "dist/sprite/sprite.svg#trending-down"
+    }
+  },
+  {
+    "name": "trending-up",
+    "originalName": "Property 1=trending-up.svg",
+    "className": "icon trending-up",
+    "paths": {
+      "svg": "dist/svg/trending-up.svg",
+      "sprite": "dist/sprite/sprite.svg#trending-up"
+    }
+  },
+  {
+    "name": "triangle",
+    "originalName": "Property 1=triangle.svg",
+    "className": "icon triangle",
+    "paths": {
+      "svg": "dist/svg/triangle.svg",
+      "sprite": "dist/sprite/sprite.svg#triangle"
+    }
+  },
+  {
+    "name": "truck",
+    "originalName": "Property 1=truck.svg",
+    "className": "icon truck",
+    "paths": {
+      "svg": "dist/svg/truck.svg",
+      "sprite": "dist/sprite/sprite.svg#truck"
+    }
+  },
+  {
+    "name": "tv",
+    "originalName": "Property 1=tv.svg",
+    "className": "icon tv",
+    "paths": {
+      "svg": "dist/svg/tv.svg",
+      "sprite": "dist/sprite/sprite.svg#tv"
+    }
+  },
+  {
+    "name": "twitch",
+    "originalName": "Property 1=twitch.svg",
+    "className": "icon twitch",
+    "paths": {
+      "svg": "dist/svg/twitch.svg",
+      "sprite": "dist/sprite/sprite.svg#twitch"
+    }
+  },
+  {
+    "name": "twitter",
+    "originalName": "Property 1=twitter.svg",
+    "className": "icon twitter",
+    "paths": {
+      "svg": "dist/svg/twitter.svg",
+      "sprite": "dist/sprite/sprite.svg#twitter"
+    }
+  },
+  {
+    "name": "type",
+    "originalName": "Property 1=type.svg",
+    "className": "icon type",
+    "paths": {
+      "svg": "dist/svg/type.svg",
+      "sprite": "dist/sprite/sprite.svg#type"
+    }
+  },
+  {
+    "name": "umbrella",
+    "originalName": "Property 1=umbrella.svg",
+    "className": "icon umbrella",
+    "paths": {
+      "svg": "dist/svg/umbrella.svg",
+      "sprite": "dist/sprite/sprite.svg#umbrella"
+    }
+  },
+  {
+    "name": "underline",
+    "originalName": "Property 1=underline.svg",
+    "className": "icon underline",
+    "paths": {
+      "svg": "dist/svg/underline.svg",
+      "sprite": "dist/sprite/sprite.svg#underline"
+    }
+  },
+  {
+    "name": "undo",
+    "originalName": "Property 1=Undo.svg",
+    "className": "icon undo",
+    "paths": {
+      "svg": "dist/svg/undo.svg",
+      "sprite": "dist/sprite/sprite.svg#undo"
+    }
+  },
+  {
+    "name": "unlock",
+    "originalName": "Property 1=unlock.svg",
+    "className": "icon unlock",
+    "paths": {
+      "svg": "dist/svg/unlock.svg",
+      "sprite": "dist/sprite/sprite.svg#unlock"
+    }
+  },
+  {
+    "name": "upload",
+    "originalName": "Property 1=upload.svg",
+    "className": "icon upload",
+    "paths": {
+      "svg": "dist/svg/upload.svg",
+      "sprite": "dist/sprite/sprite.svg#upload"
+    }
+  },
+  {
+    "name": "upload-cloud",
+    "originalName": "Property 1=upload-cloud.svg",
+    "className": "icon upload-cloud",
+    "paths": {
+      "svg": "dist/svg/upload-cloud.svg",
+      "sprite": "dist/sprite/sprite.svg#upload-cloud"
+    }
+  },
+  {
+    "name": "user",
+    "originalName": "Property 1=user.svg",
+    "className": "icon user",
+    "paths": {
+      "svg": "dist/svg/user.svg",
+      "sprite": "dist/sprite/sprite.svg#user"
+    }
+  },
+  {
+    "name": "user-check",
+    "originalName": "Property 1=user-check.svg",
+    "className": "icon user-check",
+    "paths": {
+      "svg": "dist/svg/user-check.svg",
+      "sprite": "dist/sprite/sprite.svg#user-check"
+    }
+  },
+  {
+    "name": "user-locked",
+    "originalName": "Property 1=User Locked.svg",
+    "className": "icon user-locked",
+    "paths": {
+      "svg": "dist/svg/user-locked.svg",
+      "sprite": "dist/sprite/sprite.svg#user-locked"
+    }
+  },
+  {
+    "name": "user-minus",
+    "originalName": "Property 1=user-minus.svg",
+    "className": "icon user-minus",
+    "paths": {
+      "svg": "dist/svg/user-minus.svg",
+      "sprite": "dist/sprite/sprite.svg#user-minus"
+    }
+  },
+  {
+    "name": "user-plus",
+    "originalName": "Property 1=user-plus.svg",
+    "className": "icon user-plus",
+    "paths": {
+      "svg": "dist/svg/user-plus.svg",
+      "sprite": "dist/sprite/sprite.svg#user-plus"
+    }
+  },
+  {
+    "name": "user-x",
+    "originalName": "Property 1=user-x.svg",
+    "className": "icon user-x",
+    "paths": {
+      "svg": "dist/svg/user-x.svg",
+      "sprite": "dist/sprite/sprite.svg#user-x"
+    }
+  },
+  {
+    "name": "users",
+    "originalName": "Property 1=users.svg",
+    "className": "icon users",
+    "paths": {
+      "svg": "dist/svg/users.svg",
+      "sprite": "dist/sprite/sprite.svg#users"
+    }
+  },
+  {
+    "name": "variant293",
+    "originalName": "Property 1=Variant293.svg",
+    "className": "icon variant293",
+    "paths": {
+      "svg": "dist/svg/variant293.svg",
+      "sprite": "dist/sprite/sprite.svg#variant293"
+    }
+  },
+  {
+    "name": "variant410",
+    "originalName": "Property 1=Variant410.svg",
+    "className": "icon variant410",
+    "paths": {
+      "svg": "dist/svg/variant410.svg",
+      "sprite": "dist/sprite/sprite.svg#variant410"
+    }
+  },
+  {
+    "name": "variant422",
+    "originalName": "Property 1=Variant422.svg",
+    "className": "icon variant422",
+    "paths": {
+      "svg": "dist/svg/variant422.svg",
+      "sprite": "dist/sprite/sprite.svg#variant422"
+    }
+  },
+  {
+    "name": "veterinary-patient",
+    "originalName": "Property 1=Veterinary Patient.svg",
+    "className": "icon veterinary-patient",
+    "paths": {
+      "svg": "dist/svg/veterinary-patient.svg",
+      "sprite": "dist/sprite/sprite.svg#veterinary-patient"
+    }
+  },
+  {
+    "name": "video",
+    "originalName": "Property 1=video.svg",
+    "className": "icon video",
+    "paths": {
+      "svg": "dist/svg/video.svg",
+      "sprite": "dist/sprite/sprite.svg#video"
+    }
+  },
+  {
+    "name": "video-off",
+    "originalName": "Property 1=video-off.svg",
+    "className": "icon video-off",
+    "paths": {
+      "svg": "dist/svg/video-off.svg",
+      "sprite": "dist/sprite/sprite.svg#video-off"
+    }
+  },
+  {
+    "name": "view-claims",
+    "originalName": "Property 1=View Claims.svg",
+    "className": "icon view-claims",
+    "paths": {
+      "svg": "dist/svg/view-claims.svg",
+      "sprite": "dist/sprite/sprite.svg#view-claims"
+    }
+  },
+  {
+    "name": "view-po",
+    "originalName": "Property 1=View PO.svg",
+    "className": "icon view-po",
+    "paths": {
+      "svg": "dist/svg/view-po.svg",
+      "sprite": "dist/sprite/sprite.svg#view-po"
+    }
+  },
+  {
+    "name": "vital-signs",
+    "originalName": "Property 1=Vital Signs.svg",
+    "className": "icon vital-signs",
+    "paths": {
+      "svg": "dist/svg/vital-signs.svg",
+      "sprite": "dist/sprite/sprite.svg#vital-signs"
+    }
+  },
+  {
+    "name": "voicemail",
+    "originalName": "Property 1=voicemail.svg",
+    "className": "icon voicemail",
+    "paths": {
+      "svg": "dist/svg/voicemail.svg",
+      "sprite": "dist/sprite/sprite.svg#voicemail"
+    }
+  },
+  {
+    "name": "volume",
+    "originalName": "Property 1=volume.svg",
+    "className": "icon volume",
+    "paths": {
+      "svg": "dist/svg/volume.svg",
+      "sprite": "dist/sprite/sprite.svg#volume"
+    }
+  },
+  {
+    "name": "volume-1",
+    "originalName": "Property 1=volume-1.svg",
+    "className": "icon volume-1",
+    "paths": {
+      "svg": "dist/svg/volume-1.svg",
+      "sprite": "dist/sprite/sprite.svg#volume-1"
+    }
+  },
+  {
+    "name": "volume-2",
+    "originalName": "Property 1=volume-2.svg",
+    "className": "icon volume-2",
+    "paths": {
+      "svg": "dist/svg/volume-2.svg",
+      "sprite": "dist/sprite/sprite.svg#volume-2"
+    }
+  },
+  {
+    "name": "volume-x",
+    "originalName": "Property 1=volume-x.svg",
+    "className": "icon volume-x",
+    "paths": {
+      "svg": "dist/svg/volume-x.svg",
+      "sprite": "dist/sprite/sprite.svg#volume-x"
+    }
+  },
+  {
+    "name": "warning",
+    "originalName": "Property 1=Warning.svg",
+    "className": "icon warning",
+    "paths": {
+      "svg": "dist/svg/warning.svg",
+      "sprite": "dist/sprite/sprite.svg#warning"
+    }
+  },
+  {
+    "name": "watch",
+    "originalName": "Property 1=watch.svg",
+    "className": "icon watch",
+    "paths": {
+      "svg": "dist/svg/watch.svg",
+      "sprite": "dist/sprite/sprite.svg#watch"
+    }
+  },
+  {
+    "name": "wholesale",
+    "originalName": "Property 1=Wholesale.svg",
+    "className": "icon wholesale",
+    "paths": {
+      "svg": "dist/svg/wholesale.svg",
+      "sprite": "dist/sprite/sprite.svg#wholesale"
+    }
+  },
+  {
+    "name": "wifi",
+    "originalName": "Property 1=wifi.svg",
+    "className": "icon wifi",
+    "paths": {
+      "svg": "dist/svg/wifi.svg",
+      "sprite": "dist/sprite/sprite.svg#wifi"
+    }
+  },
+  {
+    "name": "wifi-off",
+    "originalName": "Property 1=wifi-off.svg",
+    "className": "icon wifi-off",
+    "paths": {
+      "svg": "dist/svg/wifi-off.svg",
+      "sprite": "dist/sprite/sprite.svg#wifi-off"
+    }
+  },
+  {
+    "name": "wind",
+    "originalName": "Property 1=wind.svg",
+    "className": "icon wind",
+    "paths": {
+      "svg": "dist/svg/wind.svg",
+      "sprite": "dist/sprite/sprite.svg#wind"
+    }
+  },
+  {
+    "name": "x",
+    "originalName": "Property 1=x.svg",
+    "className": "icon x",
+    "paths": {
+      "svg": "dist/svg/x.svg",
+      "sprite": "dist/sprite/sprite.svg#x"
+    }
+  },
+  {
+    "name": "x-circle",
+    "originalName": "Property 1=x-circle.svg",
+    "className": "icon x-circle",
+    "paths": {
+      "svg": "dist/svg/x-circle.svg",
+      "sprite": "dist/sprite/sprite.svg#x-circle"
+    }
+  },
+  {
+    "name": "x-octagon",
+    "originalName": "Property 1=x-octagon.svg",
+    "className": "icon x-octagon",
+    "paths": {
+      "svg": "dist/svg/x-octagon.svg",
+      "sprite": "dist/sprite/sprite.svg#x-octagon"
+    }
+  },
+  {
+    "name": "x-square",
+    "originalName": "Property 1=x-square.svg",
+    "className": "icon x-square",
+    "paths": {
+      "svg": "dist/svg/x-square.svg",
+      "sprite": "dist/sprite/sprite.svg#x-square"
+    }
+  },
+  {
+    "name": "youtube",
+    "originalName": "Property 1=youtube.svg",
+    "className": "icon youtube",
+    "paths": {
+      "svg": "dist/svg/youtube.svg",
+      "sprite": "dist/sprite/sprite.svg#youtube"
+    }
+  },
+  {
+    "name": "zap",
+    "originalName": "Property 1=zap.svg",
+    "className": "icon zap",
+    "paths": {
+      "svg": "dist/svg/zap.svg",
+      "sprite": "dist/sprite/sprite.svg#zap"
+    }
+  },
+  {
+    "name": "zap-off",
+    "originalName": "Property 1=zap-off.svg",
+    "className": "icon zap-off",
+    "paths": {
+      "svg": "dist/svg/zap-off.svg",
+      "sprite": "dist/sprite/sprite.svg#zap-off"
+    }
+  },
+  {
+    "name": "zoom-in",
+    "originalName": "Property 1=zoom-in.svg",
+    "className": "icon zoom-in",
+    "paths": {
+      "svg": "dist/svg/zoom-in.svg",
+      "sprite": "dist/sprite/sprite.svg#zoom-in"
+    }
+  },
+  {
+    "name": "zoom-out",
+    "originalName": "Property 1=zoom-out.svg",
+    "className": "icon zoom-out",
+    "paths": {
+      "svg": "dist/svg/zoom-out.svg",
+      "sprite": "dist/sprite/sprite.svg#zoom-out"
+    }
+  }
+]
