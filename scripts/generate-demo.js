@@ -45,8 +45,8 @@ function generateDemo() {
     .clr-muted         { --icon-fill: #8D8D8D !important; --icon-bg: #E0E0E0 !important; color: #9E9E9E !important; }
 
     .is-hover, .is-selected, .is-disabled {
-      border-radius: 6px !important;
-      padding: 4px !important;
+      border-radius: 2px !important;
+      padding: 2px !important;
       box-sizing: content-box !important;
       display: inline-flex !important;
     }
@@ -57,8 +57,8 @@ function generateDemo() {
       color: #ffffff !important;
     }
     .is-disabled { 
-      background: #8D8D8D !important; 
-      color: #9E9E9E !important;
+      background: #D3D3D3 !important; 
+      color: #757575 !important;
     }
 
     * { box-sizing: border-box; }
