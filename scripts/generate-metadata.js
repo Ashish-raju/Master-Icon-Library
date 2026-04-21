@@ -11,10 +11,11 @@ function generateMetadata() {
   const normalizedNames = Object.keys(namesMap);
   
   const metadataArray = normalizedNames.map(normalized => {
+    const selector = /^\d/.test(normalized) ? 'i-' + normalized : normalized;
     return {
       name: normalized,
       originalName: namesMap[normalized],
-      className: `icon ${normalized}`, // Requested CSS structure
+      className: `icon ${selector}`,
       paths: {
         svg: `dist/svg/${normalized}.svg`,
         sprite: `dist/sprite/sprite.svg#${normalized}`

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ashish Icon Library | Searchable Gallery</title>
   <!-- Relative paths ensure it works in both local dev and GitHub Pages subpaths -->
-  <link rel="stylesheet" href="../dist/font/icons.css?v=1776772576644">
+  <link rel="stylesheet" href="../dist/font/icons.css?v=1776774497599">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -19,25 +19,35 @@
     }
 
     /* Professional Inlined Utilities */
-    .clr-primary   { --icon-fill: #702C62 !important; --icon-bg: #DBCAD8 !important; color: var(--icon-fill) !important; }
-    .clr-success   { --icon-fill: #339900 !important; --icon-bg: #CCE5B3 !important; color: var(--icon-fill) !important; }
-    .clr-warning   { --icon-fill: #FF7C00 !important; --icon-bg: #FFD9BF !important; color: var(--icon-fill) !important; }
-    .clr-error     { --icon-fill: #E54141 !important; --icon-bg: #F8CFCF !important; color: var(--icon-fill) !important; }
-    .clr-white     { --icon-fill: #FFFFFF !important; --icon-bg: #381631 !important; color: var(--icon-fill) !important; }
-    .clr-muted     { --icon-fill: #8D8D8D !important; --icon-bg: #E0E0E0 !important; color: #9E9E9E !important; }
+    .clr-primary      { --icon-fill: #702C62 !important; --icon-bg: #DBCAD8 !important; color: var(--icon-fill) !important; }
+    .clr-action-hover { --icon-fill: #5D2452 !important; --icon-bg: #EEDEEA !important; color: var(--icon-fill) !important; }
+    .clr-success       { --icon-fill: #339900 !important; --icon-bg: #CCE5B3 !important; color: var(--icon-fill) !important; }
+    .clr-warning       { --icon-fill: #FF7C00 !important; --icon-bg: #FFD9BF !important; color: var(--icon-fill) !important; }
+    .clr-error         { --icon-fill: #E54141 !important; --icon-bg: #F8CFCF !important; color: var(--icon-fill) !important; }
+    .clr-white         { --icon-fill: #FFFFFF !important; --icon-bg: #381631 !important; color: var(--icon-fill) !important; }
+    .clr-muted         { --icon-fill: #8D8D8D !important; --icon-bg: #E0E0E0 !important; color: #9E9E9E !important; }
 
     .is-hover, .is-selected, .is-disabled {
-      border-radius: 4px !important;
+      border: 2px solid transparent !important;
+      border-radius: 6px !important;
       padding: 4px !important;
       margin: 2px !important;
-      box-sizing: content-box !important;
+      box-sizing: border-box !important;
       display: inline-flex !important;
     }
-    .is-hover    { background: var(--icon-bg, #702C62) !important; color: var(--icon-fill, #702C62) !important; }
-    .clr-primary.is-hover, .clr-white.is-hover { color: #ffffff !important; }
+    .is-hover    { background: var(--icon-bg, #DBCAD8) !important; color: var(--icon-fill, #702C62) !important; }
     
-    .is-selected { background: var(--icon-fill, #702C62) !important; color: #ffffff !important; }
-    .is-disabled { background: #E0E0E0 !important; color: #9E9E9E !important; }
+    .is-selected { 
+      background: var(--icon-fill, #702C62) !important; 
+      color: #ffffff !important;
+      border-color: #ffffff !important;
+      box-shadow: 0 0 0 2px var(--icon-fill) !important;
+    }
+    .is-disabled { 
+      background: #F5F5F5 !important; 
+      color: #9E9E9E !important;
+      border-color: #E0E0E0 !important;
+    }
 
     * { box-sizing: border-box; }
 
@@ -299,6 +309,7 @@
           <label>Branding Themes</label>
           <div class="chip-group" id="color-select">
             <button class="chip active" data-class="clr-primary" data-hex="#702C62" data-label="Action"><span class="color-swatch" style="background:#702C62;"></span> Action / Info (#702C62)</button>
+            <button class="chip" data-class="clr-action-hover" data-hex="#5D2452" data-label="Action Hover"><span class="color-swatch" style="background:#5D2452;"></span> Action Hover (#5D2452)</button>
             <button class="chip" data-class="clr-success" data-hex="#339900" data-label="Success"><span class="color-swatch" style="background:#339900;"></span> Success (#339900)</button>
             <button class="chip" data-class="clr-warning" data-hex="#FF7C00" data-label="Warning"><span class="color-swatch" style="background:#FF7C00;"></span> Warning (#FF7C00)</button>
             <button class="chip" data-class="clr-error" data-hex="#E54141" data-label="Error"><span class="color-swatch" style="background:#E54141;"></span> Error (#E54141)</button>
@@ -324,7 +335,10 @@
         <div class="control-group">
           <label>Standard Scales</label>
           <div class="chip-group" id="size-select">
+            <button class="chip" data-class="icon-8" data-size="8px">8px</button>
+            <button class="chip" data-class="icon-10" data-size="10px">10px</button>
             <button class="chip" data-class="icon-sm" data-size="12px">sm (12px)</button>
+            <button class="chip" data-class="icon-14" data-size="14px">14px</button>
             <button class="chip active" data-class="none" data-size="16px">default (16px)</button>
             <button class="chip" data-class="icon-lg" data-size="20px">lg (20px)</button>
             <button class="chip" data-class="icon-xl" data-size="24px">xl (24px)</button>

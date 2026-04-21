@@ -20,6 +20,7 @@ const App = () => {
   // Branding Themes configuration
   const brandingThemes = [
     { id: 'clr-primary', hex: '#702C62', label: 'Action / Info' },
+    { id: 'clr-action-hover', hex: '#5D2452', label: 'Action Hover' },
     { id: 'clr-success', hex: '#339900', label: 'Success' },
     { id: 'clr-warning', hex: '#FF7C00', label: 'Warning' },
     { id: 'clr-error', hex: '#E54141', label: 'Error' },
@@ -37,7 +38,10 @@ const App = () => {
 
   // Standard Scales configuration
   const scales = [
+    { id: 'icon-8', label: '8px' },
+    { id: 'icon-10', label: '10px' },
     { id: 'icon-sm', label: 'sm (12px)' },
+    { id: 'icon-14', label: '14px' },
     { id: 'none', label: 'default (16px)' },
     { id: 'icon-lg', label: 'lg (20px)' },
     { id: 'icon-xl', label: 'xl (24px)' }
@@ -170,6 +174,8 @@ const App = () => {
         <AnimatePresence mode="popLayout">
           {filteredIcons.map((icon) => {
             const selector = icon.className.split(' ').pop() || icon.name;
+            const cleanName = icon.name.replace(/[^a-zA-Z0-9]+/g, ' '); 
+            
             const fullClasses = [
               'icon',
               selector,

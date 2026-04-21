@@ -2,7 +2,7 @@
   {
     "name": "100",
     "originalName": "Property 1=100.svg",
-    "className": "icon 100",
+    "className": "icon i-100",
     "paths": {
       "svg": "dist/svg/100.svg",
       "sprite": "dist/sprite/sprite.svg#100"
