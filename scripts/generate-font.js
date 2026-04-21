@@ -92,7 +92,7 @@ async function generateFont() {
 }
 
 .is-disabled {
-  background: #F5F5F5 !important;
+  background: #8D8D8D !important;
   border-radius: 6px !important;
   padding: 4px !important;
   box-sizing: content-box !important;

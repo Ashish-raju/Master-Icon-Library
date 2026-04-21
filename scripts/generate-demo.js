@@ -57,7 +57,7 @@ function generateDemo() {
       color: #ffffff !important;
     }
     .is-disabled { 
-      background: #F5F5F5 !important; 
+      background: #8D8D8D !important; 
       color: #9E9E9E !important;
     }
 
