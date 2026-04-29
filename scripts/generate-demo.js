@@ -35,31 +35,7 @@ function generateDemo() {
       --card-bg-override: rgba(255, 255, 255, 0.65);
     }
 
-    /* Professional Inlined Utilities */
-    .clr-primary      { --icon-fill: #702C62 !important; --icon-bg: #DBCAD8 !important; color: var(--icon-fill) !important; }
-    .clr-action-hover { --icon-fill: #542149 !important; --icon-bg: #EEDEEA !important; color: var(--icon-fill) !important; }
-    .clr-success       { --icon-fill: #339900 !important; --icon-bg: #CCE5B3 !important; color: var(--icon-fill) !important; }
-    .clr-warning       { --icon-fill: #FF7C00 !important; --icon-bg: #FFD9BF !important; color: var(--icon-fill) !important; }
-    .clr-error         { --icon-fill: #E54141 !important; --icon-bg: #F8CFCF !important; color: var(--icon-fill) !important; }
-    .clr-white         { --icon-fill: #FFFFFF !important; --icon-bg: #381631 !important; color: var(--icon-fill) !important; }
-    .clr-muted         { --icon-fill: #8D8D8D !important; --icon-bg: #E0E0E0 !important; color: #9E9E9E !important; }
-
-    .is-hover, .is-selected, .is-disabled {
-      border-radius: 2px !important;
-      padding: 2px !important;
-      box-sizing: content-box !important;
-      display: inline-flex !important;
-    }
-    .is-hover    { background: var(--icon-bg, #DBCAD8) !important; color: var(--icon-fill, #702C62) !important; }
-    
-    .is-selected { 
-      background: var(--icon-fill, #702C62) !important; 
-      color: #ffffff !important;
-    }
-    .is-disabled { 
-      background: #D3D3D3 !important; 
-      color: #757575 !important;
-    }
+    .clr-muted { color: #9E9E9E !important; } /* Local override for muted text in gallery */
 
     * { box-sizing: border-box; }
 
@@ -313,7 +289,7 @@ function generateDemo() {
     
     <div class="controls-panel">
       <div class="control-group">
-        <input type="text" id="search" class="search-box" placeholder="Start typing to filter icons...">
+        <input type="text" id="search" class="search-box" placeholder="Start typing to filter icons..." aria-label="Search icons">
       </div>
       
       <div class="control-row">
@@ -399,7 +375,6 @@ function generateDemo() {
 
     let currentSettings = {
       color: 'clr-primary',
-      hex: '#702C62',
       size: 'none',
       sizePx: '16px',
       state: 'none',
@@ -419,13 +394,14 @@ function generateDemo() {
         icon.classList.add(currentSettings.color);
         if (currentSettings.state !== 'none') icon.classList.add(currentSettings.state);
 
-        // Handle card background contrast for "White" theme
-        if ((currentSettings.color === 'clr-white') && currentSettings.state === 'none') {
-          root.style.setProperty('--card-bg-override', 'rgba(15, 23, 42, 0.9)');
-        } else {
-          root.style.setProperty('--card-bg-override', 'rgba(255, 255, 255, 0.65)');
-        }
       });
+      
+      // Handle card background contrast for "White" theme (outside loop for performance)
+      if ((currentSettings.color === 'clr-white') && currentSettings.state === 'none') {
+        root.style.setProperty('--card-bg-override', 'rgba(15, 23, 42, 0.9)');
+      } else {
+        root.style.setProperty('--card-bg-override', 'rgba(255, 255, 255, 0.65)');
+      }
     }
 
     // Search Filtering
@@ -443,7 +419,6 @@ function generateDemo() {
         colorChips.forEach(c => c.classList.remove('active'));
         chip.classList.add('active');
         currentSettings.color = chip.dataset.class;
-        currentSettings.hex = chip.dataset.hex;
         updatePreviews();
       });
     });

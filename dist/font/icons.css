@@ -32,7 +32,10 @@
 }
 
 /* Size Utilities */
+.icon-8  { font-size: 8px !important; }
+.icon-10 { font-size: 10px !important; }
 .icon-sm { font-size: 12px !important; }
+.icon-14 { font-size: 14px !important; }
 .icon-lg { font-size: 20px !important; }
 .icon-xl { font-size: 24px !important; }
 
@@ -43,7 +46,7 @@
 .clr-warning       { --icon-fill: #FF7C00; --icon-bg: #FFD9BF; color: var(--icon-fill) !important; }
 .clr-error         { --icon-fill: #E54141; --icon-bg: #F8CFCF; color: var(--icon-fill) !important; }
 .clr-white         { --icon-fill: #FFFFFF; --icon-bg: #381631; color: var(--icon-fill) !important; }
-.clr-muted         { --icon-fill: #8D8D8D; --icon-bg: #E0E0E0; color: #9E9E9E !important; }
+.clr-muted         { --icon-fill: #9E9E9E; --icon-bg: #E0E0E0; color: var(--icon-fill) !important; }
 
 /* Interaction State Utilities - Using content-box to prevent 'squeezing' the icon glyph */
 .is-hover {
